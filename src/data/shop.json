@@ -1,0 +1,852 @@
+{
+    "products": {
+        "data": [
+            {
+                "name": "Integrali Tusilli",
+                "slug": "integrali-tusilli",
+                "price": [
+                    49,
+                    59
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": null,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Fresh Dressed Meat",
+                "slug": "fresh-dressed-meat",
+                "price": [
+                    49,
+                    59
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": null,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Cooking",
+                        "slug": "cooking",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Frozen",
+                        "slug": "frozen-2",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Meat & Seafood",
+                        "slug": "meat-and-seafood",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Coconut Fruit",
+                "slug": "coconut-fruit",
+                "price": [
+                    49,
+                    59
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": null,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Cooking",
+                        "slug": "cooking",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Fruits",
+                        "slug": "fruits-2",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Fruits & Vegetables",
+                        "slug": "fruits-and-vegetables",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Vegetables",
+                        "slug": "vegetables-2",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Trafilati al Bronzo",
+                "slug": "trafilati-al-bronzo",
+                "price": [
+                    49,
+                    59
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": true,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Cooking",
+                        "slug": "cooking",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Beverages",
+                        "slug": "beverages-4",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Beauty & Personal Care",
+                        "slug": "beauty-and-personal-care-3",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Pineapple Fruit",
+                "slug": "pineapple-fruit",
+                "price": [
+                    43,
+                    69
+                ],
+                "ratings": 5,
+                "reviews": 1,
+                "is_hot": null,
+                "is_new": true,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_5_1_807935f804.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_5_1_807935f804.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Fruits",
+                        "slug": "fruits-2",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Banana Fruit",
+                "slug": "banana-fruit",
+                "price": [
+                    25,
+                    30
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": null,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Fruits",
+                        "slug": "fruits-2",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Equibeim",
+                "slug": "equibeim",
+                "price": [
+                    190,
+                    200
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": true,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 60,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_7_3_8515865705.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_7_3_8515865705.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Frozen",
+                        "slug": "frozen-2",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Azeite De Oliva Extra Virgem",
+                "slug": "azeite-de-oliva-extra-virgem",
+                "price": [
+                    200,
+                    230
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": true,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Frozen",
+                        "slug": "frozen-2",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Capeletti Ricotae Espinafre",
+                "slug": "capeletti-ricotae-espinafre",
+                "price": [
+                    26,
+                    30
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": true,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Artesano Bread",
+                "slug": "artesano-bread",
+                "price": [
+                    18,
+                    20
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": null,
+                "is_new": true,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Breakfast",
+                        "slug": "breakfast",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Fruits",
+                        "slug": "fruits-2",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Party Supplies & Crafts",
+                        "slug": "party-supplies-and-crafts-1",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Apple Fruit",
+                "slug": "apple-fruit",
+                "price": [
+                    10,
+                    12
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": null,
+                "is_new": null,
+                "is_out_of_stock": null,
+                "until": null,
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_11_3_f538062400.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_11_3_f538062400.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Fruits",
+                        "slug": "fruits-1",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "name": "Sliced Fresh Meat",
+                "slug": "sliced-fresh-meat",
+                "price": [
+                    27,
+                    30
+                ],
+                "ratings": 0,
+                "reviews": 0,
+                "is_hot": null,
+                "is_new": true,
+                "is_out_of_stock": null,
+                "until": "2022-01-06T20:00:00.000Z",
+                "stock": 50,
+                "pictures": [
+                    {
+                        "url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "name": "Cooking",
+                        "slug": "cooking",
+                        "__typename": "ProductCategory"
+                    },
+                    {
+                        "name": "Meat & Seafood",
+                        "slug": "meat-and-seafood",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            }
+        ],
+        "total": 19,
+        "categoryFamily": [],
+        "__typename": "ShopResponse"
+    }
+}

@@ -15,7 +15,7 @@ export default function ProductThree ( props ) {
 
                     <LazyLoadImage
                         alt="product"
-                        src={ process.env.NEXT_PUBLIC_ASSET_URI + product.small_pictures[ 0 ].url }
+                        src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_4_1_b37cd71f74.jpg"
                         threshold={ 500 }
                         effect="black and white"
                         width="100%"
@@ -24,7 +24,7 @@ export default function ProductThree ( props ) {
                         product.small_pictures.length >= 2 ?
                             <LazyLoadImage
                                 alt="product"
-                                src={ process.env.NEXT_PUBLIC_ASSET_URI + product.small_pictures[ 1 ].url }
+                                src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_4_2_a4bbc0caf1.jpg"
                                 threshold={ 500 }
                                 effect="black and white"
                                 wrapperClassName="product-image-hover"

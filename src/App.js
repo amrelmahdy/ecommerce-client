@@ -3,8 +3,9 @@ import { Provider } from 'react-redux';
 import { store, persistor } from './store/index';
 import { PersistGate } from 'redux-persist/integration/react';
 import Helmet from "react-helmet";
-import Layout from './components/layout';
 import Home from './pages/home'
+import Shop from './pages/shop'
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,13 +21,52 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "about",
-    element: <Layout>
-      {/* <div>
-        <h1>About</h1>
-        <Link to="/">Home</Link>
-      </div> */}
-    </Layout>,
+    path: "shop",
+    element: <Shop />,
+  },
+  {
+    path: "shop",
+    element: <></>,
+  },
+  {
+    path: "cotact-us",
+    element: <></>,
+  },
+  {
+    path: "cart",
+    element: <></>,
+  },
+  {
+    path: "whishlist",
+    element: <></>,
+  },
+  {
+    path: "help",
+    element: <></>,
+  },
+  {
+    path: "stores",
+    element: <></>,
+  },
+  {
+    path: "login",
+    element: <></>,
+  },
+  {
+    path: "login",
+    element: <></>,
+  },
+  {
+    path: "forget-password",
+    element: <></>,
+  },
+  {
+    path: "account",
+    element: <></>,
+  },
+  {
+    path: "checkout",
+    element: <></>,
   },
 ]);
 
@@ -42,21 +82,18 @@ function App() {
             <div className="bounce3"></div>
           </div>
         </div>}>
-
-
         <Helmet>
           <meta charSet="UTF-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
           <title>Shaheen Seeds</title>
-
           <meta name="keywords" content="React Template" />
           <meta name="description" content="Porto - React eCommerce Template" />
           <meta name="author" content="SW-THEMES" />
         </Helmet>
 
         <RouterProvider router={router} />
+
       </PersistGate>
     </Provider>
 

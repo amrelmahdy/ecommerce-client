@@ -1,0 +1,137 @@
+{
+    "shopSidebarData": {
+        "categories": [
+            {
+                "name": "Breakfast",
+                "slug": "breakfast",
+                "parent": null,
+                "count": 8,
+                "__typename": "ProductCategoryResponse"
+            },
+            {
+                "name": "Cooking",
+                "slug": "cooking",
+                "parent": null,
+                "count": 4,
+                "__typename": "ProductCategoryResponse"
+            },
+            {
+                "name": "Frozen",
+                "slug": "frozen-2",
+                "parent": null,
+                "count": 4,
+                "__typename": "ProductCategoryResponse"
+            },
+            {
+                "name": "Fruits",
+                "slug": "fruits-1",
+                "parent": null,
+                "count": 6,
+                "__typename": "ProductCategoryResponse"
+            },
+            {
+                "name": "Vegetables",
+                "slug": "vegetables-1",
+                "parent": null,
+                "count": 1,
+                "__typename": "ProductCategoryResponse"
+            }
+        ],
+        "featured": [
+            {
+                "slug": "trafilati-al-bronzo",
+                "name": "Trafilati al Bronzo",
+                "price": [
+                    49,
+                    59
+                ],
+                "ratings": 0,
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "slug": "equibeim",
+                "name": "Equibeim",
+                "price": [
+                    190,
+                    200
+                ],
+                "ratings": 0,
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_7_3_8515865705.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "slug": "azeite-de-oliva-extra-virgem",
+                "name": "Azeite De Oliva Extra Virgem",
+                "price": [
+                    200,
+                    230
+                ],
+                "ratings": 0,
+                "small_pictures": [
+                    {
+                        "url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "variants": [],
+                "__typename": "Product"
+            }
+        ],
+        "__typename": "ShopSidebarResponse"
+    }
+}
