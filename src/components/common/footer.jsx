@@ -64,7 +64,7 @@ function Footer () {
                             <div className="widget mb-3">
                                 <h4 className="widget-title">Payment Methods</h4>
 
-                                <img src="images/home/payment.png" alt="payment" width="240" height="32" />
+                                <img src="/images/home/payment.png" alt="payment" width="240" height="32" />
                             </div>
                         </div>
                     </div>

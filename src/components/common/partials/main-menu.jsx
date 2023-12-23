@@ -103,7 +103,7 @@ function MainMenu({ router }) {
 
                                                 <LazyLoadImage
                                                     alt="Menu banner"
-                                                    src="images/home/menu-banner-1.jpg"
+                                                    src="/images/home/menu-banner-1.jpg"
                                                     threshold={500}
                                                     effect="black and white"
                                                     width="100%"
@@ -127,35 +127,35 @@ function MainMenu({ router }) {
                                         <div className="partners-container mb-2">
                                             <OwlCarousel options={{ items: 4, margin: 20, nav: false, responsive: { 1200: { items: 5 } } }}>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand1.png"
+                                                    <img src="/images/brands/small/brand1.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand2.png"
+                                                    <img src="/images/brands/small/brand2.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand3.png"
+                                                    <img src="/images/brands/small/brand3.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand4.png"
+                                                    <img src="/images/brands/small/brand4.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand5.png"
+                                                    <img src="/images/brands/small/brand5.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand5.png"
+                                                    <img src="/images/brands/small/brand5.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand5.png"
+                                                    <img src="/images/brands/small/brand5.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                                 <div className="partner">
-                                                    <img src="images/brands/small/brand5.png"
+                                                    <img src="/images/brands/small/brand5.png"
                                                         alt="logo image" width="140" height="60" />
                                                 </div>
                                             </OwlCarousel>
@@ -243,7 +243,7 @@ function MainMenu({ router }) {
                                             <figure>
                                                 <LazyLoadImage
                                                     alt="Menu banner"
-                                                    src="images/home/menu-banner-2.jpg"
+                                                    src="/images/home/menu-banner-2.jpg"
                                                     threshold={500}
                                                     effect="black and white"
                                                     width="100%"
@@ -274,7 +274,7 @@ function MainMenu({ router }) {
                                             <figure>
                                                 <LazyLoadImage
                                                     alt="Menu banner"
-                                                    src="images/home/menu-banner-3.jpg"
+                                                    src="/images/home/menu-banner-3.jpg"
                                                     threshold={500}
                                                     effect="black and white"
                                                     width="100%"
@@ -311,7 +311,7 @@ function MainMenu({ router }) {
                                 <div className="row">
                                     <div className="col-lg-3 mb-1">
                                         <div className="image-wrapper">
-                                            <img src="images/home/icons/boy.png" alt="icon"
+                                            <img src="/images/home/icons/boy.png" alt="icon"
                                                 width="50" height="68" />
                                         </div>
                                         <ALink href={{ pathname: '/shop', query: { category: 'for-him' } }} className="nolink">FOR HIM</ALink>
@@ -329,7 +329,7 @@ function MainMenu({ router }) {
 
                                     <div className="col-lg-3 mb-1">
                                         <div className="image-wrapper">
-                                            <img src="images/home/icons/girl.png" alt="icon"
+                                            <img src="/images/home/icons/girl.png" alt="icon"
                                                 width="50" height="68" />
                                         </div>
                                         <ALink href={{ pathname: '/shop', query: { category: 'for-her' } }} className="nolink">FOR HER</ALink>
@@ -347,7 +347,7 @@ function MainMenu({ router }) {
 
                                     <div className="col-lg-3 mb-1">
                                         <div className="image-wrapper">
-                                            <img src="images/home/icons/kid.png" alt="icon"
+                                            <img src="/images/home/icons/kid.png" alt="icon"
                                                 width="50" height="68" />
                                         </div>
                                         <ALink href={{ pathname: '/shop', query: { category: 'for-kids' } }} className="nolink">FOR KIDS</ALink>
@@ -364,7 +364,7 @@ function MainMenu({ router }) {
 
                                     <div className="col-lg-3 mb-1">
                                         <div className="image-wrapper">
-                                            <img src="images/home/icons/supermarket.png"
+                                            <img src="/images/home/icons/supermarket.png"
                                                 alt="icon" width="50" height="68" />
                                         </div>
                                         <ALink href={{ pathname: '/shop', query: { category: 'birthday' } }} className="nolink">BIRTHDAY</ALink>
@@ -463,7 +463,7 @@ function MainMenu({ router }) {
                         <li>
                             <ALink href={{ pathname: '/shop', query: { category: 'music' } }}><i className="icon-category-music"></i>Music</ALink>
                             <span className="menu-btn"></span>
-                            <div className="megamenu megamenu-fixed-width megamenu-five text-transform-none p-0" style={{ backgroundImage: 'url(images/home/menu-banner-4.jpg)' }}>
+                            <div className="megamenu megamenu-fixed-width megamenu-five text-transform-none p-0" style={{ backgroundImage: 'url(/images/home/menu-banner-4.jpg)' }}>
                                 <div className="row m-0">
                                     <div className="col-lg-4 pt-0">
                                         <ALink href={{ pathname: '/shop', query: { category: 'instruments' } }} className="nolink text-white pl-0">INSTRUMENTS</ALink>
@@ -567,7 +567,7 @@ function MainMenu({ router }) {
                                                     <ALink href="/product/default/sliced-fresh-meat">
                                                         <LazyLoadImage
                                                             alt="product"
-                                                            src="images/home/products/product-16.jpg"
+                                                            src="/images/home/products/product-16.jpg"
                                                             threshold={500}
                                                             effect="black and white"
                                                             width="100%"
@@ -637,7 +637,7 @@ function MainMenu({ router }) {
                                 <div className="col-lg-4 p-0">
                                     <div className="menu-banner">
                                         <figure>
-                                            <img src="images/menu-banner.jpg" alt="Menu banner" width="300" height="300" />
+                                            <img src="/images/menu-banner.jpg" alt="Menu banner" width="300" height="300" />
                                         </figure>
                                         <div className="banner-content">
                                             <h4>
@@ -688,7 +688,7 @@ function MainMenu({ router }) {
                                 <div className="col-lg-4 p-0">
                                     <div className="menu-banner menu-banner-2">
                                         <figure>
-                                            <img src="images/menu-banner-1.jpg" alt="Menu banner" width="380" height="790"
+                                            <img src="/images/menu-banner-1.jpg" alt="Menu banner" width="380" height="790"
                                                 className="product-promo" />
                                         </figure>
                                         <i>OFF</i>

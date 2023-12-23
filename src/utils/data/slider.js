@@ -125,7 +125,7 @@ export const categorySlider = {
             items: 3
         },
         992: {
-            items: 4
+            items: 5
         }
     }
 }

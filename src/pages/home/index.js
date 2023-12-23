@@ -33,6 +33,7 @@ function Home() {
             <main className={`home bg-gray skeleton-body skel-shop-products ${loading ? '' : 'loaded'}`} >
                 <HomeSection />
 
+
                 <PopularSection products={bestSelling} />
 
                 <SpecialSection products={ topRated } />

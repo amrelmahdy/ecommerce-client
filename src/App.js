@@ -5,6 +5,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Helmet from "react-helmet";
 import Home from './pages/home'
 import Shop from './pages/shop'
+import List from './pages/shop/list'
+// import Product from './pages/product/default/[slug]';
 
 import {
   createBrowserRouter,
@@ -25,9 +27,16 @@ const router = createBrowserRouter([
     element: <Shop />,
   },
   {
-    path: "shop",
+    path: "shop/list",
+    element: <List />,
+  },
+  {
+    path: "product/:slug",
     element: <></>,
   },
+
+ 
+
   {
     path: "cotact-us",
     element: <></>,

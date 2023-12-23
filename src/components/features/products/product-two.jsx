@@ -1,19 +1,20 @@
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import React from 'react';
 import { connect } from 'react-redux';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // Import Actions
-import { actions as WishlistAction } from "../../../store/wishlist";
-import { actions as CartAction } from "../../../store/cart";
-import { actions as ModalAction } from "../../../store/modal";
+// import { actions as WishlistAction } from "../../../store/wishlist";
+// import { actions as CartAction } from "../../../store/cart";
+// import { actions as ModalAction } from "../../../store/modal";
 
 // Import Custom Component
 import ALink from '../../common/ALink';
 import ProductCountdown from '../product-countdown';
+import { useLocation } from 'react-router-dom';
 
 function ProductTwo ( props ) {
-    const router = useRouter();
+    const location = useLocation();
     const { adClass = "", link = "default", product } = props;
 
     function isSale () {
@@ -24,7 +25,7 @@ function ProductTwo ( props ) {
     }
 
     function isInWishlist () {
-        return product && props.wishlist.findIndex( item => item.slug === product.slug ) > -1;
+        //return product && props.wishlist.findIndex( item => item.slug === product.slug ) > -1;
     }
 
     function onWishlistClick ( e ) {
@@ -40,7 +41,7 @@ function ProductTwo ( props ) {
                 props.addToWishList( product );
             }, 1000 );
         } else {
-            router.push( '/pages/wishlist' );
+            //router.push( '/pages/wishlist' );
         }
     }
 
@@ -62,7 +63,7 @@ function ProductTwo ( props ) {
 
                     <LazyLoadImage
                         alt="product"
-                        src={ process.env.NEXT_PUBLIC_ASSET_URI + product.pictures[ 0 ].url }
+                        src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_5_1_807935f804.jpg"
                         threshold={ 500 }
                         effect="black and white"
                         width="100%"
@@ -71,7 +72,7 @@ function ProductTwo ( props ) {
                         product.pictures.length >= 2 ?
                             <LazyLoadImage
                                 alt="product"
-                                src={ process.env.NEXT_PUBLIC_ASSET_URI + product.pictures[ 1 ].url }
+                                src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_5_2_7781d74e60.jpg"
                                 threshold={ 500 }
                                 effect="black and white"
                                 wrapperClassName="product-image-hover"
@@ -121,6 +122,7 @@ function ProductTwo ( props ) {
                 </div>
 
                 <p className="product-description">
+                    flfkfk
                     { product.short_description }
                 </p>
 
@@ -160,4 +162,4 @@ const mapStateToProps = ( state ) => {
     }
 }
 
-export default connect( mapStateToProps, { ...WishlistAction, ...CartAction, ...ModalAction } )( ProductTwo );
+export default ProductTwo;

@@ -89,6 +89,44 @@ export default function PopularSection(props) {
                         </div>
 
                         <div className="product-category media-with-lazy bg-white text-white">
+                            <ALink href={{ pathname: '/shop', query: { category: 'cooking' } }}>
+                                <figure>
+                                    <LazyLoadImage
+                                        alt="category"
+                                        src="https://d-themes.com/react/porto/demo35/images/home/products/cats/cat-1.png"
+                                        width="100%"
+                                        height="auto"
+                                        threshold={500}
+                                        effect="black and white"
+                                    />
+                                </figure>
+                                <div className="category-content">
+                                    <h3 className="font2 ls-n-25">Seeds</h3>
+                                    <span className="font2 ls-n-20">4 Products</span>
+                                </div>
+                            </ALink>
+                        </div>
+
+                        <div className="product-category media-with-lazy bg-white text-white">
+                            <ALink href={{ pathname: '/shop', query: { category: 'cooking' } }}>
+                                <figure>
+                                    <LazyLoadImage
+                                        alt="category"
+                                        src="https://d-themes.com/react/porto/demo35/images/home/products/cats/cat-1.png"
+                                        width="100%"
+                                        height="auto"
+                                        threshold={500}
+                                        effect="black and white"
+                                    />
+                                </figure>
+                                <div className="category-content">
+                                    <h3 className="font2 ls-n-25">Seeds</h3>
+                                    <span className="font2 ls-n-20">4 Products</span>
+                                </div>
+                            </ALink>
+                        </div>
+
+                        <div className="product-category media-with-lazy bg-white text-white">
                             <ALink href={{ pathname: '/shop', query: { category: 'fruits' } }}>
                                 <figure>
                                     <LazyLoadImage

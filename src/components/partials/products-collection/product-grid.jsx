@@ -2,6 +2,8 @@
 import ProductOne from '../../features/products/product-one';
 
 export default function ProductsGrid ( props ) {
+
+    console.log("fdfdfdf", props)
     const { products = [], gridClass = "col-6 col-sm-4 col-xl-3", loading, perPage, addClass = '' } = props;
 
     return (

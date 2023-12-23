@@ -4,8 +4,8 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 
 import ALink from '../../components/common/ALink';
 import ShopSidebarOne from '../../components/partials/shop/sidebar/shop-sidebar-one';
-// import Pagination from '../../components/features/pagination';
-// import ProductsGrid from '../../components/partials/products-collection/product-grid';
+import Pagination from '../../components/features/pagination';
+import ProductsGrid from '../../components/partials/products-collection/product-grid';
 
 // import { GET_PRODUCTS } from '../../server/queries';
 // import withApollo from '../../server/apollo';
@@ -25,6 +25,7 @@ function Shop() {
     // const myParam = new URLSearchParams(location.search);
     // const query = router.query;
     // const [ getProducts, { data, loading, error } ] = useLazyQuery( GET_PRODUCTS );
+    const loading = false;
     const [perPage, setPerPage] = useState(12);
     const [sortBy, setSortBy] = useState(getPageQueryByKey('sortBy') ? getPageQueryByKey('sortBy') : 'default');
 
@@ -39,10 +40,10 @@ function Shop() {
 
 
     useEffect(() => {
-        // let offset = document.querySelector('.main-content').getBoundingClientRect().top + window.scrollY - 58;
-        // setTimeout(() => {
-        //     window.scrollTo({ top: offset, behavior: 'smooth' });
-        // }, 200);
+        let offset = document.querySelector('.main-content').getBoundingClientRect().top + window.scrollY - 58;
+        setTimeout(() => {
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }, 200);
 
         let page = getPageQueryByKey('page') ? getPageQueryByKey('page') : 1;
 
@@ -64,7 +65,7 @@ function Shop() {
 
 
     function onPerPageChange(e) {
-        //setPerPage( e.target.value );
+        setPerPage( e.target.value );
         // router.push( {
         //     pathname: router.pathname,
         //     query: {
@@ -99,6 +100,7 @@ function Shop() {
         // if ( error ) {
         //     return <div>{ error.message }</div>
     }
+
 
     return (
         <Page>
@@ -144,7 +146,8 @@ function Shop() {
 
                 <div className="container">
                     <div className="row">
-                        {/* <div className="col-lg-9 main-content">
+                        <div className="col-lg-9 main-content">
+
                             <nav className="toolbox sticky-header mobile-sticky">
                                 <div className="toolbox-left">
                                     <a href="#" className="sidebar-toggle" onClick={e => sidebarToggle(e)}>
@@ -198,19 +201,21 @@ function Shop() {
                                     </div>
 
                                     <div className="toolbox-item layout-modes">
-                                        <ALink href={{ pathname: router.pathname, query: query }} className="layout-btn btn-grid active" title="Grid">
+                                        <ALink href={{ pathname: location.pathname, query: location.search }} className="layout-btn btn-grid active" title="Grid">
                                             <i className="icon-mode-grid"></i>
                                         </ALink>
-                                        <ALink href={{ pathname: '/shop/list', query: query }} className="layout-btn btn-list" title="List">
+                                        <ALink href={{ pathname: '/shop/list', query: location.search }} style={{ marginLeft: '10px' }} className="layout-btn btn-list" title="List">
                                             <i className="icon-mode-list"></i>
                                         </ALink>
                                     </div>
                                 </div>
                             </nav>
 
-                            <ProductsGrid products={products} loading={loading} perPage={perPage} />
 
-                            {loading || (products && products.length) ?
+
+                            <ProductsGrid products={data.products.data} loading={loading} perPage={perPage} />
+
+                            {loading || (data.products && data.products.data.length) ?
                                 <nav className="toolbox toolbox-pagination">
                                     <div className="toolbox-item toolbox-show">
                                         <label>Show:</label>
@@ -227,7 +232,8 @@ function Shop() {
                                 </nav>
                                 : ''
                             }
-                        </div> */}
+
+                        </div>
 
                         <ShopSidebarOne />
                     </div>
