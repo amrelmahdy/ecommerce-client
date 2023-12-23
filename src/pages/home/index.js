@@ -42,7 +42,7 @@ function Home() {
 
                 <BlogSection blog={ blog } />
 
-                <NewsletterSection />
+                {/* <NewsletterSection /> */}
             </main>
 
             <NewsletterModal />

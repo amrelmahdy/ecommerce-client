@@ -106,7 +106,8 @@ function Header({ adClass = '', wishlist }) {
                         </button>
 
                         <ALink href="/" className="logo block">
-                            <img src="/images/logo-black.png" className="w-100" width="111" height="44" alt="Porto Logo" />
+                            {/* <img src="/images/logo-black.png" className="w-100" width="111" height="44" alt="Porto Logo" /> */}
+                            <img src="/images/logo.png" className="w-100" width="111" height="44" alt="Porto Logo" />
                         </ALink>
 
                         <SearchForm />
