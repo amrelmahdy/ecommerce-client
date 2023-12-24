@@ -18,7 +18,7 @@ export default function ProductNav ( props ) {
                                     <span className="product-popup">
                                         <span className="box-content">
                                             <img
-                                                src={ process.env.NEXT_PUBLIC_ASSET_URI + prev.small_pictures[ 0 ].url }
+                                                src={ prev.small_pictures[ 0 ].url }
                                                 alt="product"
                                                 width={ prev.small_pictures[ 0 ].width }
                                                 height={ prev.small_pictures[ 0 ].height }
@@ -40,7 +40,7 @@ export default function ProductNav ( props ) {
                                     <span className="product-popup">
                                         <span className="box-content">
                                             <img
-                                                src={ process.env.NEXT_PUBLIC_ASSET_URI + next.small_pictures[ 0 ].url }
+                                                src={  next.small_pictures[ 0 ].url }
                                                 alt="product"
                                                 width={ next.small_pictures[ 0 ].width }
                                                 height={ next.small_pictures[ 0 ].height }

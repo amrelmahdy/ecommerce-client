@@ -53,7 +53,7 @@ export default function SingleTabOne ( props ) {
                         <div className="product-size-content">
                             <div className="row">
                                 <div className="col-md-4">
-                                    <img src="images/products/single/body-shape.png" alt="body shape" />
+                                    <img src="/images/products/single/body-shape.png" alt="body shape" />
                                 </div>
 
                                 <div className="col-md-8">

@@ -6,7 +6,7 @@ import Helmet from "react-helmet";
 import Home from './pages/home'
 import Shop from './pages/shop'
 import List from './pages/shop/list'
-// import Product from './pages/product/default/[slug]';
+import Product from './pages/product/default/[slug]';
 
 import {
   createBrowserRouter,
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
   },
   {
     path: "product/:slug",
-    element: <></>,
+    element: <Product />,
   },
 
  

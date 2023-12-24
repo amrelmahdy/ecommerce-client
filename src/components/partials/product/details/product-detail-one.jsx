@@ -1,21 +1,22 @@
 import SlideToggle from 'react-slide-toggle';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import { connect } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // Import Actions
-import { actions as WishlistAction } from "../../../../store/wishlist";
-import { actions as CartAction } from "../../../../store/cart";
+// import { actions as WishlistAction } from "../../../../store/wishlist";
+// import { actions as CartAction } from "../../../../store/cart";
 
 // Import Custom Component
 import ProductNav from '../product-nav';
 import Qty from '../qty';
 import ALink from '../../../common/ALink';
 import ProductCountdown from '../../../features/product-countdown';
+import { useLocation } from 'react-router-dom';
 
 function ProductDetailOne ( props ) {
-    const router = useRouter();
+    const router = useLocation();
     const { product, adClass = "col-lg-7 col-md-6", prev, next, isNav = true, parent = ".product-single-default", isSticky = false } = props;
     const [ attrs, setAttrs ] = useState( { sizes: [], colors: [] } );
     const [ variant, setVariant ] = useState( null );
@@ -69,7 +70,7 @@ function ProductDetailOne ( props ) {
     }, [ variant ] )
 
     function isInWishlist () {
-        return product && props.wishlist.findIndex( item => item.slug === product.slug ) > -1;
+        //return product && props.wishlist.findIndex( item => item.slug === product.slug ) > -1;
     }
 
     function onWishlistClick ( e ) {
@@ -419,4 +420,4 @@ const mapStateToProps = ( state ) => {
     }
 }
 
-export default connect( mapStateToProps, { ...WishlistAction, ...CartAction } )( ProductDetailOne );
+export default ProductDetailOne;

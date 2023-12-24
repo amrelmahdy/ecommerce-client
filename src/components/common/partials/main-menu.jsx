@@ -375,10 +375,10 @@ function MainMenu({ router }) {
                         </div>
                     </li> */}
                     <li className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
-                        <ALink href="/pages/blog">Shop</ALink>
+                        <ALink href="/shop">Shop</ALink>
                     </li>
                     <li className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
-                        <ALink href="/pages/blog">Products</ALink>
+                        <ALink href="/product/integrali-tusilli">Products</ALink>
                     </li>
                     <li className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
                         <ALink href="/pages/blog">Help & FAQs</ALink>
