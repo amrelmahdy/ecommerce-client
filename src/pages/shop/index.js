@@ -1,19 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-// import { useLazyQuery } from '@apollo/react-hooks';
-
 import ALink from '../../components/common/ALink';
 import ShopSidebarOne from '../../components/partials/shop/sidebar/shop-sidebar-one';
 import Pagination from '../../components/features/pagination';
 import ProductsGrid from '../../components/partials/products-collection/product-grid';
-
-// import { GET_PRODUCTS } from '../../server/queries';
-// import withApollo from '../../server/apollo';
-import data from './../../data/shop.json'
-import Layout from '../../components/layout';
 import Page from '../../components/page';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../../store/shop/shop.actions';
+import { getAllProducts } from '../../store/shop/shop.selectors';
 
 function Shop() {
+    const dispatch = useDispatch();
+    const { data: products, categoryFamily, loading } = useSelector(getAllProducts);
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
     const searchQuery = searchParams.get('search')
@@ -25,14 +23,17 @@ function Shop() {
     // const myParam = new URLSearchParams(location.search);
     // const query = router.query;
     // const [ getProducts, { data, loading, error } ] = useLazyQuery( GET_PRODUCTS );
-    const loading = false;
     const [perPage, setPerPage] = useState(12);
     const [sortBy, setSortBy] = useState(getPageQueryByKey('sortBy') ? getPageQueryByKey('sortBy') : 'default');
 
-    const products = data && data.products;
 
-    const totalPage = data ? parseInt(data.products.total / perPage) + (data.products.total % perPage ? 1 : 0) : 1;
+    const totalPage = products ? parseInt(products.length / perPage) + (products.length % perPage ? 1 : 0) : 1;
 
+
+
+    useEffect(() => {
+        dispatch(fetchProducts())
+    }, [])
 
     const getProducts = () => {
         return []
@@ -65,7 +66,7 @@ function Shop() {
 
 
     function onPerPageChange(e) {
-        setPerPage( e.target.value );
+        setPerPage(e.target.value);
         // router.push( {
         //     pathname: router.pathname,
         //     query: {
@@ -114,7 +115,7 @@ function Shop() {
                                     <>
                                         <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>shop</ALink></li>
                                         {
-                                            data && data.products.categoryFamily.map((item, index) => (
+                                            categoryFamily.map((item, index) => (
                                                 <li className="breadcrumb-item" key={`category-family-${index}`}><ALink href={{ query: { category: item.slug } }} scroll={false}>{item.name}</ALink></li>
                                             ))
                                         }
@@ -213,9 +214,9 @@ function Shop() {
 
 
 
-                            <ProductsGrid products={data.products.data} loading={loading} perPage={perPage} />
+                            <ProductsGrid products={products} loading={loading} perPage={perPage} />
 
-                            {loading || (data.products && data.products.data.length) ?
+                            {loading || (products && products.length) ?
                                 <nav className="toolbox toolbox-pagination">
                                     <div className="toolbox-item toolbox-show">
                                         <label>Show:</label>

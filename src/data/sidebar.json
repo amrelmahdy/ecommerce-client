@@ -5,36 +5,31 @@
                 "name": "Breakfast",
                 "slug": "breakfast",
                 "parent": null,
-                "count": 8,
-                "__typename": "ProductCategoryResponse"
+                "count": 8
             },
             {
                 "name": "Cooking",
                 "slug": "cooking",
                 "parent": null,
-                "count": 4,
-                "__typename": "ProductCategoryResponse"
+                "count": 4
             },
             {
                 "name": "Frozen",
                 "slug": "frozen-2",
                 "parent": null,
-                "count": 4,
-                "__typename": "ProductCategoryResponse"
+                "count": 4
             },
             {
                 "name": "Fruits",
                 "slug": "fruits-1",
                 "parent": null,
-                "count": 6,
-                "__typename": "ProductCategoryResponse"
+                "count": 6
             },
             {
                 "name": "Vegetables",
                 "slug": "vegetables-1",
                 "parent": null,
-                "count": 1,
-                "__typename": "ProductCategoryResponse"
+                "count": 1
             }
         ],
         "featured": [

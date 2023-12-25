@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Provider } from 'react-redux';
 import { store, persistor } from './store/index';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -7,7 +7,7 @@ import Home from './pages/home'
 import Shop from './pages/shop'
 import List from './pages/shop/list'
 import Product from './pages/product/default/[slug]';
-
+import { useTranslation, I18nextProvider } from 'react-i18next';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,6 +15,7 @@ import {
   Link,
 } from "react-router-dom";
 import "./public/sass/style.scss";
+import i18n from './i18n';
 
 
 const router = createBrowserRouter([
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
     element: <Product />,
   },
 
- 
+
 
   {
     path: "cotact-us",
@@ -79,10 +80,16 @@ const router = createBrowserRouter([
   },
 ]);
 
+
 function App() {
+
+  const { t } = useTranslation();
+
+
   return (
     <Provider store={store}>
-      <PersistGate
+      <I18nextProvider i18n={i18n}>
+        {/* <PersistGate
         persistor={persistor}
         loading={<div className="loading-overlay">
           <div className="bounce-loader">
@@ -90,7 +97,7 @@ function App() {
             <div className="bounce2"></div>
             <div className="bounce3"></div>
           </div>
-        </div>}>
+        </div>}> */}
         <Helmet>
           <meta charSet="UTF-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -101,9 +108,17 @@ function App() {
           <meta name="author" content="SW-THEMES" />
         </Helmet>
 
+        <a href='#' onClick={(e) => {
+          e.preventDefault()
+          i18n.changeLanguage("en");
+        }} >test</a>
+
+        <h2>Translation : {t('welcome')}</h2>
+
         <RouterProvider router={router} />
 
-      </PersistGate>
+        {/* </PersistGate> */}
+      </I18nextProvider>
     </Provider>
 
 

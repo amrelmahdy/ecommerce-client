@@ -9,11 +9,11 @@
                     49,
                     59
                 ],
-                "ratings": 0,
+                "ratings": 3.6,
                 "reviews": 0,
-                "is_hot": null,
-                "is_new": null,
-                "is_out_of_stock": null,
+                "is_hot": true,
+                "is_new": true,
+                "is_out_of_stock": true,
                 "until": null,
                 "stock": 50,
                 "pictures": [

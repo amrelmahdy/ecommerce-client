@@ -9,6 +9,7 @@ import ALink from "./ALink";
 import CartMenu from "./partials/cart-menu";
 import MainMenu from "./partials/main-menu";
 import SearchForm from "./partials/search-form";
+import i18n from './../../i18n';
 
 function Header({ adClass = '', wishlist }) {
     function openMobileMenu(e) {
@@ -43,12 +44,12 @@ function Header({ adClass = '', wishlist }) {
                         </div>
 
                         <div className="header-dropdown mr-4 pl-2 font2">
-                            <ALink href="#"><i className="flag-us flag"></i>ENG</ALink>
+                            <ALink href="#"><i className="flag-sa flag"></i>العربية</ALink>
                             <div className="header-menu">
                                 <ul>
-                                    <li> <ALink href="#"><i className="flag-us flag"></i>ENG</ALink>
+                                    <li> <ALink to="#" onClick={() => i18n.changeLanguage('ar')}><i className="flag-sa flag"></i>العربية</ALink>
                                     </li>
-                                    <li><ALink href="#"><i className="flag-fr flag"></i>FRA</ALink></li>
+                                    <li><ALink to="#" onClick={() => i18n.changeLanguage('en')}><i className="flag-us flag"></i>ENG</ALink></li>
                                 </ul>
                             </div>
                         </div>
@@ -136,7 +137,7 @@ function Header({ adClass = '', wishlist }) {
             </div>
 
             {/* <div className={ `header-bottom sticky-header desktop-sticky d-none d-lg-flex ${useRouter().pathname !== '/' ? 'border-bottom' : ''}` }> */}
-            <div className={ `header-bottom sticky-header desktop-sticky d-none d-lg-flex ${1==5 !== '/' ? 'border-bottom' : ''}` }>
+            <div className={`header-bottom sticky-header desktop-sticky d-none d-lg-flex ${1 == 5 !== '/' ? 'border-bottom' : ''}`}>
 
                 <div className="container">
                     <div className="header-center w-100 ml-0">

@@ -42,7 +42,7 @@ function MainMenu({ router }) {
                     <ALink href="/shop"><i className="fa fa-bars align-middle mr-3"></i>All Departments</ALink>
                     <ul className="menu menu-vertical">
                         <li>
-                            <ALink href={{ pathname: '/shop', query: { category: 'sports' } }}><i className="icon-category-fashion"></i>Plants</ALink>
+                            <ALink to={{ pathname: '/shop', search: "spcategory=plants" }}><i className="icon-category-fashion"></i>Plants</ALink>
                             <span className="menu-btn"></span>
                             <div className="megamenu megamenu-fixed-width megamenu-six text-transform-none">
                                 <div className="row">

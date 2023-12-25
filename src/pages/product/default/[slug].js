@@ -6,7 +6,6 @@ import React from 'react';
 // import withApollo from '../../../server/apollo';
 // import { GET_PRODUCT } from '../../../server/queries';
 import { useLocation, useParams, useSearchParams } from 'react-router-dom';
-
 // Import Custom Component
 import ALink from '../../../components/common/ALink';
 import ProductMediaOne from '../../../components/partials/product/media/product-media-one';
@@ -25,8 +24,6 @@ function ProductDefault() {
     const getPageQueryByKey = key => searchParams.get(key)
     const error = false;
     const loading = false;
-
-    console.log("param", data)
     if (!slug) return (
         <div className="loading-overlay">
             <div className="bounce-loader">
