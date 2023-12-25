@@ -19,48 +19,34 @@
 
 // # Variables
 
-@include set-default(
-	(
-		header: (
-			search: (
-				height: 50px,
+@include set-default((header: (search: (height: 50px,
 				background: #f4f4f4,
 				divider: 1px solid #e7e7e7,
 
-				toggle: (
-					size: false,
-					weight: false
-				),
+				toggle: (size: false,
+					weight: false),
 
-				border: (
-					radius: 5rem,
+				border: (radius: 5rem,
 					width: 3px,
 					color: #ccc,
 					inline-width: 0,
 				),
 
-				select: (
-					max-width: 13rem,
+				select: (max-width: 13rem,
 					padding-left: 1rem,
-					padding-right: 1.7rem
-				),
+					padding-right: 1.7rem),
 
-				btn: (
-					size: 16px,
+				btn: (size: 16px,
 					min-width: 45px,
 					color: $primary-color-dark,
-				)
-			)
-		)
-	)
-);
+				)))));
 
 // 1. Header Search Base
 
 .header-search {
 	position: relative;
 
-// 1.1) Form Control
+	// 1.1) Form Control
 	form {
 		margin: 0;
 	}
@@ -76,8 +62,12 @@
 	}
 
 	.form-control,
-	.select-custom  {
-		@include css( background, header, search, background );
+	.select-custom {
+		body[lang="ar"] #cat {
+			text-align: center
+		}
+
+		@include css(background, header, search, background);
 	}
 
 	@include only_for_ie() {
@@ -85,14 +75,15 @@
 			flex: 1;
 		}
 	}
+
 	.form-control::placeholder {
 		color: #a8a8a8;
 	}
 
-// 1.2) Header Search (not Category Filter)
+	// 1.2) Header Search (not Category Filter)
 	&:not(.header-search-category) {
 		.form-control {
-			@include css( border-radius, header, search, border, radius);
+			@include css(border-radius, header, search, border, radius);
 		}
 
 		.btn {
@@ -108,6 +99,19 @@
 	}
 }
 
+body[lang="ar"] .header-search {
+	.select-custom {
+		#cat {
+			text-align: center
+		}
+	}
+}
+
+body[lang="ar"] .header-search {
+	direction: rtl;
+}
+
+
 // Pointer
 .search-toggle:after {
 	content: '';
@@ -115,7 +119,7 @@
 	right: calc(50% - 10px);
 	bottom: -10px;
 	border: 10px solid transparent;
-	@include css( border-bottom-color, header, search, border, color );
+	@include css(border-bottom-color, header, search, border, color);
 
 	.header-search:not(.show) & {
 		display: none;
@@ -124,21 +128,23 @@
 
 // Search Toggle
 .search-toggle i:before {
-	@include css( font-size, header, search, toggle, size );
-	@include css( font-weight, header, search, toggle, weight );
+	@include css(font-size, header, search, toggle, size);
+	@include css(font-weight, header, search, toggle, weight);
 }
 
 .header-search-category {
 	.form-control {
-		$temp: get( header, search, border, radius ); 
-		@if ( $temp ) {
+		$temp: get(header, search, border, radius);
+
+		@if ($temp ) {
 			border-radius: $temp 0 0 $temp;
 		}
 	}
 
 	.btn {
-		$temp: get( header, search, border, radius ); 
-		@if ( $temp ) {
+		$temp: get(header, search, border, radius);
+
+		@if ($temp ) {
 			border-radius: 0 $temp $temp 0;
 		}
 	}
@@ -154,10 +160,10 @@
 	margin-top: 10px;
 	color: #8d8d8d;
 	box-sizing: content-box;
-	@include css( height, header, search, height );
+	@include css(height, header, search, height);
 	@include clearfix;
-	border-radius: get( header, search, border, radius );
-	border: get( header, search, border, width ) solid get( header, search, border, color );
+	border-radius: get(header, search, border, radius);
+	border: get(header, search, border, width) solid get(header, search, border, color);
 
 	.header-search:not(.show) & {
 		display: none;
@@ -166,10 +172,11 @@
 	// 1.6) Select Box
 	.select-custom {
 		margin: 0;
-		
-		@include css( width, header, search, select, max-width );
-		@if get( header, search, select, max-width ) {
-			flex: 0 0 get( header, search, select, max-width );
+
+		@include css(width, header, search, select, max-width);
+
+		@if get(header, search, select, max-width) {
+			flex: 0 0 get(header, search, select, max-width);
 		}
 
 		&:after {
@@ -182,9 +189,9 @@
 
 	select {
 		width: 100%;
-		@include css( border-left, header, search, divider);
-		@include css( padding-left, header, search, select, padding-left );
-		@include css( padding-right, header, search, select, padding-right );
+		@include css(border-left, header, search, divider);
+		@include css(padding-left, header, search, select, padding-left);
+		@include css(padding-right, header, search, select, padding-right);
 		line-height: 36px;
 		letter-spacing: .005em;
 		color: inherit;
@@ -200,17 +207,17 @@
 		position: relative;
 		padding: 0 0 3px 0;
 		border: 0;
-		@include css( border-left, header, search, divider );
-		@include css( min-width, header, search, btn, min-width );
-		@include css( color, header, search, btn, color );
-		@include css( font-size, header, search, btn, size );
-		@include css( background, header, search, background );
+		@include css(border-left, header, search, divider);
+		@include css(min-width, header, search, btn, min-width);
+		@include css(color, header, search, btn, color);
+		@include css(font-size, header, search, btn, size);
+		@include css(background, header, search, background);
 
 		&:before {
 			display: inline-block;
 			margin-top: 5px;
 			font-weight: 800;
-		} 
+		}
 	}
 }
 
@@ -218,12 +225,12 @@
 .live-search-list {
 	display: none;
 	left: 21px;
-    right: 46px;
+	right: 46px;
 	width: auto;
 	position: absolute;
 	top: 100%;
 	min-width: 200px;
-    z-index: 1024;
+	z-index: 1024;
 
 	.header-search-popup & {
 		top: 114%;
@@ -240,12 +247,12 @@
 
 .header-search.show-results .live-search-list {
 	display: block;
-    max-height: 350px;
-    overflow-y: auto;
+	max-height: 350px;
+	overflow-y: auto;
 }
 
 .autocomplete-suggestions {
-	box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);
+	box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
 	color: #8d8d8d;
 	background-color: #f4f4f4;
 	border-color: #fff;
@@ -261,7 +268,7 @@
 
 	&::-webkit-scrollbar-thumb {
 		border-radius: 0;
-		background: rgba(204,204,204,0.5)
+		background: rgba(204, 204, 204, 0.5)
 	}
 }
 
@@ -275,7 +282,7 @@
 	min-height: 0;
 	text-align: left;
 	cursor: pointer;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	white-space: normal;
 
 	.search-price {
@@ -294,15 +301,15 @@
 			padding-top: 40px !important;
 		}
 	}
-	
-	img + .search-name {
+
+	img+.search-name {
 		padding-left: 0.5em;
 		font-size: 1.4rem;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	
+
 	.search-name {
 		-webkit-flex: 1;
 		-ms-flex: 1;
@@ -322,6 +329,7 @@
 // 2. Header Search Popup
 
 .header-search-popup {
+
 	// 2.2) Form Control
 	.form-control {
 		min-width: 266px;
@@ -347,6 +355,7 @@
 
 	// 3.3) For Desktop
 	@include mq(lg) {
+
 		.search-toggle,
 		.btn:after {
 			display: none;
@@ -357,7 +366,7 @@
 			display: -ms-flex;
 			position: static;
 			margin: 0;
-			@include css( border-width, header, search, border, inline-width );
+			@include css(border-width, header, search, border, inline-width);
 		}
 	}
 }

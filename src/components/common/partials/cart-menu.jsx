@@ -7,11 +7,12 @@ import React, { useEffect } from 'react';
 
 // Import Custom Component
 import ALink from '../ALink';
-
+import { useTranslation } from 'react-i18next';
 // Import Utils
 import { getCartTotal } from '../../../utils';
 
 function CartMenu ( props ) {
+    const {t} = useTranslation()
     const cartItems = [];
     // const router = useRouter();
 
@@ -119,7 +120,7 @@ function CartMenu ( props ) {
                 </div>
             </div >
 
-            <span className="cart-subtotal font2 d-none d-sm-inline">Shopping Cart<span className="cart-price d-block font2">${ getCartTotal( cartItems ).toFixed( 2 ) }</span></span>
+            <span className="cart-subtotal font2 d-none d-sm-inline">{t("main_menu_cart")}<span className="cart-price d-block font2">${ getCartTotal( cartItems ).toFixed( 2 ) }</span></span>
         </div>
     );
 }

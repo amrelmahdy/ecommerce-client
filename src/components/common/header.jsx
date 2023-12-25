@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 // import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next' 
 
 // Import Actions
 // import { actions as WishlistAction } from "../../store/wishlist";
@@ -12,6 +13,8 @@ import SearchForm from "./partials/search-form";
 import i18n from './../../i18n';
 
 function Header({ adClass = '', wishlist }) {
+    const { t } = useTranslation();
+
     function openMobileMenu(e) {
         e.preventDefault();
         document.querySelector("body").classList.toggle("mmenu-active");
@@ -27,13 +30,13 @@ function Header({ adClass = '', wishlist }) {
                             <i className="icon-shipping text-primary"></i>
 
                             <div className="info-box-content0">
-                                <h4 className="mb-0">FREE Express Shipping On Orders $99+</h4>
+                                <h4 className="mb-0">{t("header_info-box_text")}</h4>
                             </div>
                         </div>
                     </div>
 
                     <div className="header-right header-dropdowns">
-                        <div className="header-dropdown font2">
+                        {/* <div className="header-dropdown font2">
                             <ALink href="#">USD</ALink>
                             <div className="header-menu">
                                 <ul>
@@ -41,15 +44,15 @@ function Header({ adClass = '', wishlist }) {
                                     <li><ALink href="#">USD</ALink></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="header-dropdown mr-4 pl-2 font2">
-                            <ALink href="#"><i className="flag-sa flag"></i>العربية</ALink>
+                            <ALink href="#"><i className={i18n.language === "ar" ?"flag-sa flag" : "flag-us flag"}></i>{ i18n.language === "ar" ? "العربية" : "ENGLISH" }</ALink>
                             <div className="header-menu">
                                 <ul>
                                     <li> <ALink to="#" onClick={() => i18n.changeLanguage('ar')}><i className="flag-sa flag"></i>العربية</ALink>
                                     </li>
-                                    <li><ALink to="#" onClick={() => i18n.changeLanguage('en')}><i className="flag-us flag"></i>ENG</ALink></li>
+                                    <li><ALink to="#" onClick={() => i18n.changeLanguage('en')}><i className="flag-us flag"></i>ENGLISH</ALink></li>
                                 </ul>
                             </div>
                         </div>
@@ -63,25 +66,25 @@ function Header({ adClass = '', wishlist }) {
                                     <li>
                                         <ALink href="#">
                                             <i className="icon-pin"></i>
-                                            Our Stores
+                                           {t("header_our_stores")}
                                         </ALink>
                                     </li>
                                     <li>
                                         <ALink href="#">
                                             <i className="icon-shipping-truck"></i>
-                                            Track Your Order
+                                            {t("header_track_order")}
                                         </ALink>
                                     </li>
                                     <li>
                                         <ALink href="#">
                                             <i className="icon-help-circle"></i>
-                                            Help
+                                            {t("header_help")}
                                         </ALink>
                                     </li>
                                     <li>
                                         <ALink href="/pages/wishlist">
                                             <i className="icon-wishlist-2"></i>
-                                            Wishlist
+                                           {t("header_wishlist")}
                                         </ALink>
                                     </li>
                                 </ul>
@@ -126,8 +129,8 @@ function Header({ adClass = '', wishlist }) {
                             </ALink>
 
                             <h6 className="font1 d-none d-xl-block mb-0">
-                                <span className="d-block text-body">Welcome</span>
-                                <ALink href="/pages/login" className="font-weight-bold">Sign In / Register</ALink>
+                                <span className="d-block text-body">{t("welcome")}</span>
+                                <ALink href="/pages/login" className="font-weight-bold">{t("signin_login")}</ALink>
                             </h6>
                         </div>
 
@@ -145,11 +148,11 @@ function Header({ adClass = '', wishlist }) {
 
                         <div className="info-boxes font2 align-items-center ml-auto">
                             <div className="info-item">
-                                <ALink href="#"><i className="icon-percent-shape"></i>Special Offers</ALink>
+                                <ALink href="#"><i className="icon-percent-shape"></i>{t("main_menu_special_offers")}</ALink>
                             </div>
-                            <div className="info-item">
+                            {/* <div className="info-item">
                                 <ALink href="#"><i className="icon-business-book"></i>Recipes</ALink>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

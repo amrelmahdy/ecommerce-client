@@ -5,12 +5,13 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // Import Custom Component
 import ALink from '../ALink';
-
+import { useTranslation } from 'react-i18next'
 // Import Apollo Server and Query
 // import { GET_PRODUCTS } from '../../../server/queries';
 // import withApollo from '../../../server/apollo';
 
 function SearchForm ( props ) {
+    const { t } = useTranslation()
     // const router = useRouter();
     const [ cat, setCat ] = useState( "" );
     const [ search, setSearch ] = useState( "" );
@@ -110,11 +111,11 @@ function SearchForm ( props ) {
 
             <form action="#" method="get" onSubmit={ ( e ) => onSubmitSearchForm( e ) }>
                 <div className="header-search-wrapper">
-                    <input type="search" className="form-control" name="q" id={ `${ props.type === 1 ? 'q' : 'qqq' }` } placeholder="Search..." value={ search }
+                    <input type="search" className="form-control" name="q" id={ `${ props.type === 1 ? 'q' : 'qqq' }` } placeholder={t("header_search_form_placehoder")} value={ search }
                         required onChange={ ( e ) => onSearchChange( e ) } />
                     <div className="select-custom">
                         <select id={ `${ props.type === 1 ? 'cat1' : 'cat' }` } name="cat" value={ cat } onChange={ ( e ) => onCatSelect( e ) }>
-                            <option value="">All Categories</option>
+                            <option value="">{t("header_search_form_dropdown_default")}</option>
                             <option value="fashion">Fashion</option>
                             <option value="women">- Women</option>
                             <option value="men">- Men</option>

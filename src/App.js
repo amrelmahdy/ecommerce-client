@@ -83,7 +83,7 @@ const router = createBrowserRouter([
 
 function App() {
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
 
   return (
@@ -98,23 +98,20 @@ function App() {
             <div className="bounce3"></div>
           </div>
         </div>}> */}
-        <Helmet>
+        <Helmet htmlAttributes={{ lang : i18n.language }} bodyAttributes={{ lang : i18n.language }}>
           <meta charSet="UTF-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <title>Shaheen Seeds</title>
           <meta name="keywords" content="React Template" />
           <meta name="description" content="Porto - React eCommerce Template" />
           <meta name="author" content="SW-THEMES" />
+          <link rel="stylesheet" type="text/css" href="/vendor/mm.css" />
+          {i18n.language === 'ar' && <link rel="stylesheet" type="text/css" href="/vendor/mm.css" />}
         </Helmet>
-
-        <a href='#' onClick={(e) => {
-          e.preventDefault()
-          i18n.changeLanguage("en");
-        }} >test</a>
-
-        <h2>Translation : {t('welcome')}</h2>
-
+        
         <RouterProvider router={router} />
 
         {/* </PersistGate> */}

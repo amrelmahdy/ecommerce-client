@@ -98,6 +98,11 @@
 			transform: none;
 		}
 	}
+	
+}
+
+body[lang="ar"] .header-middle{
+	direction: rtl;
 }
 
 .header-middle.sticky-header.fixed {
@@ -189,6 +194,12 @@
 	}
 }
 
+body[lang="ar"] .cart-subtotal {
+	.cart-price {
+		text-align: right;
+	}
+}
+
 .cart-dropdown a:hover,
 .cart-dropdown a:focus {
 	color: $primary-color;
@@ -196,7 +207,10 @@
 
 .cart-dropdown-wrapper {
 	margin-bottom: 2px;
-	;
+}
+
+body[lang="ar"] .cart-dropdown-wrapper {
+	direction: rtl;
 }
 
 .cart-dropdown {
@@ -222,6 +236,7 @@
 		margin: 0 .1em;
 	}
 
+
 	h6 {
 		margin-top: 2px;
 		font-weight: 600;
@@ -242,6 +257,14 @@
 		color: $primary-color-dark;
 	}
 }
+
+body[lang="ar"] .header-user {
+	direction: rtl;
+	h6 {
+		text-align: right;
+	}
+}
+
 
 // 1.2.6) Header Search and Category Box
 .header-search-category {
@@ -270,6 +293,16 @@
 		&:before {
 			margin-top: 2px;
 		}
+	}
+}
+
+body[lang="ar"] .header-search-category {
+
+	input::placeholder{
+		font-family: $arabic-font-family;
+	}
+	select {
+		font-family: $arabic-font-family;
 	}
 }
 
@@ -811,8 +844,22 @@
 		.logo {
 			margin-right: 11.52rem;
 		}
+		
 	}
 }
+
+@include mq(lg) {
+	body[lang="ar"] .header {
+		
+		.logo {
+			margin-left: 11.52rem;
+			margin-right: 0;
+		}
+
+		
+	}
+}
+
 
 @include mq(1460px, max) {
 	.header-bottom .info-boxes {

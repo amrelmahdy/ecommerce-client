@@ -45,7 +45,7 @@ function Home() {
                 {/* <NewsletterSection /> */}
             </main>
 
-            <NewsletterModal />
+            {/* <NewsletterModal /> */}
         </Page>
     )
 }

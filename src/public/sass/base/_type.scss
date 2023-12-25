@@ -15,12 +15,18 @@
 // 1. Typography
 
 // 1.1) Headings
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
 	margin-bottom: 1.8rem;
 	color: $headings-text;
 	font-weight: 700;
@@ -28,33 +34,54 @@ h6, .h6 {
 	font-family: $second-font-family;
 }
 
-h1, .h1 {
+body[lang="ar"] h1,
+body[lang="ar"] .h1,
+body[lang="ar"] h2,
+body[lang="ar"] .h2,
+body[lang="ar"] h3,
+body[lang="ar"] .h3,
+body[lang="ar"] h4,
+body[lang="ar"] .h4,
+body[lang="ar"] h5,
+body[lang="ar"] .h5,
+body[lang="ar"] h6,
+body[lang="ar"].h6 {
+	font-family: $arabic-font-family;
+}
+
+h1,
+.h1 {
 	font-size: 3.6rem;
 	font-weight: 400;
 	line-height: 1.223;
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	font-size: 3rem;
 	line-height: 1.5;
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: 2.5rem;
 	line-height: 1.28;
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	font-size: 2rem;
 	line-height: 1.35;
 }
 
-h5, .h5 {
+h5,
+.h5 {
 	font-size: 1.4rem;
 	line-height: 1.429;
 }
 
-h6, .h6 {
+h6,
+.h6 {
 	font-size: 1.3rem;
 	line-height: 1.385;
 	font-weight: 600;
@@ -185,33 +212,50 @@ a:focus {
 .font1 {
 	font-family: $font-family !important;
 }
+
 .font2 {
 	font-family: $second-font-family !important;
 }
 
 .font3 {
-    font-family: 'Segoe Script','Savoye LET' !important;
+	font-family: 'Segoe Script', 'Savoye LET' !important;
 }
 
 .font4 {
-    font-family: $third-font-family !important;
+	font-family: $third-font-family !important;
 }
 
-.title-decorate::before, 
+body[lang="ar"] .font1 {
+	font-family: $arabic-font-family !important;
+}
+
+body[lang="ar"] .font2 {
+	font-family: $arabic-font-family !important;
+}
+
+body[lang="ar"] .font3 {
+	font-family: $arabic-font-family !important;
+}
+
+body[lang="ar"] .font4 {
+	font-family: $arabic-font-family !important;
+}
+
+.title-decorate::before,
 .title-decorate::after {
-    content: '';
-    top: 50%;
-    height: 1px;
-    background-color: rgba(0,0,0,0.08);
-    flex: 1;
+	content: '';
+	top: 50%;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.08);
+	flex: 1;
 }
 
 .title-decorate::before {
-    margin-right: 2rem;
+	margin-right: 2rem;
 }
 
 .title-decorate::after {
-    margin-left: 2rem;
+	margin-left: 2rem;
 }
 
 .box-shadow-none {
@@ -279,11 +323,14 @@ a:focus {
 // 3. Responsive
 
 @include mq(md) {
-	h1, .h1 {
+
+	h1,
+	.h1 {
 		font-size: 4.5rem;
 	}
 
-	h2, .h2 {
+	h2,
+	.h2 {
 		font-size: 2.5rem;
 	}
 
@@ -293,11 +340,14 @@ a:focus {
 }
 
 @include mq(lg) {
-	h1, .h1 {
+
+	h1,
+	.h1 {
 		font-size: 5rem;
 	}
 
-	h2, .h2 {
+	h2,
+	.h2 {
 		font-size: 3rem;
 	}
 
@@ -309,5 +359,5 @@ a:focus {
 		flex: 1;
 		-ms-flex: 1;
 		max-width: 100%;
-	}	
+	}
 }
