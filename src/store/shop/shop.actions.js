@@ -13,6 +13,7 @@ const getProductsService = () => {
 export const fetchProducts = createAsyncThunk('shop/fetchProducts', async () => {
     try {
         const res = await getProductsService();
+        console.log("res", res)
         return res.products
     } catch (error) {
         return error.message

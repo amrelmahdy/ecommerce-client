@@ -15,7 +15,8 @@ import OwlCarousel from '../../../features/owl-carousel';
 import ProductThree from '../../../features/products/product-three';
 import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 import data from './../../../../data/sidebar.json'
-
+import categoriesData from './../../../../data/categories.json'
+import { useTranslation } from 'react-i18next'
 // Import Utils
 import { widgetFeaturedProductSlider } from '../../../../utils/data/slider';
 import { shopBrands, shopSizes } from '../../../../utils/data/shop';
@@ -30,6 +31,7 @@ const TreeNode = (props) => {
 }
 
 function ShopSidebarOne(props) {
+    const {i18n, t}  = useTranslation()
     const { display, adClass = '' } = props;
     const location = useLocation();
     const navigate = useNavigate()
@@ -45,14 +47,14 @@ function ShopSidebarOne(props) {
     console.log("data.shopSidebarData.categories", location.search)
 
     const categories = useMemo(() => {
-        let cats = data ? data.shopSidebarData.categories : [];
+        let cats = categoriesData ? categoriesData.categories : [];
         let stack = [],
             result = [];
         result = cats.reduce((acc, cur) => {
             if (!cur.parent) {
                 let newNode = {
                     key: cur.slug,
-                    title: <TreeNode name={cur.name} count={cur.count} />,
+                    title: <TreeNode name={i18n.language ==='ar' ? cur.ar_name : cur.en_name} count={cur.count} />,
                     children: []
                 };
                 acc.push(newNode);
@@ -85,7 +87,7 @@ function ShopSidebarOne(props) {
         }
 
         return result;
-    }, [data]);
+    }, [data, i18n.language]);
 
     useEffect(() => {
         return () => {
@@ -147,7 +149,7 @@ function ShopSidebarOne(props) {
             <aside className={`sidebar-shop col-lg-3  mobile-sidebar skeleton-body skel-shop-products ${adClass}  ${!loading ? 'loaded' : ''} ${display === 'none' ? 'd-lg-none' : ''} ${props.right ? '' : 'order-lg-first'}`}>
                 <StickyBox className="sidebar-wrapper" offsetTop={70}>
 
-                    <div className="widget overflow-hidden">
+                    {/* <div className="widget overflow-hidden">
 
                         {
                             loading ?
@@ -162,7 +164,7 @@ function ShopSidebarOne(props) {
                                                 <a className={toggleState === 'COLLAPSED' ? 'collapsed' : ''} href="#" role="button" onClick={(e) => {
                                                     e.preventDefault()
                                                     onToggle()
-                                                }}>Filter by Price</a>
+                                                }}>{t("shop_sidebar_price")}</a>
                                             </h3>
 
                                             <div ref={setCollapsibleElement}>
@@ -192,7 +194,7 @@ function ShopSidebarOne(props) {
                                     )}
                                 </SlideToggle>
                         }
-                    </div>
+                    </div> */}
 
                     <div className="widget">
                         {
@@ -206,7 +208,7 @@ function ShopSidebarOne(props) {
                                                 <a href="#" onClick={(e) => {
                                                     e.preventDefault()
                                                     onToggle()
-                                                }} className={toggleState === 'COLLAPSED' ? 'collapsed' : ''}>Product Categories</a>
+                                                }} className={toggleState === 'COLLAPSED' ? 'collapsed' : ''}>{t("shop_sidebar_categories")}</a>
                                             </h3>
                                             <div className="overflow-hidden" ref={setCollapsibleElement}>
                                                 <div className="widget-body">
@@ -233,13 +235,13 @@ function ShopSidebarOne(props) {
                         }
                     </div>
 
-                    {
+                    {/* {
                         (getPageQueryByKey("category") || getPageQueryByKey("sizes") || getPageQueryByKey("brands") || getPageQueryByKey("min_price") || getPageQueryByKey("max_price")) && <div className="widget">
                             <ALink href={{ query: { grid: getPageQueryByKey("grid") } }} scroll={false} className="btn btn-primary reset-filter">Reset All Filters</ALink>
                         </div>
-                    }
+                    } */}
 
-
+{/* 
                     <div className="widget widget-brand">
                         {
                             loading ?
@@ -252,7 +254,7 @@ function ShopSidebarOne(props) {
                                                 <a className={toggleState === 'COLLAPSED' ? 'collapsed' : ''} href="#" onClick={(e) => {
                                                     e.preventDefault()
                                                     onToggle()
-                                                }}>Brand</a>
+                                                }}>{t("shop_sidebar_brands")}</a>
                                             </h3>
                                             <div className="overflow-hidden" ref={setCollapsibleElement}>
                                                 <div className="widget-body">
@@ -263,7 +265,7 @@ function ShopSidebarOne(props) {
                                                                     onClick={(e) => {
                                                                         e.preventDefault()
                                                                         setSearchParams((prevParams) => {
-                                                                            console.log("Object.fromEntries(prevParams.entries())", Object.fromEntries(prevParams.entries()))
+                                                                            //console.log("Object.fromEntries(prevParams.entries())", Object.fromEntries(prevParams.entries()))
 
                                                                             return new URLSearchParams({
                                                                                 ...Object.fromEntries(prevParams.entries()),
@@ -275,7 +277,11 @@ function ShopSidebarOne(props) {
                                                                     ///href={{ query: { ...query, page: 1, brands: getUrlForAttrs('brands', item.category) } }}
                                                                     //to={location.pathname + `?brands=${getUrlForAttrs('brands', item.category)}`}
                                                                     scroll={false}
-                                                                >{item.name}</ALink>
+                                                                >
+                                                                    {
+                                                                        i18n.language === 'ar' ? item.ar_name : item.en_name
+                                                                    }
+                                                                </ALink>
                                                             </li>))
                                                         }
                                                     </ul>
@@ -285,9 +291,9 @@ function ShopSidebarOne(props) {
                                     )}
                                 </SlideToggle>
                         }
-                    </div>
+                    </div> */}
 
-                    <div className="widget widget-size">
+                    {/* <div className="widget widget-size">
                         {
                             loading ?
                                 <div className="skel-widget"></div>
@@ -332,10 +338,10 @@ function ShopSidebarOne(props) {
                                     )}
                                 </SlideToggle>
                         }
-                    </div>
+                    </div> */}
 
                     <div className="widget widget-featured pb-0">
-                        <h3 className="widget-title">Featured Products</h3>
+                        <h3 className="widget-title">{t("featured_products")}</h3>
 
                         <div className="widget-body">
                             <OwlCarousel adClass="widget-featured-products" isTheme={false} options={widgetFeaturedProductSlider}>

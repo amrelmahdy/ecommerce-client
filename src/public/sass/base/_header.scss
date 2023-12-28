@@ -175,9 +175,10 @@ header {
 }
 
 
-// body[lang="ar"] .header-center{
-// 	direction: rtl;
-// }
+body[lang="ar"] .header-center{
+	direction: rtl;
+	justify-content: space-between;
+}
 
 .header-left,
 .header-center,
@@ -288,7 +289,7 @@ header {
 
 	a {
 		display: block;
-		font-size: 1.8rem;
+		font-size: 2rem;
 		font-weight: 700;
 		white-space: nowrap;
 	}

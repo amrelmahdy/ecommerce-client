@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 // import { useRouter } from 'next/router';
-import { useTranslation } from 'react-i18next' 
+import { useTranslation } from 'react-i18next'
 
 // Import Actions
 // import { actions as WishlistAction } from "../../store/wishlist";
@@ -11,9 +11,11 @@ import CartMenu from "./partials/cart-menu";
 import MainMenu from "./partials/main-menu";
 import SearchForm from "./partials/search-form";
 import i18n from './../../i18n';
+import { useNavigate } from 'react-router-dom';
 
 function Header({ adClass = '', wishlist }) {
     const { t } = useTranslation();
+    const navigate = useNavigate()
 
     function openMobileMenu(e) {
         e.preventDefault();
@@ -47,12 +49,20 @@ function Header({ adClass = '', wishlist }) {
                         </div> */}
 
                         <div className="header-dropdown mr-4 pl-2 font2">
-                            <ALink href="#"><i className={i18n.language === "ar" ?"flag-sa flag" : "flag-us flag"}></i>{ i18n.language === "ar" ? "العربية" : "ENGLISH" }</ALink>
+                            <ALink href="#"><i className={i18n.language === "ar" ? "flag-sa flag" : "flag-us flag"}></i>{i18n.language === "ar" ? "العربية" : "ENGLISH"}</ALink>
                             <div className="header-menu">
                                 <ul>
-                                    <li> <ALink to="#" onClick={() => i18n.changeLanguage('ar')}><i className="flag-sa flag"></i>العربية</ALink>
+                                    <li> <ALink to="#" onClick={async () => {
+                                        //navigate(0);
+                                        i18n.changeLanguage('ar')
+
+                                    }}><i className="flag-sa flag"></i>العربية</ALink>
                                     </li>
-                                    <li><ALink to="#" onClick={() => i18n.changeLanguage('en')}><i className="flag-us flag"></i>ENGLISH</ALink></li>
+                                    <li><ALink to="#" onClick={async () => {
+                                        //navigate(0);
+                                        i18n.changeLanguage('en');
+
+                                    }}><i className="flag-us flag"></i>ENGLISH</ALink></li>
                                 </ul>
                             </div>
                         </div>
@@ -66,7 +76,7 @@ function Header({ adClass = '', wishlist }) {
                                     <li>
                                         <ALink href="#">
                                             <i className="icon-pin"></i>
-                                           {t("header_our_stores")}
+                                            {t("header_our_stores")}
                                         </ALink>
                                     </li>
                                     <li>
@@ -84,7 +94,7 @@ function Header({ adClass = '', wishlist }) {
                                     <li>
                                         <ALink href="/pages/wishlist">
                                             <i className="icon-wishlist-2"></i>
-                                           {t("header_wishlist")}
+                                            {t("header_wishlist")}
                                         </ALink>
                                     </li>
                                 </ul>

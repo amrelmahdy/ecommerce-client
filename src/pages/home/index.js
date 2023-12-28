@@ -14,9 +14,10 @@ import PopularSection from "../../components/partials/home/popular-section";
 import SpecialSection from "../../components/partials/home/special-section";
 import NewsletterSection from "../../components/partials/home/newsletter-section";
 import data from '../../data/data.json'
+import InfoBoxesSection from "../../components/partials/home/info-boxes-section";
 
 function Home() {
-   
+
     // const { data, loading, error } = useQuery( GET_HOME_DATA, { variables: { productsCount: 15, postsCount: 6 } } );
     const bestSelling = data && data.specialProducts.bestSelling;
     const topRated = data && data.specialProducts.topRated;
@@ -36,11 +37,12 @@ function Home() {
 
                 <PopularSection products={bestSelling} />
 
-                <SpecialSection products={ topRated } />
+                <SpecialSection products={topRated} />
 
-                <BrandSection />
+                {/* <BrandSection /> */}
 
-                <BlogSection blog={ blog } />
+                <InfoBoxesSection />
+                {/* <BlogSection blog={ blog } /> */}
 
                 {/* <NewsletterSection /> */}
             </main>

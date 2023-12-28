@@ -121,6 +121,7 @@
 	}
 
 	&:hover {
+
 		.owl-prev,
 		.owl-next {
 			transform: translateX(0);
@@ -176,8 +177,16 @@ figure {
 	}
 }
 
+
+body[lang="ar"] .product-default {
+	.product-title {
+		font-family: $second-arabic-font-family;
+	}
+
+}
+
 .product-default {
-	color: #777;
+	color: #333;
 	margin-bottom: 2rem;
 	transition: box-shadow .3s ease-in-out;
 
@@ -193,14 +202,14 @@ figure {
 		}
 	}
 
-// 1.2) Image
-	
-	
+	// 1.2) Image
+
+
 	figure {
 		margin-bottom: 1.6rem;
 	}
 
-// 1.3) Label
+	// 1.3) Label
 	.label-group {
 		position: absolute;
 		top: .8rem;
@@ -215,7 +224,7 @@ figure {
 		padding: 5px 11px;
 		color: #fff;
 		font-weight: 600;
-		font-size: 10px;
+		font-size: 13px;
 		line-height: 1;
 		border-radius: 12px;
 
@@ -248,7 +257,7 @@ figure {
 		}
 	}
 
-// 1.4) Details
+	// 1.4) Details
 	.product-details {
 		display: flex;
 		display: -ms-flexbox;
@@ -261,26 +270,26 @@ figure {
 		-ms-flex-pack: center;
 	}
 
-// 1.5) Category List
+	// 1.5) Category List
 	.category-wrap {
 		width: 100%;
 		white-space: nowrap;
 	}
-	
+
 	.category-list {
 		text-align: center;
-		font-weight: 400;
-		font-size: 1rem;
+		font-weight: 600;
+		font-size: 1.5rem;
 		font-family: $font-family;
 		line-height: 1.7;
 		opacity: .8;
-		text-transform: uppercase;
+		//text-transform: uppercase;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
 	}
 
-// 1.6) Title
+	// 1.6) Title
 	.product-title {
 		max-width: 100%;
 		font-weight: 400;
@@ -288,7 +297,7 @@ figure {
 		font-family: $second-font-family;
 		line-height: 1.35;
 		letter-spacing: .005em;
-	    margin-bottom: .4rem;
+		margin-bottom: .4rem;
 		text-overflow: ellipsis;
 		overflow: hidden;
 	}
@@ -300,16 +309,16 @@ figure {
 			width: calc(100% - 20px);
 			margin-bottom: 0.5rem;
 		}
-		
+
 		.btn-icon-wish {
 			margin-top: -2px;
 		}
 	}
 
-// 1.7) Tooltip Text
+	// 1.7) Tooltip Text
 
 
-// 1.8) Actions - Wishlist, Quickview, AddCart
+	// 1.8) Actions - Wishlist, Quickview, AddCart
 	.product-action {
 		position: relative;
 		margin-bottom: 1.5rem;
@@ -319,7 +328,7 @@ figure {
 
 	.btn-add-cart,
 	.btn-icon-wish,
-	.btn-quickview  {
+	.btn-quickview {
 		border: 1px solid #f4f4f4;
 		background: #f4f4f4;
 		color: #6f6e6b;
@@ -353,12 +362,13 @@ figure {
 	}
 
 	&.product-list {
+
 		.btn-icon-wish,
 		.btn-quickview {
 			margin-right: 2px;
 			margin-left: 2px;
 		}
-		
+
 		.category-list {
 			text-align: left;
 		}
@@ -411,10 +421,10 @@ figure {
 		}
 	}
 
-// 1.9) Hover Effect
+	// 1.9) Hover Effect
 	&:hover {
 		z-index: 1;
-		box-shadow: 0 12px 20px 0 rgba(0,0,0,.08);
+		box-shadow: 0 12px 20px 0 rgba(0, 0, 0, .08);
 		transition: box-shadow .3s ease-in-out;
 
 		figure {
@@ -444,7 +454,7 @@ figure {
 		.product-action {
 			a {
 				opacity: 1;
-				
+
 				&.btn-icon-wish {
 					left: -42px;
 				}
@@ -476,26 +486,26 @@ figure {
 	text-decoration: line-through;
 	font-size: 1.4rem;
 	letter-spacing: .005em;
-	color: #999;
-    margin-right: .8rem;
+	color: #565959;
+	margin-right: .8rem;
 }
 
 .product-price {
 	color: $primary-color-dark;
 	font-size: 1.8rem;
-	line-height: .8;
+	line-height: 0;
 }
 
 .price-box {
-    margin-bottom: 1.4rem;
+	margin-bottom: 1.4rem;
 	font-weight: 600;
 	font-family: $font-family;
-	line-height: 1;
+	line-height: 0;
 }
 
 // 2.3) Ratings
 .ratings-container {
-	line-height: 1;
+	line-height: 0;
 	margin: 0 0 12px 1px;
 	cursor: pointer;
 	position: relative;
@@ -516,7 +526,7 @@ figure {
 
 		&:before {
 			content: "";
-			color: rgba(0, 0, 0, 0.16);
+			color: rgb(234 230 230);
 		}
 
 		&:hover {
@@ -536,7 +546,7 @@ figure {
 
 		&:before {
 			content: "";
-			color: #6a6a6d;
+			color: $secondary-color;
 		}
 	}
 }
@@ -613,15 +623,15 @@ figure {
 .product-nav-thumbs a,
 .product-nav-thumbs span {
 	margin-right: .6rem;
-    width: 32px;
-    height: 32px;
-    text-indent: -9999px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: transparent !important;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: transparent !important;
 	border: 1px solid #e9e9e9;
 	transition: border-color .35s;
-	
+
 	&:hover {
 		border-color: #1d70ba;
 	}
@@ -631,15 +641,15 @@ figure {
 	padding-top: 2px;
 }
 
-.product-nav-dots  a, 
+.product-nav-dots a,
 .product-nav-dots span {
-    display: block;
+	display: block;
 	width: 1.6rem;
-    height: 1.6rem;
-    border-radius: 50%;
-    border: .2rem solid #fff;
-    margin-right: .6rem;
-    transition: box-shadow .35s ease;
+	height: 1.6rem;
+	border-radius: 50%;
+	border: .2rem solid #fff;
+	margin-right: .6rem;
+	transition: box-shadow .35s ease;
 	box-shadow: 0 0 0 0.1rem $primary-color-dark;
 }
 
@@ -679,10 +689,11 @@ figure {
 
 	.btn.btn-down-icon:hover,
 	.btn.btn-up-icon:hover {
-			&:before,
-			&:after {
-				background-color: $primary-color;
-			}
+
+		&:before,
+		&:after {
+			background-color: $primary-color;
+		}
 	}
 
 	.btn.btn-outline {
@@ -708,7 +719,9 @@ figure {
 	}
 
 	.horizontal-quantity {
-		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
 			-webkit-appearance: none;
 		}
 	}
@@ -729,7 +742,7 @@ figure {
 			width: 2.8rem;
 			height: 2.8rem;
 			margin: 3px 6px 3px 0;
-			box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+			box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
 		}
 
 		.color-panel {
@@ -748,7 +761,7 @@ figure {
 		&:hover span:last-child {
 			color: $primary-color;
 		}
-	
+
 		&.active a:before {
 			display: inline-block;
 			position: absolute;
@@ -762,10 +775,10 @@ figure {
 			content: '\e84e';
 		}
 	}
-	
+
 	a:hover .color-panel,
 	a:focus .color-panel,
- 	li.active .color-panel {
+	li.active .color-panel {
 		box-shadow: 0 0 0 .1rem #dfdfdf;
 	}
 }
@@ -777,11 +790,11 @@ figure {
 	left: calc((100% - 320px) / 2);
 	padding: 10px !important;
 	overflow: hidden;
-  
+
 	.modal-dialog {
 		margin: 0;
 	}
-  
+
 	.modal-content {
 		margin: 0;
 		border: none;
@@ -794,31 +807,31 @@ figure {
 	border-top: 4px solid $primary-color;
 	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  
+
 	h4 {
 		font-weight: 500;
 		color: $primary-color;
 		margin-bottom: 1.8rem;
 	}
-  
+
 	img {
 		margin: 0 auto 10px;
 		width: 120px;
 	}
-  
+
 	.btn-actions {
 		display: flex;
 		display: -ms-flexbox;
 		justify-content: space-around;
 		-ms-flex-pack: distribute;
-  
+
 		.btn-primary {
 			width: 140px;
 			padding: 8px 0;
 			font: 500 16px $font-family;
 			border: none;
 			cursor: pointer;
-	
+
 			&:focus,
 			&:active,
 			&:active:focus {
@@ -935,7 +948,8 @@ figure {
 		-ms-flex-align: start;
 	}
 
-	.category-wrap, .title-wrap {
+	.category-wrap,
+	.title-wrap {
 		display: flex;
 		display: -ms-flexbox;
 		justify-content: space-between;
@@ -943,7 +957,7 @@ figure {
 		align-items: center;
 		-ms-flex-align: center;
 		width: 100%;
-	
+
 		.btn-icon-wish {
 			transform: none;
 			opacity: 1;
@@ -977,19 +991,19 @@ figure {
 .inner-icon {
 	position: relative;
 	margin-bottom: 1.9rem;
-	
+
 	&:not(.product-widget) {
 		.product-details {
 			padding: 0;
 		}
 	}
-	
+
 	.category-list {
 		text-align: left;
 		text-overflow: ellipsis;
 		overflow: hidden;
-        width: calc( 100% - 20px );
-        text-align: left;
+		width: calc(100% - 20px);
+		text-align: left;
 	}
 
 	.product-title {
@@ -1010,7 +1024,7 @@ figure {
 		z-index: 2;
 	}
 
-	.btn-icon-wish, 
+	.btn-icon-wish,
 	.btn-quickview {
 		top: auto;
 	}
@@ -1027,13 +1041,14 @@ figure {
 			padding-top: 1.2rem;
 			padding-bottom: 1.3rem;
 			transition: padding-top .2s, padding-bottom .2s, opacity .2s;
-		}		
+		}
 	}
 
-	.btn-add-cart, 
-	.btn-icon-wish, 
+	.btn-add-cart,
+	.btn-icon-wish,
 	.btn-quickview {
-		background-color: transparent;;
+		background-color: transparent;
+		;
 	}
 
 	figure {
@@ -1265,8 +1280,8 @@ figure {
 
 // 3.6) Product Type - Inner Icon Inline
 .inner-icon-inline {
-	figure{
-	 .btn-icon-group {
+	figure {
+		.btn-icon-group {
 			display: flex;
 			flex-direction: row;
 		}
@@ -1284,13 +1299,13 @@ figure {
 
 		>a:first-child {
 			&:after {
-				content:'';
+				content: '';
 				position: absolute;
 				width: 100%;
 				height: 100%;
 				left: 0;
 				top: 0;
-				background-color: rgba(27,27,23,0);
+				background-color: rgba(27, 27, 23, 0);
 				transition: all .25s;
 			}
 		}
@@ -1346,7 +1361,7 @@ figure {
 
 			>a:first-child {
 				&:after {
-					background-color: rgba(27,27,23,0.6);
+					background-color: rgba(27, 27, 23, 0.6);
 				}
 			}
 
@@ -1384,13 +1399,13 @@ figure {
 		>a:first-child {
 
 			&:after {
-				content:'';
+				content: '';
 				position: absolute;
 				width: 100%;
 				height: 100%;
 				left: 0;
 				top: 0;
-				background-color: rgba(27,27,23,0.3);
+				background-color: rgba(27, 27, 23, 0.3);
 				transition: all .25s;
 			}
 		}
@@ -1459,7 +1474,7 @@ figure {
 
 			>a:first-child {
 				&:after {
-					background-color: rgba(27,27,23,0.7);
+					background-color: rgba(27, 27, 23, 0.7);
 				}
 			}
 
@@ -1491,11 +1506,12 @@ figure {
 
 // 3.9) Product Type - Creative Grid
 .creative-grid {
-	>div:not(:last-child) .product-default{
+	>div:not(:last-child) .product-default {
 		height: 600px;
 	}
+
 	>div:last-child {
-		.product-default{
+		.product-default {
 			height: 300px;
 		}
 	}
@@ -1518,6 +1534,7 @@ figure {
 			img:last-child {
 				opacity: 0;
 			}
+
 			img:first-child {
 				opacity: 1;
 			}
@@ -1528,6 +1545,7 @@ figure {
 				&:first-child {
 					opacity: 0;
 				}
+
 				&:last-child {
 					opacity: 1;
 				}
@@ -1593,7 +1611,7 @@ figure {
 	}
 
 	.product-action {
-		margin-bottom: 0	;
+		margin-bottom: 0;
 	}
 
 	&:hover {
@@ -1638,12 +1656,12 @@ figure {
 	}
 
 	.ratings-container {
-		margin: 0 0 10px 0px;	
+		margin: 0 0 10px 0px;
 	}
 
 	.product-description {
 		display: -webkit-box;
-		margin-bottom: 1.6rem;	
+		margin-bottom: 1.6rem;
 		max-width: 100%; // only for IE
 		font-weight: 400;
 		font-size: 1.4rem;
@@ -1767,7 +1785,8 @@ figure {
 		font-size: 1.2rem;
 	}
 
-	&:hover ,&:hover figure {
+	&:hover,
+	&:hover figure {
 		box-shadow: none;
 	}
 }
@@ -1791,7 +1810,7 @@ figure {
 		display: flex;
 		flex-wrap: nowrap;
 		overflow: hidden;
-		
+
 		.product-item {
 			flex: 0 0 100%;
 			max-width: 100%;
@@ -1839,14 +1858,15 @@ figure {
 
 // 4.3) Show Shadow Effect In Products Slider
 .carousel-with-shadow,
-.products-slider > .owl-stage-outer {
+.products-slider>.owl-stage-outer {
 	margin: -10px -15px;
 	padding: 10px 15px;
 }
 
 @include mq(1280px, max) {
+
 	.carousel-with-shadow,
-	.products-slider > .owl-stage-outer {
+	.products-slider>.owl-stage-outer {
 		margin: -10px -15px;
 		padding: 10px 15px;
 	}
@@ -1858,17 +1878,17 @@ figure {
 }
 
 .sm-padding .product-details {
-    padding-left: 5px;
+	padding-left: 5px;
 	padding-right: 5px;
-	
+
 	.product-action {
 		display: none;
 	}
 }
 
-.row-sm > [class*=col-] {
-    padding-left: 6px;
-    padding-right: 6px;
+.row-sm>[class*=col-] {
+	padding-left: 6px;
+	padding-right: 6px;
 }
 
 // 5.Responsive
@@ -1877,6 +1897,7 @@ figure {
 		.owl-prev {
 			left: 10px;
 		}
+
 		.owl-next {
 			right: 10px;
 		}
@@ -1888,6 +1909,7 @@ figure {
 		.owl-prev {
 			left: -30px;
 		}
+
 		.owl-next {
 			right: -30px;
 		}
@@ -1899,6 +1921,7 @@ figure {
 		.owl-prev {
 			left: 10px;
 		}
+
 		.owl-next {
 			right: 10px;
 		}
@@ -1935,7 +1958,7 @@ figure {
 		}
 	}
 
-		.product-quick-view {
+	.product-quick-view {
 		.product-single-details {
 			position: absolute;
 			left: auto;
@@ -1946,22 +1969,23 @@ figure {
 				height: 10px;
 				width: 3px;
 			}
-			
+
 			&::-webkit-scrollbar-thumb {
 				background: #ebebeb;
 				border-radius: 10px;
 				position: absolute;
-			} 
-			
+			}
+
 			&::-webkit-scrollbar-track {
 				background: #fff;
 				border-radius: 10px;
 				margin: 8px;
-				width : 100%;
+				width: 100%;
 			}
 		}
 	}
 }
+
 @include mq(lg) {
 	@for $i from 1 through 11 {
 		.divide-line>.col-lg-#{$i} {
@@ -1976,6 +2000,7 @@ figure {
 		}
 	}
 }
+
 @include mq(xl) {
 	@for $i from 1 through 11 {
 		.divide-line>.col-xl-#{$i} {
@@ -2054,7 +2079,7 @@ figure {
 		}
 
 		.product-action {
-			> a {
+			>a {
 				padding: 0;
 				width: 34px;
 				height: 34px;

@@ -12,59 +12,60 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import ALink from '../../common/ALink';
 import ProductCountdown from '../product-countdown';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-function ProductTwo ( props ) {
+function ProductTwo(props) {
     const location = useLocation();
+    const { t, i18n } = useTranslation()
     const { adClass = "", link = "default", product } = props;
 
-    function isSale () {
-        return product.price[ 0 ] !== product.price[ 1 ] && product.variants.length === 0 ?
-            '-' + ( 100 * ( product.price[ 1 ] - product.price[ 0 ] ) / product.price[ 1 ] ).toFixed( 0 ) + '%'
-            :
-            product.variants.find( variant => variant.sale_price ) ? "Sale" : false;
+    function isSale() {
+        return product.price[0] !== product.price[1] ?
+            '-' + (100 * (product.price[1] - product.price[0]) / product.price[1]).toFixed(0) + '%'
+            : false;
     }
 
-    function isInWishlist () {
+    function isInWishlist() {
         //return product && props.wishlist.findIndex( item => item.slug === product.slug ) > -1;
     }
 
-    function onWishlistClick ( e ) {
+    function onWishlistClick(e) {
         e.preventDefault();
-        if ( !isInWishlist() ) {
+        if (!isInWishlist()) {
             let target = e.currentTarget;
-            target.classList.add( "load-more-overlay" );
-            target.classList.add( "loading" );
+            target.classList.add("load-more-overlay");
+            target.classList.add("loading");
 
-            setTimeout( () => {
-                target.classList.remove( 'load-more-overlay' );
-                target.classList.remove( 'loading' );
-                props.addToWishList( product );
-            }, 1000 );
+            setTimeout(() => {
+                target.classList.remove('load-more-overlay');
+                target.classList.remove('loading');
+                props.addToWishList(product);
+            }, 1000);
         } else {
             //router.push( '/pages/wishlist' );
         }
     }
 
-    function onAddCartClick ( e ) {
+    function onAddCartClick(e) {
         e.preventDefault();
-        props.addToCart( product );
+        props.addToCart(product);
     }
 
-    function onQuickViewClick ( e ) {
+    function onQuickViewClick(e) {
         e.preventDefault();
-        props.showQuickView( product.slug );
+        props.showQuickView(product.slug);
     }
 
     return (
-        <div className={ `product-default media-with-lazy left-details mb-2 product-list ${ adClass }` }>
+        <div className={`product-default media-with-lazy left-details mb-2 product-list ${adClass}`}>
             <figure>
-                <ALink href={ `/product/${ link }/${ product.slug }` }>
+                <ALink href={`/product/${link}/${product.slug}`}>
                     <div className="lazy-overlay"></div>
 
                     <LazyLoadImage
                         alt="product"
                         src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_5_1_807935f804.jpg"
-                        threshold={ 500 }
+                        threshold={500}
                         effect="black and white"
                         width="100%"
                     />
@@ -73,7 +74,7 @@ function ProductTwo ( props ) {
                             <LazyLoadImage
                                 alt="product"
                                 src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_5_2_7781d74e60.jpg"
-                                threshold={ 500 }
+                                threshold={500}
                                 effect="black and white"
                                 wrapperClassName="product-image-hover"
                             />
@@ -82,9 +83,9 @@ function ProductTwo ( props ) {
                 </ALink>
 
                 <div className="label-group">
-                    { product.is_hot ? <div className="product-label label-hot">HOT</div> : '' }
+                    {product.is_hot ? <div className="product-label label-hot">HOT</div> : ''}
 
-                    { isSale() ? <div className="product-label label-sale">{ isSale() }</div> : '' }
+                    {isSale() ? <div className="product-label label-sale">{isSale()}</div> : ''}
                 </div>
 
                 {
@@ -98,65 +99,64 @@ function ProductTwo ( props ) {
                     <div className="category-list">
                         {
                             product.categories ?
-                                product.categories.map( ( item, index ) => (
-                                    <React.Fragment key={ item.slug + '-' + index }>
-                                        <ALink href={ { pathname: '/shop', query: { category: item.slug } } }>
-                                            { item.name }
+                                product.categories.map((item, index) => (
+                                    <React.Fragment key={item.slug + '-' + index}>
+                                        <ALink href={{ pathname: '/shop', query: { category: item.slug } }}>
+                                            {i18n.language === 'ar' ? item.ar_name : item.en_name} 
                                         </ALink>
-                                        { index < product.categories.length - 1 ? ', ' : "" }
+                                        {index < product.categories.length - 1 ? ', ' : ""}
                                     </React.Fragment>
-                                ) ) : ""
+                                )) : ""
                         }
                     </div>
                 </div>
 
                 <h3 className="product-title">
-                    <ALink href={ `/product/default/${ product.slug }` }>{ product.name }</ALink>
+                    <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
                 </h3>
 
                 <div className="ratings-container">
                     <div className="product-ratings">
-                        <span className="ratings" style={ { width: 20 * product.ratings + '%' } }></span>
-                        <span className="tooltiptext tooltip-top">{ product.ratings.toFixed( 2 ) }</span>
+                        <span className="ratings" style={{ width: 20 * product.ratings + '%' }}></span>
+                        <span className="tooltiptext tooltip-top">{product.ratings.toFixed(2)}</span>
                     </div>
                 </div>
 
                 <p className="product-description">
-                    flfkfk
-                    { product.short_description }
+                    {product.short_description}
                 </p>
 
                 <div className="price-box">
                     {
-                        product.price[ 0 ] == product.price[ 1 ] ?
-                            <span className="product-price">{ '$' + product.price[ 0 ].toFixed( 2 ) }</span>
-                            : product.variants.length > 0 ?
-                                <span className="product-price">{ '$' + product.price[ 0 ].toFixed( 2 ) } &ndash; { '$' + product.price[ 1 ].toFixed( 2 ) }</span>
-                                : <>
-                                    <span className="old-price">{ '$' + product.price[ 1 ].toFixed( 2 ) }</span>
-                                    <span className="product-price">{ '$' + product.price[ 0 ].toFixed( 2 ) }</span>
-                                </>
+                        product.price[0] == product.price[1] ?
+                            <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
+                            : <>
+                                <span className="old-price">{'$' + product.price[1].toFixed(2)}</span>
+                                <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
+                            </>
                     }
                 </div>
 
                 <div className="product-action">
                     {
-                        product.variants.length > 0 ?
-                            <ALink href={ `/product/default/${ product.slug }` } className="btn-icon btn-add-cart"><i
-                                className="fa fa-arrow-right"></i><span>SELECT OPTIONS</span></ALink>
-                            : <a href="#" className="btn-icon btn-add-cart product-type-simple" title="Add To Cart" onClick={ onAddCartClick }><i
+                        <>
+                            {/* <ALink href={`/product/default/${product.slug}`} className="btn-icon btn-add-cart"><i
+                                className="fa fa-arrow-right"></i><span>SELECT OPTIONS</span></ALink> */}
+                            <a href="#" className="btn-icon btn-add-cart product-type-simple" title="Add To Cart" onClick={onAddCartClick}><i
                                 className="icon-shopping-cart"></i><span>ADD TO CART</span></a>
+
+                        </>
                     }
-                    <a href="#" className={ `btn-icon-wish ${ isInWishlist() ? 'added-wishlist' : '' }` } onClick={ onWishlistClick } title={ `${ isInWishlist() === true ? 'Go to Wishlist' : 'Add to Wishlist' }` }><i className="icon-heart"></i></a>
-                    <a href="#" className="btn-quickview" title="Quick View" onClick={ onQuickViewClick }><i
-                        className="fas fa-external-link-alt"></i></a>
+                    <a href="#" className={`btn-icon-wish ${isInWishlist() ? 'added-wishlist' : ''}`} onClick={onWishlistClick} title={`${isInWishlist() === true ? 'Go to Wishlist' : 'Add to Wishlist'}`}><i className="icon-heart"></i></a>
+                    {/* <a href="#" className="btn-quickview" title="Quick View" onClick={onQuickViewClick}><i
+                        className="fas fa-external-link-alt"></i></a> */}
                 </div>
             </div>
         </div>
     )
 }
 
-const mapStateToProps = ( state ) => {
+const mapStateToProps = (state) => {
     return {
         wishlist: state.wishlist.list ? state.wishlist.list : []
     }

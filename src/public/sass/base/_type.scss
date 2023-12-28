@@ -34,20 +34,6 @@ h6,
 	font-family: $second-font-family;
 }
 
-body[lang="ar"] h1,
-body[lang="ar"] .h1,
-body[lang="ar"] h2,
-body[lang="ar"] .h2,
-body[lang="ar"] h3,
-body[lang="ar"] .h3,
-body[lang="ar"] h4,
-body[lang="ar"] .h4,
-body[lang="ar"] h5,
-body[lang="ar"] .h5,
-body[lang="ar"] h6,
-body[lang="ar"].h6 {
-	font-family: $arabic-font-family;
-}
 
 h1,
 .h1 {
@@ -230,7 +216,7 @@ body[lang="ar"] .font1 {
 }
 
 body[lang="ar"] .font2 {
-	font-family: $arabic-font-family !important;
+	font-family: $second-arabic-font-family !important;
 }
 
 body[lang="ar"] .font3 {

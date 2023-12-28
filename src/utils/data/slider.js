@@ -1,4 +1,5 @@
 export const productSingleSlider = {
+    rtl:true,
     margin: 0,
     nav: true,
     loop: false,
@@ -15,6 +16,7 @@ export const prodThumbSlider = {
 }
 
 export const productExtendSlider = {
+    rtl:true,
     loop: true,
     margin: 0,
     nav: true,
@@ -125,12 +127,13 @@ export const categorySlider = {
             items: 3
         },
         992: {
-            items: 5
+            items: 8
         }
     }
 }
 
 export const widgetFeaturedProductSlider = {
+    rtl: true,
     margin: 20,
     loop: false,
     nav: true,

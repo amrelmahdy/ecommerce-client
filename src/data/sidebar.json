@@ -35,7 +35,8 @@
         "featured": [
             {
                 "slug": "trafilati-al-bronzo",
-                "name": "Trafilati al Bronzo",
+                "ar_name": "خليط بذور الحديقة",
+                "en_name": "Garden Seed Mix",
                 "price": [
                     49,
                     59
@@ -66,7 +67,8 @@
             },
             {
                 "slug": "equibeim",
-                "name": "Equibeim",
+                "ar_name": "خليط بذور الحديقة",
+                "en_name": "Garden Seed Mix",
                 "price": [
                     190,
                     200
@@ -97,7 +99,8 @@
             },
             {
                 "slug": "azeite-de-oliva-extra-virgem",
-                "name": "Azeite De Oliva Extra Virgem",
+                "ar_name": "خليط بذور الحديقة",
+                "en_name": "Garden Seed Mix",
                 "price": [
                     200,
                     230

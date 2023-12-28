@@ -116,10 +116,10 @@ $secondary-color: #d4a44f;
 				top: (
 					cut-start-end: false,
 
-					color: #444,
+					color: #000,
 					active-color: $primary-color,
 
-					font-size: 14px,
+					font-size: 17px,
 					font-weight: 400,
 					letter-spacing: -.35px,
 					padding: 2.2rem 3.9rem 2.2rem 2.6rem,
@@ -135,7 +135,7 @@ $secondary-color: #d4a44f;
 
 		info-box: (
 			title: (
-				size: 1.5rem,
+				size: 1.7rem,
 				weight: 600
 			)
 		),
@@ -152,7 +152,6 @@ $secondary-color: #d4a44f;
 		category: (
 			sidebar: (
 				border: false,
-
 				title: (
 					family: $font-family
 				)
@@ -174,7 +173,7 @@ $secondary-color: #d4a44f;
             widget: (
                 title: (
 					color: $primary-color-dark,
-					size: 1.5rem,
+					size: 2rem,
 					weight: 700,
 					margin: 0 0 1.5rem
                 )

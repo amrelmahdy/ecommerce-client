@@ -42,27 +42,33 @@ export const shopSizes = [
 
 export const shopBrands = [
     {
-        name: "Adidas",
+        en_name: "Burpee",
+        ar_name: "بيربي",
         category: "adidas"
     },
     {
-        name: "Climb The Mountain",
+        en_name: "Hoss Tools",
+        ar_name: "هوس توولز",
         category: "flimb-the-mountain"
     },
     {
-        name: "David Smith",
+        en_name: "True Leaf",
+        ar_name: "ترو ليف",
         category: "david-smith"
     },
     {
-        name: "Golden Grid",
+        en_name: "Territorial",
+        ar_name: "تيريتوريال",
         category: "golden-grid"
     },
     {
-        name: "Porto",
+        en_name: "Vectoy Seeds",
+        ar_name: "فيكتوري سيدز",
         category: "porto"
     },
     {
-        name: "Ron Jones",
+        en_name: "Fedco Seeds",
+        ar_name: "فيدكو سيدز",
         category: "ron-jones"
     }
 ]

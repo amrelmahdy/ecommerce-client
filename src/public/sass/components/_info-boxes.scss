@@ -87,6 +87,11 @@
     margin-top: 1px;
 }
 
+
+body[lang="ar"] .info-box-icon-left i{
+	margin-left: 15px;
+}
+
 .info-box-icon-left {
 	display: flex;
 	display: -ms-flexbox;

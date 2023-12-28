@@ -24,7 +24,7 @@ export default function SingleTabFive ( props ) {
                                 <ALink href="#" className="nav-link">Description</ALink>
                             </Tab>
                             <Tab className="nav-item">
-                                <ALink href="#" className="nav-link">Size Guide</ALink>
+                                <ALink href="#" className="nav-link">fffffffffff</ALink>
                             </Tab>
                             <Tab className="nav-item">
                                 <ALink href="#" className="nav-link">Reviews ({ product.reviews })</ALink>

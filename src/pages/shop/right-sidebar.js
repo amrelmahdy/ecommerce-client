@@ -81,8 +81,8 @@ function ShopRightSidebar () {
     }
 
     return (
-        <main className="main">
-            <div className="container">
+        <main className="main ">
+            <div className="container rtl">
                 <nav aria-label="breadcrumb" className="breadcrumb-nav">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item"><ALink href="/"><i className="icon-home"></i></ALink></li>

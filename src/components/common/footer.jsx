@@ -1,8 +1,21 @@
 import React from 'react';
 
 import ALink from "./ALink";
+import { useTranslation } from 'react-i18next';
+
+// "link_shipping_and_delivery": "Shipping & Delivery",
+// "link_login": "Login",
+// "link_our_stores": "Our Stores",
+// "link_about_us": "About Us",
+// "link_help_and_faq": "Help & FAQs",
+// "link_advanced_search": "Advanced Search"
+// ,
+// "link_payment_methods": "Payment methods",
+// "link_vat_registration_certificate": "VAT registration certificate",
+// "link_privacy_plicy": "Privacy plicy"
 
 function Footer () {
+    const {t}  = useTranslation()
     return (
         <footer className="footer font2 footer-reveal">
             <div className="container">
@@ -10,49 +23,44 @@ function Footer () {
                     <div className="row">
                         <div className="col-lg-3">
                             <div className="widget mb-3">
-                                <h4 className="widget-title">Customer Service</h4>
+                                <h4 className="widget-title">{t("footer_title1")}</h4>
 
                                 <ul className="links">
-                                    <li><ALink href="#">Help &amp; FAQs</ALink></li>
-                                    <li><ALink href="#">Order Tracking</ALink></li>
-                                    <li><ALink href="#">Shipping &amp; Delivery</ALink></li>
-                                    <li><ALink href="#">Orders History</ALink></li>
-                                    <li><ALink href="#">Advanced Search</ALink></li>
-                                    <li><ALink href="/pages/login">Login</ALink></li>
+                                    <li><ALink href="#">{t("link_help_and_faq")}</ALink></li>
+                                    <li><ALink href="#">{t("link_order_tracking")}</ALink></li>
+                                    <li><ALink href="#">{t("link_shipping_and_delivery")}</ALink></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="col-lg-3">
                             <div className="widget mb-3">
-                                <h4 className="widget-title">About Us</h4>
+                            <h4 className="widget-title">{t("footer_title2")}</h4>
 
                                 <ul className="links">
-                                    <li><ALink href="/pages/about-us">About Us</ALink></li>
-                                    <li><ALink href="#">Careers</ALink></li>
-                                    <li><ALink href="#">Our Stores</ALink></li>
-                                    <li><ALink href="#">Corporate Sales</ALink></li>
-                                    <li><ALink href="#">Careers</ALink></li>
+                                    <li><ALink href="/pages/about-us">{t("link_about_us")}</ALink></li>
+                                    <li><ALink href="#">{t("link_our_stores")}</ALink></li>
+                                    <li><ALink href="#">{t("link_our_stores")}</ALink></li>
+                                    <li><ALink href="#">{t("link_return_policy")}</ALink></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="col-lg-3">
                             <div className="widget mb-3">
-                                <h4 className="widget-title">More Information</h4>
+                            <h4 className="widget-title">{t("footer_title3")}</h4>
 
                                 <ul className="links">
-                                    <li><ALink href="#">Affiliates</ALink></li>
-                                    <li><ALink href="#">Refer a Friend</ALink></li>
-                                    <li><ALink href="#">Student Beans Offers</ALink></li>
-                                    <li><ALink href="#">Gift Vouchers</ALink></li>
+                                    <li><ALink href="#">{t("link_payment_methods")}</ALink></li>
+                                    <li><ALink href="#">{t("link_vat_registration_certificate")}</ALink></li>
+                                    <li><ALink href="#">{t("link_advanced_search")}</ALink></li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="col-lg-3">
                             <div className="widget mb-3">
-                                <h4 className="widget-title">Social Media</h4>
+                            <h4 className="widget-title">{t("footer_title4")}</h4>
 
                                 <div className="social-icons">
                                     <ALink href="#" className="social-icon social-instagram icon-instagram"></ALink>
@@ -62,7 +70,7 @@ function Footer () {
                             </div>
 
                             <div className="widget mb-3">
-                                <h4 className="widget-title">Payment Methods</h4>
+                                <h4 className="widget-title">{t("footer_title5")}</h4>
 
                                 <img src="/images/home/payment.png" alt="payment" width="240" height="32" />
                             </div>

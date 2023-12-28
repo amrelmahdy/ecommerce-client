@@ -61,6 +61,7 @@ function BrandSection () {
                     </div>
                 </Reveal>
             </div>
+            
         </div >
     );
 }

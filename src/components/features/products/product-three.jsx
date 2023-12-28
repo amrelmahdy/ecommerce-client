@@ -3,10 +3,11 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // Import Custom Component
 import ALink from '../../common/ALink';
+import {useTranslation} from 'react-i18next'
 
 export default function ProductThree ( props ) {
     const { adClass = "", link = "default", product } = props;
-
+    const {t, i18n}  =useTranslation()
     return (
         <div className={ `product-default media-with-lazy left-details product-widget ${ adClass }` }>
             <figure>
@@ -36,7 +37,7 @@ export default function ProductThree ( props ) {
 
             <div className="product-details">
                 <h3 className="product-title">
-                    <ALink href={ `/product/default/${ product.slug }` }>{ product.name }</ALink>
+                    <ALink href={ `/product/default/${ product.slug }` }>{ i18n.language === 'ar' ? product.ar_name :product.en_name }</ALink>
                 </h3>
 
                 <div className="ratings-container">

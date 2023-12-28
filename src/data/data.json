@@ -2,7 +2,8 @@
 	"specialProducts": {
 		"featured": [
 			{
-				"name": "Trafilati al Bronzo",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "trafilati-al-bronzo",
 				"price": [
 					49,
@@ -56,24 +57,10 @@
 					}
 				],
 				"categories": [
-					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beverages",
-						"slug": "beverages-4",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beauty & Personal Care",
-						"slug": "beauty-and-personal-care-3",
+						{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -136,12 +123,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -205,12 +188,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -274,8 +253,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -338,7 +318,8 @@
 				],
 				"categories": [
 					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -404,7 +385,8 @@
 				],
 				"categories": [
 					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -468,8 +450,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -532,8 +515,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -596,8 +580,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -660,8 +645,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -724,23 +710,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Meat & Seafood",
-						"slug": "meat-and-seafood",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -803,28 +775,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits & Vegetables",
-						"slug": "fruits-and-vegetables",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Vegetables",
-						"slug": "vegetables-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -886,24 +839,10 @@
 					}
 				],
 				"categories": [
-					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beverages",
-						"slug": "beverages-4",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beauty & Personal Care",
-						"slug": "beauty-and-personal-care-3",
+						{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -911,7 +850,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Pineapple Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "pineapple-fruit",
 				"price": [
 					43,
@@ -966,8 +906,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -975,7 +916,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Banana Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "banana-fruit",
 				"price": [
 					25,
@@ -1030,8 +972,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1039,7 +982,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Equibeim",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "equibeim",
 				"price": [
 					190,
@@ -1094,12 +1038,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -1108,7 +1048,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Azeite De Oliva Extra Virgem",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "azeite-de-oliva-extra-virgem",
 				"price": [
 					200,
@@ -1163,12 +1104,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -1177,7 +1114,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Artesano Bread",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "artesano-bread",
 				"price": [
 					18,
@@ -1232,18 +1170,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Party Supplies & Crafts",
-						"slug": "party-supplies-and-crafts-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1251,7 +1180,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Sliced Fresh Meat",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "sliced-fresh-meat",
 				"price": [
 					27,
@@ -1306,13 +1236,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Meat & Seafood",
-						"slug": "meat-and-seafood",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1320,7 +1246,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Melon Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "melon-fruit",
 				"price": [
 					19,
@@ -1375,18 +1302,9 @@
 				],
 				"categories": [
 					{
-						"name": "Vegetables",
-						"slug": "vegetables-1",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits & Vegetables",
-						"slug": "fruits-and-vegetables",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1396,7 +1314,8 @@
 		],
 		"topRated": [
 			{
-				"name": "Clasio White Wine - Spain",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "clasio-white-wine-spain",
 				"price": [
 					223,
@@ -1407,7 +1326,7 @@
 				"is_hot": true,
 				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
+				"until": "2022-01-06T20:00:00.000Z",
 				"stock": 50,
 				"pictures": [
 					{
@@ -1451,7 +1370,8 @@
 				],
 				"categories": [
 					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -1460,7 +1380,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Apple Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "apple-fruit",
 				"price": [
 					10,
@@ -1515,8 +1436,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1524,7 +1446,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Capeletti Ricotae Espinafre",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "capeletti-ricotae-espinafre",
 				"price": [
 					26,
@@ -1579,8 +1502,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1588,7 +1512,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Magic Toast",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "magic-toast",
 				"price": [
 					6.9,
@@ -1643,8 +1568,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1652,7 +1578,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Integrali Tusilli",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "integrali-tusilli",
 				"price": [
 					49,
@@ -1707,7 +1634,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
+						"ar_name": "فطور",
+						"en_name": "Breakfast",
 						"slug": "breakfast",
 						"__typename": "ProductCategory"
 					}
@@ -1716,7 +1644,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Fresh Dressed Meat",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "fresh-dressed-meat",
 				"price": [
 					49,
@@ -1771,23 +1700,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Meat & Seafood",
-						"slug": "meat-and-seafood",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1795,7 +1710,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Coconut Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "coconut-fruit",
 				"price": [
 					49,
@@ -1849,29 +1765,10 @@
 					}
 				],
 				"categories": [
-					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits & Vegetables",
-						"slug": "fruits-and-vegetables",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Vegetables",
-						"slug": "vegetables-2",
+						{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1879,7 +1776,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Trafilati al Bronzo",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "trafilati-al-bronzo",
 				"price": [
 					49,
@@ -1933,24 +1831,10 @@
 					}
 				],
 				"categories": [
-					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beverages",
-						"slug": "beverages-4",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beauty & Personal Care",
-						"slug": "beauty-and-personal-care-3",
+						{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -1958,7 +1842,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Pineapple Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "pineapple-fruit",
 				"price": [
 					43,
@@ -2013,8 +1898,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2022,7 +1908,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Banana Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "banana-fruit",
 				"price": [
 					25,
@@ -2077,8 +1964,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2086,7 +1974,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Equibeim",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "equibeim",
 				"price": [
 					190,
@@ -2141,12 +2030,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -2155,7 +2040,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Azeite De Oliva Extra Virgem",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "azeite-de-oliva-extra-virgem",
 				"price": [
 					200,
@@ -2210,12 +2096,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -2224,7 +2106,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Artesano Bread",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "artesano-bread",
 				"price": [
 					18,
@@ -2235,7 +2118,7 @@
 				"is_hot": null,
 				"is_new": true,
 				"is_out_of_stock": null,
-				"until": null,
+				"until": "2022-01-06T20:00:00.000Z",
 				"stock": 50,
 				"pictures": [
 					{
@@ -2279,18 +2162,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Party Supplies & Crafts",
-						"slug": "party-supplies-and-crafts-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2298,7 +2172,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Sliced Fresh Meat",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "sliced-fresh-meat",
 				"price": [
 					27,
@@ -2353,13 +2228,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Meat & Seafood",
-						"slug": "meat-and-seafood",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2367,7 +2238,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Melon Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "melon-fruit",
 				"price": [
 					19,
@@ -2422,18 +2294,9 @@
 				],
 				"categories": [
 					{
-						"name": "Vegetables",
-						"slug": "vegetables-1",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits & Vegetables",
-						"slug": "fruits-and-vegetables",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2443,7 +2306,8 @@
 		],
 		"onSale": [
 			{
-				"name": "Clasio White Wine - Spain",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "clasio-white-wine-spain",
 				"price": [
 					223,
@@ -2498,7 +2362,8 @@
 				],
 				"categories": [
 					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -2507,7 +2372,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Apple Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "apple-fruit",
 				"price": [
 					10,
@@ -2562,8 +2428,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2571,7 +2438,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Capeletti Ricotae Espinafre",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "capeletti-ricotae-espinafre",
 				"price": [
 					26,
@@ -2626,8 +2494,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2690,8 +2559,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2699,7 +2569,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Integrali Tusilli",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "integrali-tusilli",
 				"price": [
 					49,
@@ -2754,8 +2625,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2763,7 +2635,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Fresh Dressed Meat",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "fresh-dressed-meat",
 				"price": [
 					49,
@@ -2818,23 +2691,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Meat & Seafood",
-						"slug": "meat-and-seafood",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2842,7 +2701,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Coconut Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "coconut-fruit",
 				"price": [
 					49,
@@ -2896,29 +2756,10 @@
 					}
 				],
 				"categories": [
-					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits & Vegetables",
-						"slug": "fruits-and-vegetables",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Vegetables",
-						"slug": "vegetables-2",
+						{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -2926,7 +2767,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Trafilati al Bronzo",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "trafilati-al-bronzo",
 				"price": [
 					49,
@@ -2980,24 +2822,10 @@
 					}
 				],
 				"categories": [
-					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beverages",
-						"slug": "beverages-4",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Beauty & Personal Care",
-						"slug": "beauty-and-personal-care-3",
+						{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3005,7 +2833,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Pineapple Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "pineapple-fruit",
 				"price": [
 					43,
@@ -3060,8 +2889,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3069,7 +2899,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Banana Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "banana-fruit",
 				"price": [
 					25,
@@ -3124,8 +2955,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3133,7 +2965,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Equibeim",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "equibeim",
 				"price": [
 					190,
@@ -3188,12 +3021,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -3202,7 +3031,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Azeite De Oliva Extra Virgem",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "azeite-de-oliva-extra-virgem",
 				"price": [
 					200,
@@ -3257,12 +3087,8 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Frozen",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
@@ -3271,7 +3097,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Artesano Bread",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "artesano-bread",
 				"price": [
 					18,
@@ -3326,18 +3153,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Party Supplies & Crafts",
-						"slug": "party-supplies-and-crafts-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3345,7 +3163,8 @@
 				"__typename": "Product"
 			},
 			{
-				"name": "Sliced Fresh Meat",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "sliced-fresh-meat",
 				"price": [
 					27,
@@ -3400,13 +3219,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Meat & Seafood",
-						"slug": "meat-and-seafood",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3469,18 +3284,9 @@
 				],
 				"categories": [
 					{
-						"name": "Vegetables",
-						"slug": "vegetables-1",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits & Vegetables",
-						"slug": "fruits-and-vegetables",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3490,7 +3296,8 @@
 		],
 		"latest": [
 			{
-				"name": "Pineapple Fruit",
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
 				"slug": "pineapple-fruit",
 				"price": [
 					43,
@@ -3545,8 +3352,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-2",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3609,18 +3417,9 @@
 				],
 				"categories": [
 					{
-						"name": "Breakfast",
-						"slug": "breakfast",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Fruits",
-						"slug": "fruits-2",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Party Supplies & Crafts",
-						"slug": "party-supplies-and-crafts-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3683,13 +3482,9 @@
 				],
 				"categories": [
 					{
-						"name": "Cooking",
-						"slug": "cooking",
-						"__typename": "ProductCategory"
-					},
-					{
-						"name": "Meat & Seafood",
-						"slug": "meat-and-seafood",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3752,8 +3547,9 @@
 				],
 				"categories": [
 					{
-						"name": "Fruits",
-						"slug": "fruits-1",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
@@ -3765,7 +3561,8 @@
 	},
 	"dealProducts": [
 		{
-			"name": "Sliced Fresh Meat",
+			"ar_name": "Sliced Fresh Meat",
+			"en_name": "Sliced Fresh Meat>>>>>",
 			"slug": "sliced-fresh-meat",
 			"price": [
 				27,
@@ -3820,13 +3617,9 @@
 			],
 			"categories": [
 				{
-					"name": "Cooking",
-					"slug": "cooking",
-					"__typename": "ProductCategory"
-				},
-				{
-					"name": "Meat & Seafood",
-					"slug": "meat-and-seafood",
+					"ar_name": "مجمد",
+					"en_name": "Frozen",
+					"slug": "frozen-2",
 					"__typename": "ProductCategory"
 				}
 			],
@@ -3852,9 +3645,10 @@
 				],
 				"categories": [
 					{
-						"name": "Fresh Vegetables",
-						"slug": "fresh-vegetables",
-						"__typename": "PostCategory"
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
 					}
 				],
 				"video": false,
@@ -3875,10 +3669,12 @@
 					}
 				],
 				"categories": [
+					
 					{
-						"name": "Fresh Vegetables",
-						"slug": "fresh-vegetables",
-						"__typename": "PostCategory"
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
 					}
 				],
 				"video": false,
@@ -3900,14 +3696,10 @@
 				],
 				"categories": [
 					{
-						"name": "News",
-						"slug": "news",
-						"__typename": "PostCategory"
-					},
-					{
-						"name": "Model",
-						"slug": "model",
-						"__typename": "PostCategory"
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
 					}
 				],
 				"video": false,
@@ -3941,14 +3733,10 @@
 				],
 				"categories": [
 					{
-						"name": "News",
-						"slug": "news",
-						"__typename": "PostCategory"
-					},
-					{
-						"name": "Chat",
-						"slug": "chat",
-						"__typename": "PostCategory"
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
 					}
 				],
 				"video": false,
@@ -3970,14 +3758,10 @@
 				],
 				"categories": [
 					{
-						"name": "Fashion",
-						"slug": "fashion",
-						"__typename": "PostCategory"
-					},
-					{
-						"name": "Model",
-						"slug": "model",
-						"__typename": "PostCategory"
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
 					}
 				],
 				"video": false,
@@ -3999,14 +3783,10 @@
 				],
 				"categories": [
 					{
-						"name": "Fashion",
-						"slug": "fashion",
-						"__typename": "PostCategory"
-					},
-					{
-						"name": "Chat",
-						"slug": "chat",
-						"__typename": "PostCategory"
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
 					}
 				],
 				"video": false,
@@ -4014,6 +3794,5 @@
 			}
 		],
 		"__typename": "PostsResponse"
-
 	}
 }

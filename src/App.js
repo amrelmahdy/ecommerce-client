@@ -104,7 +104,7 @@ function App() {
 
 
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <title>Shaheen Seeds</title>
+          <title>{ t("wesite_title") }</title>
           <meta name="keywords" content="React Template" />
           <meta name="description" content="Porto - React eCommerce Template" />
           <meta name="author" content="SW-THEMES" />

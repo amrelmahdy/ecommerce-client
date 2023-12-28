@@ -3,8 +3,10 @@ import React from 'react';
 
 import ALink from '../common/ALink';
 import { useSearchParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function Pagination({ totalPage }) {
+    const {t, i18n} = useTranslation()
     const [searchParams, setSearchParams] = useSearchParams();
     const page = searchParams.page ? parseInt(searchParams.page) : 1;
     let indexsToShow = [];
@@ -42,7 +44,7 @@ function Pagination({ totalPage }) {
                                     });
                                 }}
                                 //href={{ query: { ...query, page: page - 1 } }} 
-                                scroll={false}><i className="icon-angle-left"></i></ALink>
+                                scroll={false}><i className={i18n.language === "ar" ? "icon-angle-right" : "icon-angle-left"}></i></ALink>
                         </li>
                     }
 
@@ -84,7 +86,7 @@ function Pagination({ totalPage }) {
                                     });
                                 }}
                                 //href={{ query: { ...query, page: page + 1 } }}
-                                scroll={false}><i className="icon-angle-right"></i></ALink>
+                                scroll={false}><i className={i18n.language === "ar" ? "icon-angle-left" : "icon-angle-right"}></i></ALink>
                         </li>
                     }
                 </ul>

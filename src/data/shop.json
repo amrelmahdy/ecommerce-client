@@ -1,36 +1,34 @@
 {
     "products": {
         "data": [
-            {
-                "name": "Integrali Tusilli",
-                "slug": "integrali-tusilli",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    49,
-                    59
-                ],
-                "ratings": 3.6,
-                "reviews": 0,
+           {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
                 "is_hot": true,
-                "is_new": true,
-                "is_out_of_stock": true,
-                "until": null,
-                "stock": 50,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -38,84 +36,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "categories": [
-                    {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    }
-                ],
-                "variants": [],
-                "__typename": "Product"
-            },
-            {
-                "name": "Fresh Dressed Meat",
-                "slug": "fresh-dressed-meat",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    49,
-                    59
-                ],
-                "ratings": 0,
-                "reviews": 0,
-                "is_hot": null,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
-                "pictures": [
-                    {
-                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "small_pictures": [
-                    {
-                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -123,144 +56,42 @@
                 ],
                 "categories": [
                     {
-                        "name": "Cooking",
-                        "slug": "cooking",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Frozen",
-                        "slug": "frozen-2",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Meat & Seafood",
-                        "slug": "meat-and-seafood",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Coconut Fruit",
-                "slug": "coconut-fruit",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    49,
-                    59
-                ],
-                "ratings": 0,
-                "reviews": 0,
-                "is_hot": null,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
-                "pictures": [
-                    {
-                        "url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "small_pictures": [
-                    {
-                        "url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "categories": [
-                    {
-                        "name": "Cooking",
-                        "slug": "cooking",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Fruits",
-                        "slug": "fruits-2",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Fruits & Vegetables",
-                        "slug": "fruits-and-vegetables",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Vegetables",
-                        "slug": "vegetables-2",
-                        "__typename": "ProductCategory"
-                    }
-                ],
-                "variants": [],
-                "__typename": "Product"
-            },
-            {
-                "name": "Trafilati al Bronzo",
-                "slug": "trafilati-al-bronzo",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    49,
-                    59
-                ],
-                "ratings": 0,
-                "reviews": 0,
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
                 "is_hot": true,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -268,19 +99,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -288,189 +119,42 @@
                 ],
                 "categories": [
                     {
-                        "name": "Cooking",
-                        "slug": "cooking",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Beverages",
-                        "slug": "beverages-4",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Beauty & Personal Care",
-                        "slug": "beauty-and-personal-care-3",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Pineapple Fruit",
-                "slug": "pineapple-fruit",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    43,
-                    69
-                ],
-                "ratings": 5,
-                "reviews": 1,
-                "is_hot": null,
-                "is_new": true,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
-                "pictures": [
-                    {
-                        "url": "/uploads/shop35_product_5_1_807935f804.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_5_3_f587aea914.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "small_pictures": [
-                    {
-                        "url": "/uploads/shop35_product_5_1_807935f804.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_5_3_f587aea914.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "categories": [
-                    {
-                        "name": "Fruits",
-                        "slug": "fruits-2",
-                        "__typename": "ProductCategory"
-                    }
-                ],
-                "variants": [],
-                "__typename": "Product"
-            },
-            {
-                "name": "Banana Fruit",
-                "slug": "banana-fruit",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    25,
-                    30
-                ],
-                "ratings": 0,
-                "reviews": 0,
-                "is_hot": null,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
-                "pictures": [
-                    {
-                        "url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "small_pictures": [
-                    {
-                        "url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    },
-                    {
-                        "url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
-                        "width": 800,
-                        "height": 800,
-                        "__typename": "Media"
-                    }
-                ],
-                "categories": [
-                    {
-                        "name": "Fruits",
-                        "slug": "fruits-2",
-                        "__typename": "ProductCategory"
-                    }
-                ],
-                "variants": [],
-                "__typename": "Product"
-            },
-            {
-                "name": "Equibeim",
-                "slug": "equibeim",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    190,
-                    200
-                ],
-                "ratings": 0,
-                "reviews": 0,
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
                 "is_hot": true,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 60,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_7_3_8515865705.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -478,19 +162,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_7_3_8515865705.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -498,49 +182,42 @@
                 ],
                 "categories": [
                     {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Frozen",
-                        "slug": "frozen-2",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Azeite De Oliva Extra Virgem",
-                "slug": "azeite-de-oliva-extra-virgem",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    200,
-                    230
-                ],
-                "ratings": 0,
-                "reviews": 0,
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
                 "is_hot": true,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -548,19 +225,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -568,49 +245,42 @@
                 ],
                 "categories": [
                     {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Frozen",
-                        "slug": "frozen-2",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Capeletti Ricotae Espinafre",
-                "slug": "capeletti-ricotae-espinafre",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    26,
-                    30
-                ],
-                "ratings": 0,
-                "reviews": 0,
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
                 "is_hot": true,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -618,19 +288,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -638,44 +308,42 @@
                 ],
                 "categories": [
                     {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Artesano Bread",
-                "slug": "artesano-bread",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    18,
-                    20
-                ],
-                "ratings": 0,
-                "reviews": 0,
-                "is_hot": null,
-                "is_new": true,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -683,19 +351,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -703,54 +371,42 @@
                 ],
                 "categories": [
                     {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Fruits",
-                        "slug": "fruits-2",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Party Supplies & Crafts",
-                        "slug": "party-supplies-and-crafts-1",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Apple Fruit",
-                "slug": "apple-fruit",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    10,
-                    12
-                ],
-                "ratings": 0,
-                "reviews": 0,
-                "is_hot": null,
-                "is_new": null,
-                "is_out_of_stock": null,
-                "until": null,
-                "stock": 50,
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_11_3_f538062400.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -758,19 +414,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_11_3_f538062400.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -778,44 +434,42 @@
                 ],
                 "categories": [
                     {
-                        "name": "Fruits",
-                        "slug": "fruits-1",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Sliced Fresh Meat",
-                "slug": "sliced-fresh-meat",
-                "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
-                "price": [
-                    27,
-                    30
-                ],
-                "ratings": 0,
-                "reviews": 0,
-                "is_hot": null,
-                "is_new": true,
-                "is_out_of_stock": null,
-                "until": "2022-01-06T20:00:00.000Z",
-                "stock": 50,
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -823,19 +477,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+                        "url": "/uploads/product_image_1.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+                        "url": "/uploads/product_image_2.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+                        "url": "/uploads/product_image_3.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -843,17 +497,705 @@
                 ],
                 "categories": [
                     {
-                        "name": "Cooking",
-                        "slug": "cooking",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Meat & Seafood",
-                        "slug": "meat-and-seafood",
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
                         "__typename": "ProductCategory"
                     }
                 ],
-                "variants": [],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
+                "__typename": "Product"
+            },
+            {
+                "ar_name": "اسم المنتج باللغة العربية",
+                "en_name": "Product Name in English",
+                "slug": "product-slug",
+                "ar_short_description": "وصف قصير للمنتج باللغة العربية",
+                "en_short_description": "Short description of the product in English",
+                "price": [19.99, 29.99],
+                "ratings": 4.2,
+                "reviews": 5,
+                "is_hot": true,
+                "is_new": false,
+                "is_out_of_stock": false,
+                "stock": 100,
+                "pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "small_pictures": [
+                    {
+                        "url": "/uploads/product_image_1.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_2.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    },
+                    {
+                        "url": "/uploads/product_image_3.jpg",
+                        "width": 800,
+                        "height": 800,
+                        "__typename": "Media"
+                    }
+                ],
+                "categories": [
+                    {
+                        "ar_name": "اسم الفئة باللغة العربية",
+                        "en_name": "Seeds",
+                        "slug": "category-slug",
+                        "__typename": "ProductCategory"
+                    }
+                ],
                 "__typename": "Product"
             }
         ],

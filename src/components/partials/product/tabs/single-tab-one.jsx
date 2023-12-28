@@ -22,18 +22,18 @@ export default function SingleTabOne ( props ) {
                             <ALink href="#" className="nav-link">Description</ALink>
                         </Tab>
 
-                        <Tab className="nav-item">
+                        {/* <Tab className="nav-item">
                             <ALink href="#" className="nav-link">Size Guide</ALink>
-                        </Tab>
+                        </Tab> */}
 
 
                         <Tab className="nav-item">
                             <ALink href="#" className="nav-link">Additional Information</ALink>
                         </Tab>
 
-                        <Tab className="nav-item">
+                        {/* <Tab className="nav-item">
                             <ALink href="#" className="nav-link">Reviews ({ product.reviews })</ALink>
-                        </Tab>
+                        </Tab> */}
                     </TabList>
 
                     <TabPanel className="tab-pane fade">
@@ -49,7 +49,7 @@ export default function SingleTabOne ( props ) {
                     </TabPanel>
 
 
-                    <TabPanel className="tab-pane fade">
+                    {/* <TabPanel className="tab-pane fade">
                         <div className="product-size-content">
                             <div className="row">
                                 <div className="col-md-4">
@@ -108,7 +108,7 @@ export default function SingleTabOne ( props ) {
                                 </div>
                             </div>
                         </div>
-                    </TabPanel>
+                    </TabPanel> */}
 
 
                     <TabPanel className="tab-pane fade">
@@ -183,7 +183,7 @@ export default function SingleTabOne ( props ) {
 
                             <div className="divider"></div>
 
-                            <div className="add-product-review">
+                            {/* <div className="add-product-review">
                                 <div className="add-product-review">
                                     <h3 className="review-title">Add a review</h3>
 
@@ -234,7 +234,7 @@ export default function SingleTabOne ( props ) {
                                         <input type="submit" className="btn btn-primary" value="Submit" />
                                     </form>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </TabPanel>
                 </Tabs>

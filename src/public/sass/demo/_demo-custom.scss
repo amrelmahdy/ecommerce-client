@@ -1,6 +1,13 @@
 // Demo35 Shop page
 
-.main-content, .sidebar-shop {
+body[lang="ar"] .main-content,
+body[lang="ar"] .sidebar-shop {
+    text-align: right;
+}
+
+.main-content,
+.sidebar-shop {
+
     padding-top: 3.5rem;
     padding-bottom: 4rem;
 }
@@ -16,7 +23,7 @@
 }
 
 .shop-off-canvas {
-    .sidebar-shop  {
+    .sidebar-shop {
         .sidebar-wrapper {
             border: 0;
         }
@@ -29,7 +36,7 @@
                 border-radius: 0;
             }
         }
-    } 
+    }
 }
 
 .sidebar-shop {
@@ -43,7 +50,7 @@
 
     .product-widget {
         .product-title {
-            color: #474747;
+            color: #333;
             font-family: $second-font-family;
             letter-spacing: 0;
         }
@@ -55,7 +62,7 @@
         .product-details {
             padding-right: 0;
         }
-        
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -73,12 +80,12 @@
 }
 
 .widget-brand .cat-list li {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 20px;
 
-    a {
-        font-weight: 400;
-    }
+    // a {
+    //     font-weight: 400;
+    // }
 }
 
 .filter-price-action .btn {
@@ -133,7 +140,7 @@
 
 .product-category:hover {
     color: #1d2127;
-    text-decoration: underline;
+    //text-decoration: underline;
 }
 
 .add-wishlist {
@@ -183,7 +190,7 @@
     }
 
     .owl-carousel.dots-top .owl-dots span {
-        border-color: rgba(46,104,60,.4);
+        border-color: rgba(46, 104, 60, .4);
     }
 
     .products-slider .product-default {
@@ -215,7 +222,7 @@
     }
 }
 
-@media (max-width: 1440px) and (min-width: 992px){
+@media (max-width: 1440px) and (min-width: 992px) {
     .sidebar-shop .product-widget figure {
         max-width: 60px;
     }
@@ -233,6 +240,6 @@
 
 @media (max-width: 991px) {
     .shop-off-canvas .sidebar-wrapper {
-       padding: 0rem;
-   }
+        padding: 0rem;
+    }
 }

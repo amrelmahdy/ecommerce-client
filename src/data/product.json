@@ -3,12 +3,14 @@
         "data": {
             "id": 1,
             "slug": "integrali-tusilli",
-            "name": "Integrali Tusilli",
+            "en_name": "Timer",
+            "ar_name": "مؤقت ري",
             "price": [
                 49,
                 59
             ],
-            "short_description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+            "en_description": "Programmable Digital Water Timer - 3 Inch Large Display, Garden Hose Faucet, IP65 Waterproof, Daytime Watering Timer/Child Lock Mode/Auto Manual Mode.",
+            "ar_description": "مؤقت مياه الرقمي القابل للبرمجة - شاشة كبيرة مقاس 7.62 سم، صنبور لخرطوم حديقة، مقاوم للمياه بدرجة IP65، مؤقت للري في النهار/وضع قفل الطفل/الوضع اليدوي التلقائي",
             "until": null,
             "sku": "SOMESKU",
             "stock": 50,
@@ -81,8 +83,9 @@
             ],
             "categories": [
                 {
-                    "name": "Breakfast",
-                    "slug": "breakfast",
+                    "ar_name": "البذور",
+                    "en_name": "Seeds",
+                    "slug": "seeds",
                     "__typename": "ProductCategory"
                 }
             ],
@@ -118,13 +121,14 @@
         },
         "related": [
             {
-                "name": "Fresh Dressed Meat",
+                "ar_name": "رشاشة مياه ومبيدات",
+                "en_name": "Water and pesticide extermination",
                 "slug": "fresh-dressed-meat",
                 "price": [
                     49,
                     59
                 ],
-                "ratings": 0,
+                "ratings": 4.2,
                 "reviews": 0,
                 "is_hot": null,
                 "is_new": null,
@@ -173,37 +177,24 @@
                 ],
                 "categories": [
                     {
-                        "name": "Cooking",
-                        "slug": "cooking",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Frozen",
-                        "slug": "frozen-2",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Meat & Seafood",
-                        "slug": "meat-and-seafood",
-                        "__typename": "ProductCategory"
-                    }
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
                 ],
                 "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Coconut Fruit",
-                "slug": "coconut-fruit",
+                "ar_name": "رشاشة مياه ومبيدات",
+                "en_name": "Water and pesticide extermination",
+                "slug": "fresh-dressed-meat",
                 "price": [
                     49,
                     59
                 ],
-                "ratings": 0,
+                "ratings": 3,
                 "reviews": 0,
                 "is_hot": null,
                 "is_new": null,
@@ -212,19 +203,19 @@
                 "stock": 50,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -232,19 +223,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -252,63 +243,45 @@
                 ],
                 "categories": [
                     {
-                        "name": "Cooking",
-                        "slug": "cooking",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Fruits",
-                        "slug": "fruits-2",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Fruits & Vegetables",
-                        "slug": "fruits-and-vegetables",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Vegetables",
-                        "slug": "vegetables-2",
-                        "__typename": "ProductCategory"
-                    }
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
                 ],
                 "variants": [],
                 "__typename": "Product"
             },
             {
-                "name": "Trafilati al Bronzo",
-                "slug": "trafilati-al-bronzo",
+                "ar_name": "رشاشة مياه ومبيدات",
+                "en_name": "Water and pesticide extermination",
+                "slug": "fresh-dressed-meat",
                 "price": [
                     49,
                     59
                 ],
-                "ratings": 0,
+                "ratings": 0.9,
                 "reviews": 0,
-                "is_hot": true,
+                "is_hot": null,
                 "is_new": null,
                 "is_out_of_stock": null,
                 "until": null,
                 "stock": 50,
                 "pictures": [
                     {
-                        "url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -316,19 +289,19 @@
                 ],
                 "small_pictures": [
                     {
-                        "url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+                        "url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+                        "url": "/uploads/shop35_product_1_2_5132af1028.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
                     },
                     {
-                        "url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+                        "url": "/uploads/shop35_product_1_3_22f9899896.jpg",
                         "width": 800,
                         "height": 800,
                         "__typename": "Media"
@@ -336,25 +309,11 @@
                 ],
                 "categories": [
                     {
-                        "name": "Cooking",
-                        "slug": "cooking",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Breakfast",
-                        "slug": "breakfast",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Beverages",
-                        "slug": "beverages-4",
-                        "__typename": "ProductCategory"
-                    },
-                    {
-                        "name": "Beauty & Personal Care",
-                        "slug": "beauty-and-personal-care-3",
-                        "__typename": "ProductCategory"
-                    }
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
                 ],
                 "variants": [],
                 "__typename": "Product"

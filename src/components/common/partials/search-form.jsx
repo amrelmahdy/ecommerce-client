@@ -9,24 +9,25 @@ import { useTranslation } from 'react-i18next'
 // Import Apollo Server and Query
 // import { GET_PRODUCTS } from '../../../server/queries';
 // import withApollo from '../../../server/apollo';
+import categoriesData from './../../../data/categories.json'
 
-function SearchForm ( props ) {
-    const { t } = useTranslation()
+function SearchForm(props) {
+    const { t, i18n } = useTranslation()
     // const router = useRouter();
-    const [ cat, setCat ] = useState( "" );
-    const [ search, setSearch ] = useState( "" );
+    const [cat, setCat] = useState("");
+    const [search, setSearch] = useState("");
 
     const data = []
     // const [ searchProducts, { data } ] = useLazyQuery( GET_PRODUCTS );
-    const [ timer, setTimer ] = useState( null );
+    const [timer, setTimer] = useState(null);
 
-    useEffect( () => {
-        document.querySelector( "body" ).addEventListener( "click", onBodyClick );
+    useEffect(() => {
+        document.querySelector("body").addEventListener("click", onBodyClick);
 
-        return ( () => {
-            document.querySelector( "body" ).removeEventListener( "click", onBodyClick );
-        } )
-    }, [] )
+        return (() => {
+            document.querySelector("body").removeEventListener("click", onBodyClick);
+        })
+    }, [])
 
     // useEffect( () => {
     //     setSearch( "" );
@@ -65,36 +66,36 @@ function SearchForm ( props ) {
     //     }
     // }
 
-    function matchEmphasize ( name ) {
-        let regExp = new RegExp( search, "i" );
+    function matchEmphasize(name) {
+        let regExp = new RegExp(search, "i");
         return name.replace(
             regExp,
-            ( match ) => "<strong>" + match + "</strong>"
+            (match) => "<strong>" + match + "</strong>"
         );
     }
 
-    function onSearchClick ( e ) {
+    function onSearchClick(e) {
         e.preventDefault();
         e.stopPropagation();
-        e.currentTarget.parentNode.classList.toggle( 'show' );
+        e.currentTarget.parentNode.classList.toggle('show');
     }
 
-    function onBodyClick ( e ) {
-        if ( e.target.closest( '.header-search' ) ) return e.target.closest( '.header-search' ).classList.contains( 'show-results' ) || e.target.closest( '.header-search' ).classList.add( 'show-results' );
+    function onBodyClick(e) {
+        if (e.target.closest('.header-search')) return e.target.closest('.header-search').classList.contains('show-results') || e.target.closest('.header-search').classList.add('show-results');
 
-        document.querySelector( '.header-search.show' ) && document.querySelector( '.header-search.show' ).classList.remove( 'show' );
-        document.querySelector( '.header-search.show-results' ) && document.querySelector( '.header-search.show-results' ).classList.remove( 'show-results' );
+        document.querySelector('.header-search.show') && document.querySelector('.header-search.show').classList.remove('show');
+        document.querySelector('.header-search.show-results') && document.querySelector('.header-search.show-results').classList.remove('show-results');
     }
 
-    function onCatSelect ( e ) {
-        setCat( e.target.value );
+    function onCatSelect(e) {
+        setCat(e.target.value);
     }
 
-    function onSearchChange ( e ) {
-        setSearch( e.target.value );
+    function onSearchChange(e) {
+        setSearch(e.target.value);
     }
 
-    function onSubmitSearchForm ( e ) {
+    function onSubmitSearchForm(e) {
         e.preventDefault();
         // router.push( {
         //     pathname: '/shop',
@@ -105,57 +106,62 @@ function SearchForm ( props ) {
         // } );
     }
 
+
+    const renderCategoriesList = () => {
+        const renderSubItems = (subItems) => {
+            if (!subItems.length) return null;
+            return subItems.map((sub, i) => {
+                const name = i18n.language === 'ar' ? sub.ar_name : sub.en_name
+                return <option value="women"> - {name}</option>
+            })
+        }
+        return categoriesData.categories.map((item, index) => {
+            const name = i18n.language === 'ar' ? item.ar_name : item.en_name
+            const sub_categories = item.sub_categories
+            return <>
+                <option value="fashion">{name}</option>
+                {renderSubItems(sub_categories)};
+            </>
+        })
+    }
+
     return (
         <div className="header-icon header-search header-search-inline header-search-category d-lg-block d-none text-right mt-0">
-            <a href="#" className="search-toggle" role="button" onClick={ onSearchClick }><i className="icon-magnifier"></i><span>Search</span></a>
+            <a href="#" className="search-toggle" role="button" onClick={onSearchClick}><i className="icon-magnifier"></i><span>Search</span></a>
 
-            <form action="#" method="get" onSubmit={ ( e ) => onSubmitSearchForm( e ) }>
+            <form action="#" method="get" onSubmit={(e) => onSubmitSearchForm(e)}>
                 <div className="header-search-wrapper">
-                    <input type="search" className="form-control" name="q" id={ `${ props.type === 1 ? 'q' : 'qqq' }` } placeholder={t("header_search_form_placehoder")} value={ search }
-                        required onChange={ ( e ) => onSearchChange( e ) } />
+                    <input type="search" className="form-control" name="q" id={`${props.type === 1 ? 'q' : 'qqq'}`} placeholder={t("header_search_form_placehoder")} value={search}
+                        required onChange={(e) => onSearchChange(e)} />
                     <div className="select-custom">
-                        <select id={ `${ props.type === 1 ? 'cat1' : 'cat' }` } name="cat" value={ cat } onChange={ ( e ) => onCatSelect( e ) }>
+                        <select id={`${props.type === 1 ? 'cat1' : 'cat'}`} name="cat" value={cat} onChange={(e) => onCatSelect(e)}>
+
                             <option value="">{t("header_search_form_dropdown_default")}</option>
-                            <option value="fashion">Fashion</option>
-                            <option value="women">- Women</option>
-                            <option value="men">- Men</option>
-                            <option value="jewellery">- Jewellery</option>
-                            <option value="kids-fashion">- Kids Fashion</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="smart-tvs">- Smart TVs</option>
-                            <option value="cameras">- Cameras</option>
-                            <option value="games">- Games</option>
-                            <option value="home-garden">Home &amp; Garden</option>
-                            <option value="motors">Motors</option>
-                            <option value="cars-and-trucks">- Cars and Trucks</option>
-                            <option value="motorcycles-powersports">- Motorcycles &amp; Powersports</option>
-                            <option value="parts-accessories">- Parts &amp; Accessories</option>
-                            <option value="boats">- Boats</option>
-                            <option value="auto-tools-supplies">- Auto Tools &amp; Supplies</option>
+                            {renderCategoriesList()}
                         </select>
                     </div>
 
                     <button className="btn icon-magnifier p-0" title="search" type="submit"></button>
 
                     <div className="live-search-list bg-white">
-                        { search.length > 2 && data && data.products.data.map( ( product, index ) => (
-                            <ALink href={ `/product/default/${ product.slug }` } className="autocomplete-suggestion" key={ `search-result-${ index }` }>
-                                <LazyLoadImage src={ process.env.NEXT_PUBLIC_ASSET_URI + product.small_pictures[ 0 ].url } width={ 40 } height={ 40 } alt="product" />
+                        {search.length > 2 && data && data.products.data.map((product, index) => (
+                            <ALink href={`/product/default/${product.slug}`} className="autocomplete-suggestion" key={`search-result-${index}`}>
+                                <LazyLoadImage src={process.env.NEXT_PUBLIC_ASSET_URI + product.small_pictures[0].url} width={40} height={40} alt="product" />
                                 {/* <div className="search-name" dangerouslySetInnerHTML={ removeXSSAttacks( matchEmphasize( product.name ) ) }></div> */}
                                 <span className="search-price">
                                     {
-                                        product.price[ 0 ] == product.price[ 1 ] ?
-                                            <span className="product-price">{ '$' + product.price[ 0 ].toFixed( 2 ) }</span>
+                                        product.price[0] == product.price[1] ?
+                                            <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
                                             : product.variants.length > 0 ?
-                                                <span className="product-price">{ '$' + product.price[ 0 ].toFixed( 2 ) } &ndash; { '$' + product.price[ 1 ].toFixed( 2 ) }</span>
+                                                <span className="product-price">{'$' + product.price[0].toFixed(2)} &ndash; {'$' + product.price[1].toFixed(2)}</span>
                                                 : <>
-                                                    <span className="old-price">{ '$' + product.price[ 1 ].toFixed( 2 ) }</span>
-                                                    <span className="product-price">{ '$' + product.price[ 0 ].toFixed( 2 ) }</span>
+                                                    <span className="old-price">{'$' + product.price[1].toFixed(2)}</span>
+                                                    <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
                                                 </>
                                     }
                                 </span>
                             </ALink>
-                        ) )
+                        ))
                         }
                     </div>
                 </div>

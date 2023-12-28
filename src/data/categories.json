@@ -1,0 +1,217 @@
+{
+    "categories": [
+        {
+            "id": "11111",
+            "ar_name": "البذور",
+            "en_name": "Seeds",
+            "icon": "icon-category-garden",
+            "slug": "seedlings-cuttings",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [
+                {
+                    "id": "99999",
+                    "ar_name": "بذور خضروات",
+                    "en_name": "Vegetable Seeds",
+                    "icon": "icon-category-garden",
+                    "slug": "vegetable-seeds",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 1
+                },
+                {
+                    "id": "101010",
+                    "ar_name": "قطع نباتية",
+                    "en_name": "Plant Cuttings",
+                    "icon": "icon-category-garden",
+                    "slug": "plant-cuttings",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 3
+                },
+                {
+                    "id": "111111",
+                    "ar_name": "بذور فواكه",
+                    "en_name": "Fruit Seeds",
+                    "icon": "icon-category-garden",
+                    "slug": "fruit-seeds",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 2
+                },
+                {
+                    "id": "121212",
+                    "ar_name": "بذور أزهار",
+                    "en_name": "Flower Seeds",
+                    "icon": "icon-category-garden",
+                    "slug": "flower-seeds",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 1
+                },
+                {
+                    "id": "131313",
+                    "ar_name": "بذور أشجار",
+                    "en_name": "Tree Seeds",
+                    "icon": "icon-category-garden",
+                    "slug": "tree-seeds",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 4
+                },
+                {
+                    "id": "141414",
+                    "ar_name": "بذور عشبية",
+                    "en_name": "Herb Seeds",
+                    "icon": "icon-category-garden",
+                    "slug": "herb-seeds",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 5
+                }
+            ],
+            "parent": null,
+            "count": 3
+        },
+        {
+            "id": "11111",
+            "ar_name": "هياكل زراعية",
+            "en_name": "Farm Structures",
+            "icon": "icon-category-garden",
+            "slug": "farm-structures",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [
+                {
+                    "id": "22222",
+                    "ar_name": "صوب زراعية",
+                    "en_name": "Crop Shelters",
+                    "icon": "icon-category-garden",
+                    "slug": "crop-shelters",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 4
+                },
+                {
+                    "id": "33333",
+                    "ar_name": "بيوت بذر",
+                    "en_name": "Seed Houses",
+                    "icon": "icon-category-garden",
+                    "slug": "seed-houses",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 3
+                }
+            ],
+            "parent": null,
+            "count": 5
+        },
+        {
+            "id": "11111",
+            "ar_name": "أسمدة",
+            "en_name": "Fertilizers",
+            "icon": "icon-category-garden",
+            "slug": "fertilizers",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [
+                {
+                    "id": "66666",
+                    "ar_name": "أسمدة عضوية",
+                    "en_name": "Organic Fertilizers",
+                    "icon": "icon-category-garden",
+                    "slug": "organic-fertilizers",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 7
+                }
+            ],
+            "parent": null,
+            "count": 77
+        },
+        {
+            "id": "11111",
+            "ar_name": "مبيدات فطرية",
+            "en_name": "Fungicides",
+            "icon": "icon-category-garden",
+            "slug": "fungicides",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [],
+            "parent": null,
+            "count": 9
+        },
+        {
+            "id": "11111",
+            "ar_name": "الصحة العامة",
+            "en_name": "Public health",
+            "icon": "icon-category-garden",
+            "slug": "public-health",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [
+                {
+                    "id": "77777",
+                    "ar_name": "مستلزمات النظافة",
+                    "en_name": "Hygiene Products",
+                    "icon": "icon-category-garden",
+                    "slug": "hygiene-products",
+                    "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+                    "sub_categories": [],
+                    "parent": "11111",
+                    "count": 2
+                }
+            ],
+            "parent": null,
+            "count": 3
+        },
+        {
+            "id": "11111",
+            "ar_name": "منتجات أخرى",
+            "en_name": "Other Products",
+            "icon": "icon-category-garden",
+            "slug": "other-products",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [],
+            "parent": null,
+            "count": 6
+        },
+        {
+            "id": "11111",
+            "ar_name": "مجموعات المداخل",
+            "en_name": "Inputs Combos",
+            "icon": "icon-category-garden",
+            "slug": "inputs-combos",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [],
+            "parent": null,
+            "count": 12
+        },
+        {
+            "id": "11111",
+            "ar_name": "مبيدات",
+            "en_name": "Pesticides",
+            "icon": "icon-category-garden",
+            "slug": "pesticides",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [],
+            "parent": null,
+            "count": 21
+        },
+        {
+            "id": "11111",
+            "ar_name": "حلا للمزارعين العضويين",
+            "en_name": "Farmers Organic Solution",
+            "icon": "icon-category-garden",
+            "slug": "farmers-organic-solution",
+            "image": "https://d-themes.com/react/porto/demo36/images/home/products/categories/category-3.jpg",
+            "sub_categories": [],
+            "parent": null,
+            "count": 13
+        }
+    ]
+}

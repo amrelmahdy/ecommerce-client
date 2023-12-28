@@ -36,7 +36,7 @@
 					padding-left: 1rem,
 					padding-right: 1.7rem),
 
-				btn: (size: 16px,
+				btn: (size: 12px,
 					min-width: 45px,
 					color: $primary-color-dark,
 				)))));
@@ -78,6 +78,7 @@
 
 	.form-control::placeholder {
 		color: #a8a8a8;
+		font-size: 15px;
 	}
 
 	// 1.2) Header Search (not Category Filter)
@@ -385,4 +386,10 @@ body[lang="ar"] .header-search {
 		left: 15px;
 		right: 15px;
 	}
+}
+
+body[lang="en"] .header-search-wrapper .select-custom{
+	margin: 0;
+    width: 18.8rem;
+    flex: 0 0 14.8rem;
 }

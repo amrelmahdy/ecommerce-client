@@ -7,6 +7,10 @@
 	font-family: $second-font-family;
 }
 
+body[lang="ar"] .rtl {
+	direction: rtl;
+}
+
 .sticky-wrapper {
 	background: #fff;
 }
@@ -98,10 +102,10 @@
 			transform: none;
 		}
 	}
-	
+
 }
 
-body[lang="ar"] .header-middle{
+body[lang="ar"] .header-middle {
 	direction: rtl;
 }
 
@@ -165,7 +169,7 @@ body[lang="ar"] .header-middle{
 
 		i {
 			margin-right: 5px;
-			font-size: 1.6rem;
+			font-size: 2rem;
 
 			&:before {
 				margin: 0 .1em;
@@ -182,8 +186,8 @@ body[lang="ar"] .header-middle{
 .cart-subtotal {
 	margin-left: 1.6rem;
 	margin-bottom: 2px;
-	color: #777;
-	font-size: 11px;
+	color: #333;
+	font-size: 15px;
 	letter-spacing: -.025em;
 	line-height: 1;
 
@@ -191,6 +195,7 @@ body[lang="ar"] .header-middle{
 		font-size: 15px;
 		font-weight: 600;
 		color: $secondary-color;
+		margin-top: 3px;
 	}
 }
 
@@ -247,7 +252,7 @@ body[lang="ar"] .cart-dropdown-wrapper {
 		}
 
 		span {
-			font-size: 1.1rem;
+			font-size: 1.2rem;
 			letter-spacing: 0.3px;
 			line-height: 1.3rem;
 		}
@@ -260,6 +265,7 @@ body[lang="ar"] .cart-dropdown-wrapper {
 
 body[lang="ar"] .header-user {
 	direction: rtl;
+
 	h6 {
 		text-align: right;
 	}
@@ -279,7 +285,7 @@ body[lang="ar"] .header-user {
 
 	select {
 		font-family: $second-font-family;
-		font-size: 11px;
+		font-size: 14px;
 	}
 
 	.select-custom:after {
@@ -298,9 +304,10 @@ body[lang="ar"] .header-user {
 
 body[lang="ar"] .header-search-category {
 
-	input::placeholder{
+	input::placeholder {
 		font-family: $arabic-font-family;
 	}
+
 	select {
 		font-family: $arabic-font-family;
 	}
@@ -335,6 +342,8 @@ body[lang="ar"] .header-search-category {
 	}
 }
 
+
+
 .menu-depart {
 	position: relative;
 	margin-right: 1.4rem;
@@ -344,7 +353,7 @@ body[lang="ar"] .header-search-category {
 	}
 
 	.menu {
-		width: 117%;
+		width: 130%;
 		position: absolute;
 		top: -3000px;
 		z-index: 100;
@@ -356,7 +365,7 @@ body[lang="ar"] .header-search-category {
 
 		>li {
 			display: flex;
-			position: static;
+			position: relative;
 			margin: 0;
 			padding: 4px 5px 4px;
 			border-top: 1px solid #e7e7e7;
@@ -417,8 +426,8 @@ body[lang="ar"] .header-search-category {
 		align-items: center;
 		position: relative;
 		height: 100%;
-		@include css(padding, menu, main, top, padding);
-		padding-left: 2rem;
+		//@include css(padding, menu, main, top, padding);
+		padding-left: 1rem;
 		padding-right: 8.3rem;
 		border-left: 1px solid #e7e7e7;
 		border-right: 1px solid #e7e7e7;
@@ -459,7 +468,7 @@ body[lang="ar"] .header-search-category {
 			font-weight: 500;
 
 			a {
-				padding: 6px 0;
+				padding: 0;
 				font-size: 1.3rem;
 				font-weight: 400;
 				line-height: 18px;
@@ -467,10 +476,13 @@ body[lang="ar"] .header-search-category {
 			}
 
 			li {
-				margin-bottom: .4rem;
+				padding: 10px;
+				//margin-bottom: .4rem;
+				border-bottom: 1px solid #e7e7e7;
 
 				&:last-child {
-					margin-bottom: 1.4rem;
+					//margin-bottom: 1.4rem;
+					border-bottom: none;
 				}
 
 				&:hover a {
@@ -789,6 +801,11 @@ body[lang="ar"] .header-search-category {
 	}
 }
 
+
+body[lang="ar"] .info-boxes {
+	margin: 0 !important
+}
+
 .info-item {
 	&+.info-item {
 		margin-left: 4.8rem;
@@ -844,19 +861,19 @@ body[lang="ar"] .header-search-category {
 		.logo {
 			margin-right: 11.52rem;
 		}
-		
+
 	}
 }
 
 @include mq(lg) {
 	body[lang="ar"] .header {
-		
+
 		.logo {
 			margin-left: 11.52rem;
 			margin-right: 0;
 		}
 
-		
+
 	}
 }
 
@@ -923,6 +940,16 @@ body[lang="ar"] .header-search-category {
 
 // Prouct Default
 
+
+body[lang="ar"] .inner-icon {
+
+	.category-list {
+		font-family: $second-arabic-font-family;
+	}
+}
+
+
+
 .inner-icon {
 	position: relative;
 	margin-bottom: 20px;
@@ -960,7 +987,7 @@ body[lang="ar"] .header-search-category {
 
 	.ratings-container {
 		margin-left: 0;
-		margin-bottom: 10px;
+		margin-bottom: 17px;
 	}
 
 	.price-box {
@@ -969,14 +996,14 @@ body[lang="ar"] .header-search-category {
 	}
 
 	.old-price {
-		color: #a7a7a7;
+		color: #565959;
 		font-size: .8em;
 		letter-spacing: .09px;
 	}
 
 	.product-price {
 		color: #444;
-		font-size: 1em;
+		font-size: 0.85em;
 	}
 
 	.btn-quickview {
@@ -1025,6 +1052,14 @@ body[lang="ar"] .header-search-category {
 		line-height: 1em;
 	}
 }
+
+// // Ratings
+// body[lang="ar"] .ratings-container {
+// 	transform: scaleY(-1);
+// }
+
+
+
 
 @include mq(sm, max) {
 
@@ -1090,6 +1125,10 @@ footer {
 
 .product-default figure {
 	margin-bottom: 1.7rem;
+}
+
+.rc-tree .rc-tree-treenode span.rc-tree-switcher, .rc-tree .rc-tree-treenode span.rc-tree-checkbox, .rc-tree .rc-tree-treenode span.rc-tree-iconEle{
+	width: 0!important;
 }
 
 

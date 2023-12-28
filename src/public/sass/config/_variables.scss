@@ -1,11 +1,11 @@
 // Variables
 
 // Skin / Font
-$font-size: 1.4rem !default;
-$sidebar-font-size: 1.3rem !default;
-$footer-font-size: 1.3rem !default;
-$input-font-size: 1.2rem !default;
-$button-font-size: 1.4rem !default;
+$font-size: 2.2rem !default;
+$sidebar-font-size: 3rem !default;
+$footer-font-size: 1.6rem !default;
+$input-font-size: 2rem !default;
+$button-font-size: 2rem !default;
 
 // Skin / Color
 $primary-color: #08C !default;
@@ -15,7 +15,7 @@ $secondary-color-dark: #2f3946 !default;
 $secondary-color-light: #515151 !default;
 $link-color: $primary-color !default;
 
-$body-text: #777 !default;
+$body-text: #333 !default;
 $light-text: #666 !default;
 $headings-text: #222529 !default;
 
@@ -26,15 +26,31 @@ $border-radius: 0 !default;
 $font-family: 'Open Sans', sans-serif !default;
 $second-font-family: Poppins, sans-serif !default;
 $third-font-family: Oswald, sans-serif !default;
-$arabic-font-family: 'Cairo', sans-serif!default;;
+$arabic-font-family: 'Cairo', sans-serif !default;
+$second-arabic-font-family: 'Tajawal', sans-serif !default;
 
 // Skin / Shop Page Font Family
 $shop-font-family: 'Open Sans', sans-serif !default;
 $shop-second-font-family: Poppins, sans-serif !default;
 
 // Breakpoints
-$breakpoints: (xs: 480px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1600px, xlst: 1920px);
-$max-breakpoints: (xs: 479px, sm: 575px, md: 767px, lg: 991px, xl: 1199px, xxl: 1599px);
+$breakpoints: (
+    xs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1600px,
+    xlst: 1920px
+);
+$max-breakpoints: (
+    xs: 479px,
+    sm: 575px,
+    md: 767px,
+    lg: 991px,
+    xl: 1199px,
+    xxl: 1599px
+);
 
 // Owl Carousel
 $dot-border: rgba(0, 0, 0, .4);

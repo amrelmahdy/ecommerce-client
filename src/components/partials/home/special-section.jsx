@@ -11,14 +11,16 @@ import OwlCarousel from '../../features/owl-carousel';
 // Import Settigns
 import { fadeIn, fadeInDownShorter, fadeInRightShorter, fadeInUpShorter, fadeInLeftShorter } from '../../../utils/data/keyframes'
 import { productSlider } from '../../../utils/data/slider';
+import { useTranslation } from 'react-i18next';
 
 function SpecialSection ( { products } ) {
+    const {t} = useTranslation()
     return (
         <section className="special-section">
             <div className="container">
                 <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                    <h2 className="section-title">This Week's Specials</h2>
-                    <p className="section-info font2">All our new arrivals in a exclusive brand selection</p>
+                    <h2 className="section-title">{t("home_shop_recently_arrived_title")}</h2>
+                    <p className="section-info font2"></p>
 
                     <div className="products-container bg-white mb-4 rounded">
                         <div className="row">
@@ -59,18 +61,17 @@ function SpecialSection ( { products } ) {
 
                             <div className="banner-layer banner-layer-middle banner-layer-right">
                                 <Reveal keyframes={ fadeInDownShorter } delay={ 100 } duration={ 1000 } triggerOnce>
-                                    <h4 className="font-weight-normal text-body">Exclusive
-                                        Product New Arrival</h4>
+                                    <h4 className="font-weight-normal text-body">{t("banner_title1")}</h4>
                                 </Reveal>
 
                                 <Reveal keyframes={ fadeInUpShorter } delay={ 600 } duration={ 1000 } triggerOnce>
-                                    <h2 className="m-l-n-1 p-r-5 m-r-2">Organic Coffee</h2>
+                                    <h2 className="m-l-n-1 p-r-5 m-r-2">{t("banner_header1")}</h2>
                                 </Reveal>
 
                                 <Reveal keyframes={ fadeInRightShorter } delay={ 1100 } duration={ 1000 } triggerOnce>
                                     <div className="position-relative">
-                                        <h3 className="text-uppercase">Special Blend</h3>
-                                        <h5 className="rotate-text font-weight-normal text-primary">Fresh!</h5>
+                                        <h3 className="text-uppercase">{t("banner_sub1")}</h3>
+                                        <h5 className="rotate-text font-weight-normal text-primary">{t("banner_sub_note1")}</h5>
                                     </div>
                                 </Reveal>
                             </div>
@@ -91,27 +92,27 @@ function SpecialSection ( { products } ) {
 
                             <div className="banner-layer banner-layer-middle banner-layer-right">
                                 <Reveal keyframes={ fadeInUpShorter } delay={ 200 } duration={ 1000 } triggerOnce>
-                                    <h4 className="font-weight-normal">Stay Healthy</h4>
+                                    <h4 className="font-weight-normal">{t("banner_title2")}</h4>
                                 </Reveal>
 
                                 <Reveal keyframes={ fadeInUpShorter } delay={ 400 } duration={ 1000 } triggerOnce>
-                                    <h2 className="text-white">Low Carb</h2>
+                                    <h2 className="text-white">{t("banner_header2")}</h2>
                                 </Reveal>
 
                                 <Reveal keyframes={ fadeInUpShorter } delay={ 600 } duration={ 1000 } triggerOnce>
-                                    <h3 className="text-white text-uppercase mb-2">Strawberry</h3>
+                                    <h3 className="text-white text-uppercase mb-2">{t("banner_sub2")}</h3>
                                 </Reveal>
 
                                 <Reveal keyframes={ fadeInUpShorter } delay={ 800 } duration={ 1000 } triggerOnce>
-                                    <h5 className="font-weight-normal text-white mb-0">Sugar-Free</h5>
+                                    <h5 className="font-weight-normal text-white mb-0">{t("banner_sub_note2")}</h5>
                                 </Reveal>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h2 className="section-title">Special Offers</h2>
-                <p className="section-info font2">All our new arrivals in a exclusive brand selection</p>
+                <h2 className="section-title">{t("home_shop_top_deals_title")}</h2>
+                <p className="section-info font2"></p>
 
                 <div className="row offer-products">
                     <div className="col-lg-4 col-md-5">

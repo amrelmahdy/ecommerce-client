@@ -1,0 +1,61 @@
+{
+    "menu": [
+        {
+            "name": "main_menu_home",
+            "path": "/",
+            "sub_items": []
+        },
+        {
+            "name": "main_menu_shop",
+            "path": "/shop",
+            "sub_items": []
+        },
+        {
+            "name": "main_menu_products",
+            "path": "/products",
+            "sub_items": []
+        },
+        {
+            "name": "main_menu_help_and_faqs",
+            "path": "/help",
+            "sub_items": []
+        },
+        {
+            "name": "main_menu_about_us",
+            "path": "/about_us",
+            "sub_items": [
+                {
+                    "name": "return_plicy",
+                    "path": "/stores",
+                    "sub_items": []
+                },
+                {
+                    "name": "shippment_and_delivery",
+                    "path": "/",
+                    "sub_items": []
+                },
+                {
+                    "name": "payment_methods",
+                    "path": "/",
+                    "sub_items": []
+                },
+                {
+                    "name": "vat_registration_certificate",
+                    "path": "/",
+                    "sub_items": []
+                },
+                {
+                    "name": "privacy_plicy",
+                    "path": "/",
+                    "sub_items": []
+                },
+                {
+                    "name": "main_menu_contact_us",
+                    "path": "/",
+                    "sub_items": []
+                }
+            ]
+        }
+       
+    ]
+}

@@ -17,10 +17,11 @@ export default function ALink ( { children, className, style, href, ...props } )
     return (
         <>
             { href !== '#' ?
-                <Link to={ href } { ...props }>
-                    <a className={ className } style={style}>
+                <Link className={ className } style={style} to={ href } { ...props }>
+                      { children }
+                    {/* <a className={ className } style={style}>
                         { children }
-                    </a>
+                    </a> */}
                 </Link>
                 : <a className={ className } href="#" onClick={ e => e.preventDefault() }>{ children }</a>
             }

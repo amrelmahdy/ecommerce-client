@@ -3,25 +3,21 @@
 // # Contents
 // 1. Menu Base
 // 2. Menu
-	// 2.1) Menu - Item
-	// 2.2) Menu - Main Item
-	// 2.3) Menu - Dropdown Arrow
+// 2.1) Menu - Item
+// 2.2) Menu - Main Item
+// 2.3) Menu - Dropdown Arrow
 // 3. Mega Menu
 // 4. Main Nav Menu
 // 5. Menu Tip
 
 // # Variables
 
-@include set-default(
-	(
-		menu: (
-			color: #777,
+@include set-default((menu: (color: #333,
 			background: false,
 			active-color: false,
 			active-background: #f4f4f4,
 
-			mega: (
-				width-4col: 580px,
+			mega: (width-4col: 580px,
 				width-3col: 600px,
 				color: false,
 				background: false,
@@ -29,44 +25,38 @@
 				active-background: transparent,
 				family: false,
 				size: false,
-				weight: false
-			),
+				weight: false),
 
-			nolink: (
-				color: #333,
+			nolink: (color: #333,
 				background: false,
 			),
 
-			top: (
-				color: #555,
+			top: (color: #555,
 				background: false,
 				active-color: $primary-color,
 				active-background: transparent,
-				letter-spacing: -.01em
-			),
-			
+				letter-spacing: -.01em),
+
 			main: (
-				font-size: 12px,
+				font-size: 16px,
 				color: false,
 				background: false,
 				active-color: false,
 				active-background: false,
-	
+
 				mega: (
 					color: false,
 					background: false,
 					active-color: false,
-					active-background: false
-				),
+					active-background: false),
 
 				nolink: (
 					color: false,
 					background: false,
 					font-weight: false,
 				),
-	
-				top: (
-					cut-start-end: true,
+
+				top: (cut-start-end: true,
 
 					color: false,
 					background: false,
@@ -80,11 +70,8 @@
 					padding: 19px 0,
 					sticky-padding: false,
 					space: 2.9rem
-				)
-			),
-		)
-	)
-);
+					)),
+		)));
 
 // 1. Menu Base
 
@@ -104,11 +91,12 @@
 	line-height: 1.5;
 	@include clearfix;
 
-// 2.1) Menu - Item
+	// 2.1) Menu - Item
 
-	> li {
+	>li {
+
 		>ul,
-		> .megamenu {
+		>.megamenu {
 			&:before {
 				content: "";
 				position: absolute;
@@ -130,8 +118,9 @@
 	}
 
 	li {
+
 		// Sub Item Anchor
-		> a {
+		>a {
 			display: block;
 			padding: .8rem 1.8rem;
 			transition: .2s ease-out;
@@ -141,6 +130,7 @@
 		}
 
 		&:hover {
+
 			ul,
 			.megamenu {
 				top: 100%;
@@ -154,7 +144,7 @@
 		&:hover,
 		&.show,
 		&.active {
-			> a {
+			>a {
 				@include css(color, menu, active-color);
 				@include css(background, menu, active-background);
 			}
@@ -163,13 +153,13 @@
 	}
 
 	// 2.2) Menu - Main Item
-	> li {
+	>li {
 		float: left;
 		position: relative;
 		margin-right: 2.8rem;
 
 		// Anchor
-		> a {
+		>a {
 			padding: 1rem 0;
 			font-size: 13px;
 			font-weight: 400;
@@ -182,14 +172,14 @@
 		&:hover,
 		&.show,
 		&.active {
-			> a {
+			>a {
 				@include css(color, menu, top, active-color);
 				@include css(background, menu, top, active-background);
 			}
 		}
 
-	// 2.3) Menu - Dropdown Triangle
-		> .sf-with-ul:before {
+		// 2.3) Menu - Dropdown Triangle
+		>.sf-with-ul:before {
 			content: '';
 			position: absolute;
 			z-index: 1000;
@@ -202,17 +192,17 @@
 			transition: opacity ease-in .08s;
 		}
 
-		&.show > .sf-with-ul:before {
+		&.show>.sf-with-ul:before {
 			opacity: 1;
 			visibility: visible;
 		}
 	}
 
-// 3. Mega Menu
+	// 3. Mega Menu
 	.megamenu {
 		display: block;
 		position: absolute;
-		padding: 10px 20px;
+		padding: 0 !important;
 		margin-top: -2rem;
 		top: -999999px;
 		visibility: hidden;
@@ -225,12 +215,12 @@
 		background-color: #fff;
 		box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .15);
 		@include css(width, menu, mega, width-4col);
-		
+
 		&.megamenu-3cols {
 			@include css(width, menu, mega, width-3col);
 		}
 
-		.row > div {
+		.row>div {
 			padding-top: 1.5rem;
 		}
 
@@ -250,7 +240,6 @@
 			min-width: 0;
 
 			a {
-				padding: 7px 8px 8px 0;
 
 				@include css(font-family, menu, mega, family);
 				@include css(font-size, menu, mega, size);
@@ -258,6 +247,9 @@
 				@include css(color, menu, mega, color);
 				@include css(background, menu, mega, background);
 			}
+
+		
+
 
 			li:hover a {
 				text-decoration: underline;
@@ -312,7 +304,7 @@
 	// Dropdown Arrow
 	&.sf-arrows {
 
-		.sf-with-ul + ul > li {
+		.sf-with-ul+ul>li {
 			position: relative;
 		}
 
@@ -325,7 +317,7 @@
 		}
 
 		// Main Anchor's dropdown icon
-		> li > .sf-with-ul:after {
+		>li>.sf-with-ul:after {
 			content: '\e81c';
 			position: static;
 			margin-left: 5px;
@@ -336,15 +328,24 @@
 
 // 4. Main Nav - Menu
 
+body[lang="ar"] .main-nav {
+	.menu {
+		li {
+			text-align: right;
+		}
+	}
+}
+
 .main-nav .menu {
 	text-transform: uppercase;
-	@include css( font-size, menu, main, font-size );
-	@include css( font-family, menu, main, font-family );
+	@include css(font-size, menu, main, font-size);
+	@include css(font-family, menu, main, font-family);
 
 	// 4.1) Header Menu Item
 	li {
+
 		// Anchor
-		> a {
+		>a {
 			@include css(color, menu, main, color);
 			@include css(background, menu, main, background);
 		}
@@ -359,22 +360,24 @@
 	}
 
 	// 4.2) Header Menu Main Item
-	> li {
-		@include css( margin-right, menu, main, top, space );
+	>li {
+
+		@include css(margin-right, menu, main, top, space);
 
 		// Anchor
-		> a {
-			@include css( font-size, menu, main, top, font-size );
-			@include css( font-weight, menu, main, top, font-weight);
-			@include css( padding, menu, main, top, padding );
-			@include css( letter-spacing, menu, main, top, letter-spacing );
-			@include css( color, menu, main, top, color );
-			@include css( background, menu, main, top, background );
-			@include css( font-family, menu, main, top, font-family );
-			@include css( letter-spacing, menu, main, top, letter-spacing );
-
+		>a {
+			padding : 1.5rem 3.9rem 1.5rem 2.6rem;
+			@include css(font-size, menu, main, top, font-size);
+			@include css(font-weight, menu, main, top, font-weight);
+			//@include css(padding, menu, main, top, padding);
+			@include css(letter-spacing, menu, main, top, letter-spacing);
+			@include css(color, menu, main, top, color);
+			@include css(background, menu, main, top, background);
+			@include css(font-family, menu, main, top, font-family);
+			@include css(letter-spacing, menu, main, top, letter-spacing);
+			color: #000000;
 			.sticky-header.fixed & {
-				@include css( padding, menu, main, top, sticky-padding );
+				@include css(padding, menu, main, top, sticky-padding);
 			}
 		}
 
@@ -386,13 +389,13 @@
 			@include css(background, menu, main, top, active-background);
 		}
 
-		@if ( get( menu, main, top, cut-start-end ) ) {
-			&:first-child > a {
+		@if (get(menu, main, top, cut-start-end)) {
+			&:first-child>a {
 				padding-left: 0;
 			}
 
 			&:not(.float-right):last-child,
-			&:not(.float-right) + li.float-right {
+			&:not(.float-right)+li.float-right {
 				margin-right: 0;
 			}
 		}
@@ -402,7 +405,7 @@
 		border-top: none;
 	}
 
-	> li > ul {
+	>li>ul {
 		left: -15px;
 	}
 
@@ -419,6 +422,7 @@
 			@include css(color, menu, main, mega, color);
 			@include css(background, menu, main, mega, background);
 		}
+
 
 		li:hover a {
 			@include css(color, menu, main, mega, active-color);

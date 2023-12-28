@@ -8,14 +8,18 @@ import Page from '../../components/page';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../store/shop/shop.actions';
 import { getAllProducts } from '../../store/shop/shop.selectors';
+import { useTranslation } from 'react-i18next';
 
 function Shop() {
+    const { t } = useTranslation()
     const dispatch = useDispatch();
     const { data: products, categoryFamily, loading } = useSelector(getAllProducts);
+    console.log("useSelector(getAllProducts)", products)
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
     const searchQuery = searchParams.get('search')
     const pageQuery = searchParams.get('page')
+
 
 
     const getPageQueryByKey = key => searchParams.get(key)
@@ -105,7 +109,7 @@ function Shop() {
 
     return (
         <Page>
-            <main className="main">
+            <main className="main rtl">
                 <div className="container">
                     <nav aria-label="breadcrumb" className="breadcrumb-nav">
                         <ol className="breadcrumb">
@@ -113,7 +117,7 @@ function Shop() {
                             {
                                 getPageQueryByKey('category') ?
                                     <>
-                                        <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>shop</ALink></li>
+                                        <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>{t("breadcrumb_item_shop")}</ALink></li>
                                         {
                                             categoryFamily.map((item, index) => (
                                                 <li className="breadcrumb-item" key={`category-family-${index}`}><ALink href={{ query: { category: item.slug } }} scroll={false}>{item.name}</ALink></li>
@@ -139,7 +143,7 @@ function Shop() {
                                                 <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>shop</ALink></li>
                                                 <li className="breadcrumb-item active" aria-current="page">{`Product Tag - ${getPageQueryByKey("tag")}`}</li>
                                             </>
-                                            : <li className="breadcrumb-item active" aria-current="page">Shop</li>
+                                            : <li className="breadcrumb-item active" aria-current="page">{t("breadcrumb_item_shop")}</li>
                             }
                         </ol>
                     </nav>
@@ -173,16 +177,18 @@ function Shop() {
                                     </a>
 
                                     <div className="toolbox-item toolbox-sort">
-                                        <label>Sort By:</label>
-
+                                        <label>{t("shop_toolbar_sort_by")}</label>
                                         <div className="select-custom">
                                             <select name="orderby" className="form-control" value={sortBy} onChange={e => onSortByChange(e)}>
-                                                <option value="default">Default sorting</option>
-                                                <option value="popularity">Sort by popularity</option>
-                                                <option value="rating">Sort by average rating</option>
-                                                <option value="date">Sort by newness</option>
-                                                <option value="price">Sort by price: low to high</option>
-                                                <option value="price-desc">Sort by price: high to low</option>
+
+          
+
+                                                <option value="default">{t("shop_toolbar_sort_by_default")}</option>
+                                                <option value="price">{t("shop_toolbar_sort_by_price")}</option>
+                                                <option value="price">{t("shop_toolbar_sort_by_date-desc")}</option>
+                                                <option value="date">{t("shop_toolbar_sort_by_date")}</option>
+                                                <option value="rating">{t("shop_toolbar_sort_by_rating")}</option>
+
                                             </select>
                                         </div>
                                     </div>
@@ -190,8 +196,7 @@ function Shop() {
 
                                 <div className="toolbox-right">
                                     <div className="toolbox-item toolbox-show">
-                                        <label>Show:</label>
-
+                                        <label>{t("shop_toolbar_shows")}</label>
                                         <div className="select-custom">
                                             <select name="count" className="form-control" value={perPage} onChange={(e) => onPerPageChange(e)}>
                                                 <option value="12">12</option>
@@ -205,7 +210,7 @@ function Shop() {
                                         <ALink href={{ pathname: location.pathname, query: location.search }} className="layout-btn btn-grid active" title="Grid">
                                             <i className="icon-mode-grid"></i>
                                         </ALink>
-                                        <ALink href={{ pathname: '/shop/list', query: location.search }} style={{ marginLeft: '10px' }} className="layout-btn btn-list" title="List">
+                                        <ALink href={{ pathname: '/shop/list', query: location.search }}  className="layout-btn btn-list" title="List">
                                             <i className="icon-mode-list"></i>
                                         </ALink>
                                     </div>
@@ -219,7 +224,7 @@ function Shop() {
                             {loading || (products && products.length) ?
                                 <nav className="toolbox toolbox-pagination">
                                     <div className="toolbox-item toolbox-show">
-                                        <label>Show:</label>
+                                        <label>{t("shop_toolbar_shows")}</label>
 
                                         <div className="select-custom">
                                             <select name="count" className="form-control" value={perPage} onChange={e => onPerPageChange(e)}>

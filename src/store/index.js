@@ -17,7 +17,6 @@ const persistConfig = {
   // timeout: null,
 };
 
-
 const rootReducer = combineReducers({
   shop: shopReducer
 });
@@ -29,7 +28,6 @@ const store = configureStore({
   reducer: persistedReducer,
   middleware: (_getDefaultMiddleware) => [thunk]
 });
-
 
 const persistor = persistStore(store);
 

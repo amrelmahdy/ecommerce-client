@@ -2,6 +2,7 @@
 import React from 'react'
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import _ from 'lodash'
 // import { useQuery } from "@apollo/react-hooks";
 
 // Import Apollo Server
@@ -13,12 +14,17 @@ import ALink from "../ALink";
 import ProductCountdown from '../../features/product-countdown';
 import OwlCarousel from '../../features/owl-carousel';
 import ProductThree from '../../features/products/product-three';
-
+import { useTranslation } from 'react-i18next'
 // Import Utils
 import { mainMenu } from "../../../utils/data/menu";
+import mainMenuData from './../../../data/mainmenu.json'
+import categoriesData from './../../../data/categories.json'
+
+import i18n from '../../../i18n';
 
 function MainMenu({ router }) {
     const pathname = 'router.pathname';
+    const { t } = useTranslation()
     // const { data, loading, error } = useQuery(GET_HOME_DATA, { variables: { productsCount: 10, postsCount: 6 } });
 
     // const featured = data && data.specialProducts.featured;
@@ -26,6 +32,117 @@ function MainMenu({ router }) {
     const featured = false;
     const loading = false;
     const error = false;
+
+
+
+
+
+    const renderMainMenu = () => {
+        let menItems = mainMenuData.menu || []
+        var reversed = Object.assign([], menItems)
+        if (i18n.language === 'ar') {
+            reversed.reverse()
+            menItems = reversed
+        }
+        const renderSubItems = subItems => {
+            if (subItems.length) {
+                return <ul>
+                    {
+                        subItems.map((subItem, i) => {
+                            return <li key={"menu_item" + i}>
+                                <ALink href={`${subItem.path}`}>{t(subItem.name)}</ALink>
+                            </li>
+
+                        })
+                    }
+                </ul>
+            }
+            return null;
+        }
+        return menItems.map((item, index) => {
+            const subItems = item.sub_items;
+            return <li key={"sub_menu_item" + index} className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
+                <ALink href="/shop">{t(item.name)}</ALink>
+                {renderSubItems(subItems)}
+            </li>
+        })
+    }
+
+
+
+    const renderSideMenu = () => {
+        let menItems = categoriesData.categories || []
+        // var reversed = Object.assign([], menItems)
+        // if (i18n.language === 'ar') {
+        //     reversed.reverse()
+        //     menItems = reversed
+        // }
+        const renderSubItems = subItems => {
+            if (subItems.length) {
+                // return <ul>
+                //     {
+                //         subItems.map((subItem, i) => {
+                //             return <li key={"menu_item" + i}>
+                //                 <ALink href={`${subItem.path}`}>{t(subItem.name)}</ALink>
+                //             </li>
+
+                //         })
+                //     }
+                // </ul>
+
+                return <div className="megamenu megamenu-fixed-width megamenu-six text-transform-none">
+                    <ul className="submenu bg-transparent">
+                        {
+                            //     {
+                            subItems.map((subItem, i) => {
+                                return <li key={"menu_item" + i}>
+                                    <ALink href={{ pathname: '/shop', query: { category: 'sports-and-fitness' } }}>{
+                                        i18n.language === 'ar' ? subItem.ar_name : subItem.en_name
+                                    }</ALink>
+
+                                </li>
+
+                            })
+                        }
+
+
+                        {/* <li><ALink href={{ pathname: '/shop', query: { category: 'boating-and-sailing' } }}>Boating &amp; Sailing</ALink>
+                                        </li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'clothing' } }}>Clothing</ALink></li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'exercise' } }}>Exercise &amp;
+                                            Fitness</ALink></li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'golf' } }}>Golf</ALink></li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'hunting-and-fishing' } }}>Hunting &amp; Fishing</ALink>
+                                        </li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'leisure-sports' } }}>Leisure Sports</ALink>
+                                        </li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'running' } }}>Running</ALink>
+                                        </li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'swimming' } }}>Swimming</ALink>
+                                        </li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'team-sports' } }}>Team Sports</ALink>
+                                        </li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'tennis' } }}>Tennis</ALink>
+                                        </li>
+                                        <li><ALink href={{ pathname: '/shop', query: { category: 'other-sports' } }}>Other Sports</ALink>
+                                        </li> */}
+                    </ul>
+                </div>
+
+            }
+            return null;
+        }
+        return menItems.map((item, index) => {
+            console.log("======subItems", item.sub_categories)
+            const subItems = item.sub_categories;
+            const name = i18n.language === 'ar' ? item.ar_name : item.en_name
+            return <li>
+                <ALink to={{ pathname: '/shop', search: "spcategory=plants" }}><i className={item.icon}></i>{name}</ALink>
+                <span className="menu-btn"></span>
+                {renderSubItems(subItems)}
+            </li>
+        })
+    }
 
     if (error) {
         return <div>{error.message}</div>
@@ -39,10 +156,12 @@ function MainMenu({ router }) {
         <>
             <nav className={`main-nav d-flex font2 skeleton-body skel-shop-products ${!loading ? 'loaded' : ''}`}>
                 <div className="menu-depart">
-                    <ALink href="/shop"><i className="fa fa-bars align-middle mr-3"></i>All Departments</ALink>
+                    <ALink href="/shop"><i className="fa fa-bars align-middle mr-3"></i>{t("main_menu_all_departments")}</ALink>
                     <ul className="menu menu-vertical">
-                        <li>
-                            <ALink to={{ pathname: '/shop', search: "spcategory=plants" }}><i className="icon-category-fashion"></i>Plants</ALink>
+
+                        {renderSideMenu()}
+                        {/* <li>
+                            <ALink to={{ pathname: '/shop', search: "spcategory=plants" }}><i className="icon-comida-organica"></i>Plants</ALink>
                             <span className="menu-btn"></span>
                             <div className="megamenu megamenu-fixed-width megamenu-six text-transform-none">
                                 <div className="row">
@@ -268,8 +387,8 @@ function MainMenu({ router }) {
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        
+                        </li> */}
+
                     </ul>
                 </div>
                 <ul className="menu sf-js-enabled sf-arrows">
@@ -374,7 +493,8 @@ function MainMenu({ router }) {
                             </div>
                         </div>
                     </li> */}
-                    <li className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
+                    {renderMainMenu()}
+                    {/* <li className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
                         <ALink href="/shop">Shop</ALink>
                     </li>
                     <li className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
@@ -394,17 +514,17 @@ function MainMenu({ router }) {
                                 ))
                             }
                         </ul>
-                    </li>
+                    </li> */}
 
-                    <li className={pathname === '/pages/about-us' ? 'active' : ''}>
+                    {/* <li className={pathname === '/pages/about-us' ? 'active' : ''}>
                         <ALink href="/pages/about-us">Our Stores</ALink>
                     </li>
 
                     <li>
                         <a href="#" target="_blank">Order Tracking</a>
-                    </li>
+                    </li> */}
                 </ul>
-            </nav>
+            </nav >
         </>
     );
 }
