@@ -31,7 +31,7 @@ export default {
         "popular_section_desc1": "الشحن مجانًا للطلبات التي تزيد عن 99 دولارًا.",
         "popular_section_title2": "ضمان استعادة الأموال",
         "popular_section_desc2": "ضمان استعادة الأموال بنسبة 100٪.",
-        "popular_section_title3": "الدعم عبر الإنترنت على مدار الساعة",
+        "popular_section_title3": "الدعم على مدار الساعة",
         "popular_section_desc3": " دعم على مدار الساعة لكل استفساراتك",
         "popular_section_title4": "الدفع الآمن",
         "popular_section_desc4": "إجراءدفعات آمنة للتسوق بأمان",

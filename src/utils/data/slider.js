@@ -37,12 +37,12 @@ export const productExtendSlider = {
 }
 
 export const HomeSlider = {
-    autoplay: false,
+    autoplay: true,
     nav: false,
     dots: false,
     autoplayTimeout: 12000,
     navText: [ '<i class="icon-left-open-big">', '<i class="icon-right-open-big">' ],
-    loop: false
+    loop: true
 }
 
 export const blogSlider = {
@@ -117,7 +117,7 @@ export const categorySlider = {
     loop: false,
     margin: 20,
     autoplay: false,
-    nav: false,
+    nav: true,
     dots: false,
     responsive: {
         576: {

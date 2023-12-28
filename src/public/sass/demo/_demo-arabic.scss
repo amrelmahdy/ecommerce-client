@@ -55,6 +55,14 @@ body[lang="ar"] .breadcrumb-item
 	font-family: $second-arabic-font-family;
 }
 
+body[lang="ar"] .home-slide p {   
+    letter-spacing: 1.1px;
+}
+
+
+body[lang="ar"] .coupon-sale-text strong {
+    padding-right: 2.4rem;
+}
 
 body[lang="ar"] .product-single-details .rating-link {
     margin-right: 5px;
