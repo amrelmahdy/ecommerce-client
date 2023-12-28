@@ -62,7 +62,7 @@ function MainMenu({ router }) {
         return menItems.map((item, index) => {
             const subItems = item.sub_items;
             return <li key={"sub_menu_item" + index} className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
-                <ALink href="/shop">{t(item.name)}</ALink>
+                <ALink href={item.path}>{t(item.name)}</ALink>
                 {renderSubItems(subItems)}
             </li>
         })

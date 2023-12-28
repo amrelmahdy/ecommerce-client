@@ -101,10 +101,10 @@ function ProductOne(props) {
 
                 </div>
 
-                {
+                {/* {
                     product.until && product.until !== null &&
                     <ProductCountdown date={product.until} />
-                }
+                } */}
 
                 <a href="#" className="btn-quickview" title={t("product_quick_view")} onClick={onQuickViewClick}>{t("product_quick_view")}</a>
             </figure>

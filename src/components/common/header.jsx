@@ -171,10 +171,5 @@ function Header({ adClass = '', wishlist }) {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        wishlist: state.wishlist.list ? state.wishlist.list : []
-    }
-}
 
 export default Header;

@@ -4,13 +4,13 @@
             "id": 1,
             "slug": "integrali-tusilli",
             "en_name": "Timer",
-            "ar_name": "مؤقت ري",
+            "ar_name": "بايكو 1 (مبيد عضوي)",
             "price": [
-                49,
-                59
+                92,
+                92
             ],
             "en_description": "Programmable Digital Water Timer - 3 Inch Large Display, Garden Hose Faucet, IP65 Waterproof, Daytime Watering Timer/Child Lock Mode/Auto Manual Mode.",
-            "ar_description": "مؤقت مياه الرقمي القابل للبرمجة - شاشة كبيرة مقاس 7.62 سم، صنبور لخرطوم حديقة، مقاوم للمياه بدرجة IP65، مؤقت للري في النهار/وضع قفل الطفل/الوضع اليدوي التلقائي",
+            "ar_description": "هو عباره عن مستخلص نباتي طبيعي يعمل عن طريق المعده ويكافح معظم الاكاروسات والحشرات مثل ( الاكاروس_المن_الذبابه البيضاء_صانعات الانفاق)",
             "until": null,
             "sku": "SOMESKU",
             "stock": 50,
@@ -177,11 +177,11 @@
                 ],
                 "categories": [
                     {
-						"ar_name": "مجمد",
-						"en_name": "Frozen",
-						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					}
+                        "ar_name": "مجمد",
+                        "en_name": "Frozen",
+                        "slug": "frozen-2",
+                        "__typename": "ProductCategory"
+                    }
                 ],
                 "variants": [],
                 "__typename": "Product"
@@ -243,11 +243,11 @@
                 ],
                 "categories": [
                     {
-						"ar_name": "مجمد",
-						"en_name": "Frozen",
-						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					}
+                        "ar_name": "مجمد",
+                        "en_name": "Frozen",
+                        "slug": "frozen-2",
+                        "__typename": "ProductCategory"
+                    }
                 ],
                 "variants": [],
                 "__typename": "Product"
@@ -309,16 +309,13 @@
                 ],
                 "categories": [
                     {
-						"ar_name": "مجمد",
-						"en_name": "Frozen",
-						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					}
-                ],
-                "variants": [],
-                "__typename": "Product"
+                        "ar_name": "مجمد",
+                        "en_name": "Frozen",
+                        "slug": "frozen-2",
+                        "__typename": "ProductCategory"
+                    }
+                ]
             }
-        ],
-        "__typename": "ProductSingleResponse"
+        ]
     }
 }

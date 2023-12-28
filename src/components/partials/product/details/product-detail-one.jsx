@@ -388,7 +388,7 @@ function ProductDetailOne(props) {
 
                         <Qty max={product.stock} value={qty} onChangeQty={changeQty} />
 
-                        <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2 ${attrs.sizes.length > 0 || attrs.colors.length > 0 ? 'disabled' : ''}`} title="Add To Cart" onClick={onAddCartClick}>Add to Cart</a>
+                        <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2 ${attrs.sizes.length > 0 || attrs.colors.length > 0 ? 'disabled' : ''}`} title="Add To Cart" onClick={onAddCartClick}>{t("add_to_cart")}</a>
                     </div>
 
                     <hr className="divider mb-0 mt-0" />

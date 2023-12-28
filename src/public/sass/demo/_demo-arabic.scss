@@ -236,7 +236,11 @@ body[lang="ar"] .menu-depart {
 
 
 body[lang="ar"] .product-single-details .product-action .add-cart{
-	margin-right: 2.5rem;
+	margin-right: 2.5rem !important;
+}
+
+body[lang="ar"] .product-single-details .product-action .add-cart:before {
+    margin-left: 5px;
 }
 
 body[lang="ar"] .menu-depart .megamenu .submenu li {
