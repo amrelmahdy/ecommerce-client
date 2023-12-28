@@ -204,7 +204,7 @@ body[lang="ar"] .menu-depart {
 			&:hover {
 				.megamenu {
 					height: auto;
-					left: -77% !important;
+					left: -68% !important;
 				}
 			}
 		}
@@ -230,6 +230,11 @@ body[lang="ar"] .menu-depart {
 body[lang="ar"] .product-single-details .product-action .add-cart{
 	margin-right: 2.5rem;
 }
+
+body[lang="ar"] .menu-depart .megamenu .submenu li {
+	padding: 18px
+}
+
 
 
 body[lang="ar"] .sidebar-shop .widget-title{
