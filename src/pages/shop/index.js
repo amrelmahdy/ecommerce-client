@@ -6,8 +6,8 @@ import Pagination from '../../components/features/pagination';
 import ProductsGrid from '../../components/partials/products-collection/product-grid';
 import Page from '../../components/page';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../store/shop/shop.actions';
-import { getAllProducts } from '../../store/shop/shop.selectors';
+import { fetchProducts } from '../../store/products/products.actions';
+import { getAllProducts } from '../../store/products/products.selectors';
 import { useTranslation } from 'react-i18next';
 
 function Shop() {

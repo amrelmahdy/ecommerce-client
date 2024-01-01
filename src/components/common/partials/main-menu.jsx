@@ -1,11 +1,8 @@
 // import { withRouter } from 'next/router';
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import _ from 'lodash'
-// import { useQuery } from "@apollo/react-hooks";
-
-// Import Apollo Server
 // import withApollo from '../../../server/apollo';
 // import { GET_HOME_DATA } from '../../../server/queries';
 
@@ -18,11 +15,18 @@ import { useTranslation } from 'react-i18next'
 // Import Utils
 import { mainMenu } from "../../../utils/data/menu";
 import mainMenuData from './../../../data/mainmenu.json'
-import categoriesData from './../../../data/categories.json'
+// import categoriesData from './../../../data/categories.json'
 
 import i18n from '../../../i18n';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAllCategories } from '../../../store/categories/categories.selectors';
 
 function MainMenu({ router }) {
+
+    const { data: categoriesData, loading: categoriesLoading } = useSelector(getAllCategories);
+
+    
+
     const pathname = 'router.pathname';
     const { t } = useTranslation()
     // const { data, loading, error } = useQuery(GET_HOME_DATA, { variables: { productsCount: 10, postsCount: 6 } });
@@ -30,7 +34,6 @@ function MainMenu({ router }) {
     // const featured = data && data.specialProducts.featured;
 
     const featured = false;
-    const loading = false;
     const error = false;
 
 
@@ -71,7 +74,7 @@ function MainMenu({ router }) {
 
 
     const renderSideMenu = () => {
-        let menItems = categoriesData.categories || []
+        let menuItems = categoriesData.filter(item => !item.parent) || []
         // var reversed = Object.assign([], menItems)
         // if (i18n.language === 'ar') {
         //     reversed.reverse()
@@ -79,21 +82,9 @@ function MainMenu({ router }) {
         // }
         const renderSubItems = subItems => {
             if (subItems.length) {
-                // return <ul>
-                //     {
-                //         subItems.map((subItem, i) => {
-                //             return <li key={"menu_item" + i}>
-                //                 <ALink href={`${subItem.path}`}>{t(subItem.name)}</ALink>
-                //             </li>
-
-                //         })
-                //     }
-                // </ul>
-
                 return <div className="megamenu megamenu-fixed-width megamenu-six text-transform-none">
                     <ul className="submenu bg-transparent">
                         {
-                            //     {
                             subItems.map((subItem, i) => {
                                 return <li key={"menu_item" + i}>
                                     <ALink href={{ pathname: '/shop', query: { category: 'sports-and-fitness' } }}>{
@@ -104,36 +95,13 @@ function MainMenu({ router }) {
 
                             })
                         }
-
-
-                        {/* <li><ALink href={{ pathname: '/shop', query: { category: 'boating-and-sailing' } }}>Boating &amp; Sailing</ALink>
-                                        </li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'clothing' } }}>Clothing</ALink></li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'exercise' } }}>Exercise &amp;
-                                            Fitness</ALink></li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'golf' } }}>Golf</ALink></li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'hunting-and-fishing' } }}>Hunting &amp; Fishing</ALink>
-                                        </li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'leisure-sports' } }}>Leisure Sports</ALink>
-                                        </li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'running' } }}>Running</ALink>
-                                        </li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'swimming' } }}>Swimming</ALink>
-                                        </li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'team-sports' } }}>Team Sports</ALink>
-                                        </li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'tennis' } }}>Tennis</ALink>
-                                        </li>
-                                        <li><ALink href={{ pathname: '/shop', query: { category: 'other-sports' } }}>Other Sports</ALink>
-                                        </li> */}
                     </ul>
                 </div>
 
             }
             return null;
         }
-        return menItems.map((item, index) => {
-            console.log("======subItems", item.sub_categories)
+        return menuItems.map((item, index) => {
             const subItems = item.sub_categories;
             const name = i18n.language === 'ar' ? item.ar_name : item.en_name
             return <li>
@@ -154,7 +122,7 @@ function MainMenu({ router }) {
 
     return (
         <>
-            <nav className={`main-nav d-flex font2 skeleton-body skel-shop-products ${!loading ? 'loaded' : ''}`}>
+            <nav className={`main-nav d-flex font2 skeleton-body skel-shop-products ${!categoriesLoading ? 'loaded' : ''}`}>
                 <div className="menu-depart">
                     <ALink href="/shop"><i className="fa fa-bars align-middle mr-3"></i>{t("main_menu_all_departments")}</ALink>
                     <ul className="menu menu-vertical">

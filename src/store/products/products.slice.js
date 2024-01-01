@@ -1,5 +1,5 @@
 import { createSlice, current, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchProducts } from '../shop/shop.actions';
+import { fetchProducts } from './products.actions';
 
 
 const initialState = {
@@ -10,8 +10,8 @@ const initialState = {
     }
 }
 
-const shopSlice = createSlice({
-    name: 'shop',
+const productsSlice = createSlice({
+    name: 'products',
     initialState: initialState,
     // reducers: {
     //     getAllProducts: {
@@ -41,6 +41,5 @@ const shopSlice = createSlice({
     }
 },)
 
-export const { getAllProducts } = shopSlice.actions;
 
-export default shopSlice.reducer
+export default productsSlice.reducer

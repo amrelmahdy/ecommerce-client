@@ -11,8 +11,17 @@ import OwlCarousel from '../../features/owl-carousel';
 import { infoBoxSlider, categorySlider, productSlider } from '../../../utils/data/slider';
 import { fadeInUpShorter, fadeIn } from '../../../utils/data/keyframes'
 import categoriesData from './../../../data/categories.json'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProducts } from '../../../store/products/products.actions';
+import { fetchCategories } from '../../../store/categories/categories.actions';
+import { getAllCategories } from '../../../store/categories/categories.selectors';
 
 export default function PopularSection(props) {
+
+
+    const { data, loading } = useSelector(getAllCategories)
+
 
     const { t, i18n } = useTranslation()
 
@@ -32,44 +41,43 @@ export default function PopularSection(props) {
 
     return (
         <section className="popular-section">
-            <div className="container">
-                
+            {
+               !loading && data &&  data.length && <div className="container">
+                    <h2 className="section-title">{t("home_shop_by_category_title")}</h2>
+                    <p className="section-info font2"></p>
 
-                <h2 className="section-title">{t("home_shop_by_category_title")}</h2>
-                <p className="section-info font2"></p>
+                    <Reveal keyframes={fadeInUpShorter} delay={100} duration={1000} triggerOnce>
+                        <section className="categories-section">
+                            <OwlCarousel adClass="categories-slider show-nav-hover nav-oute  mb-4" options={categorySlider}>
 
-                <Reveal keyframes={fadeInUpShorter} delay={100} duration={1000} triggerOnce>
-                    <section className="categories-section">
-                        <OwlCarousel adClass="categories-slider show-nav-hover nav-oute  mb-4" options={categorySlider}>
+                                {
+                                    data.length && data.map((item, index) => {
+                                        const name = i18n.language === 'ar' ? item.ar_name : item.en_name
+                                        return <div className="product-category media-with-lazy ">
+                                            <ALink href={{ pathname: '/shop', query: { category: 'cooking' } }}>
+                                                <figure>
+                                                    <LazyLoadImage
+                                                        alt="category"
+                                                        src={`${process.env.REACT_APP_BASE_URL}/${item.image}`}
+                                                        width="100%"
+                                                        height="auto"
+                                                        threshold={500}
+                                                        effect="black and white"
+                                                    />
+                                                </figure>
+                                                <div className="category-content">
+                                                    <h3 className="font2 ls-n-25 al-r">{name}</h3>
+                                                    {/* <span className="font2 rtl ls-n-20">{item.count} {t("popular_department_product")}</span> */}
+                                                </div>
+                                            </ALink>
+                                        </div>
 
-                            {
-                                categoriesData.categories.map((item, index) => {
-                                    const name = i18n.language === 'ar' ? item.ar_name : item.en_name
-                                    return <div className="product-category media-with-lazy ">
-                                        <ALink href={{ pathname: '/shop', query: { category: 'cooking' } }}>
-                                            <figure>
-                                                <LazyLoadImage
-                                                    alt="category"
-                                                    src={item.image}
-                                                    width="100%"
-                                                    height="auto"
-                                                    threshold={500}
-                                                    effect="black and white"
-                                                />
-                                            </figure>
-                                            <div className="category-content">
-                                                <h3 className="font2 ls-n-25 al-r">{name}</h3>
-                                                <span className="font2 rtl ls-n-20">{item.count} {t("popular_department_product")}</span>
-                                            </div>
-                                        </ALink>
-                                    </div>
-
-                                })
-                            }
-
+                                    })
+                                }
 
 
-                            {/* 
+
+                                {/* 
                         <div className="product-category media-with-lazy bg-white text-white">
                             <ALink href={{ pathname: '/shop', query: { category: 'fruits' } }}>
                                 <figure>
@@ -163,11 +171,11 @@ export default function PopularSection(props) {
                                 </div>
                             </ALink>
                         </div> */}
-                        </OwlCarousel>
-                    </section>
-                </Reveal>
+                            </OwlCarousel>
+                        </section>
+                    </Reveal>
 
-                {/* <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
+                    {/* <Reveal keyframes={fadeIn} delay={200} duration={1000} triggerOnce>
                     <h2 className="section-title">Most Popular</h2>
                     <p className="section-info font2">All our new arrivals in a exclusive brand selection</p>
 
@@ -324,8 +332,9 @@ export default function PopularSection(props) {
                     </div>
                 </Reveal>
                 */}
-                
-            </div>
+
+                </div>}
+
         </section>
     );
 }

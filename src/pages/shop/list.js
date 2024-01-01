@@ -14,8 +14,8 @@ import data from './../../data/shop.json'
 import { useLocation, useSearchParams } from 'react-router-dom';
 import Page from '../../components/page';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchProducts } from '../../store/shop/shop.actions';
-import { getAllProducts } from '../../store/shop/shop.selectors';
+import { fetchProducts } from '../../store/products/products.actions';
+import { getAllProducts } from '../../store/products/products.selectors';
 import { useTranslation } from 'react-i18next';
 
 function Shop() {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { useQuery } from "@apollo/react-hooks";
 import Page from '../../components/page'
 // Import Apollo Server and Query
@@ -15,8 +15,18 @@ import SpecialSection from "../../components/partials/home/special-section";
 import NewsletterSection from "../../components/partials/home/newsletter-section";
 import data from '../../data/data.json'
 import InfoBoxesSection from "../../components/partials/home/info-boxes-section";
+import { fetchCategories } from "../../store/categories/categories.actions";
+import { useDispatch } from "react-redux";
 
 function Home() {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchCategories())
+    }, [])
+
+    console.log(process.env)
 
     // const { data, loading, error } = useQuery( GET_HOME_DATA, { variables: { productsCount: 15, postsCount: 6 } } );
     const bestSelling = data && data.specialProducts.bestSelling;

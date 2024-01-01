@@ -1,5 +1,5 @@
 import { createSlice, current, createAsyncThunk } from '@reduxjs/toolkit';
-import data from './../../data/shop.json';
+import data from '../../data/shop.json';
 
 
 const getProductsService = () => {
@@ -10,10 +10,9 @@ const getProductsService = () => {
     });
 }
 
-export const fetchProducts = createAsyncThunk('shop/fetchProducts', async () => {
+export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
     try {
         const res = await getProductsService();
-        console.log("res", res)
         return res.products
     } catch (error) {
         return error.message
