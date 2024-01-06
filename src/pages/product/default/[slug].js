@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { useRouter } from 'next/router';
 // import { useQuery } from '@apollo/react-hooks';
 
@@ -9,21 +9,39 @@ import { useLocation, useParams, useSearchParams } from 'react-router-dom';
 // Import Custom Component
 import ALink from '../../../components/common/ALink';
 import ProductMediaOne from '../../../components/partials/product/media/product-media-one';
-import data from './../../../data/product.json'
+// import data from './../../../data/product.json'
 import ProductDetailOne from '../../../components/partials/product/details/product-detail-one';
 // import ProductWidgetContainer from '../../../components/partials/product/widgets/product-widget-container';
 import RelatedProducts from '../../../components/partials/product/widgets/related-products';
 import SingleTabOne from '../../../components/partials/product/tabs/single-tab-one';
 import Page from '../../../components/page';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProductDetails, fetchRelatedProducts } from '../../../store/products/products.actions';
+import { getProductDetails } from '../../../store/products/products.selectors';
+import { useTranslation } from 'react-i18next';
 
 function ProductDefault() {
+    const { t, i18n } = useTranslation()
     const location = useLocation()
+    const dispatch = useDispatch()
+    const { data: product, loading, related } = useSelector(getProductDetails)
     const params = useParams()
     const slug = params.slug;
     const [searchParams, setSearchParams] = useSearchParams();
     const getPageQueryByKey = key => searchParams.get(key)
     const error = false;
-    const loading = false;
+
+
+    console.log("product", related)
+
+
+    useEffect(() => {
+        dispatch(fetchProductDetails(slug))
+        dispatch(fetchRelatedProducts(slug))
+    }, [slug])
+
+
+
     if (!slug) return (
         <div className="loading-overlay">
             <div className="bounce-loader">
@@ -35,8 +53,10 @@ function ProductDefault() {
     );
 
 
-    const product = data && data.product.data;
-    const related = data && data.product.related;
+
+
+    // const product = data && data.product.data;
+    // const related = data && data.product.related;
 
     if (error) {
         // return useRouter().push( '/pages/404' );
@@ -54,7 +74,7 @@ function ProductDefault() {
                                 {
                                     product && product.categories.map((item, index) => (
                                         <React.Fragment key={`category-${index}`}>
-                                            <ALink href={{ pathname: "/shop", query: { category: item.slug } }}>{item.name}</ALink>
+                                            <ALink href={{ pathname: "/shop", query: { category: item.slug } }}>{item[`${i18n.language}_name`]}</ALink>
                                             {index < product.categories.length - 1 ? ',' : ''}
                                         </React.Fragment>
                                     ))
@@ -68,21 +88,21 @@ function ProductDefault() {
                 <div className={`container skeleton-body skel-shop-products ${loading ? '' : 'loaded'}`}>
                     <div className="product-single-container product-single-default">
                         <div className="row">
-                            <ProductMediaOne product={product} />
+                            {product?.images?.length > 0 && <ProductMediaOne product={product} />}
 
                             <ProductDetailOne
                                 product={product}
-                                prev={product && data.product.prev}
-                                next={product && data.product.next}
+                            // prev={product && data.product.prev}
+                            // next={product && data.product.next}
                             />
                         </div>
                     </div>
 
-                    {/* <SingleTabOne product={product} /> */}
+                    {/* <SingleTabOne product={product} />  */}
 
                     <RelatedProducts products={related} loading={loading} />
                 </div>
-            </main >
+            </main>
         </Page>
     )
 }

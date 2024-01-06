@@ -30,6 +30,8 @@ body[lang="ar"] h5,
 body[lang="ar"] .h5,
 body[lang="ar"] h6,
 body[lang="ar"].h6,
+body[lang="ar"] span,
+body[lang="ar"] strong,
 body[lang="ar"] .widget-title,
 body[lang="ar"] .count-deal .btn-add-cart,
 body[lang="ar"] .single-info-list a,
@@ -37,7 +39,7 @@ body[lang="ar"] .inner-icon:not(.product-widget):hover figure .btn-quickview
 
 {
 	font-family: $arabic-font-family;
-	letter-spacing: 0 !important;
+	// letter-spacing: 0 !important;
 }
 
 body[lang="ar"] .old-price,

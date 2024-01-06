@@ -2,24 +2,20 @@ import SlideToggle from 'react-slide-toggle';
 import InputRange from 'react-input-range';
 import StickyBox from 'react-sticky-box';
 import Tree from 'rc-tree';
-// import { useRouter } from 'next/router';
 import { useState, useEffect, useMemo } from 'react';
-// import { useQuery } from '@apollo/react-hooks';
-// Import Apollo Server and Query
-// import withApollo from '../../../../server/apollo';
-// import { GET_SHOP_SIDEBAR_DATA } from '../../../../server/queries';
-
 // Import Custom Component
 import ALink from '../../../common/ALink';
 import OwlCarousel from '../../../features/owl-carousel';
 import ProductThree from '../../../features/products/product-three';
 import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 import data from './../../../../data/sidebar.json'
-import categoriesData from './../../../../data/categories.json'
+// import categoriesData from './../../../../data/categories.json'
 import { useTranslation } from 'react-i18next'
 // Import Utils
 import { widgetFeaturedProductSlider } from '../../../../utils/data/slider';
 import { shopBrands, shopSizes } from '../../../../utils/data/shop';
+import { useSelector } from 'react-redux';
+import { getAllCategories } from '../../../../store/categories/categories.selectors';
 
 const TreeNode = (props) => {
     return (
@@ -35,6 +31,9 @@ function ShopSidebarOne(props) {
     const { display, adClass = '' } = props;
     const location = useLocation();
     const navigate = useNavigate()
+    const { data: categoriesData, loading: categoriesLoading } = useSelector(getAllCategories);
+
+
     const [searchParams, setSearchParams] = useSearchParams();
     const error = false;
     const loading = false;
@@ -44,48 +43,21 @@ function ShopSidebarOne(props) {
 
     const getPageQueryByKey = key => searchParams.get(key)
 
-    console.log("data.shopSidebarData.categories", location.search)
-
     const categories = useMemo(() => {
-        let cats = categoriesData ? categoriesData.categories : [];
+        let cats = categoriesData ? categoriesData : [];
         let stack = [],
             result = [];
         result = cats.reduce((acc, cur) => {
             if (!cur.parent) {
                 let newNode = {
                     key: cur.slug,
-                    title: <TreeNode name={i18n.language ==='ar' ? cur.ar_name : cur.en_name} count={cur.count} />,
+                    title: <TreeNode name={i18n.language ==='ar' ? cur.ar_name : cur.en_name} count={5} />,
                     children: []
                 };
                 acc.push(newNode);
-                stack.push({
-                    name: cur.name,
-                    children: newNode.children
-                });
             }
             return acc;
         }, []);
-
-        let temp, children, childNode;
-
-        while (stack.length) {
-            temp = stack[stack.length - 1];
-            stack.pop();
-            children = cats.filter(item => item.parent === temp.name);
-            children.forEach(child => {
-                childNode = {
-                    key: child.slug,
-                    title: <TreeNode name={child.name} count={child.count} />,
-                    children: []
-                };
-                temp.children.push(childNode);
-                stack.push({
-                    name: child.name,
-                    children: childNode.children
-                });
-            });
-        }
-
         return result;
     }, [data, i18n.language]);
 

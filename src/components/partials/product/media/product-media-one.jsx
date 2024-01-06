@@ -38,10 +38,9 @@ export default function ProductMediaOne(props) {
     }, [product])
 
     function isSale() {
-        return product.price[0] !== product.price[1] && product.variants.length === 0 ?
+        return product.is_on_sale ?
             '-' + (100 * (product.price[1] - product.price[0]) / product.price[1]).toFixed(0) + '%'
-            :
-            product.variants.find(variant => variant.sale_price) ? "Sale" : false;
+            : false;
     }
 
     function openLightBox() {
@@ -55,11 +54,11 @@ export default function ProductMediaOne(props) {
     }
 
     function moveNextPhoto() {
-        setPhotoIndex((photoIndex + 1) % product.large_pictures.length);
+        setPhotoIndex((photoIndex + 1) % product.images.length);
     }
 
     function movePrevPhoto() {
-        setPhotoIndex((photoIndex + product.large_pictures.length - 1) % product.large_pictures.length);
+        setPhotoIndex((photoIndex + product.images.length - 1) % product.images.length);
     }
 
     function changeMediaIndex(index, e) {
@@ -70,6 +69,7 @@ export default function ProductMediaOne(props) {
         }
         mediaRef.current.goTo(index);
     }
+
 
     return (
         <div className={`product-single-gallery ${adClass}`}>
@@ -85,11 +85,11 @@ export default function ProductMediaOne(props) {
 
                         <OwlCarousel adClass="product-single-carousel owl-carousel owl-theme show-nav-hover" options={productSingleSlider} events={events} onChangeRef={setMediaRef} redraw={redraw}>
                             {
-                                product.large_pictures.map((item, index) => (
+                                product.images.map((item, index) => (
                                     <div className="product-item" key={`product-item-${index}`}>
                                         <Magnifier
                                             style={{ paddingTop: "100%", position: "relative" }}
-                                            imageSrc={item.url}
+                                            imageSrc={process.env.REACT_APP_BASE_URL + "/" + item.url}
                                             imageAlt="product"
                                             mouseActivation="hover"
                                             cursorStyleActive="crosshair"
@@ -101,17 +101,17 @@ export default function ProductMediaOne(props) {
                             }
                         </OwlCarousel>
 
-                        <span className="prod-full-screen" onClick={openLightBox}>
+                        {/* <span className="prod-full-screen" onClick={openLightBox}>
                             <i className="icon-plus"></i>
-                        </span>
+                        </span> */}
                     </div>
 
                     <OwlCarousel adClass="prod-thumbnail owl-theme owl-dots" options={prodThumbSlider}>
                         {
-                            product.pictures.map((item, index) => (
+                            product.images.map((item, index) => (
                                 <div className="owl-dot media-with-lazy" key={`owl-dot-${index}`} onClick={(e) => changeMediaIndex(index, e)}>
                                     <figure className="mb-0">
-                                        <LazyLoadImage src={item.url}
+                                        <LazyLoadImage src={process.env.REACT_APP_BASE_URL + "/" + item.url}
                                             alt="Thumbnail"
                                             width="100%"
                                             height="auto"
@@ -123,18 +123,19 @@ export default function ProductMediaOne(props) {
                         }
                     </OwlCarousel>
 
-                    {
+
+                    {/* {
                         openLB && (
                             <LightBox
-                                mainSrc={process.env.NEXT_PUBLIC_ASSET_URI + product.large_pictures[photoIndex].url}
-                                prevSrc={process.env.NEXT_PUBLIC_ASSET_URI + product.large_pictures[(photoIndex + product.large_pictures.length - 1) % product.large_pictures.length].url}
-                                nextSrc={process.env.NEXT_PUBLIC_ASSET_URI + product.large_pictures[(photoIndex + 1) % product.large_pictures.length].url}
+                                mainSrc={process.env.REACT_APP_BASE_URL + "/" + product.images[photoIndex].url}
+                                prevSrc={process.env.REACT_APP_BASE_URL + "/" + product.images[(photoIndex + product.images.length - 1) % product.images.length].url}
+                                nextSrc={process.env.REACT_APP_BASE_URL + "/" + product.images[(photoIndex + 1) % product.images.length].url}
                                 onCloseRequest={closeLightBox}
                                 onMoveNextRequest={moveNextPhoto}
                                 onMovePrevRequest={movePrevPhoto}
                             />
                         )
-                    }
+                    } */}
                 </>
             }
         </div>

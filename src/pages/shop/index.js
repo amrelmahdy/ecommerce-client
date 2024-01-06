@@ -25,11 +25,8 @@ function Shop() {
     const getPageQueryByKey = key => searchParams.get(key)
 
     // const myParam = new URLSearchParams(location.search);
-    // const query = router.query;
-    // const [ getProducts, { data, loading, error } ] = useLazyQuery( GET_PRODUCTS );
     const [perPage, setPerPage] = useState(12);
     const [sortBy, setSortBy] = useState(getPageQueryByKey('sortBy') ? getPageQueryByKey('sortBy') : 'default');
-
 
     const totalPage = products ? parseInt(products.length / perPage) + (products.length % perPage ? 1 : 0) : 1;
 
@@ -39,10 +36,7 @@ function Shop() {
         dispatch(fetchProducts())
     }, [])
 
-    const getProducts = () => {
-        return []
-    }
-
+   
 
     useEffect(() => {
         let offset = document.querySelector('.main-content').getBoundingClientRect().top + window.scrollY - 58;
@@ -52,20 +46,20 @@ function Shop() {
 
         let page = getPageQueryByKey('page') ? getPageQueryByKey('page') : 1;
 
-        getProducts({
-            variables: {
-                search: getPageQueryByKey('search'),
-                sizes: getPageQueryByKey('sizes') ? getPageQueryByKey('sizes').split(',') : [],
-                brands: getPageQueryByKey('brands') ? getPageQueryByKey('brands').split(',') : [],
-                min_price: parseInt(getPageQueryByKey('min_price')),
-                max_price: parseInt(getPageQueryByKey('max_price')),
-                category: getPageQueryByKey('category'),
-                tag: getPageQueryByKey('tag'),
-                sortBy: sortBy,
-                from: perPage * (page - 1),
-                to: perPage * page
-            }
-        });
+        // getProducts({
+        //     variables: {
+        //         search: getPageQueryByKey('search'),
+        //         sizes: getPageQueryByKey('sizes') ? getPageQueryByKey('sizes').split(',') : [],
+        //         brands: getPageQueryByKey('brands') ? getPageQueryByKey('brands').split(',') : [],
+        //         min_price: parseInt(getPageQueryByKey('min_price')),
+        //         max_price: parseInt(getPageQueryByKey('max_price')),
+        //         category: getPageQueryByKey('category'),
+        //         tag: getPageQueryByKey('tag'),
+        //         sortBy: sortBy,
+        //         from: perPage * (page - 1),
+        //         to: perPage * page
+        //     }
+        // });
     }, [searchParams, perPage, sortBy])
 
 
@@ -118,11 +112,11 @@ function Shop() {
                                 getPageQueryByKey('category') ?
                                     <>
                                         <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>{t("breadcrumb_item_shop")}</ALink></li>
-                                        {
+                                        {/* {
                                             categoryFamily.map((item, index) => (
                                                 <li className="breadcrumb-item" key={`category-family-${index}`}><ALink href={{ query: { category: item.slug } }} scroll={false}>{item.name}</ALink></li>
                                             ))
-                                        }
+                                        } */}
                                         <li className="breadcrumb-item active">
                                             {
                                                 getPageQueryByKey("search") ?

@@ -1,12 +1,8 @@
 import SlideToggle from 'react-slide-toggle';
-// import { useRouter } from 'next/router';
 import { connect } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-// Import Actions
-// import { actions as WishlistAction } from "../../../../store/wishlist";
-// import { actions as CartAction } from "../../../../store/cart";
 
 // Import Custom Component
 import ProductNav from '../product-nav';
@@ -15,6 +11,7 @@ import ALink from '../../../common/ALink';
 import ProductCountdown from '../../../features/product-countdown';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import Helmet from "react-helmet";
 
 function ProductDetailOne(props) {
     const { t, i18n } = useTranslation();
@@ -27,41 +24,41 @@ function ProductDetailOne(props) {
     const [qty, setQty] = useState(1);
 
     useEffect(() => {
-        if (product) {
-            let attributes = product.variants.reduce((acc, cur) => {
-                cur.size && !acc.sizes.find(size => size.size === cur.size.size) && acc.sizes.push(cur.size);
-                cur.color && !acc.colors.find(color => color.name === cur.color.name) && acc.colors.push(cur.color);
-                return acc;
-            }, { sizes: [], colors: [] });
-            setAttrs(attributes);
-            initState();
-        }
+        // if (product) {
+        //     let attributes = product.variants.reduce((acc, cur) => {
+        //         cur.size && !acc.sizes.find(size => size.size === cur.size.size) && acc.sizes.push(cur.size);
+        //         cur.color && !acc.colors.find(color => color.name === cur.color.name) && acc.colors.push(cur.color);
+        //         return acc;
+        //     }, { sizes: [], colors: [] });
+        //     setAttrs(attributes);
+        //     initState();
+        // }
     }, [product])
 
     useEffect(() => {
-        if (product) {
-            let priceToggle = document.querySelector(`${parent} .price-toggle`);
-            let variationToggle = document.querySelector(`${parent} .variation-toggle`);
+        // if (product) {
+        //     let priceToggle = document.querySelector(`${parent} .price-toggle`);
+        //     let variationToggle = document.querySelector(`${parent} .variation-toggle`);
 
-            if (attrs.sizes.length && !size || attrs.colors.length && !color) {
-                document.querySelector(`${parent} .shopping-cart`) && document.querySelector(`${parent} .shopping-cart`).classList.add('disabled');
-                document.querySelector(`${parent} .sticky-cart .add-cart`) && document.querySelector(`${parent} .sticky-cart .add-cart`).classList.add('disabled');
-                priceToggle && (priceToggle.classList.contains('expanded') && priceToggle.click());
-            } else {
-                document.querySelector(`${parent} .shopping-cart`) && document.querySelector(`${parent} .shopping-cart`).classList.remove('disabled');
-                document.querySelector(`${parent} .sticky-cart .add-cart`) && document.querySelector(`${parent} .sticky-cart .add-cart`).classList.remove('disabled');
-                let index = product.variants.findIndex(item => {
-                    return !(item.size && item.size.size !== size) && !(item.color && item.color.name !== color);
-                });
-                setVariant({ ...product.variants[index], id: index });
-            }
+        //     if (attrs.sizes.length && !size || attrs.colors.length && !color) {
+        //         document.querySelector(`${parent} .shopping-cart`) && document.querySelector(`${parent} .shopping-cart`).classList.add('disabled');
+        //         document.querySelector(`${parent} .sticky-cart .add-cart`) && document.querySelector(`${parent} .sticky-cart .add-cart`).classList.add('disabled');
+        //         priceToggle && (priceToggle.classList.contains('expanded') && priceToggle.click());
+        //     } else {
+        //         document.querySelector(`${parent} .shopping-cart`) && document.querySelector(`${parent} .shopping-cart`).classList.remove('disabled');
+        //         document.querySelector(`${parent} .sticky-cart .add-cart`) && document.querySelector(`${parent} .sticky-cart .add-cart`).classList.remove('disabled');
+        //         let index = product.variants.findIndex(item => {
+        //             return !(item.size && item.size.size !== size) && !(item.color && item.color.name !== color);
+        //         });
+        //         setVariant({ ...product.variants[index], id: index });
+        //     }
 
-            if (size !== null || color !== null) {
-                variationToggle && variationToggle.classList.contains('collapsed') && variationToggle.click();
-            } else {
-                variationToggle && variationToggle.classList.contains('expanded') && variationToggle.click();
-            }
-        }
+        //     if (size !== null || color !== null) {
+        //         variationToggle && variationToggle.classList.contains('collapsed') && variationToggle.click();
+        //     } else {
+        //         variationToggle && variationToggle.classList.contains('expanded') && variationToggle.click();
+        //     }
+        // }
     }, [size, color])
 
     useEffect(() => {
@@ -155,7 +152,7 @@ function ProductDetailOne(props) {
                     <div className="ratings-container">
                         <div className="product-ratings">
                             <span className="ratings" style={{ width: `${20 * product.ratings}%` }}></span>
-                            <span className="tooltiptext tooltip-top">{product.ratings.toFixed(2)}</span>
+                            <span className="tooltiptext tooltip-top">{product.average_rating.toFixed(2)}</span>
                         </div>
 
                         <ALink href="#" className="rating-link">( {product.reviews > 0 ? `${product.reviews} Reviews` : t("product_reviews_link_no_reviews")} )</ALink>
@@ -165,14 +162,12 @@ function ProductDetailOne(props) {
 
                     <div className="price-box">
                         {
-                            product.price[0] == product.price[1] ?
-                                <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
-                                : product.variants.length > 0 ?
-                                    <span className="product-price">{'$' + product.price[0].toFixed(2)} &ndash; {'$' + product.price[1].toFixed(2)}</span>
-                                    : <>
-                                        <span className="old-price">{'$' + product.price[1].toFixed(2)}</span>
-                                        <span className="new-price">{'$' + product.price[0].toFixed(2)}</span>
-                                    </>
+                            !product.is_on_sale ?
+                                <span className="product-price">{product.price.toFixed(2) + " " + t("sar")}</span>
+                                : <>
+                                    <span className="old-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
+                                    <span className="new-price">{product.price.toFixed(2) + " " + t("sar")}</span>
+                                </>
                         }
                     </div>
 
@@ -182,19 +177,21 @@ function ProductDetailOne(props) {
                     }
 
                     <div className="product-desc">
-                        <p>{i18n.language === 'ar' ? product.ar_description : product.en_description}</p>
+                        <div dangerouslySetInnerHTML={{ __html: i18n.language === 'ar' ? product.ar_description : product.en_description }} />
                     </div>
 
                     <ul className="single-info-list">
                         {/* {
                             product.sku ?
                                 <li>
-                                    SKU: <strong>{ product.sku }</strong>
+                                    SKU: <strong>{product.sku}</strong>
                                 </li>
                                 : ''
                         } */}
 
                         <li>
+                            <strong>{ t(`product_details_categories`) } </strong>
+                            <span> : </span>
                             {product.categories.map((item, index) =>
                             (
                                 <React.Fragment key={`single-cat-${index}`}>
@@ -206,7 +203,7 @@ function ProductDetailOne(props) {
                             ))
                             }
                         </li>
-
+                        {/* 
                         {
                             !product.tags == null && product.tags.length > 0 ?
                                 <li>
@@ -222,10 +219,10 @@ function ProductDetailOne(props) {
                                     }
                                 </li>
                                 : ''
-                        }
+                        } */}
                     </ul>
 
-                    {
+                    {/* {
                         product.variants.length > 0 ?
                             <div className="product-filters-container">
                                 {
@@ -300,95 +297,12 @@ function ProductDetailOne(props) {
                                 }
                             </div>
                             : ''
-                    }
+                    } */}
 
-                    {
-                        isSticky &&
-                        <div className="sticky-wrapper">
-                            <div className="sticky-header desktop-sticky sticky-cart d-none d-lg-block">
-                                <div className="container">
-                                    <div className="sticky-img mr-4 media-with-lazy">
-                                        <figure className="mb-0">
-                                            <LazyLoadImage
-                                                src={process.env.NEXT_PUBLIC_ASSET_URI + product.small_pictures[0].url}
-                                                width="100%"
-                                                height="auto"
-                                                alt="Thumbnail"
-                                            />
-                                        </figure>
-                                    </div>
-                                    <div className="sticky-detail">
-                                        <div className="sticky-product-name">
-                                            <h2 className="product-title w-100 ls-0">{product.name}</h2>
-                                            <div className="price-box">
-                                                {
-                                                    variant && variant.id >= 0 ?
-                                                        (variant.price ?
-                                                            <span className="product-price">${variant && variant.price.toFixed(2)}</span>
-                                                            : <span className="product-stock pt-3 d-block">{product.is_out_of_stock ? 'Out of Stock' : `${product.stock} in stock`}</span>
-                                                        )
-                                                        :
-
-                                                        product.price[0] == product.price[1] ?
-                                                            <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
-                                                            : product.variants.length > 0 ?
-                                                                <span className="product-price">{'$' + product.price[0].toFixed(2)} &ndash; {'$' + product.price[1].toFixed(2)}</span>
-                                                                :
-                                                                <>
-                                                                    <span className="old-price">{'$' + product.price[1].toFixed(2)}</span>
-                                                                    <span className="new-price">{'$' + product.price[0].toFixed(2)}</span>
-                                                                </>
-                                                }
-                                            </div>
-                                        </div>
-                                        <div className="ratings-container mb-0">
-                                            <div className="product-ratings">
-                                                <span className="ratings" style={{ width: `${20 * product.ratings}%` }}></span>
-                                                <span className="tooltiptext tooltip-top">{product.ratings.toFixed(2)}</span>
-                                            </div>
-
-                                            <ALink href="#" className="rating-link">( {product.reviews > 0 ? `${product.reviews} Reviews` : 'There are no reviews yet.'} )</ALink>
-                                        </div>
-                                    </div>
-
-                                    <div className="product-action">
-                                        <Qty max={product.stock} value={qty} onChangeQty={changeQty} />
-
-                                        <a href="#" className={`btn btn-dark add-cart font1 mr-2 ${attrs.sizes.length > 0 || attrs.colors.length > 0 ? 'disabled' : ''}`} title="Add To Cart" onClick={onAddCartClick}>Add to Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
 
                     <div className="product-action">
-                        {
-                            product.variants.length ?
-                                <SlideToggle collapsed={true}>
-                                    {({ onToggle, setCollapsibleElement, toggleState }) => (
-                                        <>
-                                            <button className={`d-none price-toggle ${toggleState.toLowerCase()}`} onClick={onToggle}></button>
-                                            <div className="price-box product-filtered-price m-0" ref={setCollapsibleElement}>
-                                                {
-                                                    variant && variant.id >= 0 && (variant.price ? variant.sale_price ?
-                                                        <>
-                                                            <del className="old-price"><span>${variant.price.toFixed(2)}</span></del>
-                                                            <span className="product-price">${variant && variant.sale_price.toFixed(2)}</span>
-                                                        </>
-                                                        : <span className="product-price">${variant && variant.price.toFixed(2)}</span>
-                                                        : <span className="product-stock pb-3 d-block">{product.is_out_of_stock ? 'Out of Stock' : `${product.stock} in stock`}</span>)
-                                                }
-
-                                            </div>
-                                        </>
-                                    )}
-                                </SlideToggle>
-                                : ''
-                        }
-
                         <Qty max={product.stock} value={qty} onChangeQty={changeQty} />
-
-                        <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2 ${attrs.sizes.length > 0 || attrs.colors.length > 0 ? 'disabled' : ''}`} title="Add To Cart" onClick={onAddCartClick}>{t("add_to_cart")}</a>
+                        <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2 ${attrs.sizes.length > 0 || attrs.colors.length > 0 ? 'disabled' : ''}`} title="Add To Cart" onClick={onAddCartClick}>{t("add_to_ddcart")}</a>
                     </div>
 
                     <hr className="divider mb-0 mt-0" />

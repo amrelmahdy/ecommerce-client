@@ -118,6 +118,8 @@ export default {
         "product_quick_view": "Quick View",
         "product_related_products": "Related products",
 
+        "product_details_categories": "categories",
+
         "breadcrumb_item_shop": "shop",
     
     }

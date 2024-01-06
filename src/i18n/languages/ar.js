@@ -111,6 +111,9 @@ export default {
         "product_reviews_link_no_reviews": "لا توجد تقييمات بعد",
         "product_quick_view": "عرض سريع",
         "product_related_products": "منتجات ذات صلة",
+        "product_details_categories": "الاقسام",
+
+
 
         "breadcrumb_item_shop": "المتجر",
     }

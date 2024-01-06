@@ -25,7 +25,7 @@ function MainMenu({ router }) {
 
     const { data: categoriesData, loading: categoriesLoading } = useSelector(getAllCategories);
 
-    
+
 
     const pathname = 'router.pathname';
     const { t } = useTranslation()
@@ -106,7 +106,7 @@ function MainMenu({ router }) {
             const name = i18n.language === 'ar' ? item.ar_name : item.en_name
             return <li>
                 <ALink to={{ pathname: '/shop', search: "spcategory=plants" }}><i className={item.icon}></i>{name}</ALink>
-                <span className="menu-btn"></span>
+                {subItems.length > 0 && <span className="menu-btn"></span>}
                 {renderSubItems(subItems)}
             </li>
         })

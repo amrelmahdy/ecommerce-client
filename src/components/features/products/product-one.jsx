@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { useRouter } from 'next/router';
 // import { connect } from 'react-redux';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -11,17 +11,21 @@ import { useTranslation } from 'react-i18next'
 // Import Custom Component
 import ALink from '../../common/ALink';
 import ProductCountdown from '../product-countdown';
+import QuickModal from '../modals/quickview';
 
 
 function ProductOne(props) {
     const { t, i18n } = useTranslation();
+
+    const [ isQuickModalVisible, setIsQuickModalVisible ] = useState(false)
     // const router = useRouter();
     const { adClass = "", link = "default", product } = props;
 
 
+
     function isSale() {
-        return product.price[0] !== product.price[1]  ?
-            '-' + (100 * (product.price[1] - product.price[0]) / product.price[1]).toFixed(0) + '%'
+        return product.is_on_sale ?
+            (100 * (product.sale_price - product.price) / product.sale_price).toFixed(0) + '%'
             :
             false;
     }
@@ -54,13 +58,14 @@ function ProductOne(props) {
 
     function onQuickViewClick(e) {
         e.preventDefault();
-        props.showQuickView(product.slug);
+        setIsQuickModalVisible(true)
+        //props.showQuickView(product.slug);
     }
 
     return (
         <div className={`product-default media-with-lazy ${adClass}`}>
             <figure>
-                <ALink href={`/product/${product.slug}`}>
+                <ALink to={`/product/${product.slug}`}>
                     <div className="lazy-overlay"></div>
 
                     <LazyLoadImage
@@ -71,7 +76,7 @@ function ProductOne(props) {
                         width="100%"
                         height="auto"
                     />
-                    {
+                    {/* {
                         product.pictures.length >= 2 ?
                             <LazyLoadImage
                                 alt="product"
@@ -81,11 +86,11 @@ function ProductOne(props) {
                                 wrapperClassName="product-image-hover"
                             />
                             : ""
-                    }
+                    } */}
                 </ALink>
 
                 <div className="label-group">
-                    {/* {product.is_hot ? <div className="product-label label-hot">شحن مجاني</div> : ''} */}
+                    {product[`promotion_${i18n.language}_title`] ? <div className="product-label label-hot">{product[`promotion_${i18n.language}_title`]}</div> : ''}
 
                     {isSale() ? <div className="product-label label-sale">{isSale()}</div> : ''}
                 </div>
@@ -93,9 +98,9 @@ function ProductOne(props) {
                 <div className="btn-icon-group">
 
                     <ALink onClick={onWishlistClick} className="btn-icon btn-add-cart"><i
-                                className="icon-heart"></i></ALink>
+                        className="icon-heart"></i></ALink>
 
-                                
+
                     <a href="#" className="btn-icon btn-add-cart product-type-simple" title="Add To Cart" onClick={onAddCartClick}><i
                         className="icon-shopping-cart"></i></a>
 
@@ -116,7 +121,7 @@ function ProductOne(props) {
                             product.categories ?
                                 product.categories.map((item, index) => (
                                     <React.Fragment key={item.slug + '-' + index}>
-                                        <ALink href={{ pathname: '/shop', query: { category: item.slug } }}>
+                                        <ALink to={`/shop?category=${item.slug}`}>
                                             {i18n.language === 'ar' ? item.ar_name : item.en_name}
                                         </ALink>
                                         {index < product.categories.length - 1 ? ', ' : ""}
@@ -132,31 +137,36 @@ function ProductOne(props) {
                     <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
                 </h3>
 
+
+                {product[`${i18n.language}_subtitle`] && <div className="category-list al-r">
+                    <h6>{product[`${i18n.language}_subtitle`]}</h6>
+                </div>
+
+                }
                 <div className="ratings-container">
                     <div className="product-ratings">
-                        <span className="ratings" style={{ width: 20 * product.ratings + '%' }}></span>
-                        <span className="tooltiptext tooltip-top">{product.ratings.toFixed(2)}</span>
+                        <span className="ratings" style={{ width: 20 * product.average_rating + '%' }}></span>
+                        <span className="tooltiptext tooltip-top">{product.average_rating.toFixed(2)}</span>
                     </div>
                 </div>
 
                 <div className="price-box">
-                    {/* {
-                        product.price[0] == product.price[1] ?
-                            <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
-                            : product.variants.length > 0 ?
-                                <span className="product-price">{'$' + product.price[0].toFixed(2)} &ndash; {'$' + product.price[1].toFixed(2)}</span>
-                                : <>
-                                    <span className="old-price">{'$' + product.price[1].toFixed(2)}</span>
-                                    <span className="product-price">{'$' + product.price[0].toFixed(2)}</span>
-                                </>
-                    } */}
+                    {
+                        !product.is_on_sale && product.price !== product.sale_price ?
+                            <span className="product-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
+                            : <>
+                                <span className="old-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
+                                <span className="product-price">{product.price.toFixed(2) + " " + t("sar")}</span>
+                            </>
+                    }
 
-                    <>
+                    {/* <>
                         <span className="old-price">{product.price[1].toFixed(2) + " " +t("sar") }</span>
                         <span className="product-price">{product.price[0].toFixed(2) + " " +t("sar")}</span>
-                    </>
+                    </> */}
                 </div>
             </div>
+            <QuickModal isVisible={isQuickModalVisible} product={product} />
         </div>
     )
 }

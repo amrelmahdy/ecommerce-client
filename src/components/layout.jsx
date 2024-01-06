@@ -44,7 +44,7 @@ function Layout({ children, hideQuickView, hideVideo }) {
                 {children}
 
                 <Footer />
-                {/*
+                
                 <ToastContainer
                     autoClose={ 3000 }
                     duration={ 300 }
@@ -57,7 +57,7 @@ function Layout({ children, hideQuickView, hideVideo }) {
                     newestOnTop={ true }
                 />
 
-                <QuickModal />
+                {/* <QuickModal />
                 <VideoModal /> */}
 
                 <div className="wishlist-popup"><div className="wishlist-popup-msg">Product added!</div></div>
