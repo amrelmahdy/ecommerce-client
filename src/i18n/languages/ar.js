@@ -109,7 +109,7 @@ export default {
         "banner_sub_note2": "خالية من السكر",
 
         "product_reviews_link_no_reviews": "لا توجد تقييمات بعد",
-        "product_quick_view": "عرض سريع",
+        "product_view_details": "عرض التفاصيل",
         "product_related_products": "منتجات ذات صلة",
         "product_details_categories": "الاقسام",
 

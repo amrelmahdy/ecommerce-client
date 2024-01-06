@@ -1960,11 +1960,6 @@ body[lang="ar"] .product-default {
 
 	.product-quick-view {
 		.product-single-details {
-			position: absolute;
-			left: auto;
-			height: 100%;
-			overflow-y: auto;
-
 			&::-webkit-scrollbar {
 				height: 10px;
 				width: 3px;

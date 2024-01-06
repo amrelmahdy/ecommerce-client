@@ -115,7 +115,7 @@ export default {
         "banner_sub_note2": "Sugar-Free",
 
         "product_reviews_link_no_reviews": "There are no reviews yet",
-        "product_quick_view": "Quick View",
+        "product_view_details": "View details",
         "product_related_products": "Related products",
 
         "product_details_categories": "categories",

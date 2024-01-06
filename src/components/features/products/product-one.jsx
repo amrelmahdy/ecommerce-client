@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 // import { useRouter } from 'next/router';
 // import { connect } from 'react-redux';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -11,17 +11,16 @@ import { useTranslation } from 'react-i18next'
 // Import Custom Component
 import ALink from '../../common/ALink';
 import ProductCountdown from '../product-countdown';
-import QuickModal from '../modals/quickview';
+import { useNavigate } from 'react-router-dom';
 
 
 function ProductOne(props) {
     const { t, i18n } = useTranslation();
-
-    const [ isQuickModalVisible, setIsQuickModalVisible ] = useState(false)
+    const navigate = useNavigate()
     // const router = useRouter();
     const { adClass = "", link = "default", product } = props;
 
-
+    
 
     function isSale() {
         return product.is_on_sale ?
@@ -58,7 +57,7 @@ function ProductOne(props) {
 
     function onQuickViewClick(e) {
         e.preventDefault();
-        setIsQuickModalVisible(true)
+        navigate(`/product/${product.slug}`)
         //props.showQuickView(product.slug);
     }
 
@@ -111,7 +110,7 @@ function ProductOne(props) {
                     <ProductCountdown date={product.until} />
                 } */}
 
-                <a href="#" className="btn-quickview" title={t("product_quick_view")} onClick={onQuickViewClick}>{t("product_quick_view")}</a>
+                <a href="#" className="btn-quickview" title={t("product_view_details")} onClick={onQuickViewClick}>{t("product_view_details")}</a>
             </figure>
 
             <div className="product-details">
@@ -153,7 +152,7 @@ function ProductOne(props) {
                 <div className="price-box">
                     {
                         !product.is_on_sale && product.price !== product.sale_price ?
-                            <span className="product-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
+                            <span className="product-price">{ product.sale_price.toFixed(2)  + " " + t("sar")}</span>
                             : <>
                                 <span className="old-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
                                 <span className="product-price">{product.price.toFixed(2) + " " + t("sar")}</span>
@@ -166,7 +165,6 @@ function ProductOne(props) {
                     </> */}
                 </div>
             </div>
-            <QuickModal isVisible={isQuickModalVisible} product={product} />
         </div>
     )
 }
