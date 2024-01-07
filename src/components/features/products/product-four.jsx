@@ -70,7 +70,7 @@ function ProductFour(props) {
                         height="auto"
                     />
                     {
-                        product.pictures.length >= 2 ?
+                        product.images.length >= 2 ?
                             <LazyLoadImage
                                 alt="product"
                                 src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_12_2_8ab790c3ed.jpg"
@@ -113,17 +113,17 @@ function ProductFour(props) {
                 <div className="ratings-container">
                     <div className="product-ratings">
                         <span className="ratings" style={{ width: 20 * product.ratings + '%' }}></span>
-                        <span className="tooltiptext tooltip-top">{product.ratings.toFixed(2)}</span>
+                        <span className="tooltiptext tooltip-top">{product.average_rating.toFixed(2)}</span>
                     </div>
                 </div>
 
                 <div className="price-box">
                     {
-                        product.price[0] == product.price[1] ?
-                            <span className="product-price">{product.price[0].toFixed(2) + " " + t("sar")  }</span>
+                        !product.is_on_sale ?
+                            <span className="product-price">{product.price.toFixed(2) + " " + t("sar")  }</span>
                             : <>
-                                <span className="old-price">{product.price[1].toFixed(2)  + " " + t("sar")  }</span>
-                                <span className="product-price">{product.price[0].toFixed(2)  + " " + t("sar")   }</span>
+                                <span className="old-price">{product.sale_price.toFixed(2)  + " " + t("sar")  }</span>
+                                <span className="product-price">{product.price.toFixed(2)  + " " + t("sar")   }</span>
 
                                 
                             </>

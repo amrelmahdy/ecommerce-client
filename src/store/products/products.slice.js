@@ -10,6 +10,7 @@ const initialState = {
     product: {
         data: null,
         loading: true,
+        error: false,
         related: []
     }
 }
@@ -28,14 +29,24 @@ const productsSlice = createSlice({
             state.product.loading = true;
             state.product.data = null
         }).addCase(fetchProductDetails.fulfilled, (state, action) => {
+            console.log("fullerr=>", state, action)
+
             state.product.loading = false;
             state.product.data = action.payload;
+        }).addCase(fetchProductDetails.rejected, (state, action) => {
+            state.product.loading = false;
+            state.product.data = null;
+            state.product.error = true;
         }).addCase(fetchRelatedProducts.pending, (state, action) => {
             state.product.loading = true;
             state.product.related = []
         }).addCase(fetchRelatedProducts.fulfilled, (state, action) => {
             state.product.loading = false;
             state.product.related = action.payload;
+        }).addCase(fetchRelatedProducts.rejected, (state, action) => {
+            state.product.loading = false;
+            state.product.related = [];
+            state.product.error = true;
         })
     }
 },)

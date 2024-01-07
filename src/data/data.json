@@ -57,7 +57,7 @@
 					}
 				],
 				"categories": [
-						{
+					{
 						"ar_name": "مجمد",
 						"en_name": "Frozen",
 						"slug": "frozen-2",
@@ -839,7 +839,7 @@
 					}
 				],
 				"categories": [
-						{
+					{
 						"ar_name": "مجمد",
 						"en_name": "Frozen",
 						"slug": "frozen-2",
@@ -1317,38 +1317,16 @@
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
 				"slug": "clasio-white-wine-spain",
-				"price": [
-					223,
-					250
-				],
-				"ratings": 0,
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": true,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": "2022-01-06T20:00:00.000Z",
 				"stock": 50,
-				"pictures": [
-					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
+				"images": [
 					{
 						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
@@ -1376,59 +1354,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "apple-fruit",
-				"price": [
-					10,
-					12
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_3_f538062400.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_11_3_f538062400.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1442,59 +1397,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "capeletti-ricotae-espinafre",
-				"price": [
-					26,
-					30
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": true,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1508,125 +1440,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "magic-toast",
-				"price": [
-					6.9,
-					8
-				],
-				"ratings": 4,
-				"reviews": 1,
-				"is_hot": null,
-				"is_new": null,
-				"is_out_of_stock": null,
-				"until": null,
-				"stock": 50,
-				"pictures": [
-					{
-						"url": "/uploads/shop35_product_15_1_94205a7778.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_15_2_c4c3ada8af.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_15_3_3308c8d80c.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_15_1_94205a7778.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_15_2_c4c3ada8af.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_15_3_3308c8d80c.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"categories": [
-					{
-						"ar_name": "مجمد",
-						"en_name": "Frozen",
-						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					}
-				],
-				"variants": [],
-				"__typename": "Product"
-			},
-			{
-				"en_name": "Special strawberry seeds",
-				"ar_name": "بذور فراولة سبيشال",
-				"slug": "integrali-tusilli",
-				"price": [
-					49,
-					59
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1634,65 +1477,42 @@
 				],
 				"categories": [
 					{
-						"ar_name": "فطور",
-						"en_name": "Breakfast",
-						"slug": "breakfast",
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "fresh-dressed-meat",
-				"price": [
-					49,
-					59
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_2_5132af1028.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_3_22f9899896.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_1_2_5132af1028.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1706,191 +1526,79 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "coconut-fruit",
-				"price": [
-					49,
-					59
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					}
 				],
 				"categories": [
-						{
+					{
 						"ar_name": "مجمد",
 						"en_name": "Frozen",
 						"slug": "frozen-2",
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "trafilati-al-bronzo",
-				"price": [
-					49,
-					59
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": true,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"categories": [
-						{
-						"ar_name": "مجمد",
-						"en_name": "Frozen",
-						"slug": "frozen-2",
-						"__typename": "ProductCategory"
-					}
-				],
-				"variants": [],
-				"__typename": "Product"
-			},
-			{
-				"en_name": "Special strawberry seeds",
-				"ar_name": "بذور فراولة سبيشال",
-				"slug": "pineapple-fruit",
-				"price": [
-					43,
-					69
-				],
-				"ratings": 5,
-				"reviews": 1,
-				"is_hot": null,
-				"is_new": true,
-				"is_out_of_stock": null,
-				"until": null,
-				"stock": 50,
-				"pictures": [
-					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1904,59 +1612,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "banana-fruit",
-				"price": [
-					25,
-					30
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1970,59 +1655,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "equibeim",
-				"price": [
-					190,
-					200
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": true,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
-				"stock": 60,
-				"pictures": [
+				"stock": 50,
+				"images": [
 					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2036,59 +1698,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "azeite-de-oliva-extra-virgem",
-				"price": [
-					200,
-					230
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": true,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2102,59 +1741,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "artesano-bread",
-				"price": [
-					18,
-					20
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": true,
 				"is_out_of_stock": null,
-				"until": "2022-01-06T20:00:00.000Z",
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2168,59 +1784,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "sliced-fresh-meat",
-				"price": [
-					27,
-					30
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": true,
 				"is_out_of_stock": null,
-				"until": "2022-01-06T20:00:00.000Z",
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2234,59 +1827,36 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
 				"__typename": "Product"
 			},
 			{
 				"en_name": "Special strawberry seeds",
 				"ar_name": "بذور فراولة سبيشال",
-				"slug": "melon-fruit",
-				"price": [
-					19,
-					23
-				],
-				"ratings": 0,
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
 				"reviews": 0,
-				"is_hot": null,
-				"is_new": null,
 				"is_out_of_stock": null,
-				"until": null,
 				"stock": 50,
-				"pictures": [
+				"images": [
 					{
-						"url": "/uploads/shop35_product_13_1_934fffff0e.jpg",
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_2_5b9771be33.jpg",
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_3_19488a5f9f.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					}
-				],
-				"small_pictures": [
-					{
-						"url": "/uploads/shop35_product_13_1_934fffff0e.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_13_2_5b9771be33.jpg",
-						"width": 800,
-						"height": 800,
-						"__typename": "Media"
-					},
-					{
-						"url": "/uploads/shop35_product_13_3_19488a5f9f.jpg",
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2300,9 +1870,525 @@
 						"__typename": "ProductCategory"
 					}
 				],
-				"variants": [],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
+				"__typename": "Product"
+			},
+			{
+				"en_name": "Special strawberry seeds",
+				"ar_name": "بذور فراولة سبيشال",
+				"slug": "clasio-white-wine-spain",
+				"price": 223,
+				"sale_price": 250,
+				"is_on_sale": true,
+				"sku": "FT30",
+				"average_rating": 4.7,
+				"max_quantity": 20,
+				"reviews": 0,
+				"is_out_of_stock": null,
+				"stock": 50,
+				"images": [
+					{
+						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					},
+					{
+						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"width": 800,
+						"height": 800,
+						"__typename": "Media"
+					}
+				],
+				"categories": [
+					{
+						"ar_name": "مجمد",
+						"en_name": "Frozen",
+						"slug": "frozen-2",
+						"__typename": "ProductCategory"
+					}
+				],
 				"__typename": "Product"
 			}
+			
 		],
 		"onSale": [
 			{
@@ -2756,7 +2842,7 @@
 					}
 				],
 				"categories": [
-						{
+					{
 						"ar_name": "مجمد",
 						"en_name": "Frozen",
 						"slug": "frozen-2",
@@ -2822,7 +2908,7 @@
 					}
 				],
 				"categories": [
-						{
+					{
 						"ar_name": "مجمد",
 						"en_name": "Frozen",
 						"slug": "frozen-2",
@@ -3669,7 +3755,6 @@
 					}
 				],
 				"categories": [
-					
 					{
 						"ar_name": "مجمد",
 						"en_name": "Frozen",

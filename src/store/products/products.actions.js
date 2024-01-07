@@ -21,23 +21,21 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async ()
 })
 
 
-export const fetchProductDetails = createAsyncThunk("products/fetchProductDetails", async (slug) => {
+export const fetchProductDetails = createAsyncThunk("products/fetchProductDetails", async (slug, { rejectWithValue }) => {
     try {
         const res = await getProductDetails(slug);
         return res
     } catch (error) {
-        console.log(error.message)
-        return error.message
+        return rejectWithValue(error.message)
     }
 });
 
 
-export const fetchRelatedProducts = createAsyncThunk("products/fetchRelatedProducts", async (id) => {
+export const fetchRelatedProducts = createAsyncThunk("products/fetchRelatedProducts", async (id,  { rejectWithValue }) => {
     try {
         const res = await getRelatedProducts(id);
         return res
     } catch (error) {
-        console.log(error.message)
-        return error.message
+        return rejectWithValue(error.message)
     }
 });

@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import ALink from "../components/common/ALink";
 
 export default function PageNotFound () {
+    const {t} = useTranslation()
     return (
         <div className="container bg-white">
             <nav aria-label="breadcrumb" className="breadcrumb-nav">
@@ -15,7 +17,7 @@ export default function PageNotFound () {
                     <div className="col-md-7 text-center">
                         <div className="http-error-main">
                             <h2>404<i className="fas fa-file ml-3"></i></h2>
-                            <p>We're sorry, but the page you were looking for doesn't exist.</p>
+                            <p>{t("page_not_found_text")}</p>
                         </div>
                     </div>
                     <div className="col-md-4 mt-4 mt-md-0">

@@ -71,6 +71,7 @@ export const postSlider = {
 }
 
 export const productSlider = {
+    rtl: true,
     loop: false,
     margin: 0,
     autoplay: false,

@@ -36,7 +36,7 @@ function Shop() {
         dispatch(fetchProducts())
     }, [])
 
-   
+
 
     useEffect(() => {
         let offset = document.querySelector('.main-content').getBoundingClientRect().top + window.scrollY - 58;
@@ -87,18 +87,18 @@ function Shop() {
     }
 
     function sidebarToggle(e) {
-        //     let body = document.querySelector( 'body' );
-        //     e.preventDefault();
-        //     if ( body.classList.contains( 'sidebar-opened' ) ) {
-        //         body.classList.remove( 'sidebar-opened' );
-        //     } else {
-        //         body.classList.add( 'sidebar-opened' );
-        //     }
-        // }
-
-        // if ( error ) {
-        //     return <div>{ error.message }</div>
+        let body = document.querySelector('body');
+        e.preventDefault();
+        if (body.classList.contains('sidebar-opened')) {
+            body.classList.remove('sidebar-opened');
+        } else {
+            body.classList.add('sidebar-opened');
+        }
     }
+
+    // if ( error ) {
+    //     return <div>{ error.message }</div>
+    // }
 
 
     return (
@@ -175,7 +175,7 @@ function Shop() {
                                         <div className="select-custom">
                                             <select name="orderby" className="form-control" value={sortBy} onChange={e => onSortByChange(e)}>
 
-          
+
 
                                                 <option value="default">{t("shop_toolbar_sort_by_default")}</option>
                                                 <option value="price">{t("shop_toolbar_sort_by_price")}</option>
@@ -204,7 +204,7 @@ function Shop() {
                                         <ALink href={{ pathname: location.pathname, query: location.search }} className="layout-btn btn-grid active" title="Grid">
                                             <i className="icon-mode-grid"></i>
                                         </ALink>
-                                        <ALink href={{ pathname: '/shop/list', query: location.search }}  className="layout-btn btn-list" title="List">
+                                        <ALink href={{ pathname: '/shop/list', query: location.search }} className="layout-btn btn-list" title="List">
                                             <i className="icon-mode-list"></i>
                                         </ALink>
                                     </div>

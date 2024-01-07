@@ -108,7 +108,7 @@ function ShopSidebarOne(props) {
     }
 
     function closeSidebar() {
-        //document.querySelector( 'body' ).classList.contains( 'sidebar-opened' ) && document.querySelector( 'body' ).classList.remove( 'sidebar-opened' );
+        document.querySelector( 'body' ).classList.contains( 'sidebar-opened' ) && document.querySelector( 'body' ).classList.remove( 'sidebar-opened' );
     }
 
     if (error) {

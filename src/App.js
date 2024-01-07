@@ -13,9 +13,11 @@ import {
   RouterProvider,
   Route,
   Link,
+  Navigate,
 } from "react-router-dom";
 import "./public/sass/style.scss";
 import i18n from './i18n';
+import PageNotFound from './pages/404';
 
 
 const router = createBrowserRouter([
@@ -78,6 +80,15 @@ const router = createBrowserRouter([
     path: "checkout",
     element: <></>,
   },
+  {
+    path:"404",
+    element: <PageNotFound />
+  },
+  {
+    path:"*",
+    element: <Navigate replace to="/404" />,
+  },
+
 ]);
 
 

@@ -1,8 +1,8 @@
 export default {
     translation: {
         "wesite_title": "Shaheen Al Arab For Agriculture",
-
         "welcome": "Welcome",
+        "page_not_found_text": "We're sorry, but the page you were looking for doesn't exist.",
         "signin_login": "Sign In / Register",
         "all_departments": "All Departments",
         "main_menu_all_departments": "All Departments",

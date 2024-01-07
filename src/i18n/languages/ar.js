@@ -2,6 +2,7 @@ export default {
     translation: {
         "wesite_title": "شاهين العرب للزراعة",
         "welcome": "أهلا",
+        "page_not_found_text": ".بحثنا في كل مكان. يبدو أن هذه الصفحة مفقودة",
         "signin_login": "تسجيل الدخول / إنشاء حساب",
         "all_departments": "كل الأقسام",
         "main_menu_home": "الرئيسية",
@@ -116,5 +117,6 @@ export default {
 
 
         "breadcrumb_item_shop": "المتجر",
+
     }
 }

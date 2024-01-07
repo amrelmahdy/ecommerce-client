@@ -1,22 +1,25 @@
-import { withRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+// import { withRouter } from 'next/router';
+import React, { useContext, useEffect, useState } from 'react';
 import SlideToggle from 'react-slide-toggle';
 
 // Import Custom Component
 import ALink from "../ALink";
 import { mainMenu } from "../../../utils/data/menu";
+import { UNSAFE_NavigationContext, useLocation, useNavigate } from 'react-router-dom';
 
-function MobileMenu ( { router } ) {
-    const pathname = router.pathname;
+function MobileMenu ( {  } ) {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const navigation = useContext(UNSAFE_NavigationContext)
+
+
+    const pathname = location.pathname;
     const [ searchText, setSearchText ] = useState( '' );
 
-    useEffect( () => {
-        router.events.on( 'routeChangeStart', closeMobileMenu );
+    useEffect(() => {
+        closeMobileMenu()
+    }, [location]);
 
-        return () => {
-            router.events.off( 'routeChangeStart', closeMobileMenu );
-        }
-    }, [] );
 
     function isOtherPage () {
         return mainMenu.other.find( variation => variation.url === pathname );
@@ -32,12 +35,12 @@ function MobileMenu ( { router } ) {
 
     function searchProducts ( e ) {
         e.preventDefault();
-        router.push( {
-            pathname: '/shop',
-            query: {
-                search: searchText
-            }
-        } );
+        // router.push( {
+        //     pathname: '/shop',
+        //     query: {
+        //         search: searchText
+        //     }
+        // } );
     }
 
     function onChangeSearchText ( e ) {
@@ -220,4 +223,4 @@ function MobileMenu ( { router } ) {
     )
 }
 
-export default withRouter( MobileMenu );
+export default MobileMenu;

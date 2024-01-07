@@ -14,6 +14,9 @@ import { productSlider } from '../../../utils/data/slider';
 import { useTranslation } from 'react-i18next';
 
 function SpecialSection ( { products } ) {
+
+    console.log("======>>>>>>", products)
+
     const {t} = useTranslation()
     return (
         <section className="special-section">
@@ -27,7 +30,7 @@ function SpecialSection ( { products } ) {
                             <OwlCarousel adClass="products-slider nav-outer" options={ productSlider }>
                                 {
                                     products ?
-                                        products.slice( 8, 15 ).map( ( item, index ) => (
+                                        products.slice( 8, 19 ).map( ( item, index ) => (
                                             <ProductOne
                                                 adClass="inner-quickview inner-icon"
                                                 product={ item }
@@ -121,7 +124,7 @@ function SpecialSection ( { products } ) {
                                 {
                                     products ?
                                         products.slice( 0, 15 ).filter( ( item ) => (
-                                            item.until && item.until !== null
+                                            item.is_on_sale && item.sale_price
                                         ) ).slice( 0, 1 ).map( ( item, index ) => (
                                             <ProductFour
                                                 product={ item }

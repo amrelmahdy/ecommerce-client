@@ -47,7 +47,7 @@ function Home() {
 
                 <PopularSection products={bestSelling} />
 
-                {/* <SpecialSection products={topRated} /> */}
+                <SpecialSection products={topRated} />
 
                 {/* <BrandSection /> */}
 

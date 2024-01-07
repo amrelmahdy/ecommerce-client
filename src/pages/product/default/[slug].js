@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 // Import Apollo Server and Query
 // import withApollo from '../../../server/apollo';
 // import { GET_PRODUCT } from '../../../server/queries';
-import { useLocation, useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 // Import Custom Component
 import ALink from '../../../components/common/ALink';
 import ProductMediaOne from '../../../components/partials/product/media/product-media-one';
@@ -23,13 +23,13 @@ import { useTranslation } from 'react-i18next';
 function ProductDefault() {
     const { t, i18n } = useTranslation()
     const location = useLocation()
+    const navigate = useNavigate()
     const dispatch = useDispatch()
-    const { data: product, loading, related } = useSelector(getProductDetails)
+    const { data: product, loading, related, error } = useSelector(getProductDetails)
     const params = useParams()
     const slug = params.slug;
     const [searchParams, setSearchParams] = useSearchParams();
     const getPageQueryByKey = key => searchParams.get(key)
-    const error = false;
 
 
     console.log("product", related)
@@ -59,7 +59,7 @@ function ProductDefault() {
     // const related = data && data.product.related;
 
     if (error) {
-        // return useRouter().push( '/pages/404' );
+        navigate('/pages/404');
     }
 
     return (

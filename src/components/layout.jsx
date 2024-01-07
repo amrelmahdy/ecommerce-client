@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 // import StickyNavbar from "./common/partials/sticky-navbar";
 import Header from "./common/header";
 import Footer from "./common/footer";
-// import MobileMenu from "./common/partials/mobile-menu";
+import MobileMenu from "./common/partials/mobile-menu";
 // import QuickModal from "../components/features/modals/quickview";
 // import VideoModal from "../components/features/modals/video-modal";
 
@@ -63,8 +63,8 @@ function Layout({ children, hideQuickView, hideVideo }) {
                 <div className="wishlist-popup"><div className="wishlist-popup-msg">Product added!</div></div>
             </div>
 
-            {/* <MobileMenu />
-            <StickyNavbar /> */}
+           <MobileMenu />
+            {/*  <StickyNavbar /> */}
 
             <a id="scroll-top" href="#" title="Top" role="button" className="btn-scroll" onClick={scrollTopHandlder}><i className="icon-angle-up"></i></a>
         </>
