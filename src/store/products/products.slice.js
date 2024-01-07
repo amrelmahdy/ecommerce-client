@@ -26,11 +26,10 @@ const productsSlice = createSlice({
             state.products.loading = false;
             state.products.data = action.payload
         }).addCase(fetchProductDetails.pending, (state, action) => {
+            state.product.error = false;
             state.product.loading = true;
             state.product.data = null
         }).addCase(fetchProductDetails.fulfilled, (state, action) => {
-            console.log("fullerr=>", state, action)
-
             state.product.loading = false;
             state.product.data = action.payload;
         }).addCase(fetchProductDetails.rejected, (state, action) => {
