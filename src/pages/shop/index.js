@@ -14,7 +14,6 @@ function Shop() {
     const { t } = useTranslation()
     const dispatch = useDispatch();
     const { data: products, categoryFamily, loading } = useSelector(getAllProducts);
-    console.log("useSelector(getAllProducts)", products)
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
     const searchQuery = searchParams.get('search')

@@ -14,6 +14,21 @@ body[lang="ar"] .al-r {
 }
 
 
+body[lang="ar"] h1,
+body[lang="ar"] .h1,
+body[lang="ar"] h2,
+body[lang="ar"] .h2,
+body[lang="ar"] h3,
+body[lang="ar"] .h3,
+body[lang="ar"] h4,
+body[lang="ar"] .h4,
+body[lang="ar"] h5,
+body[lang="ar"] .h5,
+body[lang="ar"] h6,
+body[lang="ar"].h6 {
+	letter-spacing: 0 !important;
+}
+
 body[lang="ar"] .ls-n-10,
 body[lang="ar"] .ls-n-15,
 body[lang="ar"] .ls-n-20,
@@ -35,9 +50,7 @@ body[lang="ar"] strong,
 body[lang="ar"] .widget-title,
 body[lang="ar"] .count-deal .btn-add-cart,
 body[lang="ar"] .single-info-list a,
-body[lang="ar"] .inner-icon:not(.product-widget):hover figure .btn-quickview
-
-{
+body[lang="ar"] .inner-icon:not(.product-widget):hover figure .btn-quickview {
 	font-family: $arabic-font-family;
 	// letter-spacing: 0 !important;
 }
@@ -52,22 +65,21 @@ body[lang="ar"] .cat-list,
 body[lang="ar"] .product-countdown-title,
 body[lang="ar"] .count-deal .product-default .countdown-section>.countdown-period,
 body[lang="ar"] .product-single-details .product-desc,
-body[lang="ar"] .breadcrumb-item
-{
+body[lang="ar"] .breadcrumb-item {
 	font-family: $second-arabic-font-family;
 }
 
-body[lang="ar"] .home-slide p {   
-    letter-spacing: 1.1px;
+body[lang="ar"] .home-slide p {
+	letter-spacing: 1.1px;
 }
 
 
 body[lang="ar"] .coupon-sale-text strong {
-    padding-right: 2.4rem;
+	padding-right: 2.4rem;
 }
 
 body[lang="ar"] .product-single-details .rating-link {
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
 body[lang="ar"] .product-single-gallery .label-group {
@@ -102,9 +114,10 @@ body[lang="ar"] .toolbox label {
 body[lang="ar"] .toolbox-item,
 body[lang="ar"] .offer-products,
 body[lang="ar"] .toolbox-show,
-body[lang="ar"] .products-container .product-details,
+body[lang="ar"] .product-details,
 body[lang="ar"] .product-single-container,
 body[lang="ar"] .products-slider,
+body[lang="ar"] .main-content,
 body[lang="ar"] .footer {
 	direction: rtl !important;
 }
@@ -144,8 +157,7 @@ body[lang="ar"] .product-single-details .product-desc,
 body[lang="ar"] .social-icons,
 body[lang="ar"] .product-single-details .single-info-list,
 body[lang="ar"] .product-single-details .product-action,
-body[lang="ar"] .product-single-details .product-title
-{
+body[lang="ar"] .product-single-details .product-title {
 	text-align: right;
 }
 
@@ -185,17 +197,18 @@ body[lang="ar"] .info-item a {
 
 }
 
-body[lang="ar"] .main-nav .menu{
+body[lang="ar"] .main-nav .menu {
 	// font-size: 1.5rem;
 	font-weight: 700;
 
 }
-body[lang="ar"] .main-nav .menu a{
-	font-weight: 500!important;
+
+body[lang="ar"] .main-nav .menu a {
+	font-weight: 500 !important;
 
 }
 
-body[lang="ar"] .menu-depart .megamenu .submenu a{
+body[lang="ar"] .menu-depart .megamenu .submenu a {
 	// font-size: 1.7rem;
 	font-weight: 700;
 
@@ -237,12 +250,12 @@ body[lang="ar"] .menu-depart {
 }
 
 
-body[lang="ar"] .product-single-details .product-action .add-cart{
+body[lang="ar"] .product-single-details .product-action .add-cart {
 	margin-right: 2.5rem !important;
 }
 
 body[lang="ar"] .product-single-details .product-action .add-cart:before {
-    margin-left: 5px;
+	margin-left: 5px;
 }
 
 body[lang="ar"] .menu-depart .megamenu .submenu li {
@@ -251,39 +264,39 @@ body[lang="ar"] .menu-depart .megamenu .submenu li {
 
 
 
-body[lang="ar"] .sidebar-shop .widget-title{
+body[lang="ar"] .sidebar-shop .widget-title {
 	// font-size: 2rem;
 
 }
 
-body[lang="ar"] .rc-tree.cat-list .rc-tree-treenode{
+body[lang="ar"] .rc-tree.cat-list .rc-tree-treenode {
 	// font-size: 1.7rem;
 }
 
 
-body[lang="ar"] .product-default .product-title{
+body[lang="ar"] .product-default .product-title {
 	// font-size: 1.7rem;
 }
 
-body[lang="ar"]  .product-default .category-list{
+body[lang="ar"] .product-default .category-list {
 	// font-size: 1.4rem;
 }
 
-body[lang="ar"] .inner-icon .price-box{
+body[lang="ar"] .inner-icon .price-box {
 	// font-size:2rem;
 }
 
 
-body[lang="ar"] .product-widget .old-price{
+body[lang="ar"] .product-widget .old-price {
 	// font-size:1.5rem;
 	margin-right: 5px !important;
 }
 
-body[lang="ar"] .breadcrumb-item + .breadcrumb-item:before {
-    content: "\e819";
-    // font-size: 12px;
-    // font-family: "porto";
-    // vertical-align: middle;
-    // margin-top: -2px;
-    margin-left: 6px;
+body[lang="ar"] .breadcrumb-item+.breadcrumb-item:before {
+	content: "\e819";
+	// font-size: 12px;
+	// font-family: "porto";
+	// vertical-align: middle;
+	// margin-top: -2px;
+	margin-left: 6px;
 }

@@ -246,3 +246,6 @@ export const countTo = function () {
         }
     }
 }
+
+
+export const getPageQueryByKey = (key, searchParams) => searchParams.get(key);

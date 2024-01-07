@@ -19,6 +19,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductDetails, fetchRelatedProducts } from '../../../store/products/products.actions';
 import { getProductDetails } from '../../../store/products/products.selectors';
 import { useTranslation } from 'react-i18next';
+import PageNotFound from '../../404';
 
 function ProductDefault() {
     const { t, i18n } = useTranslation()
@@ -55,7 +56,7 @@ function ProductDefault() {
     // const related = data && data.product.related;
 
     if (error) {
-        navigate('/pages/404');
+        return <PageNotFound />
     }
 
     return (

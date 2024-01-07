@@ -6,6 +6,8 @@ import Helmet from "react-helmet";
 import Home from './pages/home'
 import Shop from './pages/shop'
 import List from './pages/shop/list'
+import Grid from './pages/shop/[grid]'
+
 import Product from './pages/product/default/[slug]';
 import { useTranslation, I18nextProvider } from 'react-i18next';
 import {
@@ -38,55 +40,57 @@ const router = createBrowserRouter([
     element: <Product />,
   },
 
-
-
   {
-    path: "cotact-us",
-    element: <></>,
+    path: "products",
+    element: <Grid />,
   },
-  {
-    path: "cart",
-    element: <></>,
-  },
-  {
-    path: "whishlist",
-    element: <></>,
-  },
-  {
-    path: "help",
-    element: <></>,
-  },
-  {
-    path: "stores",
-    element: <></>,
-  },
-  {
-    path: "login",
-    element: <></>,
-  },
-  {
-    path: "login",
-    element: <></>,
-  },
-  {
-    path: "forget-password",
-    element: <></>,
-  },
-  {
-    path: "account",
-    element: <></>,
-  },
-  {
-    path: "checkout",
-    element: <></>,
-  },
-  {
-    path:"404",
-    element: <PageNotFound />
-  },
+  // {
+  //   path: "cotact-us",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "cart",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "whishlist",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "help",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "stores",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "login",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "login",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "forget-password",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "account",
+  //   element: <></>,
+  // },
+  // {
+  //   path: "checkout",
+  //   element: <></>,
+  // },
+  // {
+  //   path:"404",
+  //   element: <PageNotFound />
+  // },
   {
     path:"*",
-    element: <Navigate replace to="/404" />,
+    element:  <PageNotFound />,
   },
 
 ]);

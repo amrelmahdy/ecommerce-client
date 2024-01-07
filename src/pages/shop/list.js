@@ -40,7 +40,6 @@ function Shop() {
 
     const totalPage = products ? parseInt(products.length / perPage) + (products.length % perPage ? 1 : 0) : 1;
     // const loading = false;
-    console.log("=======||||", perPage, totalPage)
 
 
 
@@ -123,12 +122,12 @@ function Shop() {
                             {
                                 getPageQueryByKey("category") ?
                                     <>
-                                        <li className="breadcrumb-item"><ALink href="/shop" scroll={false}>shop</ALink></li>
+                                        {/* <li className="breadcrumb-item"><ALink href="/shop" scroll={false}>shop</ALink></li>
                                         {
                                             data && data.products.categoryFamily.map((item, index) => (
                                                 <li className="breadcrumb-item" key={`category-family-${index}`}><ALink href={{ query: { category: item.slug } }} scroll={false}>{item.name}</ALink></li>
                                             ))
-                                        }
+                                        } */}
                                         <li className="breadcrumb-item active">
                                             {
                                                 getPageQueryByKey("search") ?

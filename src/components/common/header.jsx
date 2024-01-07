@@ -158,7 +158,7 @@ function Header({ adClass = '', wishlist }) {
 
                         <div className="info-boxes font2 align-items-center ml-auto">
                             <div className="info-item">
-                                <ALink href="#"><i className="icon-percent-shape"></i>{t("main_menu_special_offers")}</ALink>
+                                <ALink href="/products?grid=6cols"><i className="icon-percent-shape"></i>{t("main_menu_special_offers")}</ALink>
                             </div>
                             {/* <div className="info-item">
                                 <ALink href="#"><i className="icon-business-book"></i>Recipes</ALink>
