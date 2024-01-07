@@ -9,7 +9,9 @@ import { useTranslation } from 'react-i18next'
 // Import Apollo Server and Query
 // import { GET_PRODUCTS } from '../../../server/queries';
 // import withApollo from '../../../server/apollo';
-import categoriesData from './../../../data/categories.json'
+// import categoriesData from './../../../data/categories.json'
+import { getAllCategories } from '../../../store/categories/categories.selectors';
+import { useSelector } from 'react-redux';
 
 function SearchForm(props) {
     const { t, i18n } = useTranslation()
@@ -17,8 +19,11 @@ function SearchForm(props) {
     const [cat, setCat] = useState("");
     const [search, setSearch] = useState("");
 
-    const data = []
-    // const [ searchProducts, { data } ] = useLazyQuery( GET_PRODUCTS );
+
+
+    const { data: categoriesData, loading: categoriesLoading } = useSelector(getAllCategories);
+
+
     const [timer, setTimer] = useState(null);
 
     useEffect(() => {
@@ -97,6 +102,7 @@ function SearchForm(props) {
 
     function onSubmitSearchForm(e) {
         e.preventDefault();
+        alert("d")
         // router.push( {
         //     pathname: '/shop',
         //     query: {
@@ -112,14 +118,14 @@ function SearchForm(props) {
             if (!subItems.length) return null;
             return subItems.map((sub, i) => {
                 const name = i18n.language === 'ar' ? sub.ar_name : sub.en_name
-                return <option value="women"> - {name}</option>
+                return <option value={sub.id}> - {name}</option>
             })
         }
-        return categoriesData.categories.map((item, index) => {
+        return categoriesData.map((item, index) => {
             const name = i18n.language === 'ar' ? item.ar_name : item.en_name
             const sub_categories = item.sub_categories
             return <>
-                <option value="fashion">{name}</option>
+                <option value={item.id}>{name}</option>
                 {renderSubItems(sub_categories)};
             </>
         })
@@ -144,10 +150,10 @@ function SearchForm(props) {
                     <button className="btn icon-magnifier p-0" title="search" type="submit"></button>
 
                     <div className="live-search-list bg-white">
-                        {search.length > 2 && data && data.products.data.map((product, index) => (
+                        {/* {search.length > 2 && data && data.products.data.map((product, index) => (
                             <ALink href={`/product/default/${product.slug}`} className="autocomplete-suggestion" key={`search-result-${index}`}>
                                 <LazyLoadImage src={process.env.NEXT_PUBLIC_ASSET_URI + product.small_pictures[0].url} width={40} height={40} alt="product" />
-                                {/* <div className="search-name" dangerouslySetInnerHTML={ removeXSSAttacks( matchEmphasize( product.name ) ) }></div> */}
+                                <div className="search-name" dangerouslySetInnerHTML={ removeXSSAttacks( matchEmphasize( product.name ) ) }></div>
                                 <span className="search-price">
                                     {
                                         product.price[0] == product.price[1] ?
@@ -162,7 +168,7 @@ function SearchForm(props) {
                                 </span>
                             </ALink>
                         ))
-                        }
+                        } */}
                     </div>
                 </div>
             </form>
