@@ -31,16 +31,12 @@ function ProductDefault() {
     const [searchParams, setSearchParams] = useSearchParams();
     const getPageQueryByKey = key => searchParams.get(key)
 
-
-    console.log("product", related)
-
-
     useEffect(() => {
+        window.scroll(0,150)
         dispatch(fetchProductDetails(slug))
         dispatch(fetchRelatedProducts(slug))
     }, [slug])
-
-
+    
 
     if (!slug) return (
         <div className="loading-overlay">
