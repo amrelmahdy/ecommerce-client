@@ -113,7 +113,7 @@ export default {
         "product_view_details": "عرض التفاصيل",
         "product_related_products": "منتجات ذات صلة",
         "product_details_categories": "الاقسام",
-
+        "product_details_tags": "العلامات",
 
 
         "breadcrumb_item_shop": "المتجر",

@@ -120,7 +120,7 @@ function Shop() {
                                             {
                                                 getPageQueryByKey("search") ?
                                                     <>
-                                                        Search - <ALink href={{ query: { category: getPageQueryByKey("category") } }} scroll={false}>{getPageQueryByKey("category")}</ALink> / {getPageQueryByKey("search")}
+                                                        Search - <ALink to={{ query: { category: getPageQueryByKey("category") } }} scroll={false}>{getPageQueryByKey("category")}</ALink> / {getPageQueryByKey("search")}
                                                     </>
                                                     : getPageQueryByKey("category")
                                             }

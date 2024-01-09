@@ -12,9 +12,12 @@ import { useTranslation } from 'react-i18next'
 // import categoriesData from './../../../data/categories.json'
 import { getAllCategories } from '../../../store/categories/categories.selectors';
 import { useSelector } from 'react-redux';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 function SearchForm(props) {
-    const { t, i18n } = useTranslation()
+    const { t, i18n } = useTranslation();
+    const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
     // const router = useRouter();
     const [cat, setCat] = useState("");
     const [search, setSearch] = useState("");
@@ -102,7 +105,16 @@ function SearchForm(props) {
 
     function onSubmitSearchForm(e) {
         e.preventDefault();
-        alert("d")
+        navigate("/shop");
+        setSearchParams((prevParams) => {
+            //console.log("Object.fromEntries(prevParams.entries())", Object.fromEntries(prevParams.entries()))
+
+            // return new URLSearchParams({
+            //     ...Object.fromEntries(prevParams.entries()),
+            //     page: 1,
+            //     brands: getUrlForAttrs('brands', item.category)
+            // });
+        });
         // router.push( {
         //     pathname: '/shop',
         //     query: {
@@ -135,7 +147,7 @@ function SearchForm(props) {
         <div className="header-icon header-search header-search-inline header-search-category d-lg-block d-none text-right mt-0">
             <a href="#" className="search-toggle" role="button" onClick={onSearchClick}><i className="icon-magnifier"></i><span>Search</span></a>
 
-            <form action="#" method="get" onSubmit={(e) => onSubmitSearchForm(e)}>
+            <form action="#" method="get" noValidate onSubmit={onSubmitSearchForm}>
                 <div className="header-search-wrapper">
                     <input type="search" className="form-control" name="q" id={`${props.type === 1 ? 'q' : 'qqq'}`} placeholder={t("header_search_form_placehoder")} value={search}
                         required onChange={(e) => onSearchChange(e)} />

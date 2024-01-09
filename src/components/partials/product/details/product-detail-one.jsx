@@ -135,6 +135,7 @@ function ProductDetailOne(props) {
         return false;
     }
 
+
     return (
         <>
             <div className={`skel-pro skel-detail ${adClass}`}></div>
@@ -190,7 +191,7 @@ function ProductDetailOne(props) {
                         } */}
 
                         <li>
-                            <strong>{ t(`product_details_categories`) } </strong>
+                            <strong>{t(`product_details_categories`)} </strong>
                             <span> : </span>
                             {product.categories.map((item, index) =>
                             (
@@ -203,23 +204,26 @@ function ProductDetailOne(props) {
                             ))
                             }
                         </li>
-                        {/* 
+
                         {
-                            !product.tags == null && product.tags.length > 0 ?
+                            product[`${i18n.language}_tags`] && product[`${i18n.language}_tags`].length > 0 ?
                                 <li>
-                                    TAGs: {product.tags.map((item, index) =>
+                                    <strong>{t(`product_details_tags`)} </strong>
+                                    <span> : </span>
+
+                                    {product[`${i18n.language}_tags`].map((item, index) =>
                                     (
                                         <React.Fragment key={`single-cat-${index}`}>
-                                            <strong>
-                                                <ALink href={{ pathname: '/shop', query: { tag: item.slug } }} className="category">{item.name}</ALink>
-                                            </strong>
-                                            {index < product.tags.length - 1 ? ', ' : ''}
+
+                                            <ALink href={{ pathname: '/shop', query: { tag: item.slug } }} className="tag">{item.name}</ALink>
+
+                                            {/* {index < product[`${i18n.language}_tags`].length - 1 ? ', ' : ''} */}
                                         </React.Fragment>
                                     ))
                                     }
                                 </li>
                                 : ''
-                        } */}
+                        }
                     </ul>
 
                     {/* {

@@ -117,8 +117,8 @@ export default {
         "product_reviews_link_no_reviews": "There are no reviews yet",
         "product_view_details": "View details",
         "product_related_products": "Related products",
-
         "product_details_categories": "categories",
+        "product_details_tags": "Tags",
 
         "breadcrumb_item_shop": "shop",
     
