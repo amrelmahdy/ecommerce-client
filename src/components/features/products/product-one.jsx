@@ -20,7 +20,7 @@ function ProductOne(props) {
     // const router = useRouter();
     const { adClass = "", link = "default", product } = props;
 
-    
+
 
     function isSale() {
         return product.is_on_sale ?
@@ -69,7 +69,14 @@ function ProductOne(props) {
 
                     <LazyLoadImage
                         alt="product"
-                        src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_9_1_6ec2446a53.jpg"
+                        src={
+                            product.images.length > 0
+                                ?
+                                process.env.REACT_APP_BASE_URL + "/" + product.images[0].url
+                                :
+                                process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"
+
+                        }
                         threshold={500}
                         effect="black and white"
                         width="100%"
@@ -152,7 +159,7 @@ function ProductOne(props) {
                 <div className="price-box">
                     {
                         !product.is_on_sale && product.price !== product.sale_price ?
-                            <span className="product-price">{ product.sale_price.toFixed(2)  + " " + t("sar")}</span>
+                            <span className="product-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
                             : <>
                                 <span className="old-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
                                 <span className="product-price">{product.price.toFixed(2) + " " + t("sar")}</span>

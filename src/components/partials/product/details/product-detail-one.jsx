@@ -92,13 +92,13 @@ function ProductDetailOne(props) {
     function onAddCartClick(e) {
         e.preventDefault();
 
-        if (product.stock > 0 && !e.currentTarget.classList.contains('disabled')) {
-            if (product.variants.length === 0) {
-                props.addToCart(product, qty, -1);
-            } else {
-                props.addToCart(product, qty, variant.id);
-            }
-        }
+        // if (product.stock > 0 && !e.currentTarget.classList.contains('disabled')) {
+        //     if (product.variants.length === 0) {
+        //         props.addToCart(product, qty, -1);
+        //     } else {
+        //         props.addToCart(product, qty, variant.id);
+        //     }
+        // }
     }
 
     function changeQty(value) {
@@ -215,7 +215,9 @@ function ProductDetailOne(props) {
                                     (
                                         <React.Fragment key={`single-cat-${index}`}>
 
-                                            <ALink href={{ pathname: '/shop', query: { tag: item.slug } }} className="tag">{item.name}</ALink>
+                                            <ALink href={{ pathname: '/shop', query: { tag: item.slug } }} className="tag">
+                                                <span>{item.name}</span>
+                                            </ALink>
 
                                             {/* {index < product[`${i18n.language}_tags`].length - 1 ? ', ' : ''} */}
                                         </React.Fragment>
@@ -224,6 +226,18 @@ function ProductDetailOne(props) {
                                 </li>
                                 : ''
                         }
+
+                        {product.vendor && <li>
+                            <strong> البائع </strong>
+                            <span> : </span>
+                            <React.Fragment key={`single-cat-`}>
+
+                                <ALink href={{ pathname: '/shop' }} >
+                                    <span>{product.vendor[`${i18n.language}_name`]}</span>
+                                </ALink>
+                            </React.Fragment>
+
+                        </li>}
                     </ul>
 
                     {/* {
@@ -306,7 +320,7 @@ function ProductDetailOne(props) {
 
                     <div className="product-action">
                         <Qty max={product.stock} value={qty} onChangeQty={changeQty} />
-                        <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2 ${attrs.sizes.length > 0 || attrs.colors.length > 0 ? 'disabled' : ''}`} title="Add To Cart" onClick={onAddCartClick}>{t("add_to_cart")}</a>
+                        <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2`} title="Add To Cart" onClick={onAddCartClick}>{t("add_to_cart")}</a>
                     </div>
 
                     <hr className="divider mb-0 mt-0" />

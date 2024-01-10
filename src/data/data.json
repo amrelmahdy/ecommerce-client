@@ -18,19 +18,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+						"url": "uploads/shop35_product_4_1_b37cd71f74.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+						"url": "uploads/shop35_product_4_2_a4bbc0caf1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+						"url": "uploads/shop35_product_4_3_6ee777be24.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -38,19 +38,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+						"url": "uploads/shop35_product_4_1_b37cd71f74.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+						"url": "uploads/shop35_product_4_2_a4bbc0caf1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+						"url": "uploads/shop35_product_4_3_6ee777be24.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -83,19 +83,19 @@
 				"stock": 60,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+						"url": "uploads/shop35_product_7_1_af08dd6479.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+						"url": "uploads/shop35_product_7_2_0350eb9f43.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
+						"url": "uploads/shop35_product_7_3_8515865705.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -103,19 +103,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+						"url": "uploads/shop35_product_7_1_af08dd6479.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+						"url": "uploads/shop35_product_7_2_0350eb9f43.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
+						"url": "uploads/shop35_product_7_3_8515865705.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -148,19 +148,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+						"url": "uploads/shop35_product_8_1_0322c2279b.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+						"url": "uploads/shop35_product_8_2_49bc206c33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+						"url": "uploads/shop35_product_8_3_c5d5c833b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -168,19 +168,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+						"url": "uploads/shop35_product_8_1_0322c2279b.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+						"url": "uploads/shop35_product_8_2_49bc206c33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+						"url": "uploads/shop35_product_8_3_c5d5c833b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -213,19 +213,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+						"url": "uploads/shop35_product_9_1_6ec2446a53.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "uploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+						"url": "uploads/shop35_product_9_3_dd4c277e99.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -233,19 +233,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+						"url": "uploads/shop35_product_9_1_6ec2446a53.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "uploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+						"url": "uploads/shop35_product_9_3_dd4c277e99.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -278,19 +278,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "https://d-themes.com/react_asset_api/porto/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "https://d-themes.com/react_asset_api/portouploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -298,19 +298,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -345,19 +345,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -365,19 +365,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -410,19 +410,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+						"url": "uploads/shop35_product_11_1_8f942fff29.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+						"url": "uploads/shop35_product_11_2_bd8e78a8f8.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_3_f538062400.jpg",
+						"url": "uploads/shop35_product_11_3_f538062400.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -430,19 +430,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+						"url": "uploads/shop35_product_11_1_8f942fff29.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+						"url": "uploads/shop35_product_11_2_bd8e78a8f8.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_3_f538062400.jpg",
+						"url": "uploads/shop35_product_11_3_f538062400.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -475,19 +475,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+						"url": "uploads/shop35_product_9_1_6ec2446a53.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "uploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+						"url": "uploads/shop35_product_9_3_dd4c277e99.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -495,19 +495,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+						"url": "uploads/shop35_product_9_1_6ec2446a53.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "uploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+						"url": "uploads/shop35_product_9_3_dd4c277e99.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -540,19 +540,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_15_1_94205a7778.jpg",
+						"url": "uploads/shop35_product_15_1_94205a7778.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_2_c4c3ada8af.jpg",
+						"url": "uploads/shop35_product_15_2_c4c3ada8af.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_3_3308c8d80c.jpg",
+						"url": "uploads/shop35_product_15_3_3308c8d80c.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -560,19 +560,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_15_1_94205a7778.jpg",
+						"url": "uploads/shop35_product_15_1_94205a7778.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_2_c4c3ada8af.jpg",
+						"url": "uploads/shop35_product_15_2_c4c3ada8af.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_3_3308c8d80c.jpg",
+						"url": "uploads/shop35_product_15_3_3308c8d80c.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -605,19 +605,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+						"url": "uploads/shop35_product_2_1_6421c5e5b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+						"url": "uploads/shop35_product_2_2_e3977e449a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+						"url": "uploads/shop35_product_2_3_49b3626a90.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -625,19 +625,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+						"url": "uploads/shop35_product_2_1_6421c5e5b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+						"url": "uploads/shop35_product_2_2_e3977e449a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+						"url": "uploads/shop35_product_2_3_49b3626a90.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -670,19 +670,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
+						"url": "uploads/shop35_product_1_1_e94a0a3ff4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_2_5132af1028.jpg",
+						"url": "uploads/shop35_product_1_2_5132af1028.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+						"url": "uploads/shop35_product_1_3_22f9899896.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -690,19 +690,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
+						"url": "uploads/shop35_product_1_1_e94a0a3ff4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_2_5132af1028.jpg",
+						"url": "uploads/shop35_product_1_2_5132af1028.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+						"url": "uploads/shop35_product_1_3_22f9899896.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -735,19 +735,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+						"url": "uploads/shop35_product_3_1_3a4288289a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+						"url": "uploads/shop35_product_3_2_79d0b0743e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+						"url": "uploads/shop35_product_3_3_67fbf4349d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -755,19 +755,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+						"url": "uploads/shop35_product_3_1_3a4288289a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+						"url": "uploads/shop35_product_3_2_79d0b0743e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+						"url": "uploads/shop35_product_3_3_67fbf4349d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -800,19 +800,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+						"url": "uploads/shop35_product_4_1_b37cd71f74.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+						"url": "uploads/shop35_product_4_2_a4bbc0caf1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+						"url": "uploads/shop35_product_4_3_6ee777be24.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -820,19 +820,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+						"url": "uploads/shop35_product_4_1_b37cd71f74.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+						"url": "uploads/shop35_product_4_2_a4bbc0caf1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+						"url": "uploads/shop35_product_4_3_6ee777be24.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -866,19 +866,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
+						"url": "uploads/shop35_product_5_1_807935f804.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+						"url": "uploads/shop35_product_5_2_7781d74e60.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+						"url": "uploads/shop35_product_5_3_f587aea914.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -886,19 +886,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
+						"url": "uploads/shop35_product_5_1_807935f804.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+						"url": "uploads/shop35_product_5_2_7781d74e60.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+						"url": "uploads/shop35_product_5_3_f587aea914.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -932,19 +932,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
+						"url": "uploads/shop35_product_6_1_d52891ec40.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
+						"url": "uploads/shop35_product_6_2_531ed60cc3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
+						"url": "uploads/shop35_product_6_3_9c25b54014.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -952,19 +952,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
+						"url": "uploads/shop35_product_6_1_d52891ec40.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
+						"url": "uploads/shop35_product_6_2_531ed60cc3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
+						"url": "uploads/shop35_product_6_3_9c25b54014.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -998,19 +998,19 @@
 				"stock": 60,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+						"url": "uploads/shop35_product_7_1_af08dd6479.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+						"url": "uploads/shop35_product_7_2_0350eb9f43.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
+						"url": "uploads/shop35_product_7_3_8515865705.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1018,19 +1018,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+						"url": "uploads/shop35_product_7_1_af08dd6479.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+						"url": "uploads/shop35_product_7_2_0350eb9f43.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
+						"url": "uploads/shop35_product_7_3_8515865705.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1064,19 +1064,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+						"url": "uploads/shop35_product_8_1_0322c2279b.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+						"url": "uploads/shop35_product_8_2_49bc206c33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+						"url": "uploads/shop35_product_8_3_c5d5c833b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1084,19 +1084,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+						"url": "uploads/shop35_product_8_1_0322c2279b.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+						"url": "uploads/shop35_product_8_2_49bc206c33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+						"url": "uploads/shop35_product_8_3_c5d5c833b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1130,19 +1130,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+						"url": "uploads/shop35_product_10_1_0ff925db31.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+						"url": "uploads/shop35_product_10_2_aed5ab2c20.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+						"url": "uploads/shop35_product_10_3_b2ce9f5cca.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1150,19 +1150,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+						"url": "uploads/shop35_product_10_1_0ff925db31.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+						"url": "uploads/shop35_product_10_2_aed5ab2c20.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+						"url": "uploads/shop35_product_10_3_b2ce9f5cca.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1196,19 +1196,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+						"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+						"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+						"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1216,19 +1216,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+						"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+						"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+						"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1262,19 +1262,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_13_1_934fffff0e.jpg",
+						"url": "uploads/shop35_product_13_1_934fffff0e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_2_5b9771be33.jpg",
+						"url": "uploads/shop35_product_13_2_5b9771be33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_3_19488a5f9f.jpg",
+						"url": "uploads/shop35_product_13_3_19488a5f9f.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1282,19 +1282,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_13_1_934fffff0e.jpg",
+						"url": "uploads/shop35_product_13_1_934fffff0e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_2_5b9771be33.jpg",
+						"url": "uploads/shop35_product_13_2_5b9771be33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_3_19488a5f9f.jpg",
+						"url": "uploads/shop35_product_13_3_19488a5f9f.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1328,19 +1328,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1371,19 +1371,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1414,19 +1414,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1457,19 +1457,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1500,19 +1500,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1543,19 +1543,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1586,19 +1586,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1629,19 +1629,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1672,19 +1672,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1715,19 +1715,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1758,19 +1758,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1801,19 +1801,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1844,19 +1844,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "assets/images/placeholder-img-300x300.png",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1887,19 +1887,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1930,19 +1930,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -1973,19 +1973,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2016,19 +2016,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2059,19 +2059,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2102,19 +2102,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2145,19 +2145,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2188,19 +2188,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2231,19 +2231,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2274,19 +2274,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2317,19 +2317,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2360,19 +2360,19 @@
 				"stock": 50,
 				"images": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2408,19 +2408,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "https://d-themes.com/react_asset_api/porto/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "https://d-themes.com/react_asset_api/portouploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2428,19 +2428,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_18_1_2d0cee220d.jpg",
+						"url": "uploads/shop35_product_18_1_2d0cee220d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_2_1f076de542.jpg",
+						"url": "uploads/shop35_product_18_2_1f076de542.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_18_3_de48a209b4.jpg",
+						"url": "uploads/shop35_product_18_3_de48a209b4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2474,19 +2474,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+						"url": "uploads/shop35_product_11_1_8f942fff29.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+						"url": "uploads/shop35_product_11_2_bd8e78a8f8.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_3_f538062400.jpg",
+						"url": "uploads/shop35_product_11_3_f538062400.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2494,19 +2494,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_11_1_8f942fff29.jpg",
+						"url": "uploads/shop35_product_11_1_8f942fff29.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_2_bd8e78a8f8.jpg",
+						"url": "uploads/shop35_product_11_2_bd8e78a8f8.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_11_3_f538062400.jpg",
+						"url": "uploads/shop35_product_11_3_f538062400.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2540,19 +2540,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+						"url": "uploads/shop35_product_9_1_6ec2446a53.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "uploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+						"url": "uploads/shop35_product_9_3_dd4c277e99.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2560,19 +2560,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_9_1_6ec2446a53.jpg",
+						"url": "uploads/shop35_product_9_1_6ec2446a53.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_2_6706d0e5a7.jpg",
+						"url": "uploads/shop35_product_9_2_6706d0e5a7.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_9_3_dd4c277e99.jpg",
+						"url": "uploads/shop35_product_9_3_dd4c277e99.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2605,19 +2605,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_15_1_94205a7778.jpg",
+						"url": "uploads/shop35_product_15_1_94205a7778.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_2_c4c3ada8af.jpg",
+						"url": "uploads/shop35_product_15_2_c4c3ada8af.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_3_3308c8d80c.jpg",
+						"url": "uploads/shop35_product_15_3_3308c8d80c.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2625,19 +2625,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_15_1_94205a7778.jpg",
+						"url": "uploads/shop35_product_15_1_94205a7778.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_2_c4c3ada8af.jpg",
+						"url": "uploads/shop35_product_15_2_c4c3ada8af.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_15_3_3308c8d80c.jpg",
+						"url": "uploads/shop35_product_15_3_3308c8d80c.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2671,19 +2671,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+						"url": "uploads/shop35_product_2_1_6421c5e5b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+						"url": "uploads/shop35_product_2_2_e3977e449a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+						"url": "uploads/shop35_product_2_3_49b3626a90.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2691,19 +2691,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_2_1_6421c5e5b3.jpg",
+						"url": "uploads/shop35_product_2_1_6421c5e5b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_2_e3977e449a.jpg",
+						"url": "uploads/shop35_product_2_2_e3977e449a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_2_3_49b3626a90.jpg",
+						"url": "uploads/shop35_product_2_3_49b3626a90.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2737,19 +2737,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
+						"url": "uploads/shop35_product_1_1_e94a0a3ff4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_2_5132af1028.jpg",
+						"url": "uploads/shop35_product_1_2_5132af1028.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+						"url": "uploads/shop35_product_1_3_22f9899896.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2757,19 +2757,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_1_1_e94a0a3ff4.jpg",
+						"url": "uploads/shop35_product_1_1_e94a0a3ff4.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_2_5132af1028.jpg",
+						"url": "uploads/shop35_product_1_2_5132af1028.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_1_3_22f9899896.jpg",
+						"url": "uploads/shop35_product_1_3_22f9899896.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2803,19 +2803,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+						"url": "uploads/shop35_product_3_1_3a4288289a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+						"url": "uploads/shop35_product_3_2_79d0b0743e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+						"url": "uploads/shop35_product_3_3_67fbf4349d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2823,19 +2823,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_3_1_3a4288289a.jpg",
+						"url": "uploads/shop35_product_3_1_3a4288289a.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_2_79d0b0743e.jpg",
+						"url": "uploads/shop35_product_3_2_79d0b0743e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_3_3_67fbf4349d.jpg",
+						"url": "uploads/shop35_product_3_3_67fbf4349d.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2869,19 +2869,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+						"url": "uploads/shop35_product_4_1_b37cd71f74.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+						"url": "uploads/shop35_product_4_2_a4bbc0caf1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+						"url": "uploads/shop35_product_4_3_6ee777be24.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2889,19 +2889,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_4_1_b37cd71f74.jpg",
+						"url": "uploads/shop35_product_4_1_b37cd71f74.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_2_a4bbc0caf1.jpg",
+						"url": "uploads/shop35_product_4_2_a4bbc0caf1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_4_3_6ee777be24.jpg",
+						"url": "uploads/shop35_product_4_3_6ee777be24.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2935,19 +2935,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
+						"url": "uploads/shop35_product_5_1_807935f804.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+						"url": "uploads/shop35_product_5_2_7781d74e60.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+						"url": "uploads/shop35_product_5_3_f587aea914.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -2955,19 +2955,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
+						"url": "uploads/shop35_product_5_1_807935f804.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+						"url": "uploads/shop35_product_5_2_7781d74e60.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+						"url": "uploads/shop35_product_5_3_f587aea914.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3001,19 +3001,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
+						"url": "uploads/shop35_product_6_1_d52891ec40.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
+						"url": "uploads/shop35_product_6_2_531ed60cc3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
+						"url": "uploads/shop35_product_6_3_9c25b54014.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3021,19 +3021,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_6_1_d52891ec40.jpg",
+						"url": "uploads/shop35_product_6_1_d52891ec40.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_2_531ed60cc3.jpg",
+						"url": "uploads/shop35_product_6_2_531ed60cc3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_6_3_9c25b54014.jpg",
+						"url": "uploads/shop35_product_6_3_9c25b54014.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3067,19 +3067,19 @@
 				"stock": 60,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+						"url": "uploads/shop35_product_7_1_af08dd6479.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+						"url": "uploads/shop35_product_7_2_0350eb9f43.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
+						"url": "uploads/shop35_product_7_3_8515865705.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3087,19 +3087,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_7_1_af08dd6479.jpg",
+						"url": "uploads/shop35_product_7_1_af08dd6479.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_2_0350eb9f43.jpg",
+						"url": "uploads/shop35_product_7_2_0350eb9f43.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_7_3_8515865705.jpg",
+						"url": "uploads/shop35_product_7_3_8515865705.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3133,19 +3133,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+						"url": "uploads/shop35_product_8_1_0322c2279b.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+						"url": "uploads/shop35_product_8_2_49bc206c33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+						"url": "uploads/shop35_product_8_3_c5d5c833b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3153,19 +3153,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_8_1_0322c2279b.jpg",
+						"url": "uploads/shop35_product_8_1_0322c2279b.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_2_49bc206c33.jpg",
+						"url": "uploads/shop35_product_8_2_49bc206c33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_8_3_c5d5c833b3.jpg",
+						"url": "uploads/shop35_product_8_3_c5d5c833b3.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3199,19 +3199,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+						"url": "uploads/shop35_product_10_1_0ff925db31.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+						"url": "uploads/shop35_product_10_2_aed5ab2c20.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+						"url": "uploads/shop35_product_10_3_b2ce9f5cca.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3219,19 +3219,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+						"url": "uploads/shop35_product_10_1_0ff925db31.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+						"url": "uploads/shop35_product_10_2_aed5ab2c20.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+						"url": "uploads/shop35_product_10_3_b2ce9f5cca.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3265,19 +3265,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+						"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+						"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+						"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3285,19 +3285,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+						"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+						"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+						"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3330,19 +3330,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_13_1_934fffff0e.jpg",
+						"url": "uploads/shop35_product_13_1_934fffff0e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_2_5b9771be33.jpg",
+						"url": "uploads/shop35_product_13_2_5b9771be33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_3_19488a5f9f.jpg",
+						"url": "uploads/shop35_product_13_3_19488a5f9f.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3350,19 +3350,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_13_1_934fffff0e.jpg",
+						"url": "uploads/shop35_product_13_1_934fffff0e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_2_5b9771be33.jpg",
+						"url": "uploads/shop35_product_13_2_5b9771be33.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_13_3_19488a5f9f.jpg",
+						"url": "uploads/shop35_product_13_3_19488a5f9f.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3398,19 +3398,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
+						"url": "uploads/shop35_product_5_1_807935f804.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+						"url": "uploads/shop35_product_5_2_7781d74e60.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+						"url": "uploads/shop35_product_5_3_f587aea914.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3418,19 +3418,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_5_1_807935f804.jpg",
+						"url": "uploads/shop35_product_5_1_807935f804.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_2_7781d74e60.jpg",
+						"url": "uploads/shop35_product_5_2_7781d74e60.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_5_3_f587aea914.jpg",
+						"url": "uploads/shop35_product_5_3_f587aea914.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3463,19 +3463,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+						"url": "uploads/shop35_product_10_1_0ff925db31.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+						"url": "uploads/shop35_product_10_2_aed5ab2c20.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+						"url": "uploads/shop35_product_10_3_b2ce9f5cca.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3483,19 +3483,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_10_1_0ff925db31.jpg",
+						"url": "uploads/shop35_product_10_1_0ff925db31.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_2_aed5ab2c20.jpg",
+						"url": "uploads/shop35_product_10_2_aed5ab2c20.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_10_3_b2ce9f5cca.jpg",
+						"url": "uploads/shop35_product_10_3_b2ce9f5cca.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3528,19 +3528,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+						"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+						"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+						"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3548,19 +3548,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+						"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+						"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+						"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3593,19 +3593,19 @@
 				"stock": 50,
 				"pictures": [
 					{
-						"url": "/uploads/shop35_product_16_1_40c8daecb2.jpg",
+						"url": "uploads/shop35_product_16_1_40c8daecb2.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_16_2_348f93975e.jpg",
+						"url": "uploads/shop35_product_16_2_348f93975e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_16_3_8e072ec83c.jpg",
+						"url": "uploads/shop35_product_16_3_8e072ec83c.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3613,19 +3613,19 @@
 				],
 				"small_pictures": [
 					{
-						"url": "/uploads/shop35_product_16_1_40c8daecb2.jpg",
+						"url": "uploads/shop35_product_16_1_40c8daecb2.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_16_2_348f93975e.jpg",
+						"url": "uploads/shop35_product_16_2_348f93975e.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/shop35_product_16_3_8e072ec83c.jpg",
+						"url": "uploads/shop35_product_16_3_8e072ec83c.jpg",
 						"width": 800,
 						"height": 800,
 						"__typename": "Media"
@@ -3663,19 +3663,19 @@
 			"stock": 50,
 			"pictures": [
 				{
-					"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+					"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 					"width": 800,
 					"height": 800,
 					"__typename": "Media"
 				},
 				{
-					"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+					"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 					"width": 800,
 					"height": 800,
 					"__typename": "Media"
 				},
 				{
-					"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+					"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 					"width": 800,
 					"height": 800,
 					"__typename": "Media"
@@ -3683,19 +3683,19 @@
 			],
 			"small_pictures": [
 				{
-					"url": "/uploads/shop35_product_12_1_8beda5c5c1.jpg",
+					"url": "uploads/shop35_product_12_1_8beda5c5c1.jpg",
 					"width": 800,
 					"height": 800,
 					"__typename": "Media"
 				},
 				{
-					"url": "/uploads/shop35_product_12_2_8ab790c3ed.jpg",
+					"url": "uploads/shop35_product_12_2_8ab790c3ed.jpg",
 					"width": 800,
 					"height": 800,
 					"__typename": "Media"
 				},
 				{
-					"url": "/uploads/shop35_product_12_3_6cd79ac491.jpg",
+					"url": "uploads/shop35_product_12_3_6cd79ac491.jpg",
 					"width": 800,
 					"height": 800,
 					"__typename": "Media"
@@ -3723,7 +3723,7 @@
 				"content": "A tasty way to incorporate more veggies into your diet!",
 				"picture": [
 					{
-						"url": "/uploads/blog_2_a1228416f4.png",
+						"url": "uploads/blog_2_a1228416f4.png",
 						"width": 660,
 						"height": 280,
 						"__typename": "Media"
@@ -3748,7 +3748,7 @@
 				"content": "A tasty way to incorporate more veggies into your diet!",
 				"picture": [
 					{
-						"url": "/uploads/blog_1_9bad248e2e.png",
+						"url": "uploads/blog_1_9bad248e2e.png",
 						"width": 660,
 						"height": 280,
 						"__typename": "Media"
@@ -3773,7 +3773,7 @@
 				"content": "Proin ut ante vitae magna cursus porta. Aenean rutrum faucibus augue eu convallis. Phasellus condimentum elit id cursus sodales. Vivamus nec est consectetur, tincidunt augue at, tempor libero.",
 				"picture": [
 					{
-						"url": "/uploads/post_1_29b9758e1b.jpg",
+						"url": "uploads/post_1_29b9758e1b.jpg",
 						"width": 1280,
 						"height": 500,
 						"__typename": "Media"
@@ -3798,19 +3798,19 @@
 				"content": "uismod atras vulputate iltricies etri elit. Class aptent taciti sociosqu ad litora. Nam dolor ligula, faucibus id sodales in, auctor fringilla libero. Pellentesque pellentesque tempor tellus eget hendrerit.",
 				"picture": [
 					{
-						"url": "/uploads/post_3_674dffc858.jpg",
+						"url": "uploads/post_3_674dffc858.jpg",
 						"width": 1280,
 						"height": 500,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/post_2_b5b34da229.jpg",
+						"url": "uploads/post_2_b5b34da229.jpg",
 						"width": 1280,
 						"height": 500,
 						"__typename": "Media"
 					},
 					{
-						"url": "/uploads/post_1_29b9758e1b.jpg",
+						"url": "uploads/post_1_29b9758e1b.jpg",
 						"width": 1280,
 						"height": 500,
 						"__typename": "Media"
@@ -3835,7 +3835,7 @@
 				"content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
 				"picture": [
 					{
-						"url": "/uploads/post_2_b5b34da229.jpg",
+						"url": "uploads/post_2_b5b34da229.jpg",
 						"width": 1280,
 						"height": 500,
 						"__typename": "Media"
@@ -3860,7 +3860,7 @@
 				"content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and",
 				"picture": [
 					{
-						"url": "/uploads/post_3_674dffc858.jpg",
+						"url": "uploads/post_3_674dffc858.jpg",
 						"width": 1280,
 						"height": 500,
 						"__typename": "Media"
