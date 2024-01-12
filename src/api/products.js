@@ -1,7 +1,7 @@
 import { httpClient } from './http';
 
-export const getProducts = async () => {
-    const { data } = await httpClient.get("products")
+export const getProducts = async (query = "") => {
+    const { data } = await httpClient.get("products/shop" + query)
     return data
 }
 

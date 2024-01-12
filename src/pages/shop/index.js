@@ -9,11 +9,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../store/products/products.actions';
 import { getAllProducts } from '../../store/products/products.selectors';
 import { useTranslation } from 'react-i18next';
+import InternalServerError from '../../components/internal-server-error';
 
 function Shop() {
     const { t } = useTranslation()
     const dispatch = useDispatch();
-    const { data: products, categoryFamily, loading } = useSelector(getAllProducts);
+    const { data: products, error, loading } = useSelector(getAllProducts);
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
     const searchQuery = searchParams.get('search')
@@ -32,16 +33,19 @@ function Shop() {
 
 
     useEffect(() => {
-        dispatch(fetchProducts())
-    }, [])
+        const query = `?${searchParams.toString()}`;
+        dispatch(fetchProducts(query))
+    }, [searchParams])
 
 
 
     useEffect(() => {
-        let offset = document.querySelector('.main-content').getBoundingClientRect().top + window.scrollY - 58;
-        setTimeout(() => {
-            window.scrollTo({ top: offset, behavior: 'smooth' });
-        }, 200);
+        if (error) {
+            let offset = document.querySelector('.main-content')?.getBoundingClientRect().top + window.scrollY - 58;
+            setTimeout(() => {
+                window.scrollTo({ top: offset, behavior: 'smooth' });
+            }, 200);
+        }
 
         let page = getPageQueryByKey('page') ? getPageQueryByKey('page') : 1;
 
@@ -95,9 +99,9 @@ function Shop() {
         }
     }
 
-    // if ( error ) {
-    //     return <div>{ error.message }</div>
-    // }
+    if (error) {
+        return <InternalServerError />
+    }
 
 
     return (

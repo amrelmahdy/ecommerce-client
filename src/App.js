@@ -19,7 +19,7 @@ import {
 } from "react-router-dom";
 import "./public/sass/style.scss";
 import i18n from './i18n';
-import PageNotFound from './pages/404';
+import PageNotFound from './pages/error/404';
 
 
 const router = createBrowserRouter([

@@ -20,6 +20,7 @@ import mainMenuData from './../../../data/mainmenu.json'
 import i18n from '../../../i18n';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllCategories } from '../../../store/categories/categories.selectors';
+import { useLocation } from 'react-router-dom';
 
 function MainMenu({ router }) {
 
@@ -27,7 +28,7 @@ function MainMenu({ router }) {
 
 
 
-    const pathname = 'router.pathname';
+    const pathname = useLocation().pathname;
     const { t } = useTranslation()
     // const { data, loading, error } = useQuery(GET_HOME_DATA, { variables: { productsCount: 10, postsCount: 6 } });
 
@@ -63,8 +64,9 @@ function MainMenu({ router }) {
             return null;
         }
         return menItems.map((item, index) => {
+            console.log(pathname, (item.path))
             const subItems = item.sub_items;
-            return <li key={"sub_menu_item" + index} className={pathname.indexOf('/pages/blog') !== -1 ? 'active' : ''}>
+            return <li key={"sub_menu_item" + index} className={pathname == item.path ? 'active' : ''}>
                 <ALink href={item.path}>{t(item.name)}</ALink>
                 {renderSubItems(subItems)}
             </li>
@@ -87,7 +89,7 @@ function MainMenu({ router }) {
                         {
                             subItems.map((subItem, i) => {
                                 return <li key={"menu_item" + i}>
-                                    <ALink href={{ pathname: '/shop', query: { category: 'sports-and-fitness' } }}>{
+                                    <ALink to={{ pathname: '/shop', search: "category=" + subItem.slug  }}>{
                                         i18n.language === 'ar' ? subItem.ar_name : subItem.en_name
                                     }</ALink>
 
@@ -105,7 +107,7 @@ function MainMenu({ router }) {
             const subItems = item.sub_categories;
             const name = i18n.language === 'ar' ? item.ar_name : item.en_name
             return <li>
-                <ALink to={{ pathname: '/shop', search: "spcategory=plants" }}><i className={item.icon}></i>{name}</ALink>
+                <ALink to={{ pathname: '/shop', search: "category=" + item.slug }}><i className={item.icon}></i>{name}</ALink>
                 {subItems.length > 0 && <span className="menu-btn"></span>}
                 {renderSubItems(subItems)}
             </li>

@@ -14,29 +14,32 @@ import { useTranslation } from 'react-i18next'
 // Import Utils
 import { widgetFeaturedProductSlider } from '../../../../utils/data/slider';
 import { shopBrands, shopSizes } from '../../../../utils/data/shop';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getAllCategories } from '../../../../store/categories/categories.selectors';
+import { fetchVendors } from '../../../../store/vendors/vendors.actions';
+import { fetchCategories } from '../../../../store/categories/categories.actions';
+import { getAllVendors } from '../../../../store/vendors/vendors.selectors';
 
 const TreeNode = (props) => {
     return (
         <>
             {props.name}
-            <span className="products-count">({props.count})</span>
+            {/* <span className="products-count">({props.count})</span> */}
         </>
     )
 }
 
 function ShopSidebarOne(props) {
-    const {i18n, t}  = useTranslation()
+    const dispatch = useDispatch()
+    const { i18n, t } = useTranslation()
     const { display, adClass = '' } = props;
     const location = useLocation();
     const navigate = useNavigate()
     const { data: categoriesData, loading: categoriesLoading } = useSelector(getAllCategories);
-
+    const { data: vendorsData, loading: vendorsLoading } = useSelector(getAllVendors);
 
     const [searchParams, setSearchParams] = useSearchParams();
     const error = false;
-    const loading = false;
     // const query = router.query;
     // const { data, loading, error } = useQuery( GET_SHOP_SIDEBAR_DATA, { variables: { featured: true } } );
     const [priceRange, setRange] = useState({ min: 0, max: 1000 });
@@ -48,41 +51,49 @@ function ShopSidebarOne(props) {
         let stack = [],
             result = [];
         result = cats.reduce((acc, cur) => {
-            if (!cur.parent) {
-                let newNode = {
-                    key: cur.slug,
-                    title: <TreeNode name={i18n.language ==='ar' ? cur.ar_name : cur.en_name} count={5} />,
-                    children: []
-                };
-                acc.push(newNode);
-            }
+            let newNode = {
+                key: cur.slug,
+                title: <TreeNode name={i18n.language === 'ar' ? cur.ar_name : cur.en_name} count={5} />,
+                children: []
+            };
+            acc.push(newNode);
             return acc;
         }, []);
         return result;
     }, [data, i18n.language]);
 
     useEffect(() => {
+
+
+        dispatch(fetchVendors());
+        dispatch(fetchCategories())
+
         return () => {
             closeSidebar();
         }
     }, [])
 
 
+    console.log("v", vendorsData)
+
+
     useEffect(() => {
-        if (getPageQueryByKey("min_price") && getPageQueryByKey("max_price")) {
-            setRange({ min: parseInt(getPageQueryByKey("min_price")), max: parseInt(getPageQueryByKey("max_price")) });
-        } else {
-            setRange({ min: 0, max: 1000 });
-        }
     }, [searchParams])
 
     function filterByCategory(selected) {
-        //navigate("?dhdh=9")
-        navigate(location.pathname.replace('[grid]', getPageQueryByKey("grid")) + '?category=' + (selected.length ? selected[0] : ''));
-    }
-
-    function onChangePriceRange(value) {
-        setRange(value);
+        setSearchParams((prevParams) => {
+            let updatedParams = ({
+                ...Object.fromEntries(prevParams.entries())
+            });
+            if (selected.length) {
+                updatedParams.category = selected[0]
+            } else {
+                let { category, ...rest } = Object.fromEntries(prevParams.entries());
+                updatedParams = rest
+            }
+            return new URLSearchParams(updatedParams);
+        });
+        //navigate(location.pathname.replace('[grid]', getPageQueryByKey("grid")) + '?category=' + (selected.length ? selected[0] : ''));
     }
 
     function containsAttrInUrl(type, value) {
@@ -96,19 +107,10 @@ function ShopSidebarOne(props) {
         return currentQueries.join(',');
     }
 
-    function filterByPrice(e) {
-        e.preventDefault();
-        let url = location.pathname.replace('[grid]', getPageQueryByKey("grid"));
-        let arr = [`min_price=${priceRange.min}`, `max_price=${priceRange.max}`, 'page=1'];
-        // for ( let key in query ) {
-        //     if ( key !== 'min_price' && key !== 'max_price' && key !== 'page' && key !== 'grid' ) arr.push( key + '=' + query[ key ] );
-        // }
-        // url = url + '?' + arr.join( '&' );
-        //router.push( url );
-    }
+
 
     function closeSidebar() {
-        document.querySelector( 'body' ).classList.contains( 'sidebar-opened' ) && document.querySelector( 'body' ).classList.remove( 'sidebar-opened' );
+        document.querySelector('body').classList.contains('sidebar-opened') && document.querySelector('body').classList.remove('sidebar-opened');
     }
 
     if (error) {
@@ -118,7 +120,7 @@ function ShopSidebarOne(props) {
     return (
         <>
             <div className="sidebar-overlay" onClick={closeSidebar}></div>
-            <aside className={`sidebar-shop col-lg-3  mobile-sidebar skeleton-body skel-shop-products ${adClass}  ${!loading ? 'loaded' : ''} ${display === 'none' ? 'd-lg-none' : ''} ${props.right ? '' : 'order-lg-first'}`}>
+            <aside className={`sidebar-shop col-lg-3  mobile-sidebar skeleton-body skel-shop-products ${adClass}  ${!categoriesLoading ? 'loaded' : ''} ${display === 'none' ? 'd-lg-none' : ''} ${props.right ? '' : 'order-lg-first'}`}>
                 <StickyBox className="sidebar-wrapper" offsetTop={70}>
 
                     {/* <div className="widget overflow-hidden">
@@ -170,7 +172,7 @@ function ShopSidebarOne(props) {
 
                     <div className="widget">
                         {
-                            loading ?
+                            categoriesLoading ?
                                 <div className="skel-widget"></div>
                                 :
                                 <SlideToggle>
@@ -207,16 +209,16 @@ function ShopSidebarOne(props) {
                         }
                     </div>
 
-                    {/* {
-                        (getPageQueryByKey("category") || getPageQueryByKey("sizes") || getPageQueryByKey("brands") || getPageQueryByKey("min_price") || getPageQueryByKey("max_price")) && <div className="widget">
-                            <ALink href={{ query: { grid: getPageQueryByKey("grid") } }} scroll={false} className="btn btn-primary reset-filter">Reset All Filters</ALink>
+                    {
+                        (getPageQueryByKey("category") || getPageQueryByKey("vendor") || getPageQueryByKey("max_price")) && <div className="widget">
+                            <ALink href={{ query: { grid: getPageQueryByKey("grid") } }} scroll={false} className="btn btn-primary reset-filter">{t("shop_reset_filter")}</ALink>
                         </div>
-                    } */}
+                    }
 
-{/* 
+
                     <div className="widget widget-brand">
                         {
-                            loading ?
+                            vendorsLoading ?
                                 <div className="skel-widget"></div>
                                 :
                                 <SlideToggle>
@@ -226,33 +228,33 @@ function ShopSidebarOne(props) {
                                                 <a className={toggleState === 'COLLAPSED' ? 'collapsed' : ''} href="#" onClick={(e) => {
                                                     e.preventDefault()
                                                     onToggle()
-                                                }}>{t("shop_sidebar_brands")}</a>
+                                                }}>{t("shop_sidebar_vendors")}</a>
                                             </h3>
                                             <div className="overflow-hidden" ref={setCollapsibleElement}>
                                                 <div className="widget-body">
                                                     <ul className="cat-list">
                                                         {
-                                                            shopBrands.map((item, index) => (<li className={containsAttrInUrl('brands', item.category) ? 'active' : ''} key={`brand-${index}`}>
+                                                            vendorsData.map((item, index) => (<li className={containsAttrInUrl('vendor', item.slug) ? 'active' : ''} key={`vendor-${index}`}>
                                                                 <ALink
                                                                     onClick={(e) => {
                                                                         e.preventDefault()
                                                                         setSearchParams((prevParams) => {
-                                                                            //console.log("Object.fromEntries(prevParams.entries())", Object.fromEntries(prevParams.entries()))
-
-                                                                            return new URLSearchParams({
+                                                                            const vendorValue = getUrlForAttrs('vendor', item.slug);
+                                                                            let updatedParams = ({
                                                                                 ...Object.fromEntries(prevParams.entries()),
                                                                                 page: 1,
-                                                                                brands: getUrlForAttrs('brands', item.category)
+                                                                                vendor: vendorValue,
                                                                             });
+                                                                            if (!vendorValue) {
+                                                                                let { vendor, ...rest } = Object.fromEntries(prevParams.entries());
+                                                                                updatedParams = rest
+                                                                            }
+                                                                            return new URLSearchParams(updatedParams);
                                                                         });
                                                                     }}
-                                                                    ///href={{ query: { ...query, page: 1, brands: getUrlForAttrs('brands', item.category) } }}
-                                                                    //to={location.pathname + `?brands=${getUrlForAttrs('brands', item.category)}`}
                                                                     scroll={false}
                                                                 >
-                                                                    {
-                                                                        i18n.language === 'ar' ? item.ar_name : item.en_name
-                                                                    }
+                                                                    {item[`${i18n.language}_name`]}
                                                                 </ALink>
                                                             </li>))
                                                         }
@@ -263,7 +265,7 @@ function ShopSidebarOne(props) {
                                     )}
                                 </SlideToggle>
                         }
-                    </div> */}
+                    </div>
 
                     {/* <div className="widget widget-size">
                         {
@@ -319,7 +321,7 @@ function ShopSidebarOne(props) {
                             <OwlCarousel adClass="widget-featured-products" isTheme={false} options={widgetFeaturedProductSlider}>
                                 <div className="featured-col">
                                     {
-                                        loading ?
+                                        categoriesLoading ?
                                             [0, 1, 2].map((item, index) =>
                                                 <div className="skel-product-col skel-pro mb-2" key={"product-one" + index}></div>
                                             )

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import ALink from "../components/common/ALink";
-import Page from '../components/page';
+import ALink from "../../components/common/ALink";
+import Page from '../../components/page';
 
 export default function PageNotFound() {
     const { t } = useTranslation()

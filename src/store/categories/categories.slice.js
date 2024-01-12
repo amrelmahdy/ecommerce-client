@@ -18,7 +18,6 @@ const categoriesSlice = createSlice({
             state.categories.data = [];
 
         }).addCase(fetchCategories.fulfilled, (state, action) => {
-            console.log("action.payload", action.payload)
             state.categories.loading = false;
             state.categories.data = action.payload
         })

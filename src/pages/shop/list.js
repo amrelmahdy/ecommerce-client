@@ -44,7 +44,8 @@ function Shop() {
 
 
     useEffect(() => {
-        dispatch(fetchProducts())
+        const query = `?${searchParams.toString()}`;
+        dispatch(fetchProducts(query))
     }, [])
 
 

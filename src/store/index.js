@@ -7,6 +7,7 @@ import storage from 'redux-persist/lib/storage'
 import { thunk } from 'redux-thunk';
 import productsReducer from './products/products.slice'
 import categoriesReducer from './categories/categories.slice'
+import vendorsReducer from './vendors/vendors.slice';
 
 
 
@@ -20,7 +21,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   products: productsReducer,
-  categories: categoriesReducer
+  categories: categoriesReducer,
+  vendors: vendorsReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

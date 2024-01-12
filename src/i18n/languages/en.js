@@ -3,6 +3,7 @@ export default {
         "wesite_title": "Shaheen Al Arab For Agriculture",
         "welcome": "Welcome",
         "page_not_found_text": "We're sorry, but the page you were looking for doesn't exist.",
+        "internal_server_error": "Oops! Something went wrong on our end. Our team has been notified, and we're working to fix the issue as soon as possible. In the meantime, you can try refreshing the page or come back later.",
         "signin_login": "Sign In / Register",
         "all_departments": "All Departments",
         "main_menu_all_departments": "All Departments",
@@ -71,16 +72,14 @@ export default {
 
         "featured_products": "Special products",
         "shop_toolbar_sort_by": "Sort by",
-
-
-
         "shop_toolbar_sort_by_default": "Defult",
-
         "shop_toolbar_shows": "shows:",
         "shop_toolbar_sort_by_rating": "Sort by average rating",
         "shop_toolbar_sort_by_date": "Sort by newness",
         "shop_toolbar_sort_by_price": "Sort by price: low to high",
         "shop_toolbar_sort_by_date-desc": "Sort by price: high to low",
+        "shop_reset_filter": "Reset All Filters",
+        "shop_sidebar_vendors": "vendors",
 
         "sar": "SAR",
 
@@ -121,6 +120,8 @@ export default {
         "product_details_tags": "Tags",
 
         "breadcrumb_item_shop": "shop",
+       
+
     
     }
 }

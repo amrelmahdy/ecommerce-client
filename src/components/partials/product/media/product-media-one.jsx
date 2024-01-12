@@ -39,8 +39,9 @@ export default function ProductMediaOne(props) {
 
     function isSale() {
         return product.is_on_sale ?
-            '-' + (100 * (product.price[1] - product.price[0]) / product.price[1]).toFixed(0) + '%'
-            : false;
+            (100 * (product.sale_price - product.price) / product.sale_price).toFixed(0) + '%'
+            :
+            false;
     }
 
     function openLightBox() {

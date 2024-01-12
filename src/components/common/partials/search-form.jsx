@@ -106,22 +106,28 @@ function SearchForm(props) {
     function onSubmitSearchForm(e) {
         e.preventDefault();
         navigate("/shop");
-        setSearchParams((prevParams) => {
-            //console.log("Object.fromEntries(prevParams.entries())", Object.fromEntries(prevParams.entries()))
 
-            // return new URLSearchParams({
-            //     ...Object.fromEntries(prevParams.entries()),
-            //     page: 1,
-            //     brands: getUrlForAttrs('brands', item.category)
-            // });
+
+
+        setSearchParams((prevParams) => {
+            let updatedParams = ({
+                ...Object.fromEntries(prevParams.entries())
+            });
+
+            if (search !== "") {
+                updatedParams.search = search
+            } else {
+                delete updatedParams.search;
+            }
+
+            if (cat !== "") {
+                updatedParams.category = cat
+            } else{
+                delete updatedParams.category;
+            }
+
+            return new URLSearchParams(updatedParams);
         });
-        // router.push( {
-        //     pathname: '/shop',
-        //     query: {
-        //         search: search,
-        //         category: cat
-        //     }
-        // } );
     }
 
 
@@ -137,7 +143,7 @@ function SearchForm(props) {
             const name = i18n.language === 'ar' ? item.ar_name : item.en_name
             const sub_categories = item.sub_categories
             return <>
-                <option value={item.id}>{name}</option>
+                <option value={item.slug}>{name}</option>
                 {renderSubItems(sub_categories)};
             </>
         })

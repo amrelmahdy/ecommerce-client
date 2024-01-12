@@ -3,6 +3,7 @@ export default {
         "wesite_title": "شاهين العرب للزراعة",
         "welcome": "أهلا",
         "page_not_found_text": ".بحثنا في كل مكان. يبدو أن هذه الصفحة مفقودة",
+        "internal_server_error": "عذرًا! حدث خطأ على جهتنا. لقد تم إبلاغ فريقنا، ونحن نعمل على حل المشكلة في أقرب وقت ممكن.",
         "signin_login": "تسجيل الدخول / إنشاء حساب",
         "all_departments": "كل الأقسام",
         "main_menu_home": "الرئيسية",
@@ -64,7 +65,8 @@ export default {
 
         "shop_sidebar_price": "السعر",
         "shop_sidebar_categories": "الأقسام",
-        "shop_sidebar_brands": "العلامة التجارية",
+        "shop_sidebar_vendors": "البائعون",
+        "shop_reset_filter": "إلغاء التصفية",
         "featured_products": "منتجات مميزة",
 
         "shop_toolbar_shows": "نتائج",

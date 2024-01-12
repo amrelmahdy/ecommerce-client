@@ -54,7 +54,7 @@ export default function PopularSection(props) {
                                     data.length && data.map((item, index) => {
                                         const name = i18n.language === 'ar' ? item.ar_name : item.en_name
                                         return <div className="product-category media-with-lazy ">
-                                            <ALink href={{ pathname: '/shop', query: { category: 'cooking' } }}>
+                                            <ALink to={{ pathname: '/shop', search: "category=" + item.slug }}>
                                                 <figure>
                                                     <LazyLoadImage
                                                         alt="category"

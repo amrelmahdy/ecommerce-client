@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-
-// Import Custom Component
 import ProductNav from '../product-nav';
 import Qty from '../qty';
 import ALink from '../../../common/ALink';
@@ -166,8 +164,8 @@ function ProductDetailOne(props) {
                             !product.is_on_sale ?
                                 <span className="product-price">{product.price.toFixed(2) + " " + t("sar")}</span>
                                 : <>
-                                    <span className="old-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
-                                    <span className="new-price">{product.price.toFixed(2) + " " + t("sar")}</span>
+                                    <span className="old-price">{product.price.toFixed(2) + " " + t("sar")}</span>
+                                    <span className="new-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
                                 </>
                         }
                     </div>
@@ -197,7 +195,7 @@ function ProductDetailOne(props) {
                             (
                                 <React.Fragment key={`single-cat-${index}`}>
                                     <strong>
-                                        <ALink href={{ pathname: '/shop', query: { category: item.slug } }} className="category">{i18n.language === 'ar' ? item.ar_name : item.en_name}</ALink>
+                                        <ALink to={{ pathname: '/shop', search: `category=${item.slug}` }} className="category">{i18n.language === 'ar' ? item.ar_name : item.en_name}</ALink>
                                     </strong>
                                     {index < product.categories.length - 1 ? ', ' : ''}
                                 </React.Fragment>
@@ -215,7 +213,9 @@ function ProductDetailOne(props) {
                                     (
                                         <React.Fragment key={`single-cat-${index}`}>
 
-                                            <ALink href={{ pathname: '/shop', query: { tag: item.slug } }} className="tag">
+                                            <ALink
+                                                to={{ pathname: '/shop', search: `tag=${item.slug}` }}
+                                                className="tag">
                                                 <span>{item.name}</span>
                                             </ALink>
 
@@ -232,7 +232,8 @@ function ProductDetailOne(props) {
                             <span> : </span>
                             <React.Fragment key={`single-cat-`}>
 
-                                <ALink href={{ pathname: '/shop' }} >
+                                <ALink
+                                    to={{ pathname: '/shop', search: `vendor=${product.vendor.slug}` }}>
                                     <span>{product.vendor[`${i18n.language}_name`]}</span>
                                 </ALink>
                             </React.Fragment>

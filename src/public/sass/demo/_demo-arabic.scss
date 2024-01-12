@@ -50,7 +50,9 @@ body[lang="ar"] strong,
 body[lang="ar"] .widget-title,
 body[lang="ar"] .count-deal .btn-add-cart,
 body[lang="ar"] .single-info-list a,
-body[lang="ar"] .inner-icon:not(.product-widget):hover figure .btn-quickview {
+body[lang="ar"] .inner-icon:not(.product-widget):hover figure .btn-quickview,
+body[lang="ar"] .sidebar-shop .reset-filter
+{
 	font-family: $arabic-font-family;
 	// letter-spacing: 0 !important;
 }
@@ -65,7 +67,8 @@ body[lang="ar"] .cat-list,
 body[lang="ar"] .product-countdown-title,
 body[lang="ar"] .count-deal .product-default .countdown-section>.countdown-period,
 body[lang="ar"] .product-single-details .product-desc,
-body[lang="ar"] .breadcrumb-item {
+body[lang="ar"] .breadcrumb-item
+{
 	font-family: $second-arabic-font-family;
 }
 

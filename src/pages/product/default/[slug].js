@@ -19,7 +19,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductDetails, fetchRelatedProducts } from '../../../store/products/products.actions';
 import { getProductDetails } from '../../../store/products/products.selectors';
 import { useTranslation } from 'react-i18next';
-import PageNotFound from '../../404';
+import PageNotFound from '../../error/404';
 
 function ProductDefault() {
     const { t, i18n } = useTranslation()

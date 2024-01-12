@@ -3,20 +3,13 @@ import data from '../../data/shop.json';
 import { getProductDetails, getProducts, getRelatedProducts } from '../../api/products';
 
 
-const getProductsService = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            return resolve(data)
-        }, 3000)
-    });
-}
 
-export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
+export const fetchProducts = createAsyncThunk('products/fetchProducts', async (query, {rejectWithValue}) => {
     try {
-        const res = await getProducts();
+        const res = await getProducts(query);
         return res
     } catch (error) {
-        return error.message
+        return rejectWithValue(error.message)
     }
 })
 
