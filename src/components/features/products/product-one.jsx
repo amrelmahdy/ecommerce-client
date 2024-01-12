@@ -121,6 +121,12 @@ function ProductOne(props) {
             </figure>
 
             <div className="product-details">
+              
+
+                <h3 className="product-title">
+                    <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
+                </h3>
+
                 <div className="category-wrap">
                     <div className="category-list al-r">
                         {
@@ -139,13 +145,8 @@ function ProductOne(props) {
                     {/* <a href="#" className={`btn-icon-wish ${isInWishlist() ? 'added-wishlist' : ''}`} onClick={onWishlistClick} title={`${isInWishlist() === true ? 'Go to Wishlist' : 'Add to Wishlist'}`}><i className="icon-heart"></i></a> */}
                 </div>
 
-                <h3 className="product-title">
-                    <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
-                </h3>
-
-
                 {product[`${i18n.language}_subtitle`] && <div className="category-list al-r">
-                    <h6>{product[`${i18n.language}_subtitle`]}</h6>
+                    <span>{product[`${i18n.language}_subtitle`]}</span>
                 </div>
 
                 }

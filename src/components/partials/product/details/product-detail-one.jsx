@@ -141,7 +141,6 @@ function ProductDetailOne(props) {
                 product &&
                 <div className={`product-single-details ${adClass}`}>
                     <h1 className="product-title">{i18n.language === 'ar' ? product.ar_name : product.en_name}</h1>
-
                     {/* {
                         isNav ?
                             <ProductNav prev={ prev } next={ next } />
@@ -157,6 +156,7 @@ function ProductDetailOne(props) {
                         <ALink href="#" className="rating-link">( {product.reviews > 0 ? `${product.reviews} Reviews` : t("product_reviews_link_no_reviews")} )</ALink>
                     </div>
 
+
                     <hr className="short-divider" />
 
                     <div className="price-box">
@@ -170,13 +170,17 @@ function ProductDetailOne(props) {
                         }
                     </div>
 
-                    {
+                    {/* {
                         product.until && product.until !== null &&
                         <ProductCountdown type="1" />
-                    }
+                    } */}
+
+
+                    <h6 className='al-r'>{product[`${i18n.language}_subtitle`]}</h6>
+
 
                     <div className="product-desc">
-                        <div dangerouslySetInnerHTML={{ __html: i18n.language === 'ar' ? product.ar_description : product.en_description }} />
+                        <div dangerouslySetInnerHTML={{ __html: product[`${i18n.language}_description`] }} />
                     </div>
 
                     <ul className="single-info-list">
@@ -187,6 +191,7 @@ function ProductDetailOne(props) {
                                 </li>
                                 : ''
                         } */}
+
 
                         <li>
                             <strong>{t(`product_details_categories`)} </strong>
