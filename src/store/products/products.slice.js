@@ -5,6 +5,7 @@ import { fetchProductDetails, fetchProducts, fetchRelatedProducts } from './prod
 const initialState = {
     products: {
         data: [],
+        total: 0,
         loading: true,
         error: false
     },
@@ -23,15 +24,18 @@ const productsSlice = createSlice({
         builder.addCase(fetchProducts.pending, (state, action) => {
             state.products.loading = true;
             state.products.data = [];
+            state.products.total = 0;
             state.products.error = false;
         }).addCase(fetchProducts.fulfilled, (state, action) => {
             state.products.loading = false;
             state.products.error = false;
-            state.products.data = action.payload
+            state.products.data = action.payload.products
+            state.products.total = action.payload.total
         }).addCase(fetchProducts.rejected, (state, action) => {
             state.products.loading = false;
             state.products.error = true;
             state.products.data = [];
+            state.products.total = 0;
         }).addCase(fetchProductDetails.pending, (state, action) => {
             state.product.error = false;
             state.product.loading = true;

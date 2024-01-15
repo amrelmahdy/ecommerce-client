@@ -7,7 +7,6 @@ import Home from './pages/home'
 import Shop from './pages/shop'
 import List from './pages/shop/list'
 import Grid from './pages/shop/[grid]'
-
 import Product from './pages/product/default/[slug]';
 import { useTranslation, I18nextProvider } from 'react-i18next';
 import {
@@ -20,12 +19,25 @@ import {
 import "./public/sass/style.scss";
 import i18n from './i18n';
 import PageNotFound from './pages/error/404';
+import Login from './pages/login/login';
+import Cookies from 'universal-cookie';
+import AuthService from './auth/auth.service'
+
+
+const PrivateRoute = ({ element }) => {
+  const cookies = new Cookies();
+
+  // Replace this with your actual authentication logic
+  const isAuthenticated = cookies.get("access_token")
+
+  return isAuthenticated ? element : <Navigate to="/login" />;
+};
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <PrivateRoute element={<Home />} />,
   },
   {
     path: "shop",
@@ -64,10 +76,10 @@ const router = createBrowserRouter([
   //   path: "stores",
   //   element: <></>,
   // },
-  // {
-  //   path: "login",
-  //   element: <></>,
-  // },
+  {
+    path: "login",
+    element: <Login />,
+  },
   // {
   //   path: "login",
   //   element: <></>,
@@ -89,14 +101,36 @@ const router = createBrowserRouter([
   //   element: <PageNotFound />
   // },
   {
-    path:"*",
-    element:  <PageNotFound />,
+    path: "*",
+    element: <PageNotFound />,
   },
 
 ]);
 
 
+
+
 function App() {
+
+  useEffect(() => {
+    const cookies = new Cookies();
+    const accessToken = cookies.get("access_token");
+    const refreshToken = cookies.get("refresh_token");
+    handleRefreshToken(accessToken, refreshToken)
+    // const refreshInterval = setInterval(handleRefreshToken, 5000);
+    // return () => {
+    //   clearInterval(refreshInterval);
+    // };
+  }, [])
+
+
+
+  const handleRefreshToken = async (accessToken, refreshToken) => {
+    const authService = new AuthService();
+    authService.setTokens(accessToken, refreshToken);
+    authService.refreshAccessToken(accessToken, refreshToken);
+  }
+
 
   const { t, i18n } = useTranslation();
 
@@ -113,20 +147,20 @@ function App() {
             <div className="bounce3"></div>
           </div>
         </div>}> */}
-        <Helmet htmlAttributes={{ lang : i18n.language }} bodyAttributes={{ lang : i18n.language }}>
+        <Helmet htmlAttributes={{ lang: i18n.language }} bodyAttributes={{ lang: i18n.language }}>
           <meta charSet="UTF-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <title>{ t("wesite_title") }</title>
+          <title>{t("wesite_title")}</title>
           <meta name="keywords" content="React Template" />
           <meta name="description" content="Porto - React eCommerce Template" />
           <meta name="author" content="SW-THEMES" />
           <link rel="stylesheet" type="text/css" href="/vendor/mm.css" />
           {i18n.language === 'ar' && <link rel="stylesheet" type="text/css" href="/vendor/mm.css" />}
         </Helmet>
-        
+
         <RouterProvider router={router} />
 
         {/* </PersistGate> */}

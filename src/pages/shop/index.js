@@ -14,23 +14,14 @@ import InternalServerError from '../../components/internal-server-error';
 function Shop() {
     const { t } = useTranslation()
     const dispatch = useDispatch();
-    const { data: products, error, loading } = useSelector(getAllProducts);
+    const { data: products, error, loading, total } = useSelector(getAllProducts);
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
-    const searchQuery = searchParams.get('search')
-    const pageQuery = searchParams.get('page')
-
-
-
+    const page = searchParams.get('page')
+    const pageSize = searchParams.get('pageSize')
     const getPageQueryByKey = key => searchParams.get(key)
-
-    // const myParam = new URLSearchParams(location.search);
-    const [perPage, setPerPage] = useState(12);
-    const [sortBy, setSortBy] = useState(getPageQueryByKey('sortBy') ? getPageQueryByKey('sortBy') : 'default');
-
-    const totalPage = products ? parseInt(products.length / perPage) + (products.length % perPage ? 1 : 0) : 1;
-
-
+    const [perPage, setPerPage] = useState(pageSize || 12);
+    const totalPage = products ? parseInt(total / perPage) + (total % perPage ? 1 : 0) : 1;
 
     useEffect(() => {
         const query = `?${searchParams.toString()}`;
@@ -40,14 +31,10 @@ function Shop() {
 
 
     useEffect(() => {
-        if (error) {
-            let offset = document.querySelector('.main-content')?.getBoundingClientRect().top + window.scrollY - 58;
-            setTimeout(() => {
-                window.scrollTo({ top: offset, behavior: 'smooth' });
-            }, 200);
-        }
-
-        let page = getPageQueryByKey('page') ? getPageQueryByKey('page') : 1;
+        let offset = document.querySelector('.main-content')?.getBoundingClientRect().top + window.scrollY - 58;
+        setTimeout(() => {
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }, 200);
 
         // getProducts({
         //     variables: {
@@ -63,30 +50,30 @@ function Shop() {
         //         to: perPage * page
         //     }
         // });
-    }, [searchParams, perPage, sortBy])
+    }, [searchParams, perPage, page, error])
 
 
     function onPerPageChange(e) {
         setPerPage(e.target.value);
-        // router.push( {
-        //     pathname: router.pathname,
-        //     query: {
-        //         ...query,
-        //         page: 1
-        //     }
-        // } );
+        setSearchParams((prevParams) => {
+            let updatedParams = ({
+                ...Object.fromEntries(prevParams.entries())
+            });
+
+            updatedParams.pageSize = e.target.value
+
+            return new URLSearchParams(updatedParams);
+        })
     }
 
     function onSortByChange(e) {
-        // router.push( {
-        //     pathname: router.pathname,
-        //     query: {
-        //         ...query,
-        //         sortBy: e.target.value,
-        //         page: 1
-        //     }
-        // } )
-        //setSortBy( e.target.value );
+        setSearchParams((prevParams) => {
+            let updatedParams = ({
+                ...Object.fromEntries(prevParams.entries())
+            });
+            updatedParams.sortBy = e.target.value
+            return new URLSearchParams(updatedParams);
+        })
     }
 
     function sidebarToggle(e) {
@@ -176,14 +163,11 @@ function Shop() {
                                     <div className="toolbox-item toolbox-sort">
                                         <label>{t("shop_toolbar_sort_by")}</label>
                                         <div className="select-custom">
-                                            <select name="orderby" className="form-control" value={sortBy} onChange={e => onSortByChange(e)}>
-
-
-
+                                            <select name="orderby" className="form-control" value={ searchParams.get('sortBy')} onChange={e => onSortByChange(e)}>
                                                 <option value="default">{t("shop_toolbar_sort_by_default")}</option>
                                                 <option value="price">{t("shop_toolbar_sort_by_price")}</option>
-                                                <option value="price">{t("shop_toolbar_sort_by_date-desc")}</option>
-                                                <option value="date">{t("shop_toolbar_sort_by_date")}</option>
+                                                <option value="price-desc">{t("shop_toolbar_sort_by_date-desc")}</option>
+                                                {/* <option value="date">{t("shop_toolbar_sort_by_date")}</option> */}
                                                 <option value="rating">{t("shop_toolbar_sort_by_rating")}</option>
 
                                             </select>
@@ -235,7 +219,6 @@ function Shop() {
                                 </nav>
                                 : ''
                             }
-
                         </div>
 
                         <ShopSidebarOne />

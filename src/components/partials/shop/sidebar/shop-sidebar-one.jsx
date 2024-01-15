@@ -234,7 +234,7 @@ function ShopSidebarOne(props) {
                                                 <div className="widget-body">
                                                     <ul className="cat-list">
                                                         {
-                                                            vendorsData.map((item, index) => (<li className={containsAttrInUrl('vendor', item.slug) ? 'active' : ''} key={`vendor-${index}`}>
+                                                            vendorsData?.map((item, index) => (<li className={containsAttrInUrl('vendor', item.slug) ? 'active' : ''} key={`vendor-${index}`}>
                                                                 <ALink
                                                                     onClick={(e) => {
                                                                         e.preventDefault()

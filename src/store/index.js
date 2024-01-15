@@ -8,7 +8,7 @@ import { thunk } from 'redux-thunk';
 import productsReducer from './products/products.slice'
 import categoriesReducer from './categories/categories.slice'
 import vendorsReducer from './vendors/vendors.slice';
-
+import authReducer from './auth/auth.slice';
 
 
 // persistance configuration for root reducers
@@ -20,6 +20,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
+  auth: authReducer,
   products: productsReducer,
   categories: categoriesReducer,
   vendors: vendorsReducer

@@ -1,6 +1,7 @@
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 // import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // Import Actions
 // import { actions as WishlistAction } from "../../store/wishlist";
@@ -12,8 +13,16 @@ import MainMenu from "./partials/main-menu";
 import SearchForm from "./partials/search-form";
 import i18n from './../../i18n';
 import { useNavigate } from 'react-router-dom';
+import { getIsAuthenticated, getUserInfo } from '../../store/auth/auth.selectors';
+import Cookies from 'universal-cookie';
+import { setUserUnAuthenticated } from '../../store/auth/auth.slice';
 
 function Header({ adClass = '', wishlist }) {
+    const cookies =  new Cookies()
+    const dispatch = useDispatch()
+    const userInfo = useSelector(getUserInfo)
+    const isAuthenticated = useSelector(getIsAuthenticated)
+
     const { t } = useTranslation();
     const navigate = useNavigate()
 
@@ -21,6 +30,13 @@ function Header({ adClass = '', wishlist }) {
         e.preventDefault();
         document.querySelector("body").classList.toggle("mmenu-active");
         e.currentTarget.classList.toggle("active");
+    }
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        cookies.remove("access_token")
+        cookies.remove("refresh_token")
+        dispatch(setUserUnAuthenticated())
     }
 
     return (
@@ -124,7 +140,7 @@ function Header({ adClass = '', wishlist }) {
                             <img src="/images/logo.png" className="w-100" width="111" height="44" alt="Porto Logo" />
                         </ALink>
 
-                        <SearchForm />
+                        {/* <SearchForm /> */}
                     </div>
 
                     <div className="header-right">
@@ -134,13 +150,18 @@ function Header({ adClass = '', wishlist }) {
                         </ALink>
 
                         <div className="header-user d-lg-flex align-items-center">
-                            <ALink href="/pages/login" className="header-icon mr-0" title="login">
-                                <i className="icon-user-2 mr-2"></i>
-                            </ALink>
+                            {isAuthenticated ?
+                                <div className='avatar'>
+                                    <LazyLoadImage src="images/clients/client1.png" alt="client" width="40" height="40" />
+                                </div>
+                                : <ALink href="/pages/login" className="header-icon mr-0" title="login">
+                                    <i className="icon-user-2 mr-2"></i>
+                                </ALink>
+                            }
 
                             <h6 className="font1 d-none d-xl-block mb-0">
-                                <span className="d-block text-body">{t("welcome")}</span>
-                                <ALink href="/pages/login" className="font-weight-bold">{t("signin_login")}</ALink>
+                                <span className="d-block text-body">{`${t("welcome")} ${isAuthenticated && userInfo ? userInfo.name: ''}`}  </span>
+                                {isAuthenticated && userInfo ? <ALink to="/logout" onClick={handleLogout} className="font-weight-bold">{t("logout")}</ALink> : <ALink href="/login" className="font-weight-bold">{t("signin_login")}</ALink>}
                             </h6>
                         </div>
 
@@ -158,7 +179,7 @@ function Header({ adClass = '', wishlist }) {
 
                         <div className="info-boxes font2 align-items-center ml-auto">
                             <div className="info-item">
-                                <ALink href="/products?grid=6cols"><i className="icon-percent-shape"></i>{t("main_menu_special_offers")}</ALink>
+                                <ALink href="/products?grid=6cols&sale=true"><i className="icon-percent-shape"></i>{t("main_menu_special_offers")}</ALink>
                             </div>
                             {/* <div className="info-item">
                                 <ALink href="#"><i className="icon-business-book"></i>Recipes</ALink>

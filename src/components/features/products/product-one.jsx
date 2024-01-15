@@ -160,7 +160,7 @@ function ProductOne(props) {
                 <div className="price-box">
                     {
                         !product.is_on_sale && product.price !== product.sale_price ?
-                            <span className="product-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>
+                            <span className="product-price">{product.price.toFixed(2) + " " + t("sar")}</span>
                             : <>
                                 <span className="old-price">{product.price.toFixed(2) + " " + t("sar")}</span>
                                 <span className="product-price">{product.sale_price.toFixed(2) + " " + t("sar")}</span>

@@ -65,12 +65,20 @@ function ProductTwo(props) {
 
                     <LazyLoadImage
                         alt="product"
-                        src="https://d-themes.com/react_asset_api/porto/uploads/shop35_product_5_1_807935f804.jpg"
+                        src={
+                            product.images.length > 0
+                                ?
+                                process.env.REACT_APP_BASE_URL + "/" + product.images[0].url
+                                :
+                                process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"
+
+                        }
                         threshold={500}
                         effect="black and white"
                         width="100%"
+                        height="auto"
                     />
-                    {
+                    {/* {
                         product.images.length >= 2 ?
                             <LazyLoadImage
                                 alt="product"
@@ -80,7 +88,7 @@ function ProductTwo(props) {
                                 wrapperClassName="product-image-hover"
                             />
                             : ""
-                    }
+                    } */}
                 </ALink>
 
                 <div className="label-group">
@@ -89,13 +97,18 @@ function ProductTwo(props) {
                     {isSale() ? <div className="product-label label-sale">{isSale()}</div> : ''}
                 </div>
 
-                {
+                {/* {
                     product.until && product.until !== null &&
                     <ProductCountdown />
-                }
+                } */}
             </figure>
 
             <div className="product-details">
+               
+            <h3 className="product-title">
+                    <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
+                </h3>
+
                 <div className="category-wrap">
                     <div className="category-list">
                         {
@@ -112,10 +125,7 @@ function ProductTwo(props) {
                     </div>
                 </div>
 
-                <h3 className="product-title">
-                    <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
-                </h3>
-
+              
                 <div className="ratings-container">
                     <div className="product-ratings">
                         <span className="ratings" style={{ width: 20 * product.average_rating + '%' }}></span>

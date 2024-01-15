@@ -5,7 +5,8 @@ import { fetchCategories } from './categories.actions';
 const initialState = {
     categories: {
         data: [],
-        loading: false
+        loading: false,
+        error: false
     }
 }
 
@@ -20,6 +21,10 @@ const categoriesSlice = createSlice({
         }).addCase(fetchCategories.fulfilled, (state, action) => {
             state.categories.loading = false;
             state.categories.data = action.payload
+        }).addCase(fetchCategories.rejected, (state, action) => {
+            state.categories.loading = false;
+            state.categories.data = [];
+            state.categories.error = true;
         })
     }
 })

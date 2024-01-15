@@ -64,7 +64,6 @@ function MainMenu({ router }) {
             return null;
         }
         return menItems.map((item, index) => {
-            console.log(pathname, (item.path))
             const subItems = item.sub_items;
             return <li key={"sub_menu_item" + index} className={pathname == item.path ? 'active' : ''}>
                 <ALink href={item.path}>{t(item.name)}</ALink>
@@ -76,7 +75,7 @@ function MainMenu({ router }) {
 
 
     const renderSideMenu = () => {
-        let menuItems = categoriesData.filter(item => !item.parent) || []
+        let menuItems = categoriesData?.filter(item => !item.parent) || []
         // var reversed = Object.assign([], menItems)
         // if (i18n.language === 'ar') {
         //     reversed.reverse()

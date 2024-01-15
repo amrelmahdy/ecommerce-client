@@ -2,9 +2,11 @@ export default {
     translation: {
         "wesite_title": "شاهين العرب للزراعة",
         "welcome": "أهلا",
+        "logout": "تسجيل الخروج",
         "page_not_found_text": ".بحثنا في كل مكان. يبدو أن هذه الصفحة مفقودة",
         "internal_server_error": "عذرًا! حدث خطأ على جهتنا. لقد تم إبلاغ فريقنا، ونحن نعمل على حل المشكلة في أقرب وقت ممكن.",
         "signin_login": "تسجيل الدخول / إنشاء حساب",
+        "login": "تسجيل الدخول",
         "all_departments": "كل الأقسام",
         "main_menu_home": "الرئيسية",
         "main_menu_shop": "المتجر",

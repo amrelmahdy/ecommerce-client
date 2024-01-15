@@ -1,13 +1,11 @@
 body[lang="ar"] .sidebar-shop .owl-nav,
 body[lang="ar"] .price-slider-wrapper,
-body[lang="ar"] .filter-price-action body[lang="ar"] .toolbox {
+body[lang="ar"] .filter-price-action body[lang="ar"] .toolbox,
+.body[lang="ar"] .pagination
+{
 	direction: ltr !important;
 }
 
-body[lang="ar"] .filter-price-action,
-body[lang="ar"] .count-deal .btn-add-cart {
-	direction: ltr;
-}
 
 body[lang="ar"] .al-r {
 	text-align: right !important;
@@ -56,6 +54,7 @@ body[lang="ar"] .sidebar-shop .reset-filter
 	font-family: $arabic-font-family;
 	// letter-spacing: 0 !important;
 }
+
 
 body[lang="ar"] .old-price,
 body[lang="ar"] .product-price,
@@ -123,6 +122,15 @@ body[lang="ar"] .products-slider,
 body[lang="ar"] .main-content,
 body[lang="ar"] .footer {
 	direction: rtl !important;
+}
+
+
+body[lang="ar"] .filter-price-action,
+body[lang="ar"] .count-deal .btn-add-cart,
+body[lang="ar"] .toolbox-pagination,
+.ltr
+{
+	direction: ltr !important;
 }
 
 body[lang="ar"] .widget .owl-carousel .owl-nav {

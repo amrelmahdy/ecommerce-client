@@ -1,102 +1,80 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
-// import { useRouter } from 'next/router';
-// import { useLazyQuery } from '@apollo/react-hooks';
-
+import { useLocation, useSearchParams } from 'react-router-dom';
 import ALink from '../../components/common/ALink';
 import ShopSidebarOne from '../../components/partials/shop/sidebar/shop-sidebar-one';
 import Pagination from '../../components/features/pagination';
 import ProductsRow from '../../components/partials/products-collection/product-row';
-import data from './../../data/shop.json'
 
-// import withApollo from '../../server/apollo';
-// import { GET_PRODUCTS } from '../../server/queries';
-import { useLocation, useSearchParams } from 'react-router-dom';
 import Page from '../../components/page';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../store/products/products.actions';
 import { getAllProducts } from '../../store/products/products.selectors';
 import { useTranslation } from 'react-i18next';
+import InternalServerError from '../../components/internal-server-error';
 
-function Shop() {
-
-    const dispatch = useDispatch();
-
+function List() {
     const { t } = useTranslation()
+    const dispatch = useDispatch();
+    const { data: products, error, loading, total } = useSelector(getAllProducts);
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
+    const page = searchParams.get('page')
+    const pageSize = searchParams.get('pageSize')
     const getPageQueryByKey = key => searchParams.get(key)
-    // const query = router.query;
-    // const [getProducts, { data, loading, error }] = useLazyQuery(GET_PRODUCTS);
-
-    const { data: products, total, categoryFamily, loading } = useSelector(getAllProducts);
-
-
-    const [perPage, setPerPage] = useState(12);
-    const [sortBy, setSortBy] = useState(getPageQueryByKey("sortBy") ? getPageQueryByKey("sortBy") : 'default');
-
-
-    // const products = data && data.products;
-
-    const totalPage = products ? parseInt(products.length / perPage) + (products.length % perPage ? 1 : 0) : 1;
-    // const loading = false;
-
-
+    const [perPage, setPerPage] = useState(pageSize || 12);
+    const totalPage = products ? parseInt(total / perPage) + (total % perPage ? 1 : 0) : 1;
 
     useEffect(() => {
         const query = `?${searchParams.toString()}`;
         dispatch(fetchProducts(query))
-    }, [])
+    }, [searchParams])
 
 
 
+    useEffect(() => {
+        let offset = document.querySelector('.main-content')?.getBoundingClientRect().top + window.scrollY - 58;
+        setTimeout(() => {
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }, 200);
 
-    // useEffect(() => {
-    //     let offset = document.querySelector('.main-content').getBoundingClientRect().top + window.pageYOffset - 58;
-    //     setTimeout(() => {
-    //         window.scrollTo({ top: offset, behavior: 'smooth' });
-    //     }, 200);
+        // getProducts({
+        //     variables: {
+        //         search: getPageQueryByKey('search'),
+        //         sizes: getPageQueryByKey('sizes') ? getPageQueryByKey('sizes').split(',') : [],
+        //         brands: getPageQueryByKey('brands') ? getPageQueryByKey('brands').split(',') : [],
+        //         min_price: parseInt(getPageQueryByKey('min_price')),
+        //         max_price: parseInt(getPageQueryByKey('max_price')),
+        //         category: getPageQueryByKey('category'),
+        //         tag: getPageQueryByKey('tag'),
+        //         sortBy: sortBy,
+        //         from: perPage * (page - 1),
+        //         to: perPage * page
+        //     }
+        // });
+    }, [searchParams, perPage, page, error])
 
-    //     let page = query.page ? query.page : 1;
-
-    //     getProducts({
-    //         variables: {
-    //             list: true,
-    //             search: query.search,
-    //             colors: query.colors ? query.colors.split(',') : [],
-    //             sizes: query.sizes ? query.sizes.split(',') : [],
-    //             min_price: parseInt(query.min_price),
-    //             max_price: parseInt(query.max_price),
-    //             category: query.category,
-    //             tag: query.tag,
-    //             sortBy: sortBy,
-    //             from: perPage * (page - 1),
-    //             to: perPage * page
-    //         }
-    //     });
-    // }, [query, perPage, sortBy])
 
     function onPerPageChange(e) {
         setPerPage(e.target.value);
-        // router.push({
-        //     pathname: router.pathname,
-        //     query: {
-        //         ...query,
-        //         page: 1
-        //     }
-        // });
+        setSearchParams((prevParams) => {
+            let updatedParams = ({
+                ...Object.fromEntries(prevParams.entries())
+            });
+
+            updatedParams.pageSize = e.target.value
+
+            return new URLSearchParams(updatedParams);
+        })
     }
 
     function onSortByChange(e) {
-        // router.push({
-        //     pathname: router.pathname,
-        //     query: {
-        //         ...query,
-        //         sortBy: e.target.value,
-        //         page: 1
-        //     }
-        // })
-        setSortBy(e.target.value);
+        setSearchParams((prevParams) => {
+            let updatedParams = ({
+                ...Object.fromEntries(prevParams.entries())
+            });
+            updatedParams.sortBy = e.target.value
+            return new URLSearchParams(updatedParams);
+        })
     }
 
     function sidebarToggle(e) {
@@ -109,9 +87,10 @@ function Shop() {
         }
     }
 
-    // if (error) {
-    //     return <div>{error.message}</div>
-    // }
+    if (error) {
+        return <InternalServerError />
+    }
+
 
     return (
         <Page>
@@ -121,11 +100,11 @@ function Shop() {
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><ALink href="/"><i className="icon-home"></i></ALink></li>
                             {
-                                getPageQueryByKey("category") ?
+                                getPageQueryByKey('category') ?
                                     <>
-                                        {/* <li className="breadcrumb-item"><ALink href="/shop" scroll={false}>shop</ALink></li>
-                                        {
-                                            data && data.products.categoryFamily.map((item, index) => (
+                                        <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>{t("breadcrumb_item_shop")}</ALink></li>
+                                        {/* {
+                                            categoryFamily.map((item, index) => (
                                                 <li className="breadcrumb-item" key={`category-family-${index}`}><ALink href={{ query: { category: item.slug } }} scroll={false}>{item.name}</ALink></li>
                                             ))
                                         } */}
@@ -133,13 +112,13 @@ function Shop() {
                                             {
                                                 getPageQueryByKey("search") ?
                                                     <>
-                                                        Search - <ALink href={{ query: { category: getPageQueryByKey("category") } }} scroll={false}>{getPageQueryByKey("category")}</ALink> / {getPageQueryByKey("search")}
+                                                        Search - <ALink to={{ query: { category: getPageQueryByKey("category") } }} scroll={false}>{getPageQueryByKey("category")}</ALink> / {getPageQueryByKey("search")}
                                                     </>
                                                     : getPageQueryByKey("category")
                                             }
                                         </li>
                                     </>
-                                    : getPageQueryByKey("search") ?
+                                    : getPageQueryByKey('search') ?
                                         <>
                                             <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>shop</ALink></li>
                                             <li className="breadcrumb-item active" aria-current="page">{`Search - ${getPageQueryByKey("search")}`}</li>
@@ -149,13 +128,16 @@ function Shop() {
                                                 <li className="breadcrumb-item"><ALink href={{ pathname: location.pathname, query: {} }} scroll={false}>shop</ALink></li>
                                                 <li className="breadcrumb-item active" aria-current="page">{`Product Tag - ${getPageQueryByKey("tag")}`}</li>
                                             </>
-                                            : <li className="breadcrumb-item active" aria-current="page">Shop</li>
+                                            : <li className="breadcrumb-item active" aria-current="page">{t("breadcrumb_item_shop")}</li>
                             }
                         </ol>
                     </nav>
+                </div>
 
+                <div className="container">
                     <div className="row">
                         <div className="col-lg-9 main-content">
+
                             <nav className="toolbox sticky-header mobile-sticky">
                                 <div className="toolbox-left">
                                     <a href="#" className="sidebar-toggle" onClick={e => sidebarToggle(e)}>
@@ -180,15 +162,15 @@ function Shop() {
                                     </a>
 
                                     <div className="toolbox-item toolbox-sort">
-                                    <label>{t("shop_toolbar_sort_by")}</label>
-
+                                        <label>{t("shop_toolbar_sort_by")}</label>
                                         <div className="select-custom">
-                                            <select name="orderby" className="form-control" value={sortBy} onChange={e => onSortByChange(e)}>
+                                            <select name="orderby" className="form-control" value={searchParams.get('sortBy')} onChange={e => onSortByChange(e)}>
                                                 <option value="default">{t("shop_toolbar_sort_by_default")}</option>
                                                 <option value="price">{t("shop_toolbar_sort_by_price")}</option>
-                                                <option value="price">{t("shop_toolbar_sort_by_date-desc")}</option>
-                                                <option value="date">{t("shop_toolbar_sort_by_date")}</option>
+                                                <option value="price-desc">{t("shop_toolbar_sort_by_date-desc")}</option>
+                                                {/* <option value="date">{t("shop_toolbar_sort_by_date")}</option> */}
                                                 <option value="rating">{t("shop_toolbar_sort_by_rating")}</option>
+
                                             </select>
                                         </div>
                                     </div>
@@ -197,7 +179,6 @@ function Shop() {
                                 <div className="toolbox-right">
                                     <div className="toolbox-item toolbox-show">
                                         <label>{t("shop_toolbar_shows")}</label>
-
                                         <div className="select-custom">
                                             <select name="count" className="form-control" value={perPage} onChange={(e) => onPerPageChange(e)}>
                                                 <option value="12">12</option>
@@ -208,36 +189,38 @@ function Shop() {
                                     </div>
 
                                     <div className="toolbox-item layout-modes">
-                                        <ALink href={{ pathname: '/shop', query: location.search }} className="layout-btn btn-grid" title="Grid">
+                                        <ALink href={{ pathname: '/shop', query: location.search }} className="layout-btn btn-grid active" title="Grid">
                                             <i className="icon-mode-grid"></i>
                                         </ALink>
-                                        <ALink href={{ pathname: '/shop/list', query: location.search }} className="layout-btn btn-list active" style={{ marginLeft: '10px' }} title="List">
+                                        <ALink href={{ pathname: '/shop/list', query: location.search }} className="layout-btn btn-list" title="List">
                                             <i className="icon-mode-list"></i>
                                         </ALink>
                                     </div>
                                 </div>
                             </nav>
 
+
+
                             <ProductsRow products={products} loading={loading} perPage={perPage} />
 
-                            {/* 
-                            {loading || (products && products.data.length) ?
-                            <nav className="toolbox toolbox-pagination">
-                                <div className="toolbox-item toolbox-show">
-                                    <label>Show:</label>
+                            {loading || (products && products.length) ?
+                                <nav className="toolbox toolbox-pagination">
+                                    <div className="toolbox-item toolbox-show">
+                                        <label>{t("shop_toolbar_shows")}</label>
 
-                                    <div className="select-custom">
-                                        <select name="count" className="form-control" value={perPage} onChange={e => onPerPageChange(e)}>
-                                            <option value="12">12</option>
-                                            <option value="24">24</option>
-                                            <option value="36">36</option>
-                                        </select>
+                                        <div className="select-custom">
+                                            <select name="count" className="form-control" value={perPage} onChange={e => onPerPageChange(e)}>
+                                                <option value="12">12</option>
+                                                <option value="24">24</option>
+                                                <option value="36">36</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-                                <Pagination totalPage={totalPage} />
-                            </nav>
-                            : ''
-                        } */}
+                                    <Pagination totalPage={totalPage} />
+                                </nav>
+                                : ''
+                            }
+
                         </div>
 
                         <ShopSidebarOne />
@@ -248,4 +231,4 @@ function Shop() {
     )
 }
 
-export default Shop
+export default List;
