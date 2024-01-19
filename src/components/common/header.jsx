@@ -180,8 +180,7 @@ function Header({ adClass = '', wishlist }) {
                 </div>
             </div>
 
-            {/* <div className={ `header-bottom sticky-header desktop-sticky d-none d-lg-flex ${useRouter().pathname !== '/' ? 'border-bottom' : ''}` }> */}
-            <div className={`header-bottom sticky-header desktop-sticky d-none d-lg-flex ${1 == 5 !== '/' ? 'border-bottom' : ''}`}>
+            <div className={`header-bottom sticky-header desktop-sticky d-none d-lg-flex ${1 == 5 !== '/' ? 'bordmer-bottom' : ''}`}>
 
                 <div className="container">
                     <div className="header-center w-100 ml-0">

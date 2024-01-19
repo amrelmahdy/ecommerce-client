@@ -15,7 +15,12 @@ function CartPopup ( props ) {
                         <ALink href={ `/product/default/${ product.slug }` } >
                             <LazyLoadImage
                                 alt="product"
-                                src={ product.small_pictures ? `${ process.env.NEXT_PUBLIC_ASSET_URI + product.small_pictures[ 0 ].url }` : '' }
+                                src={ 
+                                    product.images.length > 0
+                                    ?
+                                    process.env.REACT_APP_BASE_URL + "/" + product.images[0].url
+                                    :
+                                    process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"                                }
                                 threshold={ 500 }
                                 effect="black and white"
                                 width="100%"
@@ -24,7 +29,7 @@ function CartPopup ( props ) {
                         </ALink>
                     </figure>
                     <div className="product-detail">
-                        {
+                        {/* {
                             product.index > -1 ?
                                 !product.variants[ product.index ].color ?
                                     <ALink className="product-name" href={ `/product/default/${ product.slug }` }>{ product.name + ' - ' + product.variants[ product.index ].size.name }</ALink>
@@ -35,14 +40,14 @@ function CartPopup ( props ) {
                                         <ALink className="product-name" href={ `/product/default/${ product.slug }` }>{ product.name + ' - ' + product.variants[ product.index ].color.name + ', ' + product.variants[ product.index ].size.name }</ALink>
                                 :
                                 <ALink className="product-name" href={ `/product/default/${ product.slug }` }>{ product.name }</ALink>
-                        }
+                        } */}
 
                         <p>has been added to your cart.</p>
                     </div>
                 </div>
                 <div className="product-action">
-                    <ALink href="/pages/cart" className="btn viewcart">View Cart</ALink>
-                    <ALink href="/pages/checkout" className="btn btn-dark checkout">Checkout</ALink>
+                    <ALink to="/cart" className="btn viewcart">View Cart</ALink>
+                    <ALink to="/checkout" className="btn btn-dark checkout">Checkout</ALink>
                 </div>
                 <button className="mfp-close"></button>
             </div>

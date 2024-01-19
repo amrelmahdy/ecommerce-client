@@ -4,15 +4,15 @@ import { connect } from "react-redux";
 import ALink from "../ALink";
 
 function StickyNavbar ( { cartItems } ) {
-    function getQtyTotal ( items ) {
-        let total = 0;
-        if ( items ) {
-            for ( let i = 0; i < items.length; i++ ) {
-                total += parseInt( items[ i ].qty, 10 );
-            }
-        }
-        return total;
-    }
+    // function getQtyTotal ( items ) {
+    //     let total = 0;
+    //     if ( items ) {
+    //         for ( let i = 0; i < items.length; i++ ) {
+    //             total += parseInt( items[ i ].qty, 10 );
+    //         }
+    //     }
+    //     return total;
+    // }
 
     return (
         <div className="sticky-navbar">
@@ -31,7 +31,9 @@ function StickyNavbar ( { cartItems } ) {
             <div className="sticky-info">
                 <ALink href="/pages/cart" className="">
                     <i className="icon-shopping-cart position-relative">
-                        <span className="cart-count badge-circle">{ getQtyTotal( cartItems ) }</span>
+                        {/* <span className="cart-count badge-circle">{ getQtyTotal( cartItems ) }</span> */}
+                        <span className="cart-count badge-circle">100</span>
+
                     </i>Cart
                 </ALink>
             </div>
@@ -39,10 +41,6 @@ function StickyNavbar ( { cartItems } ) {
     )
 }
 
-function mapStateToProps ( state ) {
-    return {
-        cartItems: state.cartlist.cart ? state.cartlist.cart : []
-    }
-}
 
-export default connect( mapStateToProps, null )( StickyNavbar );
+
+export default StickyNavbar;

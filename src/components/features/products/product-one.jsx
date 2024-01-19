@@ -17,6 +17,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getIsAuthenticated, getUserInfo } from '../../../store/auth/auth.selectors';
 import { addProductTocart } from '../../../store/cart/cart.actions';
 import { getCart } from '../../../store/cart/cart.selectors';
+import { toast } from 'react-toastify';
+import AddToCartPopup from '../modals/add-to-cart-popup';
 
 
 function ProductOne(props) {
@@ -83,7 +85,9 @@ function ProductOne(props) {
                     target.classList.remove('load-more-overlay');
                     target.classList.remove('loading');
                 }, 500);
+                toast(<AddToCartPopup product={product} />);
             }
+            console.log("e.payload", e.payload)
         } else {
             navigate("/login")
         }
@@ -158,7 +162,7 @@ function ProductOne(props) {
 
 
                 <h3 className="product-title">
-                    <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
+                    <ALink href={`/product/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>
                 </h3>
 
                 <div className="category-wrap">
