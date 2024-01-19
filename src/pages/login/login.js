@@ -137,11 +137,11 @@ export default function Login() {
                                         <input type="password" className="form-input form-wide" value={password} onChange={handleOnChangePassword} id="login-password" required />
                                         <span className="helper-text" style={{ visibility: (!validated && password == "") || validatePassword(password) ? 'hidden' : 'visible' }}>البريد الإلكتروني مطلوب</span>
                                         <div className="form-footer">
-                                            <div className="custom-control custom-checkbox mb-0">
+                                            {/* <div className="custom-control custom-checkbox mb-0">
                                                 <input type="checkbox" className="custom-control-input" id="lost-password" />
                                                 <label className="custom-control-label mb-0" htmlFor="lost-password">Remember
                                                     me</label>
-                                            </div>
+                                            </div> */}
 
                                             <ALink href="/pages/forgot-password"
                                                 className="forget-password text-dark form-footer-right">Forgot

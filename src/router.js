@@ -28,6 +28,7 @@ import AuthService from './auth/auth.service'
 import { refreshAccessToken } from './api/auth';
 import Wishlist from './pages/wishlist/wishlist';
 import Cart from './pages/cart/cart';
+import Account from './pages/account/account';
 
 const PrivateRoute = ({ element }) => {
     const cookies = new Cookies();
@@ -61,6 +62,17 @@ const router = createBrowserRouter([
         path: "products",
         element: <Grid />,
     },
+
+    {
+        path: "account",
+        element: <Account />,
+    },
+
+    {
+        path: "help",
+        element:<>Help</>,
+    },
+    
     {
         path: "wishlist",
         element: <Wishlist />,
