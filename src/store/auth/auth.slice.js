@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { addToProductWishList, fetchCurrentUserDetails } from "./auth.actions";
 
 
 const initialState = {
@@ -20,6 +21,11 @@ const authSlice = createSlice({
             state.isAuthenticated = false
             console.log("STATE", action.payload)
         }
+    },
+    extraReducers: (builder) => {
+        builder.addCase(fetchCurrentUserDetails.fulfilled, (state, action) => {
+            state.user = action.payload
+        })
     }
 });
 

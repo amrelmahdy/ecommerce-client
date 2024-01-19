@@ -1,5 +1,5 @@
 import SlideToggle from 'react-slide-toggle';
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -10,9 +10,15 @@ import ProductCountdown from '../../../features/product-countdown';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Helmet from "react-helmet";
+import { addToProductWishList } from '../../../../store/auth/auth.actions';
+import { addToWishList } from '../../../../api/user';
+import { getIsAuthenticated, getUserInfo } from '../../../../store/auth/auth.selectors';
 
 function ProductDetailOne(props) {
     const { t, i18n } = useTranslation();
+    const userInfo = useSelector(getUserInfo)
+    const isAuthenticated = useSelector(getIsAuthenticated)
+    const dispatch = useDispatch();
     const router = useLocation();
     const { product, adClass = "col-lg-7 col-md-6", prev, next, isNav = true, parent = ".product-single-default", isSticky = false } = props;
     const [attrs, setAttrs] = useState({ sizes: [], colors: [] });
@@ -67,24 +73,22 @@ function ProductDetailOne(props) {
     }, [variant])
 
     function isInWishlist() {
-        //return product && props.wishlist.findIndex( item => item.slug === product.slug ) > -1;
+        if(isAuthenticated){
+            const isProductInWishlist = userInfo.wish_list.some((wishlistProduct) => wishlistProduct.id === product?.id.toString());
+            return isProductInWishlist
+        } 
     }
 
-    function onWishlistClick(e) {
+    const onWishlistClick = async (e, product) => {
         e.preventDefault();
-        if (!isInWishlist()) {
-            let target = e.currentTarget;
-            target.classList.add("load-more-overlay");
-            target.classList.add("loading");
-
-            setTimeout(() => {
-                target.classList.remove('load-more-overlay');
-                target.classList.remove('loading');
-                props.addToWishList(product);
-            }, 1000);
-        } else {
-            router.push('/pages/wishlist');
-        }
+        let target = e.currentTarget;
+        target.classList.add("load-more-overlay");
+        target.classList.add("loading");
+        setTimeout(async () => {
+            dispatch(addToProductWishList(product._id))
+            target.classList.remove('load-more-overlay');
+            target.classList.remove('loading');
+        }, 500);
     }
 
     function onAddCartClick(e) {
@@ -345,7 +349,7 @@ function ProductDetailOne(props) {
                                 title="Mail"></ALink>
                         </div>
 
-                        <a href="#" className={`btn-icon-wish add-wishlist ${isInWishlist() ? 'added-wishlist' : ''}`} onClick={onWishlistClick} title={`${isInWishlist() ? 'Go to Wishlist' : 'Add to Wishlist'}`}><i
+                        <a href="#" className={`btn-icon-wish add-wishlist ${isInWishlist() ? 'added-wishlist' : ''}`} onClick={(e) => onWishlistClick(e, product)} title={`${isInWishlist() ? 'Go to Wishlist' : 'Add to Wishlist'}`}><i
                             className="icon-wishlist-2"></i>
                             {/* <span>{isInWishlist() ? 'Go to Wishlist' : 'Add to Wishlist'}</span> */}
                         </a>

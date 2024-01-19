@@ -77,6 +77,10 @@ body[lang="ar"] .rtl {
 	.avatar{
 		margin-right: 5px;
 		margin-left: 5px;
+		width: 60px;
+		height: 60px;
+		border-radius: 30px;
+		overflow: hidden;
 	}
 }
 
@@ -191,12 +195,12 @@ body[lang="ar"] .header-middle {
 	margin-left: 1.6rem;
 	margin-bottom: 2px;
 	color: #333;
-	font-size: 15px;
+	font-size: 20px;
 	letter-spacing: -.025em;
 	line-height: 1;
 
 	.cart-price {
-		font-size: 15px;
+		font-size: 17px;
 		font-weight: 600;
 		color: $secondary-color;
 		margin-top: 3px;

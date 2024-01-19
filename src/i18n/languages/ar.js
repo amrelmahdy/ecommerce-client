@@ -118,9 +118,26 @@ export default {
         "product_related_products": "منتجات ذات صلة",
         "product_details_categories": "الاقسام",
         "product_details_tags": "العلامات",
-
-
         "breadcrumb_item_shop": "المتجر",
+
+        "wishlist": "المفضلة",
+        "wishlist_product": "المنتج",
+        "wishlist_price": "السعر",
+        "wishlist_stock_status": "المخزون",
+        "wishlist_actions":"إجراءات",
+        "wishlist_no_products": "لا يوجد منتجات في القائمة بعد",
+        "wishlist_go_shop": "عد إلي التسوق",
+
+        "product_in_stock": "متاح",
+        "product_out_of_stock": "غير متاح",
+
+        "cart_no_products": "لا يوجد منتجات بعد.",
+        "cart_menu_title" : "عربة التسوق",
+        "cart_veiw_cart": "إذهب الي العربة",
+        "cart_checkout": "تابع الشراء",
+        "cart_subtotal": "الإجمالي الفرعي",
+
+        "return_to_shop": "عد إلي التسوق"
 
     }
 }

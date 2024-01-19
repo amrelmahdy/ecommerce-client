@@ -120,11 +120,26 @@ export default {
         "product_related_products": "Related products",
         "product_details_categories": "categories",
         "product_details_tags": "Tags",
-
         "breadcrumb_item_shop": "shop",
-       
 
-    
+        "wishlist": "Wishlist",
+        "wishlist_product": "Product",
+        "wishlist_price": "Price",
+        "wishlist_stock_status": "Stock status",
+        "wishlist_actions": "Actions",
+        "wishlist_no_products": "No products added to the wishlist",
+        "wishlist_go_shop": "Go shop",
+
+        "product_in_stock": "In stock",
+        "product_out_of_stock": "Out ofstock",
+
+        "cart_no_products": "No products in the cart.",
+        "cart_menu_title": "Shopping Cart",
+        "cart_veiw_cart": "View Cart",
+        "cart_checkout": "Checkout",
+        "cart_subtotal": "Subtotal",
+        
+        "return_to_shop": "return to shop"
     }
 }
 

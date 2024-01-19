@@ -7,10 +7,10 @@ export default function ProductsGrid(props) {
 
 
     const addToWishList = () => {
-        document.querySelector(".wishlist-popup") && document.querySelector(".wishlist-popup").classList.add("active");
-        setTimeout(() => {
-            document.querySelector(".wishlist-popup") && document.querySelector(".wishlist-popup").classList.remove("active");
-        }, 2000);
+        // document.querySelector(".wishlist-popup") && document.querySelector(".wishlist-popup").classList.add("active");
+        // setTimeout(() => {
+        //     document.querySelector(".wishlist-popup") && document.querySelector(".wishlist-popup").classList.remove("active");
+        // }, 2000);
     }
 
 

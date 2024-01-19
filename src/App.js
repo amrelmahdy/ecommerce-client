@@ -15,6 +15,9 @@ import {
   Route,
   Link,
   Navigate,
+  useNavigate,
+  Router,
+  useLocation
 } from "react-router-dom";
 import "./public/sass/style.scss";
 import i18n from './i18n';
@@ -22,114 +25,13 @@ import PageNotFound from './pages/error/404';
 import Login from './pages/login/login';
 import Cookies from 'universal-cookie';
 import AuthService from './auth/auth.service'
-
-
-const PrivateRoute = ({ element }) => {
-  const cookies = new Cookies();
-
-  // Replace this with your actual authentication logic
-  const isAuthenticated = cookies.get("access_token")
-
-  return isAuthenticated ? element : <Navigate to="/login" />;
-};
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <PrivateRoute element={<Home />} />,
-  },
-  {
-    path: "shop",
-    element: <Shop />,
-  },
-  {
-    path: "shop/list",
-    element: <List />,
-  },
-  {
-    path: "product/:slug",
-    element: <Product />,
-  },
-
-  {
-    path: "products",
-    element: <Grid />,
-  },
-  // {
-  //   path: "cotact-us",
-  //   element: <></>,
-  // },
-  // {
-  //   path: "cart",
-  //   element: <></>,
-  // },
-  // {
-  //   path: "whishlist",
-  //   element: <></>,
-  // },
-  // {
-  //   path: "help",
-  //   element: <></>,
-  // },
-  // {
-  //   path: "stores",
-  //   element: <></>,
-  // },
-  {
-    path: "login",
-    element: <Login />,
-  },
-  // {
-  //   path: "login",
-  //   element: <></>,
-  // },
-  // {
-  //   path: "forget-password",
-  //   element: <></>,
-  // },
-  // {
-  //   path: "account",
-  //   element: <></>,
-  // },
-  // {
-  //   path: "checkout",
-  //   element: <></>,
-  // },
-  // {
-  //   path:"404",
-  //   element: <PageNotFound />
-  // },
-  {
-    path: "*",
-    element: <PageNotFound />,
-  },
-
-]);
-
-
-
+import { refreshAccessToken } from './api/auth';
+import Wishlist from './pages/wishlist/wishlist';
+import router from './router'
 
 function App() {
 
-  useEffect(() => {
-    const cookies = new Cookies();
-    const accessToken = cookies.get("access_token");
-    const refreshToken = cookies.get("refresh_token");
-    handleRefreshToken(accessToken, refreshToken)
-    // const refreshInterval = setInterval(handleRefreshToken, 5000);
-    // return () => {
-    //   clearInterval(refreshInterval);
-    // };
-  }, [])
 
-
-
-  const handleRefreshToken = async (accessToken, refreshToken) => {
-    const authService = new AuthService();
-    authService.setTokens(accessToken, refreshToken);
-    authService.refreshAccessToken(accessToken, refreshToken);
-  }
 
 
   const { t, i18n } = useTranslation();

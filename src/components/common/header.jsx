@@ -16,15 +16,24 @@ import { useNavigate } from 'react-router-dom';
 import { getIsAuthenticated, getUserInfo } from '../../store/auth/auth.selectors';
 import Cookies from 'universal-cookie';
 import { setUserUnAuthenticated } from '../../store/auth/auth.slice';
+import { useEffect } from 'react';
+import { fetchCart } from '../../store/cart/cart.actions';
 
 function Header({ adClass = '', wishlist }) {
     const cookies =  new Cookies()
     const dispatch = useDispatch()
+    
     const userInfo = useSelector(getUserInfo)
     const isAuthenticated = useSelector(getIsAuthenticated)
 
     const { t } = useTranslation();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    // getCartTotal(items).toFixed(2)} {t("sar")
+
+    useEffect(() => {
+        dispatch(fetchCart())
+    }, [])
 
     function openMobileMenu(e) {
         e.preventDefault();
@@ -37,6 +46,7 @@ function Header({ adClass = '', wishlist }) {
         cookies.remove("access_token")
         cookies.remove("refresh_token")
         dispatch(setUserUnAuthenticated())
+        navigate("/login")
     }
 
     return (
@@ -108,7 +118,7 @@ function Header({ adClass = '', wishlist }) {
                                         </ALink>
                                     </li>
                                     <li>
-                                        <ALink href="/pages/wishlist">
+                                        <ALink href="/wishlist">
                                             <i className="icon-wishlist-2"></i>
                                             {t("header_wishlist")}
                                         </ALink>
@@ -150,14 +160,14 @@ function Header({ adClass = '', wishlist }) {
                         </ALink>
 
                         <div className="header-user d-lg-flex align-items-center">
-                            {isAuthenticated ?
+                            {/* {isAuthenticated ?
                                 <div className='avatar'>
-                                    <LazyLoadImage src="images/clients/client1.png" alt="client" width="40" height="40" />
+                                    <LazyLoadImage src={ process.env.REACT_APP_BASE_URL + "/" + userInfo.image} alt="client"  />
                                 </div>
                                 : <ALink href="/pages/login" className="header-icon mr-0" title="login">
                                     <i className="icon-user-2 mr-2"></i>
                                 </ALink>
-                            }
+                            } */}
 
                             <h6 className="font1 d-none d-xl-block mb-0">
                                 <span className="d-block text-body">{`${t("welcome")} ${isAuthenticated && userInfo ? userInfo.name: ''}`}  </span>

@@ -9,6 +9,7 @@ import productsReducer from './products/products.slice'
 import categoriesReducer from './categories/categories.slice'
 import vendorsReducer from './vendors/vendors.slice';
 import authReducer from './auth/auth.slice';
+import cartReducer from './cart/cart.slice';
 
 
 // persistance configuration for root reducers
@@ -23,7 +24,8 @@ const rootReducer = combineReducers({
   auth: authReducer,
   products: productsReducer,
   categories: categoriesReducer,
-  vendors: vendorsReducer
+  vendors: vendorsReducer,
+  cart: cartReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)

@@ -6,6 +6,6 @@ export const fetchVendors = createAsyncThunk("vendors/fetchVendors", async (_, {
         const vendors = await getVendors();
         return vendors
     } catch(error){
-        rejectWithValue(error.message)
+        return rejectWithValue(error.message)
     }
 })

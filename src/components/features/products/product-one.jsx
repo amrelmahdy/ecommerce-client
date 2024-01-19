@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 // import { useRouter } from 'next/router';
 // import { connect } from 'react-redux';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -11,14 +11,35 @@ import { useTranslation } from 'react-i18next'
 // Import Custom Component
 import ALink from '../../common/ALink';
 import ProductCountdown from '../product-countdown';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useNavigation } from 'react-router-dom';
+import { addToProductWishList } from '../../../store/auth/auth.actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { getIsAuthenticated, getUserInfo } from '../../../store/auth/auth.selectors';
+import { addProductTocart } from '../../../store/cart/cart.actions';
+import { getCart } from '../../../store/cart/cart.selectors';
 
 
 function ProductOne(props) {
     const { t, i18n } = useTranslation();
+    const dispatch = useDispatch()
     const navigate = useNavigate()
-    // const router = useRouter();
+    const userInfo = useSelector(getUserInfo)
+    const isAuthenticated = useSelector(getIsAuthenticated)
+    const { error, items: cartItems, loading } = useSelector(getCart);
+    const [isAddedToCart, setIsAddedToCart] = useState(false);
+    const [isAdedToWishList, setIsAdedToWishList] = useState(false);
     const { adClass = "", link = "default", product } = props;
+
+
+    useEffect(() => {
+        if (isAuthenticated) {
+            const isItemInCart = cartItems.some((item) => item.product.id === product?.id?.toString());
+            isItemInCart && setIsAddedToCart(true)
+
+            const isProductInWishlist = userInfo.wish_list.some((wishlistProduct) => wishlistProduct.id === product?.id?.toString());
+            isProductInWishlist && setIsAdedToWishList(true)
+        }
+    }, [product])
 
 
 
@@ -29,30 +50,43 @@ function ProductOne(props) {
             false;
     }
 
-    function isInWishlist() {
-        return product && props.wishlist?.findIndex(item => item.slug === product.slug) > -1;
-    }
 
     function onWishlistClick(e) {
         e.preventDefault();
-        if (!isInWishlist()) {
+        if (isAuthenticated) {
             let target = e.currentTarget;
             target.classList.add("load-more-overlay");
             target.classList.add("loading");
-
-            setTimeout(() => {
+            setTimeout(async () => {
+                dispatch(addToProductWishList(product.id))
+                setIsAdedToWishList(!isAdedToWishList)
                 target.classList.remove('load-more-overlay');
                 target.classList.remove('loading');
-                props.addToWishList(product);
-            }, 1000);
+            }, 500);
         } else {
-            //router.push( '/pages/wishlist' );
+            navigate("/login")
         }
     }
 
-    function onAddCartClick(e) {
+    const onAddCartClick = (e) => {
         e.preventDefault();
-        props.addToCart(product);
+        if (isAuthenticated) {
+            if (!isAddedToCart) {
+                let target = e.currentTarget;
+                target.classList.add("load-more-overlay");
+                target.classList.add("loading");
+                setTimeout(async () => {
+                    dispatch(addProductTocart({
+                        productId: product.id, quantity: 1
+                    }));
+                    setIsAddedToCart(true)
+                    target.classList.remove('load-more-overlay');
+                    target.classList.remove('loading');
+                }, 500);
+            }
+        } else {
+            navigate("/login")
+        }
     }
 
     function onQuickViewClick(e) {
@@ -103,12 +137,12 @@ function ProductOne(props) {
 
                 <div className="btn-icon-group">
 
-                    <ALink onClick={onWishlistClick} className="btn-icon btn-add-cart"><i
+                    <ALink onClick={onWishlistClick} className={`btn-icon  ${isAdedToWishList ? 'added-wishlist' : ""} `}><i
                         className="icon-heart"></i></ALink>
 
 
-                    <a href="#" className="btn-icon btn-add-cart product-type-simple" title="Add To Cart" onClick={onAddCartClick}><i
-                        className="icon-shopping-cart"></i></a>
+                    <ALink onClick={onAddCartClick} className={`btn-icon btn-add-cart  ${isAddedToCart ? 'added-cart' : ''}`} title="Add To Cart" ><i
+                        className="icon-shopping-cart"></i></ALink>
 
                 </div>
 
@@ -121,7 +155,7 @@ function ProductOne(props) {
             </figure>
 
             <div className="product-details">
-              
+
 
                 <h3 className="product-title">
                     <ALink href={`/product/default/${product.slug}`}>{i18n.language === 'ar' ? product.ar_name : product.en_name}</ALink>

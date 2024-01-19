@@ -1,5 +1,6 @@
 import axios from 'axios';
-
+import Cookies from 'universal-cookie';
+import moment from 'moment'
 class AuthService {
   constructor() {
     this.token = null;
@@ -12,9 +13,14 @@ class AuthService {
   }
 
   async refreshAccessToken() {
+    const cookies = new Cookies();
+    cookies.set("last_refreshed", moment.now())
+    const lastRefreshed = cookies.get("expires_at");
+    const lastRfreshedFormatted = moment.unix((lastRefreshed / 1000) - 500).format("DD-MM-YY hh:mm:ss") 
+    //const lastRfreshedFormatted = new Date(1705384846714) 
     try {
 
-      console.log("refreshing token")
+      console.log("refreshing token", cookies.get("expires_at"),  lastRfreshedFormatted)
       
     //   const response = await axios.post(
     //     'YOUR_REFRESH_TOKEN_ENDPOINT',
