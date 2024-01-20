@@ -7,7 +7,7 @@ import Page from '../../components/page';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCart } from '../../store/cart/cart.selectors';
-import { addProductTocart } from '../../store/cart/cart.actions';
+import { addProductTocart, removeProductFromCart } from '../../store/cart/cart.actions';
 
 const Cart = (props) => {
     const [cartList, setCartList] = useState([]);
@@ -18,12 +18,12 @@ const Cart = (props) => {
     //     setCartList( [ ...props.cart ] );
     // }, [ props.cart ] )
 
-    function removeFromCart(item, id) {
-        //props.removeFromCart( item );
+    function removeFromCart(item) {
+        dispatch(removeProductFromCart({ productId: item.product.id }));
     }
 
     function onChangeQty(product, qty) {
-       console.log(">>>", product, qty)
+        console.log(">>>", product, qty)
         dispatch(addProductTocart({
             productId: product.id, quantity: qty
         }))
@@ -35,20 +35,21 @@ const Cart = (props) => {
     function updateCart() {
         //props.updateCart( cartList );
     }
+    
 
     return (
         <Page>
             <main className="main">
                 <div className="container">
-                    <ul className="checkout-progress-bar d-flex justify-content-center flex-wrap">
+                    <ul rev='true' className="checkout-progress-bar d-flex justify-content-center flex-wrap">
                         <li className="active">
-                            <ALink href="/pages/cart">Shopping Cart</ALink>
+                            <ALink href="/cart">{t("cart")}</ALink>
                         </li>
                         <li>
-                            <ALink href="/pages/checkout">Checkout</ALink>
+                            <ALink href="/checkout">{t("checkout")}</ALink>
                         </li>
                         <li className="disabled">
-                            <ALink href="#">Order Complete</ALink>
+                            <ALink href="#">{t("order_complete")}</ALink>
                         </li>
                     </ul>
 
@@ -71,10 +72,10 @@ const Cart = (props) => {
                                             <thead>
                                                 <tr>
                                                     <th className="thumbnail-col"></th>
-                                                    <th className="product-col">Product</th>
-                                                    <th className="price-col">Price</th>
-                                                    <th className="qty-col">Quantity</th>
-                                                    <th className="text-right">Subtotal</th>
+                                                    <th className="product-col">{t("cart_product")}</th>
+                                                    <th className="price-col">{t("cart_price")}</th>
+                                                    <th className="qty-col">{t("cart_quantity")}</th>
+                                                    <th className="text-right">{t("cart_subtotal")}</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -83,7 +84,7 @@ const Cart = (props) => {
                                                         <tr key={"cart-item" + index} className="product-row">
                                                             <td>
                                                                 <figure className="product-image-container">
-                                                                    <ALink href={`/product/default/${item.product.slug}`} className="product-image">
+                                                                    <ALink href={`/product/${item.product.slug}`} className="product-image">
                                                                         <img src={
                                                                             item.product.images.length > 0
                                                                                 ?
@@ -94,23 +95,23 @@ const Cart = (props) => {
 
                                                                     </ALink>
 
-                                                                    <a href="#" className="btn-remove icon-cancel" title="Remove Product" onClick={(e) => { e.preventDefault(); removeFromCart(item, index); }}></a>
+                                                                    <a href="#" className="btn-remove icon-cancel" title="Remove Product" onClick={(e) => { e.preventDefault(); removeFromCart(item); }}></a>
                                                                 </figure>
                                                             </td>
                                                             <td className="product-col">
                                                                 <h5 className="product-title">
-                                                                    <ALink href={`/product/default/${item.product.slug}`}>{
+                                                                    <ALink href={`/product/${item.product.slug}`}>{
                                                                         item.product[`${i18n.language}_name`]
                                                                     }</ALink>
                                                                 </h5>
                                                             </td>
                                                             <td>
-                                                                ${item.product.price.toFixed(2)}
+                                                                <span> {item.product.price.toFixed(2) + " " + t("sar")}</span>
                                                             </td>
                                                             <td>
                                                                 <Qty value={item.quantity} max={item.product.max_quantity} product={item.product} onChangeQty={onChangeQty} />
                                                             </td>
-                                                            <td className="text-right"><span className="subtotal-price">${(item.product.price * item.quantity).toFixed(2)}</span></td>
+                                                            <td className="text-right"><span className="subtotal-price">{(item.product.price * item.quantity).toFixed(2) + " " + t("sar")}</span></td>
                                                         </tr>
                                                     ))
                                                 }
@@ -145,8 +146,6 @@ const Cart = (props) => {
                                         </table>
                                     </div>
                                 </div>
-
-
                             </div>
                     }
                 </div>

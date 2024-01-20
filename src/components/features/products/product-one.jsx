@@ -38,7 +38,7 @@ function ProductOne(props) {
             const isItemInCart = cartItems.some((item) => item.product.id === product?.id?.toString());
             isItemInCart && setIsAddedToCart(true)
 
-            const isProductInWishlist = userInfo.wish_list.some((wishlistProduct) => wishlistProduct.id === product?.id?.toString());
+            const isProductInWishlist = userInfo?.wish_list?.some((wishlistProduct) => wishlistProduct.id === product?.id?.toString());
             isProductInWishlist && setIsAdedToWishList(true)
         }
     }, [product])

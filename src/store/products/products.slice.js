@@ -34,8 +34,6 @@ const productsSlice = createSlice({
         }).addCase(fetchProducts.rejected, (state, action) => {
             state.products.loading = false;
             state.products.error = true;
-            state.products.data = [];
-            state.products.total = 0;
         }).addCase(fetchProductDetails.pending, (state, action) => {
             state.product.error = false;
             state.product.loading = true;
@@ -55,7 +53,6 @@ const productsSlice = createSlice({
             state.product.related = action.payload;
         }).addCase(fetchRelatedProducts.rejected, (state, action) => {
             state.product.loading = false;
-            state.product.related = [];
             state.product.error = true;
         })
     }

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { addProductTocart, fetchCart } from "./cart.actions";
+import { addProductTocart, fetchCart, removeProductFromCart } from "./cart.actions";
 
 const initialState = {
     items: [],
@@ -21,14 +21,19 @@ const cartSlice = createSlice({
             state.loading =  false;
             state.error =  false;
         }).addCase(fetchCart.rejected, (state, action) => {
-            state.items = [];
             state.loading =  false;
             state.error =  true;
         }).addCase(addProductTocart.pending, (state, action) => {
-            state.items = [];
             state.loading =  true;
             state.error =  false;
         }).addCase(addProductTocart.fulfilled, (state, action) => {
+            state.items = action.payload.items;
+            state.loading =  false;
+            state.error =  false;
+        }).addCase(removeProductFromCart.pending, (state, action) => {
+            state.loading =  true;
+            state.error =  false;
+        }).addCase(removeProductFromCart.fulfilled, (state, action) => {
             state.items = action.payload.items;
             state.loading =  false;
             state.error =  false;

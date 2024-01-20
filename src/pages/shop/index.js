@@ -10,6 +10,7 @@ import { fetchProducts } from '../../store/products/products.actions';
 import { getAllProducts } from '../../store/products/products.selectors';
 import { useTranslation } from 'react-i18next';
 import InternalServerError from '../../components/internal-server-error';
+import WithRefreshToken from '../../auth/with-refresh-token';
 
 function Shop() {
     const { t } = useTranslation()
@@ -229,4 +230,4 @@ function Shop() {
     )
 }
 
-export default Shop;
+export default  WithRefreshToken(Shop);

@@ -28,6 +28,10 @@ export default function Account() {
         e.preventDefault();
         cookies.remove("access_token")
         cookies.remove("refresh_token")
+        cookies.remove("expires_at")
+        cookies.remove("expires_in")
+        cookies.remove("refresh_expires_at")
+        cookies.remove("refresh_expires_in")
         dispatch(setUserUnAuthenticated())
         navigate("/login")
     }

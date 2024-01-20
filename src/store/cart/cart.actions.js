@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { addToCart, getCart } from "../../api/cart";
+import { addToCart, getCart, removeFromCart } from "../../api/cart";
 
 export const fetchCart = createAsyncThunk("cart/fetchCart", async (_, { rejectWithValue }) => {
     try {
@@ -13,9 +13,18 @@ export const fetchCart = createAsyncThunk("cart/fetchCart", async (_, { rejectWi
 
 
 export const addProductTocart = createAsyncThunk("cart/addProductTocart", async ({ productId, quantity }, { rejectWithValue }) => {
-    console.log(productId, quantity)
     try {
         const cart = await addToCart(productId, quantity);
+        return cart
+    } catch (error) {
+        console.log("error", error)
+        return rejectWithValue(error.message)
+    }
+});
+
+export const removeProductFromCart = createAsyncThunk("cart/removeProductFromCart", async ({ productId }, { rejectWithValue }) => {
+    try {
+        const cart = await removeFromCart(productId);
         return cart
     } catch (error) {
         console.log("error", error)

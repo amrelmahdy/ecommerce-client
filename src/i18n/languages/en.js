@@ -140,7 +140,14 @@ export default {
         "cart_veiw_cart": "View Cart",
         "cart_checkout": "Checkout",
         "cart_subtotal": "Subtotal",
-        
+        "cart_product": "Product",
+        "cart_price": "Price",
+        "cart_quantity": "Quantity",
+
+        "cart": "Shopping cart",
+        "checkout":"Checkout",
+        "order_complete": "Order complete",
+
         "return_to_shop": "return to shop"
     }
 }

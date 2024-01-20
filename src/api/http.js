@@ -12,38 +12,42 @@ httpClient.interceptors.request.use(
   async (config) => {
     const cookies = new Cookies();
     let accessToken = cookies.get("access_token");
-    const pathName = window.location.pathname;
-    const refreshToken = cookies.get("refresh_token");
-    const expirationTimestamp = Math.floor(cookies.get("expires_at") / 1000);
-    const currentTimestamp = Math.floor(new Date().getTime() / 1000);
-    // Check if the token is expired and the request is not the token refresh request
-    if ((expirationTimestamp - currentTimestamp) < 100 && pathName !== "/login") {
-      if (!isRefreshing) {
-        try {
-          // Set the refreshing flag
-          isRefreshing = true;
+    // const pathName = window.location.pathname;
+    // const refreshToken = cookies.get("refresh_token");
+    // const expirationTimestamp = Math.floor(cookies.get("expires_at") / 1000);
+    // const currentTimestamp = Math.floor(new Date().getTime() / 1000);
+    // // Check if the token is expired and the request is not the token refresh request
+    // if ((expirationTimestamp - currentTimestamp) < 100 && pathName !== "/login") {
+    //   if (!isRefreshing) {
+    //     try {
+    //       // Set the refreshing flag
+    //       isRefreshing = true;
 
-          // Make the token refresh request
-          const refreshedToken = await refreshAccessToken(refreshToken);
+    //       // Make the token refresh request
+    //       const refreshedToken = await refreshAccessToken(refreshToken);
 
-          // If the refresh is successful, update the access token
-          if (refreshedToken) {
-            const { access_token, expires_at } = refreshedToken;
-            cookies.set("access_token", access_token);
-            cookies.set("expires_at", expires_at);
-            accessToken =  access_token;
-          }
-        } catch (error) {
-          // Handle refresh error
-          if (window.location.pathname !== "/login") {
-            window.location.href = "/login";
-          }
-        } finally {
-          // Reset the refreshing flag
-          isRefreshing = false;
-        }
-      }
-    }
+    //       // If the refresh is successful, update the access token
+    //       if (refreshedToken) {
+    //         const { access_token, expires_at } = refreshedToken;
+    //         cookies.set("access_token", access_token);
+    //         cookies.set("expires_at", expires_at);
+    //         accessToken =  access_token;
+    //       }
+    //     } catch (error) {
+    //       // Handle refresh error
+    //       if (window.location.pathname !== "/login") {
+    //         window.location.href = "/login";
+    //       }
+    //     } finally {
+    //       // Reset the refreshing flag
+    //       isRefreshing = false;
+    //     }
+    //   }
+
+    //   if(!expirationTimestamp){
+    //     window.location.href = "/login";
+    //   }
+    // } 
     // Set the Authorization header with the current access token
     config.headers.Authorization = `Bearer ${accessToken}`;
     return config;

@@ -1,12 +1,12 @@
 body[lang="ar"] {
+
 	.sidebar-shop .owl-nav,
 	.price-slider-wrapper,
 	.filter-price-action .toolbox,
 	.pagination,
-	.table.table-cart .bootstrap-touchspin.input-group, 
-	.table.table-wishlist .bootstrap-touchspin.input-group
-	
-	{
+	.table.table-cart .bootstrap-touchspin.input-group,
+	.table.table-wishlist .bootstrap-touchspin.input-group,
+	.product-single-qty .bootstrap-touchspin.input-group {
 		direction: ltr !important;
 	}
 
@@ -24,7 +24,9 @@ body[lang="ar"] {
 	}
 
 
-	.al-r, td, th {
+	.al-r,
+	td,
+	th {
 		text-align: right !important;
 	}
 
@@ -67,6 +69,7 @@ body[lang="ar"] {
 	.inner-icon:not(.product-widget):hover figure .btn-quickview,
 	.sidebar-shop .reset-filter,
 	.dropdown-cart-header,
+	.dropdown-menu p,
 	.btn {
 		font-family: $arabic-font-family;
 		// letter-spacing: 0 !important;
@@ -83,7 +86,9 @@ body[lang="ar"] {
 	.product-countdown-title,
 	.count-deal .product-default .countdown-section>.countdown-period,
 	.product-single-details .product-desc,
-	.breadcrumb-item {
+	.breadcrumb-item,
+	.table.table-cart .product-title a, .table.table-cart .subtotal-price
+	{
 		font-family: $second-arabic-font-family;
 	}
 
@@ -175,7 +180,8 @@ body[lang="ar"] {
 	.product-single-details .product-action,
 	.product-single-details .product-title,
 	.dropdown-cart-header,
-	.cart-dropdown .product-details {
+	.cart-dropdown .product-details,
+	.dropdown-menu p {
 		text-align: right;
 	}
 

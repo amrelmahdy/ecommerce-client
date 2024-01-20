@@ -15,3 +15,9 @@ export const addToCart = async (productId, quantity) => {
     const { data } = await httpClient.post("/cart/add", { productId, quantity });
     return data
 }
+
+
+export const removeFromCart = async (productId) => {
+    const { data } = await httpClient.post("/cart/delete", { productId });
+    return data
+}

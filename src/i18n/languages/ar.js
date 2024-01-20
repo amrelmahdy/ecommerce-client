@@ -137,6 +137,14 @@ export default {
         "cart_veiw_cart": "إذهب الي العربة",
         "cart_checkout": "تابع الشراء",
         "cart_subtotal": "الإجمالي الفرعي",
+        "cart_product": "المنتج",
+        "cart_price": "السعر",
+        "cart_quantity": "الكمية",
+
+        "cart": "سلة التسوق",
+        "checkout":"إكمال الشراء",
+        "order_complete": "إنهاء الطلب",
+
 
         "return_to_shop": "عد إلي التسوق"
 
