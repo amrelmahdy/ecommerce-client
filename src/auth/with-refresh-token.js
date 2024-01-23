@@ -4,11 +4,13 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 import { refreshAccessToken } from '../api/auth';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setUserUnAuthenticated } from '../store/auth/auth.slice';
+import { getIsAuthenticated } from '../store/auth/auth.selectors';
 
 const WithRefreshToken = (WrappedComponent) => {
   return (props) => {
+    const isAuthenticated = useSelector(getIsAuthenticated)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
@@ -18,28 +20,26 @@ const WithRefreshToken = (WrappedComponent) => {
     const expirationTimestamp = Math.floor(cookies.get('expires_at'));
     const currentTimestamp = Math.floor(new Date().getTime());
 
+    console.log("refreshToken", (expirationTimestamp - currentTimestamp) >= 100)
 
     useEffect(() => {
       // Token refresh logic
       const handleRefreshToken = async () => {
         try {
-          if (!refreshToken || (expirationTimestamp - currentTimestamp) >= 100 || pathName === '/login') {
-            return;
+          if (!refreshToken || pathName === '/login') {
+            if (isAuthenticated) dispatch(setUserUnAuthenticated());
           }
-        
+
           const refreshedToken = await refreshAccessToken(refreshToken);
 
-          if (refreshedToken) {
+          if (refreshedToken && (expirationTimestamp - currentTimestamp) <= 100) {
             const { access_token, expires_at } = refreshedToken;
             cookies.set('access_token', access_token);
             cookies.set('expires_at', expires_at);
-          } else {
-            dispatch(setUserUnAuthenticated());
-            navigate('/login');
-          }
+          } 
         } catch (error) {
           // Handle refresh error
-          console.error('Token refresh error:', error);
+          if (isAuthenticated) dispatch(setUserUnAuthenticated());
         }
       };
 

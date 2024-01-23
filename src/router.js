@@ -43,7 +43,7 @@ const PrivateRoute = ({ element }) => {
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <PrivateRoute element={<Home />} />,
+        element:<Home />,
     },
     {
         path: "shop",
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
 
     {
         path: "account",
-        element: <Account />,
+        element: <PrivateRoute element={<Account />} />,
     },
 
     {

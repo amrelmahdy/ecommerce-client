@@ -119,6 +119,29 @@
     }
 }
 
+.error-alert {
+	padding-top: 48px;
+	padding-left: 3px;
+
+	p {
+		margin-bottom: 1.7rem;
+		font-size: 16px;
+		font-weight: 500;
+		color: #222529;
+
+		&::before {
+			content: "\f00d";
+			position: relative;
+			top: 2px;
+			margin-right: 9px;
+			font-size: 20px;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 900;
+			color: #ff0404;
+		}
+	}
+}
+
 @include mq(md) {
     .login-container {
         .col-md-6:first-child {

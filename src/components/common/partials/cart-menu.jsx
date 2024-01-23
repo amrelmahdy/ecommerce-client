@@ -10,14 +10,16 @@ import ALink from '../ALink';
 import { useTranslation } from 'react-i18next';
 // Import Utils
 import { getCartTotal } from '../../../utils';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getCart } from '../../../store/cart/cart.selectors';
 import { useNavigate } from 'react-router-dom';
+import { removeProductFromCart } from '../../../store/cart/cart.actions';
 
 function CartMenu(props) {
     const { t, i18n } = useTranslation();
     const cartItems = [];
     const { error, items, loading } = useSelector(getCart);
+    const dispatch = useDispatch()
     console.log("getCartItems", items)
     const Navigate = useNavigate();
 
@@ -37,6 +39,7 @@ function CartMenu(props) {
     function cartClose() {
         document.querySelector('body').classList.contains('cart-opened') && document.querySelector('body').classList.remove('cart-opened');
     }
+    
     function getQtyTotal(items) {
         let total = 0;
         if (items) {
@@ -47,9 +50,10 @@ function CartMenu(props) {
         return total;
     }
 
-    function removeFromCart(e, cart) {
+    function removeFromCart(e, item) {
         e.preventDefault();
-        //props.removeFromCart( cart );
+        dispatch(removeProductFromCart({ productId: item.product.id }));
+
     }
 
     return (
@@ -89,13 +93,12 @@ function CartMenu(props) {
                                                     <figure className="product-image-container">
                                                         <ALink href={`/product/default/${item.slug}`} className="product-image">
                                                             <img src={
-                                                                // process.env.NEXT_PUBLIC_ASSET_URI + cart.small_pictures[0].url
 
                                                                 item.product.images.length > 0
-                                                                ?
-                                                                process.env.REACT_APP_BASE_URL + "/" + item.product.images[0].url
-                                                                :
-                                                                process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"
+                                                                    ?
+                                                                    item.product.images[0].url
+                                                                    :
+                                                                    "https://res.cloudinary.com/dbe5ygqci/image/upload/v1705965378/products/placeholder-img-300x300_tyujgu.png"
 
                                                             } width="78" height="78" alt="product" />
                                                         </ALink>

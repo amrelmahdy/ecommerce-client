@@ -3,6 +3,11 @@ export default {
         "wesite_title": "Shaheen Al Arab For Agriculture",
         "welcome": "Welcome",
         "logout": "Logout",
+        "username":"Username or email address",
+        "password": "Password",
+        "register": "Create a new account",
+        "forget_password": "Forgot Password?",
+
         "account_and_menus": "Account and menus",
 
         "page_not_found_text": "We're sorry, but the page you were looking for doesn't exist.",
@@ -84,6 +89,7 @@ export default {
         "shop_toolbar_sort_by_date-desc": "Sort by price: high to low",
         "shop_reset_filter": "Reset All Filters",
         "shop_sidebar_vendors": "vendors",
+        "shop_no_products": "No products were found matching your selection",
 
         "sar": "SAR",
 
@@ -143,6 +149,7 @@ export default {
         "cart_product": "Product",
         "cart_price": "Price",
         "cart_quantity": "Quantity",
+        "added_to_cart": "has been added to your cart",
 
         "cart": "Shopping cart",
         "checkout":"Checkout",

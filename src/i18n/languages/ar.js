@@ -3,6 +3,11 @@ export default {
         "wesite_title": "شاهين العرب للزراعة",
         "welcome": "أهلا",
         "logout": "تسجيل الخروج",
+        "username": "إسم المستخدم او البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "register": "إنشاء حساب جديد",
+        "forget_password": "نسيت كلمة المرور ؟",
+        
         "account_and_menus": "الحساب والقوائم",
         "page_not_found_text": ".بحثنا في كل مكان. يبدو أن هذه الصفحة مفقودة",
         "internal_server_error": "عذرًا! حدث خطأ على جهتنا. لقد تم إبلاغ فريقنا، ونحن نعمل على حل المشكلة في أقرب وقت ممكن.",
@@ -80,6 +85,7 @@ export default {
         "shop_toolbar_sort_by_date": "وصل حديثاً",
         "shop_toolbar_sort_by_price": "السعر من الاقل الى الاعلى",
         "shop_toolbar_sort_by_date-desc": "السعر من الاعلى الى الاقل",
+        "shop_no_products": "لم يتم العثور على منتجات مطابقة لاختيارك",
 
         "sar": "رس",
 
@@ -134,18 +140,17 @@ export default {
 
         "cart_no_products": "لا يوجد منتجات بعد.",
         "cart_menu_title" : "عربة التسوق",
-        "cart_veiw_cart": "إذهب الي العربة",
+        "cart_veiw_cart": "إذهب الي للسلة",
         "cart_checkout": "تابع الشراء",
         "cart_subtotal": "الإجمالي الفرعي",
         "cart_product": "المنتج",
         "cart_price": "السعر",
         "cart_quantity": "الكمية",
+        "added_to_cart": "تمت إضافة المنج للسلة",
 
         "cart": "سلة التسوق",
-        "checkout":"إكمال الشراء",
+        "checkout":"إتمام الشراء",
         "order_complete": "إنهاء الطلب",
-
-
         "return_to_shop": "عد إلي التسوق"
 
     }

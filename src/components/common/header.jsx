@@ -118,7 +118,14 @@ function Header({ adClass = '', wishlist }) {
                                         </ALink>
                                     </li>
                                     <li>
-                                        <ALink href="/wishlist">
+                                        <ALink onClick={(e) => {
+                                            e.preventDefault();
+                                           if(isAuthenticated){
+                                            navigate("/wishlist")
+                                           } else {
+                                            navigate("/login")
+                                           }
+                                        }}>
                                             <i className="icon-wishlist-2"></i>
                                             {t("header_wishlist")}
                                         </ALink>
@@ -150,7 +157,7 @@ function Header({ adClass = '', wishlist }) {
                             <img src="/images/logo.png" className="w-100" width="111" height="44" alt="Porto Logo" />
                         </ALink>
 
-                        {/* <SearchForm /> */}
+                        <SearchForm />
                     </div>
 
                     <div className="header-right">

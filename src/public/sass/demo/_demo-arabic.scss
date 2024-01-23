@@ -19,7 +19,8 @@ body[lang="ar"] {
 	.main-content,
 	.footer,
 	.wishlist-table-container,
-	.table {
+	.table,
+	.minipopup-box {
 		direction: rtl !important;
 	}
 
@@ -70,7 +71,11 @@ body[lang="ar"] {
 	.sidebar-shop .reset-filter,
 	.dropdown-cart-header,
 	.dropdown-menu p,
-	.btn {
+	.btn,
+	.btn-dark,
+	.btn-md,
+	.table.table-cart tfoot .btn,
+	.table.table-wishlist tfoot .btn {
 		font-family: $arabic-font-family;
 		// letter-spacing: 0 !important;
 	}
@@ -87,8 +92,9 @@ body[lang="ar"] {
 	.count-deal .product-default .countdown-section>.countdown-period,
 	.product-single-details .product-desc,
 	.breadcrumb-item,
-	.table.table-cart .product-title a, .table.table-cart .subtotal-price
-	{
+	.table.table-cart .product-title a,
+	.table.table-cart .subtotal-price,
+	.checkout-progress-bar li a {
 		font-family: $second-arabic-font-family;
 	}
 
@@ -251,7 +257,7 @@ body[lang="ar"] {
 				&:hover {
 					.megamenu {
 						height: auto;
-						left: -68% !important;
+						right:100% !important;
 					}
 				}
 			}
@@ -420,5 +426,35 @@ body[lang="ar"] {
 
 
 
+	button.mfp-close {
+		left: 0;
+	}
 
+	.minipopup-box {
+		left: -8rem;
+		width: 300px;
+		padding: 2rem 2rem 0;
+		background-color: #fff;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+		transition: opacity .3s, left .3s ease-out, transform .3s;
+
+		.product {
+			p {
+				margin-right: 10px;
+				font-family: $second-arabic-font-family;
+			}
+		}
+	}
+
+	.info-box.with-icon p:before {
+		float: right;
+		margin-left: 5px;
+	}
+
+	.login-container form label {
+		display: block;
+		text-align: right;
+		direction: rtl;
+		font-family: $second-arabic-font-family;
+	}
 }

@@ -134,12 +134,12 @@ function SearchForm(props) {
     const renderCategoriesList = () => {
         const renderSubItems = (subItems) => {
             if (!subItems.length) return null;
-            return subItems.map((sub, i) => {
+            return subItems?.map((sub, i) => {
                 const name = i18n.language === 'ar' ? sub.ar_name : sub.en_name
                 return <option value={sub.id}> - {name}</option>
             })
         }
-        return categoriesData.map((item, index) => {
+        return categoriesData?.map((item, index) => {
             const name = i18n.language === 'ar' ? item.ar_name : item.en_name
             const sub_categories = item.sub_categories
             return <>

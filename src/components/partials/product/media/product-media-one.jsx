@@ -90,7 +90,7 @@ export default function ProductMediaOne(props) {
                                     <div className="product-item" key={`product-item-${index}`}>
                                         <Magnifier
                                             style={{ paddingTop: "100%", position: "relative" }}
-                                            imageSrc={process.env.REACT_APP_BASE_URL + "/" + item.url}
+                                            imageSrc={item.url}
                                             imageAlt="product"
                                             mouseActivation="hover"
                                             cursorStyleActive="crosshair"
@@ -102,9 +102,9 @@ export default function ProductMediaOne(props) {
                             }
                         </OwlCarousel>
 
-                        {/* <span className="prod-full-screen" onClick={openLightBox}>
+                        <span className="prod-full-screen" onClick={openLightBox}>
                             <i className="icon-plus"></i>
-                        </span> */}
+                        </span>
                     </div>
 
                     <OwlCarousel adClass="prod-thumbnail owl-theme owl-dots" options={prodThumbSlider}>
@@ -112,7 +112,7 @@ export default function ProductMediaOne(props) {
                             product.images.map((item, index) => (
                                 <div className="owl-dot media-with-lazy" key={`owl-dot-${index}`} onClick={(e) => changeMediaIndex(index, e)}>
                                     <figure className="mb-0">
-                                        <LazyLoadImage src={process.env.REACT_APP_BASE_URL + "/" + item.url}
+                                        <LazyLoadImage src={item.url}
                                             alt="Thumbnail"
                                             width="100%"
                                             height="auto"
@@ -125,18 +125,18 @@ export default function ProductMediaOne(props) {
                     </OwlCarousel>
 
 
-                    {/* {
+                    {
                         openLB && (
                             <LightBox
-                                mainSrc={process.env.REACT_APP_BASE_URL + "/" + product.images[photoIndex].url}
-                                prevSrc={process.env.REACT_APP_BASE_URL + "/" + product.images[(photoIndex + product.images.length - 1) % product.images.length].url}
-                                nextSrc={process.env.REACT_APP_BASE_URL + "/" + product.images[(photoIndex + 1) % product.images.length].url}
+                                mainSrc={ product.images[photoIndex].url}
+                                prevSrc={ product.images[(photoIndex + product.images.length - 1) % product.images.length].url}
+                                nextSrc={ product.images[(photoIndex + 1) % product.images.length].url}
                                 onCloseRequest={closeLightBox}
                                 onMoveNextRequest={moveNextPhoto}
                                 onMovePrevRequest={movePrevPhoto}
                             />
                         )
-                    } */}
+                    }
                 </>
             }
         </div>

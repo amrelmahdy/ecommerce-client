@@ -58,7 +58,7 @@ export default function PopularSection(props) {
                                                 <figure>
                                                     <LazyLoadImage
                                                         alt="category"
-                                                        src={`${process.env.REACT_APP_BASE_URL}/${item.image}`}
+                                                        src={item.image?.url}
                                                         width="100%"
                                                         height="auto"
                                                         threshold={500}

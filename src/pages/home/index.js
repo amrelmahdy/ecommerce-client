@@ -17,6 +17,7 @@ import data from '../../data/data.json'
 import InfoBoxesSection from "../../components/partials/home/info-boxes-section";
 import { fetchCategories } from "../../store/categories/categories.actions";
 import { useDispatch } from "react-redux";
+import WithRefreshToken from "../../auth/with-refresh-token";
 
 function Home() {
 
@@ -62,4 +63,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default WithRefreshToken(Home);

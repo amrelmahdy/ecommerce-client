@@ -1,7 +1,9 @@
 // Import Custom Component
+import { useTranslation } from 'react-i18next';
 import ProductOne from '../../features/products/product-one';
 
 export default function ProductsGrid(props) {
+    const { t } = useTranslation();
 
     const { products = [], gridClass = "col-6 col-sm-4 col-xl-3", loading, perPage, addClass = '' } = props;
 
@@ -14,7 +16,7 @@ export default function ProductsGrid(props) {
     }
 
 
-    const addToCart = () => { 
+    const addToCart = () => {
         //toast( <CartPopup product={ { ...e.payload.product, index: e.index } } /> );
     }
 
@@ -36,7 +38,7 @@ export default function ProductsGrid(props) {
             </div>
             {
                 !loading && products.length === 0 ?
-                    <div className="info-box with-icon"><p>No products were found matching your selection.</p></div>
+                    <div className="info-box with-icon"><p>{t("shop_no_products")}</p></div>
                     : ''
             }
         </>

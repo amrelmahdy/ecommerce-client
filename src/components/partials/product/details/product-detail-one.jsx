@@ -13,30 +13,30 @@ import Helmet from "react-helmet";
 import { addToProductWishList } from '../../../../store/auth/auth.actions';
 import { addToWishList } from '../../../../api/user';
 import { getIsAuthenticated, getUserInfo } from '../../../../store/auth/auth.selectors';
+import { getCart } from '../../../../store/cart/cart.selectors';
+import { addProductTocart } from '../../../../store/cart/cart.actions';
+import AddToCartPopup from '../../../features/modals/add-to-cart-popup';
+import { toast } from 'react-toastify';
 
 function ProductDetailOne(props) {
     const { t, i18n } = useTranslation();
     const userInfo = useSelector(getUserInfo)
     const isAuthenticated = useSelector(getIsAuthenticated)
+    const { error, items: cartItems, loading } = useSelector(getCart);
+
     const dispatch = useDispatch();
-    const router = useLocation();
+    const location = useLocation();
     const { product, adClass = "col-lg-7 col-md-6", prev, next, isNav = true, parent = ".product-single-default", isSticky = false } = props;
-    const [attrs, setAttrs] = useState({ sizes: [], colors: [] });
-    const [variant, setVariant] = useState(null);
     const [size, setSize] = useState(null);
     const [color, setColor] = useState(null);
     const [qty, setQty] = useState(1);
 
     useEffect(() => {
-        // if (product) {
-        //     let attributes = product.variants.reduce((acc, cur) => {
-        //         cur.size && !acc.sizes.find(size => size.size === cur.size.size) && acc.sizes.push(cur.size);
-        //         cur.color && !acc.colors.find(color => color.name === cur.color.name) && acc.colors.push(cur.color);
-        //         return acc;
-        //     }, { sizes: [], colors: [] });
-        //     setAttrs(attributes);
-        //     initState();
-        // }
+        const item = cartItems.find((item) => item.product.id === product?.id?.toString())
+       if(item) {
+        setQty(item.quantity)
+       }
+
     }, [product])
 
     useEffect(() => {
@@ -65,19 +65,23 @@ function ProductDetailOne(props) {
         // }
     }, [size, color])
 
-    useEffect(() => {
-        if (variant && variant.id >= 0) {
-            let priceToggle = document.querySelector(`${parent} .price-toggle`);
-            priceToggle && (priceToggle.classList.contains('collapsed') && priceToggle.click());
-        }
-    }, [variant])
+  
 
     function isInWishlist() {
-        if(isAuthenticated){
+        if (isAuthenticated) {
             const isProductInWishlist = userInfo.wish_list.some((wishlistProduct) => wishlistProduct.id === product?.id.toString());
             return isProductInWishlist
-        } 
+        }
     }
+
+    const isItemInCart = () => {
+        const isProductInCart = cartItems.some((item) => item.product.id === product?.id?.toString())
+        return isProductInCart
+    };
+
+
+
+
 
     const onWishlistClick = async (e, product) => {
         e.preventDefault();
@@ -85,7 +89,7 @@ function ProductDetailOne(props) {
         target.classList.add("load-more-overlay");
         target.classList.add("loading");
         setTimeout(async () => {
-            dispatch(addToProductWishList(product._id))
+            dispatch(addToProductWishList(product.id))
             target.classList.remove('load-more-overlay');
             target.classList.remove('loading');
         }, 500);
@@ -93,7 +97,10 @@ function ProductDetailOne(props) {
 
     function onAddCartClick(e) {
         e.preventDefault();
-
+        dispatch(addProductTocart({
+            productId: product.id, quantity: qty
+        }));
+        toast(<AddToCartPopup product={product} />);
         // if (product.stock > 0 && !e.currentTarget.classList.contains('disabled')) {
         //     if (product.variants.length === 0) {
         //         props.addToCart(product, qty, -1);
@@ -103,7 +110,11 @@ function ProductDetailOne(props) {
         // }
     }
 
-    function changeQty(value) {
+    function changeQty(prod, value) {
+        console.log(value)
+        dispatch(addProductTocart({
+            productId: prod.id, quantity: value
+        }))
         setQty(value);
     }
 
@@ -329,8 +340,10 @@ function ProductDetailOne(props) {
 
 
                     <div className="product-action">
-                        <Qty max={product.stock} value={qty} onChangeQty={changeQty} />
-                        <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2`} title="Add To Cart" onClick={onAddCartClick}>{t("add_to_cart")}</a>
+                        <Qty value={qty} max={product.max_quantity} product={product} onChangeQty={changeQty} />
+
+
+                        {!isItemInCart() && <a href="#" className={`btn btn-dark add-cart shopping-cart font1 mr-2`} title="Add To Cart" onClick={onAddCartClick}>{t("add_to_cart")}</a>}
                     </div>
 
                     <hr className="divider mb-0 mt-0" />

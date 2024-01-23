@@ -35,6 +35,11 @@ function Qty({ max = Infinity, onChangeQty, value = 1, product }) {
     function changeCount(e) {
         let value = e.target.value ? parseInt(e.target.value) : 0;
         setCount(Math.min(value, max));
+        setCount(() => {
+            const newCount = Math.min(value, max);
+            onChangeQty && onChangeQty(product, newCount);
+            return newCount;
+        });
     }
 
 
@@ -46,7 +51,7 @@ function Qty({ max = Infinity, onChangeQty, value = 1, product }) {
                 <span className="input-group-btn input-group-prepend">
                     <button className="btn btn-outline btn-down-icon bootstrap-touchspin-down" onClick={decrease} type="button"></button>
                 </span>
-                <input className="horizontal-quantity form-control font1" type="number" min="1" max={max} value={count} onChange={changeCount} />
+                <input  className="horizontal-quantity form-control font1" type="number" min="1" max={max} value={count} onChange={changeCount} />
                 <span className="input-group-btn input-group-append">
                     <button className="btn btn-outline btn-up-icon bootstrap-touchspin-up" onClick={increase} type="button"></button>
                 </span>

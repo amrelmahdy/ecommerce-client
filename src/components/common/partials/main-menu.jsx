@@ -52,7 +52,7 @@ function MainMenu({ router }) {
             if (subItems.length) {
                 return <ul>
                     {
-                        subItems.map((subItem, i) => {
+                        subItems?.map((subItem, i) => {
                             return <li key={"menu_item" + i}>
                                 <ALink href={`${subItem.path}`}>{t(subItem.name)}</ALink>
                             </li>
@@ -63,7 +63,7 @@ function MainMenu({ router }) {
             }
             return null;
         }
-        return menItems.map((item, index) => {
+        return menItems?.map((item, index) => {
             const subItems = item.sub_items;
             return <li key={"sub_menu_item" + index} className={pathname == item.path ? 'active' : ''}>
                 <ALink href={item.path}>{t(item.name)}</ALink>
@@ -86,7 +86,7 @@ function MainMenu({ router }) {
                 return <div className="megamenu megamenu-fixed-width megamenu-six text-transform-none">
                     <ul className="submenu bg-transparent">
                         {
-                            subItems.map((subItem, i) => {
+                            subItems?.map((subItem, i) => {
                                 return <li key={"menu_item" + i}>
                                     <ALink to={{ pathname: '/shop', search: "category=" + subItem.slug  }}>{
                                         i18n.language === 'ar' ? subItem.ar_name : subItem.en_name
@@ -102,7 +102,7 @@ function MainMenu({ router }) {
             }
             return null;
         }
-        return menuItems.map((item, index) => {
+        return menuItems?.map((item, index) => {
             const subItems = item.sub_categories;
             const name = i18n.language === 'ar' ? item.ar_name : item.en_name
             return <li>

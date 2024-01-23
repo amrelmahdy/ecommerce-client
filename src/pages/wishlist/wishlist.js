@@ -69,7 +69,7 @@ function Wishlist(props) {
                         <h2>My wishlist on Porto Shop 35</h2>
                     </div> */}
                     {
-                        userInfo.wish_list.length === 0 ?
+                        userInfo?.wish_list.length === 0 ?
                             <div className="wishlist-table-container">
                                 <div className="table table-wishlist mb-0">
                                     <div className="wishlist-empty-page text-center">
@@ -94,7 +94,7 @@ function Wishlist(props) {
                                     </thead>
                                     <tbody>
                                         {
-                                            userInfo.wish_list.map((item, index) => (
+                                            userInfo?.wish_list.map((item, index) => (
                                                 <tr key={"wishlist-item" + index} className="product-row">
                                                     <td className="media-with-lazy">
                                                         <figure className="product-image-container">
@@ -104,7 +104,7 @@ function Wishlist(props) {
                                                                     src={
                                                                         item.images.length > 0
                                                                             ?
-                                                                            process.env.REACT_APP_BASE_URL + "/" + item.images[0].url
+                                                                             item.images[0].url
                                                                             :
                                                                             process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"
 

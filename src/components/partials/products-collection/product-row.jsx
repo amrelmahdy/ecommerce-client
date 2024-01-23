@@ -14,7 +14,7 @@ export default function ProductsRow(props) {
                             </div>
                         )
                         :
-                        products.map((item, index) => (
+                        products?.map((item, index) => (
                             <div className={gridClass} key={`product-${index}`}>
                                 <ProductTwo product={item} />
                             </div>

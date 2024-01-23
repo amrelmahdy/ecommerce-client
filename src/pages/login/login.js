@@ -15,6 +15,7 @@ export default function Login() {
     const cookies = new Cookies();
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const [error, setError] = useState(null)
 
     const { t } = useTranslation()
 
@@ -27,7 +28,7 @@ export default function Login() {
 
     useEffect(() => {
 
-        if(isAuthenticated) navigate("/")
+        if (isAuthenticated) navigate("/")
         //   const token =  cookies.get("access_token")
         //   const referesh =  cookies.get("access_token")
 
@@ -37,6 +38,7 @@ export default function Login() {
     }, [])
 
     const handleOnChangeUsername = (e) => {
+        setError(null)
         setUsername(e.target.value)
     }
 
@@ -53,6 +55,7 @@ export default function Login() {
     }
 
     const handleOnChangePassword = (e) => {
+        setError(null)
         setPassword(e.target.value)
     }
 
@@ -62,6 +65,7 @@ export default function Login() {
         setValidated(true)
         try {
             if (validateEmail(username) && validatePassword(password)) {
+                setError(null)
                 const res = await login(username, password);
                 if (res) {
                     const { access_token, refresh_token, expires_in, expires_at, refresh_expires_at, refresh_expires_in, userInfo } = res;
@@ -81,7 +85,12 @@ export default function Login() {
                 }
             }
         } catch (error) {
-            console.log("error", error)
+            if(!error.response){
+                setError("Whoops something went wrong")
+            } else {
+                setError("Unable to authenticate user")
+            }
+            console.log("login error: => ", error.response)
         }
     }
 
@@ -108,7 +117,13 @@ export default function Login() {
                     </div>
                 </div>
 
-
+                {
+                    error && <div className="container text-center">
+                        <div className="error-alert">
+                            <p>{error}</p>
+                        </div>
+                    </div>
+                }
 
                 <div className="container login-container">
                     <div className="row">
@@ -127,12 +142,12 @@ export default function Login() {
                                         action="#"
                                     >
                                         <label htmlFor="login-email">
-                                            Username or email address <span className="required">*</span>
+                                            {t("username")} <span className="required">*</span>
                                         </label>
                                         <input type="email" className="form-input form-wide" value={username} onChange={handleOnChangeUsername} id="login-email" required />
                                         <span className="helper-text" style={{ visibility: (!validated && username == "") || validateEmail(username) ? 'hidden' : 'visible' }}>البريد الإلكتروني مطلوب</span>
                                         <label htmlFor="login-password">
-                                            Password <span className="required">*</span>
+                                            {t("password")} <span className="required">*</span>
                                         </label>
                                         <input type="password" className="form-input form-wide" value={password} onChange={handleOnChangePassword} id="login-password" required />
                                         <span className="helper-text" style={{ visibility: (!validated && password == "") || validatePassword(password) ? 'hidden' : 'visible' }}>البريد الإلكتروني مطلوب</span>
@@ -142,10 +157,11 @@ export default function Login() {
                                                 <label className="custom-control-label mb-0" htmlFor="lost-password">Remember
                                                     me</label>
                                             </div> */}
+                                            <ALink href="/pages/forgot-password"
+                                                className="forget-password text-dark ">{t("register")}</ALink>
 
                                             <ALink href="/pages/forgot-password"
-                                                className="forget-password text-dark form-footer-right">Forgot
-                                                Password?</ALink>
+                                                className="forget-password text-dark form-footer-right">{t("forget_password")}</ALink>
                                         </div>
                                         <button type="submit" disabled={
                                             !validateEmail(username) || !validatePassword(password)

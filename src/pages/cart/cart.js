@@ -23,7 +23,6 @@ const Cart = (props) => {
     }
 
     function onChangeQty(product, qty) {
-        console.log(">>>", product, qty)
         dispatch(addProductTocart({
             productId: product.id, quantity: qty
         }))
@@ -35,7 +34,7 @@ const Cart = (props) => {
     function updateCart() {
         //props.updateCart( cartList );
     }
-    
+
 
     return (
         <Page>
@@ -44,12 +43,6 @@ const Cart = (props) => {
                     <ul rev='true' className="checkout-progress-bar d-flex justify-content-center flex-wrap">
                         <li className="active">
                             <ALink href="/cart">{t("cart")}</ALink>
-                        </li>
-                        <li>
-                            <ALink href="/checkout">{t("checkout")}</ALink>
-                        </li>
-                        <li className="disabled">
-                            <ALink href="#">{t("order_complete")}</ALink>
                         </li>
                     </ul>
 
@@ -88,9 +81,9 @@ const Cart = (props) => {
                                                                         <img src={
                                                                             item.product.images.length > 0
                                                                                 ?
-                                                                                process.env.REACT_APP_BASE_URL + "/" + item.product.images[0].url
+                                                                                item.product.images[0].url
                                                                                 :
-                                                                                process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"
+                                                                                "https://res.cloudinary.com/dbe5ygqci/image/upload/v1705965378/products/placeholder-img-300x300_tyujgu.png"
                                                                         } alt="product" />
 
                                                                     </ALink>
@@ -116,7 +109,15 @@ const Cart = (props) => {
                                                     ))
                                                 }
                                             </tbody>
-
+                                            <tfoot>
+                                                <tr>
+                                                    <td colSpan="5" className="clearfix">
+                                                        <button type="submit" className="btn btn-dark btn-add-cart product-type-simple font1 w-auto" onClick={updateCart}>
+                                                            {t("checkout")}
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
 
                                             {/* <tfoot>
                                                 <tr>

@@ -3,25 +3,26 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // Import Custom Component
 import ALink from '../../common/ALink';
+import { useTranslation } from 'react-i18next';
 
-function CartPopup ( props ) {
+function CartPopup(props) {
     const { product } = props;
-
+    const { t } = useTranslation()
     return (
         <div className="minipopup-area">
-            <div className="minipopup-box" style={ { top: "0" } }>
+            <div className="minipopup-box" style={{ top: "0" }}>
                 <div className="product media-with-lazy">
                     <figure className="product-media w-100">
-                        <ALink href={ `/product/default/${ product.slug }` } >
+                        <ALink href={`/product/default/${product.slug}`} >
                             <LazyLoadImage
                                 alt="product"
-                                src={ 
+                                src={
                                     product.images.length > 0
-                                    ?
-                                    process.env.REACT_APP_BASE_URL + "/" + product.images[0].url
-                                    :
-                                    process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"                                }
-                                threshold={ 500 }
+                                        ?
+                                         product.images[0].url
+                                        :
+                                        "https://res.cloudinary.com/dbe5ygqci/image/upload/v1705965378/products/placeholder-img-300x300_tyujgu.png"}
+                                threshold={500}
                                 effect="black and white"
                                 width="100%"
                                 height="auto"
@@ -42,12 +43,12 @@ function CartPopup ( props ) {
                                 <ALink className="product-name" href={ `/product/default/${ product.slug }` }>{ product.name }</ALink>
                         } */}
 
-                        <p>has been added to your cart.</p>
+                        <p>{t("added_to_cart")}</p>
                     </div>
                 </div>
                 <div className="product-action">
-                    <ALink to="/cart" className="btn viewcart">View Cart</ALink>
-                    <ALink to="/checkout" className="btn btn-dark checkout">Checkout</ALink>
+                    <ALink to="/cart" className="btn viewcart">{t("cart_veiw_cart")}</ALink>
+                    <ALink to="/checkout" className="btn btn-dark checkout">{t("checkout")}</ALink>
                 </div>
                 <button className="mfp-close"></button>
             </div>
@@ -55,4 +56,4 @@ function CartPopup ( props ) {
     )
 }
 
-export default React.memo( CartPopup );
+export default React.memo(CartPopup);

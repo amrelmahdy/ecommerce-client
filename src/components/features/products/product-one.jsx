@@ -87,7 +87,6 @@ function ProductOne(props) {
                 }, 500);
                 toast(<AddToCartPopup product={product} />);
             }
-            console.log("e.payload", e.payload)
         } else {
             navigate("/login")
         }
@@ -110,9 +109,9 @@ function ProductOne(props) {
                         src={
                             product.images.length > 0
                                 ?
-                                process.env.REACT_APP_BASE_URL + "/" + product.images[0].url
+                                product.images[0].url
                                 :
-                                process.env.REACT_APP_BASE_URL + "/" + "assets/images/placeholder-img-300x300.png"
+                                "https://res.cloudinary.com/dbe5ygqci/image/upload/v1705965378/products/placeholder-img-300x300_tyujgu.png"
 
                         }
                         threshold={500}
@@ -155,7 +154,7 @@ function ProductOne(props) {
                     <ProductCountdown date={product.until} />
                 } */}
 
-                <a href="#" className="btn-quickview" title={t("product_view_details")} onClick={onQuickViewClick}>{t("product_view_details")}</a>
+                {/* <a href="#" className="btn-quickview" title={t("product_view_details")} onClick={onQuickViewClick}>{t("product_view_details")}</a> */}
             </figure>
 
             <div className="product-details">
