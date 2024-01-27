@@ -12,6 +12,17 @@ export const addShippingAddress = async (address) => {
     return data
 }
 
+export const getAddress = async (addressId) => {
+    const { data } = await httpClient.get(`addresses/${addressId}`);
+    return data
+}
+
+export const deleteAddress = async (addressId) => {
+    const { data } = await httpClient.delete(`addresses/${addressId}`);
+    return data
+}
+
+
 export const setDefaultAddress = async (addressId) => {
     const { data } = await httpClient.post("addresses/default", { addressId })
     return data

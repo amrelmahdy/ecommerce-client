@@ -5,17 +5,18 @@ import Page from "../../../components/page";
 import Cookies from 'universal-cookie';
 import { useDispatch, useSelector } from "react-redux";
 import { setUserUnAuthenticated } from "../../../store/auth/auth.slice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { addShippingAddress, getCurrentLocation } from "../../../api/account";
+import { addShippingAddress, getAddress, getCurrentLocation } from "../../../api/account";
 import { useTranslation } from "react-i18next";
 import Input from "../../../components/validation/input";
 import validator from 'validator';
 import { getUserInfo } from "../../../store/auth/auth.selectors";
 import { toggleLoading } from "../../../store/app/app.slice";
 
-export default function AddAddress() {
-    const cookies = new Cookies();
+export default function EditAddress() {
+    const params = useParams()
+    const id = params.id;
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { t } = useTranslation();
@@ -33,6 +34,35 @@ export default function AddAddress() {
     const [addressDescription, setAddressDescription] = useState("");
     const [isDefault, setIsDefault] = useState(true);
 
+
+    useEffect(() => {
+        getAddressdetails(id)
+    }, []);
+
+
+    const getAddressdetails = async (addressId) => {
+        dispatch(toggleLoading(true))
+        try {
+            const address = await getAddress(addressId);
+            if(address){
+                setName(address.name)
+                setPhone(address.phone)
+                setCity(address.city)
+                setCountry(address.country)
+                setDistrict(address.district)
+                setStreet(address.street)
+                setAddressDescription(address.address_description)
+                setBuilding(address.building)
+                setPostalCode(address.postal_code)
+                setLandmark(address.landmark)
+            } else {
+
+            }
+        } catch (error) {
+
+        }
+        dispatch(toggleLoading(false))
+    }
 
 
     const handleOnSubmit = async (e) => {
@@ -109,10 +139,8 @@ export default function AddAddress() {
 
                                         <div className="address-auto-complete">
                                             <p>{t("account_shipping_address_autocomplete")}</p>
-                                            <ALink onClick={(e) => {
-                                                e.preventDefault()
+                                            <ALink onClick={() => {
                                                 navigator.geolocation.getCurrentPosition(async pos => {
-                                                    console.log(pos)
                                                     const currrentAddress = await getCurrentLocation(pos.coords.latitude, pos.coords.longitude);
                                                     if (currrentAddress.address) {
                                                         setCity(currrentAddress.address.city)

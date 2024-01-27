@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import validator from 'validator';
 import { placeholder } from 'i18n-js';
 
-export default ({ value, setValue, label, validations, validated, placeholder = "", ...props }) => {
+export default ({ value, setValue, label, validations = [], validated, placeholder = "", ...props }) => {
     const { t } = useTranslation();
 
     const isValid = () => {

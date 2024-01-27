@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUserUnAuthenticated } from "../../../store/auth/auth.slice";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getCurrentLocation, setDefaultAddress } from "../../../api/account";
+import { deleteAddress, getCurrentLocation, setDefaultAddress } from "../../../api/account";
 import { useTranslation } from "react-i18next";
 import { fetchCurrentUserDetails } from "../../../store/auth/auth.actions";
 import { getIsFetchingUserInfo, getUserInfo } from "../../../store/auth/auth.selectors";
@@ -23,21 +23,31 @@ export default function Addresses() {
 
     useEffect(() => {
         dispatch(fetchCurrentUserDetails())
-        dispatch(toggleLoading(false));
 
     }, [])
 
     const handleOnSetDefaultAddressClick = async (e, addressId) => {
         e.preventDefault();
         dispatch(toggleLoading(true));
-        setDefaultAddress(addressId).then(res => {
-            dispatch(fetchCurrentUserDetails())
-        })
-        dispatch(toggleLoading(false));
+        try {
+            const defaultAddress = await setDefaultAddress(addressId);
+            defaultAddress && dispatch(fetchCurrentUserDetails());
+        } catch (error) {
+            // handle set default address error.
+        }
+
     }
 
-    const handleOnRemoveAddressClick = async (e) => {
+    const handleOnDeleteAddressClick = async (e, addressId) => {
         e.preventDefault();
+        dispatch(toggleLoading(true))
+        try {
+            const deleted = await deleteAddress(addressId);
+            deleted && dispatch(fetchCurrentUserDetails())
+        } catch (error) {
+            // handle delete address error.
+        }
+        dispatch(toggleLoading(false))
     }
 
 
@@ -95,10 +105,10 @@ export default function Addresses() {
                                                         <p>{address.phone}</p>
                                                         <p>{`${address.city} / ${address.country}`}</p>
                                                         <div className="action">
-                                                            <ALink>
+                                                            <ALink href={address.id}>
                                                                 <span>Edit</span>
                                                             </ALink>
-                                                            <ALink>
+                                                            <ALink onClick={(e) => handleOnDeleteAddressClick(e, address.id)}>
                                                                 <span>Remove</span>
                                                             </ALink>
                                                             {!address.is_default && <ALink onClick={(e) => handleOnSetDefaultAddressClick(e, address.id)}>

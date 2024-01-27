@@ -31,6 +31,7 @@ import Cart from './pages/cart/cart';
 import Account from './pages/account/account';
 import Addresses from './pages/account/addresses';
 import AddAddress from './pages/account/addresses/add-address';
+import EditAddress from './pages/account/addresses/edit-address';
 
 const PrivateRoute = ({ element }) => {
     const cookies = new Cookies();
@@ -45,7 +46,7 @@ const PrivateRoute = ({ element }) => {
 const router = createBrowserRouter([
     {
         path: "/",
-        element:<Home />,
+        element: <Home />,
     },
     {
         path: "shop",
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute element={<AddAddress />} />,
     },
     {
+        path: "account/addresses/:id",
+        element: <PrivateRoute element={<EditAddress />} />,
+    },
+    {
         path: "account/orders",
         element: <PrivateRoute element={<Account />} />,
     },
@@ -88,9 +93,9 @@ const router = createBrowserRouter([
 
     {
         path: "help",
-        element:<>Help</>,
+        element: <>Help</>,
     },
-    
+
     {
         path: "wishlist",
         element: <Wishlist />,
