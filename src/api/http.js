@@ -50,6 +50,7 @@ httpClient.interceptors.request.use(
     // } 
     // Set the Authorization header with the current access token
     config.headers.Authorization = `Bearer ${accessToken}`;
+    console.log("accessToken", accessToken)
     return config;
   },
   (error) => {

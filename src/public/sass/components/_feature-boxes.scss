@@ -12,6 +12,8 @@
 	)
 );
 
+
+
 .feature-box {
 	color: #7b858a;
 	font-size: 1.5rem;
@@ -55,6 +57,7 @@
 			padding: 30px 20px 10px 20px;
 		}
 	}
+	
 }
 
 .feature-box-content {
@@ -71,4 +74,20 @@
     border-radius: 500px;
     font-size: 35px;
     line-height: 80px;
+}
+
+.address-box.address-box{
+	padding-top: 1.5rem !important;
+	.action{
+
+		span{
+			padding: 0 5px;
+		}
+	}
+	h5{
+		margin: 0;
+	}
+	span{
+		
+	}
 }

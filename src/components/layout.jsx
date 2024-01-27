@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import 'rc-tree/assets/index.css';
 import 'react-input-range/lib/css/index.css';
 import 'react-image-lightbox/style.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import Loader from 'react-loaders'
 
 
 // Import Custom Coponent
@@ -20,21 +21,23 @@ import MobileMenu from "./common/partials/mobile-menu";
 
 // Import Utils
 import { stickyInit, scrollTopHandlder, scrollTopInit } from "../utils";
+import { getIsLoading } from "../store/app/app.selectors";
 
 function Layout({ children, hideQuickView, hideVideo }) {
-    useEffect( () => {
-        window.addEventListener( "scroll", stickyInit, { passive: true } );
-        window.addEventListener( "scroll", scrollTopInit, { passive: true } );
-        window.addEventListener( "resize", stickyInit );
+    const loading = useSelector(getIsLoading);
+    useEffect(() => {
+        window.addEventListener("scroll", stickyInit, { passive: true });
+        window.addEventListener("scroll", scrollTopInit, { passive: true });
+        window.addEventListener("resize", stickyInit);
         // hideQuickView();
         // hideVideo();
 
         return () => {
-            window.removeEventListener( "scroll", stickyInit, { passive: true } );
-            window.removeEventListener( "scroll", scrollTopInit, { passive: true } );
-            window.removeEventListener( "resize", stickyInit );
+            window.removeEventListener("scroll", stickyInit, { passive: true });
+            window.removeEventListener("scroll", scrollTopInit, { passive: true });
+            window.removeEventListener("resize", stickyInit);
         }
-    }, [] )
+    }, [])
 
     return (
         <>
@@ -42,6 +45,13 @@ function Layout({ children, hideQuickView, hideVideo }) {
                 <Header />
 
                 {children}
+
+                {
+                    loading && <div className="loader-container">
+                        <Loader type="ball-pulse" />
+                    </div>
+                }
+
 
                 <Footer />
 

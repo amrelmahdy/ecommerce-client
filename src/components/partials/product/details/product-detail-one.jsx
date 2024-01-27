@@ -10,7 +10,7 @@ import ProductCountdown from '../../../features/product-countdown';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Helmet from "react-helmet";
-import { addToProductWishList } from '../../../../store/auth/auth.actions';
+import { addProductToWishList } from '../../../../store/auth/auth.actions';
 import { addToWishList } from '../../../../api/user';
 import { getIsAuthenticated, getUserInfo } from '../../../../store/auth/auth.selectors';
 import { getCart } from '../../../../store/cart/cart.selectors';
@@ -89,7 +89,7 @@ function ProductDetailOne(props) {
         target.classList.add("load-more-overlay");
         target.classList.add("loading");
         setTimeout(async () => {
-            dispatch(addToProductWishList(product.id))
+            dispatch(addProductToWishList(product.id))
             target.classList.remove('load-more-overlay');
             target.classList.remove('loading');
         }, 500);

@@ -20,14 +20,19 @@ body[lang="ar"] {
 	.footer,
 	.wishlist-table-container,
 	.table,
-	.minipopup-box {
+	.minipopup-box,
+	.dashboard-content,
+	.addresses-content,
+	.address .form-control,
+	.address-auto-complete,
+	.page-header .breadcrumb-nav
+	{
 		direction: rtl !important;
 	}
 
 
-	.al-r,
-	td,
-	th {
+	.al-r
+	{
 		text-align: right !important;
 	}
 
@@ -75,7 +80,9 @@ body[lang="ar"] {
 	.btn-dark,
 	.btn-md,
 	.table.table-cart tfoot .btn,
-	.table.table-wishlist tfoot .btn {
+	.table.table-wishlist tfoot .btn,
+	.nav-tabs.list .nav-item .nav-link
+	{
 		font-family: $arabic-font-family;
 		// letter-spacing: 0 !important;
 	}
@@ -94,7 +101,10 @@ body[lang="ar"] {
 	.breadcrumb-item,
 	.table.table-cart .product-title a,
 	.table.table-cart .subtotal-price,
-	.checkout-progress-bar li a {
+	.checkout-progress-bar li a,
+	.address-auto-complete span,
+	form label
+	{
 		font-family: $second-arabic-font-family;
 	}
 
@@ -187,7 +197,17 @@ body[lang="ar"] {
 	.product-single-details .product-title,
 	.dropdown-cart-header,
 	.cart-dropdown .product-details,
-	.dropdown-menu p {
+	.dropdown-menu p,
+	.nav-tabs.list .nav-item .nav-link,
+	form .select-custom, form .form-group,
+	.address-auto-complete,
+	.widget-dashboard h2,
+	td,
+	th,
+	.address.account-content h4,
+	.account-sub-title,
+	.address
+	{
 		text-align: right;
 	}
 
@@ -257,7 +277,7 @@ body[lang="ar"] {
 				&:hover {
 					.megamenu {
 						height: auto;
-						right:100% !important;
+						right: 100% !important;
 					}
 				}
 			}
@@ -456,5 +476,12 @@ body[lang="ar"] {
 		text-align: right;
 		direction: rtl;
 		font-family: $second-arabic-font-family;
+	}
+
+	.account-container .nav-tabs.list .nav-item {
+		margin-right: 0;
+	}
+	.account-sub-title i{
+		margin-right: 0;
 	}
 }

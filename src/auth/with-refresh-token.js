@@ -18,7 +18,7 @@ const WithRefreshToken = (WrappedComponent) => {
     const pathName = location.pathname;
     const refreshToken = cookies.get('refresh_token');
     const expirationTimestamp = Math.floor(cookies.get('expires_at'));
-    const currentTimestamp = Math.floor(new Date().getTime());
+    const currentTimestamp = Math.floor(new Date().getTime() / 100);
 
     console.log("refreshToken", (expirationTimestamp - currentTimestamp) >= 100)
 
@@ -30,9 +30,10 @@ const WithRefreshToken = (WrappedComponent) => {
             if (isAuthenticated) dispatch(setUserUnAuthenticated());
           }
 
-          const refreshedToken = await refreshAccessToken(refreshToken);
 
-          if (refreshedToken && (expirationTimestamp - currentTimestamp) <= 100) {
+          if (refreshToken && (expirationTimestamp - currentTimestamp) <= 100) {
+            const refreshedToken = await refreshAccessToken(refreshToken);
+
             const { access_token, expires_at } = refreshedToken;
             cookies.set('access_token', access_token);
             cookies.set('expires_at', expires_at);

@@ -29,6 +29,8 @@ import { refreshAccessToken } from './api/auth';
 import Wishlist from './pages/wishlist/wishlist';
 import Cart from './pages/cart/cart';
 import Account from './pages/account/account';
+import Addresses from './pages/account/addresses';
+import AddAddress from './pages/account/addresses/add-address';
 
 const PrivateRoute = ({ element }) => {
     const cookies = new Cookies();
@@ -65,6 +67,22 @@ const router = createBrowserRouter([
 
     {
         path: "account",
+        element: <PrivateRoute element={<Account />} />,
+    },
+    {
+        path: "account/addresses",
+        element: <PrivateRoute element={<Addresses />} />,
+    },
+    {
+        path: "account/addresses/add",
+        element: <PrivateRoute element={<AddAddress />} />,
+    },
+    {
+        path: "account/orders",
+        element: <PrivateRoute element={<Account />} />,
+    },
+    {
+        path: "account/details",
         element: <PrivateRoute element={<Account />} />,
     },
 

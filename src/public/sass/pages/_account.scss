@@ -21,8 +21,8 @@
         line-height: 32px;
     }
 
-    .form-group { 
-        margin-bottom: 1.7rem;
+    .form-group {
+        margin-bottom: 0;
 
         p {
             font-size: 1.3rem;
@@ -35,7 +35,7 @@
         padding-left: 1.2rem;
         font-size: 1.4rem;
         height: 50px;
-        border-color: rgba(0,0,0,0.09);
+        border-color: rgba(0, 0, 0, 0.09);
         letter-spacing: -.015em;
     }
 
@@ -62,10 +62,10 @@
 
 .page-header,
 .about {
-    .breadcrumb-item + .breadcrumb-item:before {
+    .breadcrumb-item+.breadcrumb-item:before {
         padding-right: 1.1rem;
     }
-} 
+}
 
 .account-container {
     .nav-link {

@@ -5,6 +5,7 @@ import { combineReducers } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
 import { thunk } from 'redux-thunk';
+import appReducer from './app/app.slice';
 import productsReducer from './products/products.slice'
 import categoriesReducer from './categories/categories.slice'
 import vendorsReducer from './vendors/vendors.slice';
@@ -21,6 +22,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
+  app: appReducer,
   auth: authReducer,
   products: productsReducer,
   categories: categoriesReducer,

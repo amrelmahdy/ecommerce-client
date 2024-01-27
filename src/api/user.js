@@ -5,3 +5,4 @@ export const addToWishList = async (productId) => {
     return data
 }
 
+

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUserInfo } from '../../store/auth/auth.selectors';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { addToProductWishList } from '../../store/auth/auth.actions';
+import { addProductToWishList } from '../../store/auth/auth.actions';
 
 
 function Wishlist(props) {
@@ -18,17 +18,13 @@ function Wishlist(props) {
     const navigate = useNavigate()
     const dispatch = useDispatch();
     
-    const onMoveFromToWishlit = (e, item) => {
-        setFlag(2);
-        e.preventDefault();
-        addToCart(item);
-        removeFromWishlist(item);
-    }
+  
 
     const removeProduct = async (e, item) => {
+       console.log("dhdhdhdhhd",e,  item)
         //setFlag(1);
         e.preventDefault();
-        dispatch(addToProductWishList(item.id))
+        dispatch(addProductToWishList(item.id))
     }
 
     const onQuickViewClick = (e, product) => {
@@ -41,16 +37,16 @@ function Wishlist(props) {
             <main className="main">
                 <div className="page-header">
                     <div className="container d-flex flex-column align-items-center">
-                        {/* <nav aria-label="breadcrumb" className="breadcrumb-nav">
+                        <nav aria-label="breadcrumb" className="breadcrumb-nav">
                             <div className="container">
                                 <ol className="breadcrumb">
-                                    <li className="breadcrumb-item"><ALink href="/">Home</ALink></li>
+                                    <li className="breadcrumb-item"><ALink href="/">{ t("home") }</ALink></li>
                                     <li className="breadcrumb-item active" aria-current="page">
-                                        Wishlist
+                                        {t("wishlist")}
                                     </li>
                                 </ol>
                             </div>
-                        </nav> */}
+                        </nav>
 
                         <h1>{t("wishlist")}</h1>
                     </div>

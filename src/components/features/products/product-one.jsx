@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next'
 import ALink from '../../common/ALink';
 import ProductCountdown from '../product-countdown';
 import { useNavigate, useNavigation } from 'react-router-dom';
-import { addToProductWishList } from '../../../store/auth/auth.actions';
+import { addProductToWishList } from '../../../store/auth/auth.actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { getIsAuthenticated, getUserInfo } from '../../../store/auth/auth.selectors';
 import { addProductTocart } from '../../../store/cart/cart.actions';
@@ -60,7 +60,7 @@ function ProductOne(props) {
             target.classList.add("load-more-overlay");
             target.classList.add("loading");
             setTimeout(async () => {
-                dispatch(addToProductWishList(product.id))
+                dispatch(addProductToWishList(product.id))
                 setIsAdedToWishList(!isAdedToWishList)
                 target.classList.remove('load-more-overlay');
                 target.classList.remove('loading');

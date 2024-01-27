@@ -58,7 +58,7 @@ function Header({ adClass = '', wishlist }) {
                             <i className="icon-shipping text-primary"></i>
 
                             <div className="info-box-content0">
-                                <h4 className="mb-0">{t("header_info-box_text")}</h4>
+                                <h4 className="mb-0">{t("header_info_box_text")}</h4>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ function Header({ adClass = '', wishlist }) {
                         <div className="header-user d-lg-flex align-items-center">
                             {isAuthenticated ?
                                 <div className='avatar'>
-                                    <LazyLoadImage src={ process.env.REACT_APP_BASE_URL + "/" + userInfo.image} alt="client"  />
+                                    <LazyLoadImage src={ process.env.REACT_APP_BASE_URL + "/" + userInfo?.image} alt="client"  />
                                 </div>
                                 : <ALink href="/pages/login" className="header-icon mr-0" title="login">
                                     <i className="icon-user-2 mr-2"></i>
@@ -177,7 +177,7 @@ function Header({ adClass = '', wishlist }) {
                             }
 
                             <h6 className="font1 d-none d-xl-block mb-0">
-                                <span className="d-block text-body">{`${t("welcome")} ${isAuthenticated && userInfo ? userInfo.name: ''}`}  </span>
+                                <span className="d-block text-body">{`${t("welcome")} ${isAuthenticated && userInfo ? userInfo?.name: ''}`}  </span>
                                 {isAuthenticated && userInfo ? <ALink to="/account"  className="font-weight-bold">{t("account_and_menus")}</ALink> : <ALink href="/login" className="font-weight-bold">{t("signin_login")}</ALink>}
                             </h6>
                         </div>

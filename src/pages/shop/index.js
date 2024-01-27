@@ -167,7 +167,7 @@ function Shop() {
                                             <select name="orderby" className="form-control" value={ searchParams.get('sortBy')} onChange={e => onSortByChange(e)}>
                                                 <option value="default">{t("shop_toolbar_sort_by_default")}</option>
                                                 <option value="price">{t("shop_toolbar_sort_by_price")}</option>
-                                                <option value="price-desc">{t("shop_toolbar_sort_by_date-desc")}</option>
+                                                <option value="price-desc">{t("shop_toolbar_sort_by_date_desc")}</option>
                                                 {/* <option value="date">{t("shop_toolbar_sort_by_date")}</option> */}
                                                 <option value="rating">{t("shop_toolbar_sort_by_rating")}</option>
 
