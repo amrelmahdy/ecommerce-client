@@ -32,6 +32,7 @@ import Account from './pages/account/account';
 import Addresses from './pages/account/addresses';
 import AddAddress from './pages/account/addresses/add-address';
 import EditAddress from './pages/account/addresses/edit-address';
+import CheckOut from './pages/checkout/checkout';
 
 const PrivateRoute = ({ element }) => {
     const cookies = new Cookies();
@@ -103,6 +104,10 @@ const router = createBrowserRouter([
     {
         path: "cart",
         element: <Cart />,
+    },
+    {
+        path: "checkout",
+        element: <CheckOut />,
     },
     {
         path: "login",

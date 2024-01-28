@@ -86,7 +86,7 @@ function CartMenu(props) {
                                                         </h2>
 
                                                         <span className="cart-product-info">
-                                                            <span className="cart-product-qty">{item.quantity}</span> × ${item.product.price.toFixed(2)}
+                                                            <span className="cart-product-qty">{item.quantity}</span> ×  {item.product.price.toFixed(2)} {t("sar")}
                                                         </span>
                                                     </div>
 
