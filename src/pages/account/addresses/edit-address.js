@@ -7,20 +7,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUserUnAuthenticated } from "../../../store/auth/auth.slice";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { addShippingAddress, getAddress, getCurrentLocation } from "../../../api/account";
+import { addShippingAddress, getAddress, getCurrentLocation, updateAddress } from "../../../api/account";
 import { useTranslation } from "react-i18next";
 import Input from "../../../components/validation/input";
 import validator from 'validator';
 import { getUserInfo } from "../../../store/auth/auth.selectors";
 import { toggleLoading } from "../../../store/app/app.slice";
+import PageNotFound from "../../error/404";
 
 export default function EditAddress() {
-    const params = useParams()
-    const id = params.id;
+    const params = useParams();
+    const addressId = params.id;
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const { t } = useTranslation();
     const userInfo = useSelector(getUserInfo)
+    const [isAddressNotFound, setIsAddressNotFound] = useState(false)
     const [validated, setValidated] = useState(false);
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
@@ -36,15 +38,16 @@ export default function EditAddress() {
 
 
     useEffect(() => {
-        getAddressdetails(id)
+        getAddressdetails(addressId)
     }, []);
 
 
     const getAddressdetails = async (addressId) => {
-        dispatch(toggleLoading(true))
+        dispatch(toggleLoading(true));
+        setIsAddressNotFound(false)
         try {
             const address = await getAddress(addressId);
-            if(address){
+            if (address) {
                 setName(address.name)
                 setPhone(address.phone)
                 setCity(address.city)
@@ -54,18 +57,18 @@ export default function EditAddress() {
                 setAddressDescription(address.address_description)
                 setBuilding(address.building)
                 setPostalCode(address.postal_code)
-                setLandmark(address.landmark)
+                setLandmark(address.landmark);
             } else {
 
             }
         } catch (error) {
-
+            setIsAddressNotFound(true)
         }
         dispatch(toggleLoading(false))
     }
 
 
-    const handleOnSubmit = async (e) => {
+    const handleOnSubmit = async (e, addressId) => {
         e.preventDefault();
         window.scrollTo({
             top: 0,
@@ -102,13 +105,19 @@ export default function EditAddress() {
             }
             try {
                 dispatch(toggleLoading(true))
-                await addShippingAddress(address);
+                const addressUpdated = await updateAddress(addressId, address);
                 dispatch(toggleLoading(false))
-                navigate("/account/addresses");
+                if(addressUpdated){
+                    navigate("/account/addresses");
+                }
             } catch (err) {
-
+                // handle update address error
             }
         }
+    }
+
+    if(isAddressNotFound){
+        return <PageNotFound />
     }
 
     return (
@@ -121,11 +130,11 @@ export default function EditAddress() {
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item"><ALink href="/account">{t("account")}</ALink></li>
                                     <li className="breadcrumb-item"><ALink href="/account/addresses">{t("account_shipping_addresses")}</ALink></li>
-                                    <li className="breadcrumb-item active" aria-current="page">{t("account_shipping_address_add")}</li>
+                                    <li className="breadcrumb-item active" aria-current="page">{t("account_shipping_address_edit")}</li>
                                 </ol>
                             </div>
                         </nav>
-                        <h1>{t("account_shipping_address_add")}</h1>
+                        <h1>{t("account_shipping_address_edit")}</h1>
                     </div>
                 </div>
 
@@ -135,7 +144,7 @@ export default function EditAddress() {
                         <div className="col-lg-6 order-lg-last order-1 ">
                             <div className="tab-pane " id="address-panel">
                                 <div className="address account-content hide-content  mt-0 pt-2">
-                                    <form className="mb-2" noValidate onSubmit={handleOnSubmit} action="#">
+                                    <form className="mb-2" noValidate onSubmit={(e) => handleOnSubmit(e, addressId)} action="#">
 
                                         <div className="address-auto-complete">
                                             <p>{t("account_shipping_address_autocomplete")}</p>

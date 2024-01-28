@@ -164,6 +164,7 @@ export default {
         account_shipping_addresses: "عناوين التوصيل",
         account_shipping_addresses_no_addresses: "لا توجد عناوين بعد",
         account_shipping_address_add: "إضافة عنوان",
+        account_shipping_address_edit: "تعديل عنوان",
         account_shipping_address_autocomplete:" وفِّر الوقت. فعّل المل التلقائي لموقعك الحالي",
         account_shipping_address_autocomplete_btn:" الملء التلقائي",
         account_address_name:"الإسم",

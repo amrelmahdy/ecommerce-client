@@ -72,9 +72,11 @@ export default function AddAddress() {
             }
             try {
                 dispatch(toggleLoading(true))
-                await addShippingAddress(address);
+                const addressAdded = await addShippingAddress(address);
                 dispatch(toggleLoading(false))
-                navigate("/account/addresses");
+                if(addressAdded){
+                    navigate("account/addresses");
+                }
             } catch (err) {
 
             }

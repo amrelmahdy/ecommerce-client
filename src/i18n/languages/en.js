@@ -166,6 +166,7 @@ export default {
         account_shipping_addresses: "Shipping addresses",
         account_shipping_addresses_no_addresses: "There are no addresses yet.",
         account_shipping_address_add: "Add address",
+        account_shipping_address_edit: "Edit address",
         account_shipping_address_autocomplete: "Save time. Enable automatic filling for your current location.",
         account_address_name: "Name",
         account_address_phone:"Phone",

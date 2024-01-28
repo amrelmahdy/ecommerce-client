@@ -17,6 +17,13 @@ export const getAddress = async (addressId) => {
     return data
 }
 
+
+export const updateAddress = async (addressId, address) => {
+    const { data } = await httpClient.put(`addresses/${addressId}`, address);
+    return data
+}
+
+
 export const deleteAddress = async (addressId) => {
     const { data } = await httpClient.delete(`addresses/${addressId}`);
     return data
